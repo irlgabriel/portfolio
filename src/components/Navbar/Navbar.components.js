@@ -38,7 +38,7 @@ export const NavItem = styled.li`
   margin: 0 10px;
   
   @media screen and (max-width: 960px) {
-    padding: 10px;
+    padding: 30px;
     width: 100%;
     border-bottom: 1px solid lightgray;
   }

@@ -9,7 +9,10 @@ import {
   Heading,
   Subtitle,
   SubtitleItem,
-  Features
+  Features,
+  ProjectHeader,
+  ProjectLink,
+
 } from "./Project.components";
 export default function Project({
   bgColor,
@@ -22,13 +25,18 @@ export default function Project({
   imageLeft,
   smallDesc,
   features,
-
+  liveURL,
+  codeURL,
 }) {
   return (
     <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
       <InfoColumn>
         <TextWrapper>
-          <TopLine>{projectTitle}</TopLine>
+          <ProjectHeader>
+            <TopLine>{projectTitle}</TopLine>
+            <ProjectLink bgColor={bgColor} href={liveURL}>Live</ProjectLink>
+            <ProjectLink bgColor={bgColor} href={codeURL}>Code</ProjectLink>
+          </ProjectHeader>
           <Heading>{smallDesc}</Heading>
           <Features>{features}</Features>
           <Heading>{headingContent}</Heading>

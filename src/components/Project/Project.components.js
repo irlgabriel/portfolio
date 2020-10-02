@@ -8,9 +8,11 @@ export const ProjectContainer = styled.div`
   background-color: ${({bgColor}) => (bgColor)};
   color: ${({textColor}) => (textColor)};
   flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")};
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
+    justify-content: center;
   }
 `
 
@@ -53,12 +55,33 @@ export const Image = styled.img`
   width: 100%;
   max-height: 350px;
 `
-
-export const TopLine = styled.h3`
-
+export const ProjectHeader = styled.section`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
 `
-export const Heading = styled.p`
+export const TopLine = styled.h3`
+  
+`
 
+export const ProjectLink = styled.a`
+  margin-left: 15px;
+  padding: 5px 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: ${({bgColor}) => (bgColor !== "#101522" ? "white" : "#101522")};
+  background: ${({bgColor}) => (bgColor === "#101522" ? "white" : "#101522")};
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({bgColor}) => (bgColor === "#101522" ? "white" : "#101522")};
+    background: lightcoral;
+  }
+`
+
+export const Heading = styled.p`
+  font-size: 1.2rem;
 `
 
 export const Subtitle = styled.p`
@@ -73,8 +96,10 @@ export const SubtitleItem = styled.div`
   background: lightslategrey;
   padding: 5px;
   border-radius: 5px;
-  &:hover {
+  transition: all 0.3s ease-in-out;
 
+  &:hover {
+    background: lightcoral;
   }
 `
 

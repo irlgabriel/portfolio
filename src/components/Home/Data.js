@@ -6,10 +6,13 @@ export const ProjectOne = {
   alt: "Photo of facebook project",
   projectTitle: "Facebook",
   headingContent: "Frameworks and Technologies",
-  subtitleContent: ["Ruby on Rails", "Ruby", "HTML5", "CSS3", "Amazon Web Storage"],
+  subtitleContent: ["Ruby on Rails", "Ruby","Javascript", "HTML5", "CSS3", "Amazon Web Storage"],
   smallDesc: "A facebook clone using ruby on rails.",
-  features: "Posts, Comments, Replies, Post/comment Likes, Friend Requests and more. Try it out right now",
+  features: "Responsive Design, Email Confirmation, Posts, Comments, Replies, Post/Comment Likes, Friend Requests and more. Try it out right now.",
+  liveURL: "",
+  codeURL: "",
   imageLeft: false,
+
 }
 
 export const ProjectTwo = {
@@ -19,8 +22,8 @@ export const ProjectTwo = {
   alt: "Photo of library project",
   projectTitle: "Library",
   headingContent: "Frameworks and Technologies",
-  subtitleContent: ["React.js", "Google Firebase", "Styled Components", "HTML5", "CSS3"],
-  smallDesc: "A small app for book lovers",
+  subtitleContent: ["React.js","Javascript", "Google Firebase", "Styled Components", "HTML5", "CSS3"],
+  smallDesc: "A small app for book lovers!",
   features: "Store your favorite books in an aesthetically pleasing way with this small app powered by the latest technologies!",
   imageLeft: true,
 

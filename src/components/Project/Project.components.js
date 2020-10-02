@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
+  padding-top: 15px;
   width: 100%;
   height: 90vh;
   display: flex;
   background-color: ${({bgColor}) => (bgColor)};
   color: ${({textColor}) => (textColor)};
-  flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")}
+  flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `
 
 export const InfoColumn = styled.div`
@@ -24,10 +29,12 @@ export const InfoColumn = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
   min-width: 350px;
   max-width: 555px;
   display: flex;
   transition: all 0.5s ease-in-out;
+  
   &:hover {
     transform: scale(1.02);
   }
@@ -69,4 +76,11 @@ export const SubtitleItem = styled.div`
   &:hover {
 
   }
+`
+
+export const Features = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
 `

@@ -9,6 +9,7 @@ import {
   Heading,
   Subtitle,
   SubtitleItem,
+  Features
 } from "./Project.components";
 export default function Project({
   bgColor,
@@ -18,7 +19,9 @@ export default function Project({
   projectTitle,
   headingContent,
   subtitleContent,
-  imageLeft
+  imageLeft,
+  smallDesc,
+  features,
 
 }) {
   return (
@@ -26,6 +29,8 @@ export default function Project({
       <InfoColumn>
         <TextWrapper>
           <TopLine>{projectTitle}</TopLine>
+          <Heading>{smallDesc}</Heading>
+          <Features>{features}</Features>
           <Heading>{headingContent}</Heading>
           <Subtitle>
           {
@@ -35,7 +40,7 @@ export default function Project({
         </TextWrapper>
       </InfoColumn>
       <InfoColumn>
-        <ImageWrapper>
+        <ImageWrapper bgColor={bgColor}>
           <Image src={img} alt={alt} />
         </ImageWrapper>
       </InfoColumn>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProjectContainer = styled.div`
   padding-top: 15px;
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   background-color: ${({bgColor}) => (bgColor)};
   color: ${({textColor}) => (textColor)};
@@ -20,7 +20,6 @@ export const InfoColumn = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   flex: 1;
-  max-width: 50%;
   flex-basis: 50%;
   @media screen and (max-width: 768px) {
     display: flex;
@@ -32,11 +31,10 @@ export const InfoColumn = styled.div`
 
 export const ImageWrapper = styled.div`
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
-  min-width: 350px;
-  max-width: 555px;
+  width: 555px;
   display: flex;
-  transition: all 0.5s ease-in-out;
-  
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
   &:hover {
     transform: scale(1.02);
   }
@@ -46,8 +44,9 @@ export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
+
   @media screen and (max-width: 768px) {
-    padding-bottom: 65px;
+    padding: 30px 0;
   }
 `
 

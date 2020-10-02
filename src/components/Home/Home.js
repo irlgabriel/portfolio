@@ -1,13 +1,20 @@
 import React from "react"
-import { Container } from "../../globalStyles"
 import {
   Project,
 } from "../../components";
+import {
+  Intro,
+  Heading,
+  
+} from "./Home.components"
 import { ProjectOne, ProjectTwo } from "./Data";
 
 export default function Home() {
   return(
     <>
+      <Intro>
+        <Heading>Some of my projects</Heading>
+      </Intro>
       <Project {...ProjectOne} />
       <Project {...ProjectTwo} />
     </>

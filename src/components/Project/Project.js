@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   ProjectContainer,
   InfoColumn,
@@ -28,6 +28,7 @@ export default function Project({
   liveURL,
   codeURL,
 }) {
+  const [currentImage, setImage] = (img);
   return (
     <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
       <InfoColumn>

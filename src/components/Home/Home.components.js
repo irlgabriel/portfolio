@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 
-export const Project = styled.section`
+export const Intro = styled.section`
   display: flex;
-  width: 100%;
-  height: 90vh;
-  background-color: white;
-
-  @media screen and (max-width: 960px) {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
 `
 
+export const Heading = styled.h3`
+  font-size: 1.5rem;
+`

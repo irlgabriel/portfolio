@@ -7,6 +7,7 @@ import { Navbar } from "./components"
 import { Home } from "./components"
 import { About } from "./components"
 import { Contact } from "./components"
+import { Footer } from "./components"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
+        <Footer />
       </MainContainer>
     </Router>
   );

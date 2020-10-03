@@ -12,6 +12,7 @@ import {
   Features,
   ProjectHeader,
   ProjectLink,
+  ProjectIcon,
 
 } from "./Project.components";
 export default function Project({
@@ -27,6 +28,8 @@ export default function Project({
   features,
   liveURL,
   codeURL,
+  projectIcon,
+  projectIconColor,
 }) {
   const [currentImage, setImage] = (img);
   return (
@@ -34,11 +37,12 @@ export default function Project({
       <InfoColumn>
         <TextWrapper>
           <ProjectHeader>
+            <ProjectIcon color={projectIconColor}>{projectIcon}</ProjectIcon>
             <TopLine>{projectTitle}</TopLine>
             <ProjectLink bgColor={bgColor} href={liveURL}>Live</ProjectLink>
             <ProjectLink bgColor={bgColor} href={codeURL}>Code</ProjectLink>
           </ProjectHeader>
-          <Heading>{smallDesc}</Heading>
+         <Heading>{smallDesc}</Heading>
           <Features>{features}</Features>
           <Heading>{headingContent}</Heading>
           <Subtitle>
@@ -49,7 +53,7 @@ export default function Project({
         </TextWrapper>
       </InfoColumn>
       <InfoColumn>
-        <ImageWrapper bgColor={bgColor}>
+        <ImageWrapper imageLeft={imageLeft} bgColor={bgColor}>
           <Image src={img} alt={alt} />
         </ImageWrapper>
       </InfoColumn>

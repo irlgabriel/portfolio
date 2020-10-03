@@ -6,22 +6,25 @@ export const ProjectContainer = styled.div`
   min-height: 90vh;
   display: flex;
   background-color: ${({bgColor}) => (bgColor)};
+  flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")}; 
   color: ${({textColor}) => (textColor)};
-  flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")};
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 960px) {
     flex-direction: column-reverse;
     justify-content: center;
   }
 `
 
 export const InfoColumn = styled.div`
+  
   margin-bottom: 15px;
   padding: 0 15px;
-  flex: 1;
-  flex-basis: 50%;
-  @media screen and (max-width: 768px) {
+  flex: 1; 
+  flex-basis: 50%; 
+  margin: 0 15px;
+  @media screen and (max-width: 960px) {
     display: flex;
     max-width: 100%;
     flex-basis: 100%;
@@ -31,7 +34,8 @@ export const InfoColumn = styled.div`
 
 export const ImageWrapper = styled.div`
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
-  width: 555px;
+  max-width: 555px;
+  min-width: 400px;
   display: flex;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
@@ -45,14 +49,14 @@ export const TextWrapper = styled.div`
   padding-top: 0;
   padding-bottom: 60px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     padding: 30px 0;
   }
 `
 
 export const Image = styled.img`
-  width: 100%;
-  max-height: 350px;
+  max-width: 555px;
+  min-width: 400px;
 `
 export const ProjectHeader = styled.section`
   display: flex;
@@ -107,4 +111,13 @@ export const Features = styled.div`
   justify-content: center;
   padding: 10px;
   border-radius: 5px;
+`
+
+export const ProjectIcon = styled.span`
+  margin-right: .75rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: ${({color}) => (color)};
+
 `

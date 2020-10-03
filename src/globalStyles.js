@@ -16,7 +16,6 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  background: lightgoldenrodyellow;
   z-index: 1;
   width: 100%;
   max-width: 1300px;

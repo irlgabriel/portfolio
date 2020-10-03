@@ -51,10 +51,10 @@ export default function Navbar() {
             <NavLink to="/">Projects</NavLink>
           </NavItem>
           <NavItem onClick={closeMobileMenu}>
-            <NavLink to="/">Contact</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </NavItem>
           <NavItem onClick={closeMobileMenu}>
-            <NavLink to="/">About</NavLink>
+            <NavLink to="/about">About</NavLink>
           </NavItem>
         </NavMenu>
       </Nav>

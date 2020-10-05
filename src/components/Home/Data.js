@@ -38,3 +38,21 @@ export const ProjectTwo = {
   imageLeft: true,
 
 }
+
+export const ProjectThree = {
+  bgColor: "white",
+  textColor: "#101522",
+  img: require("../../images/project3.png"),
+  alt: "Photo of CV Project",
+  projectTitle: "CV Generator",
+  headingContent: "Frameworks and Technologies",
+  subtitleContent: ["React.js", "Javascript", "Styled Components", "HTML5", "CSS3"],
+  smallDesc: "A simple app that helps you generate a CV!",
+  features: "Responsive Design, Create/Edit individual parts of your CV!",
+  liveURL: "https://github.com/irlgabriel/facebook-odin",
+  codeURL: "https://github.com/irlgabriel/facebook-odin",
+  projectIcon: <FaReact />,
+  projectIconColor: "lightblue",
+  imageLeft: false,
+
+}

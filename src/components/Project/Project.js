@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom"
 import {
   ProjectContainer,
   InfoColumn,
@@ -54,7 +55,7 @@ export default function Project({
       </InfoColumn>
       <InfoColumn>
         <ImageWrapper imageLeft={imageLeft} bgColor={bgColor}>
-          <Image src={img} alt={alt} />
+          <a href={img}><Image src={img} alt={alt} /></a>
         </ImageWrapper>
       </InfoColumn>
       

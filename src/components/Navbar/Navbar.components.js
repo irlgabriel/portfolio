@@ -6,6 +6,7 @@ export const NavContainer = styled.section`
   height: 80px;
   background: #101522;
   color: white;
+  border-bottom: 1px solid white;
 `
 
 export const Nav = styled.nav`

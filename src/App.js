@@ -5,6 +5,9 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 // Components
 import { Navbar } from "./components"
 import { Home } from "./components"
+import { About } from "./components"
+import { Contact } from "./components"
+import { Footer } from "./components"
 
 function App() {
   return (
@@ -12,7 +15,10 @@ function App() {
       <MainContainer>
         <GlobalStyle />
         <Navbar />
-        <Route to='/' exact component={Home}/>
+        <Route path='/' exact component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <Footer />
       </MainContainer>
     </Router>
   );

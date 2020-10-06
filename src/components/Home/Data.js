@@ -49,7 +49,7 @@ export const ProjectThree = {
   subtitleContent: ["React.js", "Javascript", "Styled Components", "HTML5", "CSS3"],
   smallDesc: "A simple app that helps you generate a CV!",
   features: "Responsive Design, Create/Edit individual parts of your CV!",
-  liveURL: "https://github.com/irlgabriel/facebook-odin",
+  liveURL: "https://whispering-bayou-85275.herokuapp.com/",
   codeURL: "https://github.com/irlgabriel/facebook-odin",
   projectIcon: <FaReact />,
   projectIconColor: "lightblue",

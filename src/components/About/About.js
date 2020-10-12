@@ -1,11 +1,13 @@
 import React from "react"
 import {
   Container,
+  ContainerFlex,
   Heading,
   InfoColumn,
   Content,
   Para,
-
+  Image,
+  ImageContainer,
 
 } from "./About.components"
 
@@ -13,42 +15,19 @@ export default function About() {
   return (
     <Container>
       <Heading>About me</Heading>
-      <InfoColumn>
-        <Heading>Bio</Heading>
-        <Content>
-          <Para>I am a 20 years old guy from Romania. I enjoy
-            coding and everything tech related, among other things
-            - reading, working out, hiking.
-          </Para>
-        </Content>
-      </InfoColumn>
-      <InfoColumn>
-        <Heading>Bio</Heading>
-        <Content>
-          <Para>I am a 20 years old guy from Romania. I enjoy
-            coding and everything tech related, among other things
-            - reading, working out, hiking.
-          </Para>
-        </Content>
-      </InfoColumn>
-      <InfoColumn>
-        <Heading>Bio</Heading>
-        <Content>
-          <Para>I am a 20 years old guy from Romania. I enjoy
-            coding and everything tech related, among other things
-            - reading, working out, hiking.
-          </Para>
-        </Content>
-      </InfoColumn>
-      <InfoColumn>
-        <Heading>Bio</Heading>
-        <Content>
-          <Para>I am a 20 years old guy from Romania. I enjoy
-            coding and everything tech related, among other things
-            - reading, working out, hiking.
-          </Para>
-        </Content>
-      </InfoColumn>
+      <ContainerFlex>
+        <ImageContainer>
+          <Image href="../../images/me.jpeg" />
+        </ImageContainer>
+        <InfoColumn>
+          <Content>
+            <Para>I am a 20 years old guy from Romania. I enjoy
+              coding and everything tech related. Other things I enjoy are
+              reading, working out and sightseeing.
+            </Para>
+          </Content>
+        </InfoColumn>
+      </ContainerFlex>
     </Container>
   )
 }

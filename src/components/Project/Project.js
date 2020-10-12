@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
 import {
   ProjectContainer,
   InfoColumn,
@@ -8,7 +7,6 @@ import {
   Image,
   TopLine,
   Heading,
-  Subtitle,
   SubtitleItem,
   Features,
   ProjectHeader,
@@ -32,7 +30,7 @@ export default function Project({
   projectIcon,
   projectIconColor,
 }) {
-  const [currentImage, setImage] = (img);
+  const [currentImage, setImage] = useState(img);
   return (
     <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
       <InfoColumn>
@@ -46,16 +44,14 @@ export default function Project({
          <Heading>{smallDesc}</Heading>
           <Features>{features}</Features>
           <Heading>{headingContent}</Heading>
-          <Subtitle>
           {
             subtitleContent.map(item => <SubtitleItem>{item}</SubtitleItem>)
           }
-          </Subtitle>
         </TextWrapper>
       </InfoColumn>
       <InfoColumn>
         <ImageWrapper imageLeft={imageLeft} bgColor={bgColor}>
-          <a href={img}><Image src={img} alt={alt} /></a>
+          <a href={currentImage}><Image src={currentImage} alt={alt} /></a>
         </ImageWrapper>
       </InfoColumn>
       

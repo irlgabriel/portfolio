@@ -33,6 +33,7 @@ export const InfoColumn = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  border-radius: 5px;  
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
   max-width: 555px;
   min-width: 400px;
@@ -55,6 +56,7 @@ export const TextWrapper = styled.div`
 `
 
 export const Image = styled.img`
+  border-radius: 5px;
   max-width: 555px;
   min-width: 400px;
 `

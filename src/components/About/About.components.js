@@ -11,13 +11,9 @@ export const Heading = styled.h1`
 `
 
 export const InfoColumn = styled.section`
-  margin-top: 1.5rem;
   margin-right: auto;
-  padding: 2rem .5rem;
-  max-width: 60%;
-  background: whitesmoke;
-  border-radius: 5px;
-
+  margin-left: 1rem;
+  max-width: 60%; 
   &:nth-child(odd) {
     margin-right: 0;
     margin-left: auto;
@@ -35,5 +31,28 @@ export const Content = styled.div`
 `
 
 export const Para = styled.p`
-  margin-top: .5rem;
+`
+
+export const ImageContainer = styled.div`
+  max-width: 555px;
+  min-width: 400px;
+`
+export const Image = styled.img`
+  max-width: 555px;
+  min-width: 400px;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+`
+
+export const ContainerFlex = styled.div`
+  display: flex;
+  justify-content: center;
+  background: whitesmoke;
+  border-radius: 5px;
+  padding: 1.3rem .5rem;
+
 `

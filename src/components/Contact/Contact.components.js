@@ -2,10 +2,15 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: auto;
 `
 
 export const Heading = styled.h1`
+
+`
+
+export const Paragraph = styled.p`
 
 `

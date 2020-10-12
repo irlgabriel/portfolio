@@ -1,5 +1,6 @@
 import React from "react"
 import { FaGithub, FaInstagramSquare, FaFacebookSquare } from "react-icons/fa"
+import { AiFillMail } from "react-icons/ai"
 import {
   MainContainer,
   ContactInfo,
@@ -33,6 +34,14 @@ export default function Footer() {
           <TopLine>
             <ContactHeader>Facebook &nbsp;</ContactHeader>
             <ContactIcon><FaFacebookSquare /></ContactIcon>
+          </TopLine> 
+        </ContactLink>
+      </ContactInfo>
+      <ContactInfo>
+      <ContactLink href="mailto: radu.gabriel131@gmail.com">
+          <TopLine>
+            <ContactHeader>Mail &nbsp;</ContactHeader>
+            <ContactIcon><AiFillMail /></ContactIcon>
           </TopLine> 
         </ContactLink>
       </ContactInfo>

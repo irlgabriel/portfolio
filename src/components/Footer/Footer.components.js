@@ -27,6 +27,11 @@ export const TopLine = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: 1.5rem;
+  padding: .5rem;
+  border: 1px solid lightsalmon;
+  &:hover {
+    color: lightsalmon;
+  }
 `
 
 export const ContactHeader = styled.h3`

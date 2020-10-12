@@ -17,7 +17,7 @@ export default function About() {
       <Heading>About me</Heading>
       <ContainerFlex>
         <ImageContainer>
-          <Image href="../../images/me.jpeg" />
+          <Image href={require("../../images/me.jpeg")} />
         </ImageContainer>
         <InfoColumn>
           <Content>

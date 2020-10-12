@@ -4,12 +4,21 @@ export const ProjectContainer = styled.div`
   padding-top: 15px;
   width: 100%;
   min-height: 90vh;
+  padding: .5rem;
   display: flex;
   background-color: ${({bgColor}) => (bgColor)};
   flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")}; 
   color: ${({textColor}) => (textColor)};
   align-items: center;
 
+  &:nth-child(odd) {
+    &:after{
+      display: block;
+      height: 100px;
+      background: yellow;
+      content: "";
+    }
+  }
 
   @media screen and (max-width: 960px) {
     flex-direction: column-reverse;
@@ -71,17 +80,18 @@ export const TopLine = styled.h3`
 `
 
 export const ProjectLink = styled.a`
+  font-weight: bold;
   margin-left: 15px;
   padding: 5px 1.5rem;
   border-radius: 5px;
   text-decoration: none;
-  color: ${({bgColor}) => (bgColor !== "#101522" ? "white" : "#101522")};
-  background: ${({bgColor}) => (bgColor === "#101522" ? "white" : "#101522")};
+  color: ${({bgColor}) => (bgColor !== "#101522" ? "white" : "lightsalmon")};
+  background: ${({bgColor}) => (bgColor === "#101522" ? "white" : "lightsalmon")};
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: ${({bgColor}) => (bgColor === "#101522" ? "white" : "#101522")};
-    background: lightcoral;
+    color: ${({bgColor}) => (bgColor !== "#101522" ? "white" : "lightsalmon")};
+    background: ${({bgColor}) => (bgColor === "#101522" ? "white" : "#101522")};
   }
 `
 
@@ -104,7 +114,8 @@ export const SubtitleItem = styled.div`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background: lightcoral;
+    background: lightsalmon;
+    transform: scale(1.05); 
   }
 `
 

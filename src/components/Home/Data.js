@@ -24,7 +24,7 @@ export const ProjectOne = {
 export const ProjectTwo = {
   bgColor: "#101522",
   textColor: "white",
-  img: require("../../images/weather.png"),
+  img: require("../../images/weather2.png"),
   alt: "Photo of weather project",
   projectTitle: "Weather App",
   headingContent: "Frameworks and Technologies",
@@ -86,6 +86,6 @@ export const ProjectFive = {
   liveURL: "https://irlgabriel.github.io/memory-card-game/#/",
   codeURL: "https://github.com/irlgabriel/memory-card-game",
   projectIcon: <FaReact />,
-  projectIconColor: "lightblue",
-  imageLeft: true,
+  projectIconColor: "lightskyblue",
+  imageLeft: false,
 }

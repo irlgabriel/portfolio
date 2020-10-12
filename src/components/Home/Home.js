@@ -5,7 +5,7 @@ import {
 import {
   Intro,
   Heading,
-  
+  ProjectsDiv
 } from "./Home.components"
 import { ProjectOne, ProjectTwo, ProjectThree, ProjectFour, ProjectFive } from "./Data";
 
@@ -13,7 +13,7 @@ export default function Home() {
   return(
     <>
       <Intro>
-        <Heading>Some of my projects</Heading>
+        <Heading>Projects Overview</Heading>
       </Intro>
       <Project {...ProjectOne} />
       <Project {...ProjectTwo} />

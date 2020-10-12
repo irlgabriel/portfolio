@@ -6,7 +6,7 @@ export const NavContainer = styled.section`
   height: 80px;
   background: #101522;
   color: white;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid lightsalmon;
 `
 
 export const Nav = styled.nav`
@@ -37,11 +37,14 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   margin: 0 10px;
-  
+  padding: .5rem;
+  border: 1px solid lightsalmon;
+
   @media screen and (max-width: 960px) {
+    border: none;
+    border-bottom: 1px solid lightsalmon;
     padding: 30px;
     width: 100%;
-    border-bottom: 1px solid lightgray;
   }
 `
 
@@ -52,7 +55,7 @@ export const NavLink = styled(Link)`
   font-weight: bold;
   transition: all 0.5 ease;
   &:hover {
-    color: lightcoral;
+    color: lightsalmon;
   }
 `
 

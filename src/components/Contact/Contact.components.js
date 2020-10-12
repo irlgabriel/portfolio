@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const Heading = styled.h1`
-
+  margin-top: 20px;
 `
 
 export const Paragraph = styled.p`

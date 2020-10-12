@@ -7,7 +7,7 @@ import {
   Heading,
   
 } from "./Home.components"
-import { ProjectOne, ProjectTwo, ProjectThree } from "./Data";
+import { ProjectOne, ProjectTwo, ProjectThree, ProjectFour, ProjectFive } from "./Data";
 
 export default function Home() {
   return(
@@ -18,6 +18,8 @@ export default function Home() {
       <Project {...ProjectOne} />
       <Project {...ProjectTwo} />
       <Project {...ProjectThree} />
+      <Project {...ProjectFour} />
+      <Project {...ProjectFive} />
     </>
   )
 }

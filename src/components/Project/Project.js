@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
   ProjectContainer,
   InfoColumn,
@@ -12,12 +14,13 @@ import {
   ProjectHeader,
   ProjectLink,
   ProjectIcon,
+  SliderButton,
 
 } from "./Project.components";
 export default function Project({
   bgColor,
   textColor,
-  img,
+  images,
   alt,
   projectTitle,
   headingContent,
@@ -29,8 +32,9 @@ export default function Project({
   codeURL,
   projectIcon,
   projectIconColor,
+  slides,
 }) {
-  const [currentImage, setImage] = useState(img);
+  let i = -1;
   return (
     <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
       <InfoColumn>
@@ -50,9 +54,30 @@ export default function Project({
         </TextWrapper>
       </InfoColumn>
       <InfoColumn>
-        <ImageWrapper imageLeft={imageLeft} bgColor={bgColor}>
-          <a href={currentImage}><Image src={currentImage} alt={alt} /></a>
-        </ImageWrapper>
+        <CarouselProvider
+          naturalSlideWidth={500}
+          naturalSlideHeight={375}
+          totalSlides={slides}
+        >
+          <Slider>
+            {
+              images.map(img => 
+                <Slide index={i ++}>
+                  <ImageWrapper>
+                    <Image src={img} />
+                  </ImageWrapper>
+                </Slide> 
+              )
+            }
+          </Slider >
+          <SliderButton>
+            <ButtonBack>Back</ButtonBack>
+          </SliderButton>
+          <SliderButton>
+            <ButtonNext>Next</ButtonNext>
+          </SliderButton>
+        
+        </CarouselProvider>
       </InfoColumn>
       
     </ProjectContainer>

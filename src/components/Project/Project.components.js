@@ -11,7 +11,6 @@ export const ProjectContainer = styled.div`
   color: ${({textColor}) => (textColor)};
   align-items: center;
 
-
   @media screen and (max-width: 960px) {
     flex-direction: column-reverse;
     justify-content: center;
@@ -19,16 +18,15 @@ export const ProjectContainer = styled.div`
 `
 
 export const InfoColumn = styled.div`
-  
   margin-bottom: 15px;
   padding: 0 15px;
-  flex: 1; 
-  flex-basis: 50%; 
   margin: 0 15px;
+  width: 550px;
+
   @media screen and (max-width: 960px) {
     display: flex;
     max-width: 100%;
-    flex-basis: 100%;
+    flex-direction: column;
     justify-content: center;
   }
 `;
@@ -36,14 +34,11 @@ export const InfoColumn = styled.div`
 export const ImageWrapper = styled.div`
   border-radius: 5px;  
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
-  max-width: 555px;
-  min-width: 400px;
+  width: 500px;
   display: flex;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  &:hover {
-    transform: scale(1.02);
-  }
+
 `
 
 export const TextWrapper = styled.div`
@@ -58,8 +53,9 @@ export const TextWrapper = styled.div`
 
 export const Image = styled.img`
   border-radius: 5px;
-  max-width: 555px;
-  min-width: 400px;
+  width: 500px;
+  height: auto;
+  object-fit: cover;
 `
 export const ProjectHeader = styled.section`
   display: flex;
@@ -124,5 +120,10 @@ export const ProjectIcon = styled.span`
   align-items: center;
   font-size: 1.5rem;
   color: ${({color}) => (color)};
+`
 
+export const SliderButton = styled.div`
+  z-index: -1;
+  border: 1px solid red;
+  display: inline-block;
 `

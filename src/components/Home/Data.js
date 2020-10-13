@@ -6,11 +6,16 @@ import { DiRuby } from "react-icons/di"
 export const ProjectOne = {
   bgColor: "white",
   textColor: "#101522",
-  img: require("../../images/facebook.png"),
+  images: [
+    require("../../images/facebook1.png"),
+    require("../../images/facebook2.png"),
+    require("../../images/facebook3.png"),
+    require("../../images/facebook4.png"),
+    require("../../images/facebook5.png")],
   alt: "Photo of facebook project",
   projectTitle: "Facebook",
   headingContent: "Frameworks and Technologies",
-  subtitleContent: ["Ruby on Rails", "Ruby", "Javascript", "HTML5", "CSS3", "Amazon Web Storage", "Heroku"],
+  subtitleContent: ["Ruby on Rails", "Ruby", "Javascript", "HTML5", "CSS3", "PostgreSQL", "Amazon Web Storage", "Heroku"],
   smallDesc: "A facebook clone using ruby on rails.",
   features: "Responsive Design, Facebook oAuth, Email Confirmation, Posts, Comments, Replies, Post/Comment Likes, Friend Requests and more. Try it out right now.",
   liveURL: "https://whispering-bayou-85275.herokuapp.com/",
@@ -18,13 +23,18 @@ export const ProjectOne = {
   projectIcon: <DiRuby />,
   projectIconColor: "red",
   imageLeft: false,
+  slides: 5,
+  key: 1,
 
 }
 
 export const ProjectTwo = {
   bgColor: "#101522",
   textColor: "white",
-  img: require("../../images/weather2.png"),
+  images: [
+    require("../../images/weather2.png"),
+    require("../../images/weather3.png"),
+    require("../../images/weather4.png")],
   alt: "Photo of weather project",
   projectTitle: "Weather App",
   headingContent: "Frameworks and Technologies",
@@ -36,12 +46,13 @@ export const ProjectTwo = {
   projectIcon: <FaReact />,
   projectIconColor: "lightblue",
   imageLeft: true,
+  key: 2,
 }
 
 export const ProjectThree = {
   bgColor: "white",
   textColor: "#101522",
-  img: require("../../images/project3.png"),
+  images: [require("../../images/project3.png")],
   alt: "Photo of CV Project",
   projectTitle: "CV Generator",
   headingContent: "Frameworks and Technologies",
@@ -53,13 +64,14 @@ export const ProjectThree = {
   projectIcon: <FaReact />,
   projectIconColor: "lightblue",
   imageLeft: false,
+  key: 3,
 
 }
 
 export const ProjectFour = {
   bgColor: "#101522",
   textColor: "white",
-  img: require("../../images/library3.png"),
+  images: [require("../../images/library3.png")],
   alt: "Photo of library project",
   projectTitle: "Library",
   headingContent: "Frameworks and Technologies",
@@ -71,14 +83,15 @@ export const ProjectFour = {
   projectIcon: <FaReact />,
   projectIconColor: "lightblue",
   imageLeft: true,
+  key: 4,
 }
 
 export const ProjectFive = {
   bgColor: "white",
   textColor: "#101522",
-  img: require("../../images/memory-game.png"),
+  images: [require("../../images/memory-game.png")],
   alt: "Photo of memory card game project",
-  projectTitle: "Memory-card-game",
+  projectTitle: "Netflix Cards",
   headingContent: "Frameworks and Technologies",
   subtitleContent: ["React.js", "Javascript", "Styled Components", "HTML5", "CSS3"],
   smallDesc: "Small app to practice your memory (and my ReactJS effect and state hooks)",
@@ -88,4 +101,5 @@ export const ProjectFive = {
   projectIcon: <FaReact />,
   projectIconColor: "lightskyblue",
   imageLeft: false,
+  key: 5,
 }

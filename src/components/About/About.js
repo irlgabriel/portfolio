@@ -6,7 +6,6 @@ import {
   InfoColumn,
   Content,
   Para,
-  Image,
   ImageContainer,
 
 } from "./About.components"
@@ -16,9 +15,7 @@ export default function About() {
     <Container>
       <Heading>About me</Heading>
       <ContainerFlex>
-        <ImageContainer>
-          <Image href={require("../../images/me.jpeg")} />
-        </ImageContainer>
+        <ImageContainer src={require('../../images/me.jpeg')}></ImageContainer>
         <InfoColumn>
           <Content>
             <Para>I am a 20 years old guy from Romania. I enjoy

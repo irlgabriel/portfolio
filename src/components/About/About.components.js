@@ -31,17 +31,16 @@ export const Content = styled.div`
 `
 
 export const Para = styled.p`
+  font-size: 1.2rem;
 `
 
 export const ImageContainer = styled.div`
-  max-width: 555px;
-  min-width: 400px;
-`
-export const Image = styled.img`
-  max-width: 555px;
-  min-width: 400px;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
+  background-image: url(${({src}) => (src)});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px;
+  height: 300px;
 
   &:hover {
     transform: scale(1.02);

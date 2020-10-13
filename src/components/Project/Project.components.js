@@ -35,9 +35,7 @@ export const ImageWrapper = styled.div`
   border-radius: 5px;  
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
   width: 500px;
-  display: flex;
   transition: all 0.3s ease-in-out;
-  overflow: hidden;
 
 `
 
@@ -53,9 +51,8 @@ export const TextWrapper = styled.div`
 
 export const Image = styled.img`
   border-radius: 5px;
-  width: 500px;
+  width: 100%;
   height: auto;
-  object-fit: cover;
 `
 export const ProjectHeader = styled.section`
   display: flex;
@@ -123,7 +120,12 @@ export const ProjectIcon = styled.span`
 `
 
 export const SliderButton = styled.div`
+
   z-index: -1;
   border: 1px solid red;
   display: inline-block;
+`
+
+export const CarouselDiv = styled.div`
+
 `

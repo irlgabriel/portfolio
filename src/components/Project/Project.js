@@ -1,12 +1,10 @@
 import React from "react";
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
   ProjectContainer,
   InfoColumn,
   TextWrapper,
-  ImageWrapper,
-  Image,
   TopLine,
   Heading,
   SubtitleItem,
@@ -14,7 +12,7 @@ import {
   ProjectHeader,
   ProjectLink,
   ProjectIcon,
-  SliderButton,
+  CarouselDiv,
 
 } from "./Project.components";
 export default function Project({
@@ -33,8 +31,10 @@ export default function Project({
   projectIcon,
   projectIconColor,
   slides,
+  id,
+  idx
+  
 }) {
-  let i = -1;
   return (
     <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
       <InfoColumn>
@@ -53,32 +53,26 @@ export default function Project({
           }
         </TextWrapper>
       </InfoColumn>
-      <InfoColumn>
+      <CarouselDiv>
         <CarouselProvider
-          naturalSlideWidth={500}
-          naturalSlideHeight={375}
+          naturalSlideWidth={350}
+          naturalSlideHeight={350}
           totalSlides={slides}
         >
-          <Slider>
+          <Slider className="slider">
             {
-              images.map(img => 
-                <Slide index={i ++}>
-                  <ImageWrapper>
-                    <Image src={img} />
-                  </ImageWrapper>
+              images.map(obj => 
+                <Slide index={obj.idx}>
+                  <Image src={obj.src} />
                 </Slide> 
               )
             }
           </Slider >
-          <SliderButton>
-            <ButtonBack>Back</ButtonBack>
-          </SliderButton>
-          <SliderButton>
-            <ButtonNext>Next</ButtonNext>
-          </SliderButton>
-        
+          <ButtonBack className="slider-button">Back</ButtonBack>
+          <ButtonNext className="slider-button">Next</ButtonNext>
+      
         </CarouselProvider>
-      </InfoColumn>
+      </CarouselDiv>
       
     </ProjectContainer>
   )

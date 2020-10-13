@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "react-reveal";
+import { Zoom } from "react-reveal";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import {
@@ -38,7 +38,7 @@ export default function Project({
   
 }) {
   return (
-    <Fade>
+    <Zoom>
       <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
         <InfoColumn>
           <TextWrapper>
@@ -62,6 +62,6 @@ export default function Project({
             </CarouselComponent>
         </InfoColumn>
       </ProjectContainer>
-    </Fade>
+    </Zoom>
   )
 }

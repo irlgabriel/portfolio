@@ -32,7 +32,6 @@ export const InfoColumn = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  border-radius: 5px;  
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
   width: 500px;
   transition: all 0.3s ease-in-out;
@@ -50,7 +49,6 @@ export const TextWrapper = styled.div`
 `
 
 export const Image = styled.img`
-  border-radius: 5px;
   width: 100%;
   height: auto;
 `
@@ -117,15 +115,4 @@ export const ProjectIcon = styled.span`
   align-items: center;
   font-size: 1.5rem;
   color: ${({color}) => (color)};
-`
-
-export const SliderButton = styled.div`
-
-  z-index: -1;
-  border: 1px solid red;
-  display: inline-block;
-`
-
-export const CarouselDiv = styled.div`
-
 `

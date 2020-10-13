@@ -1,6 +1,7 @@
 import React from "react";
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 import {
   ProjectContainer,
   InfoColumn,
@@ -12,7 +13,8 @@ import {
   ProjectHeader,
   ProjectLink,
   ProjectIcon,
-  CarouselDiv,
+  Image,
+  ImageWrapper,
 
 } from "./Project.components";
 export default function Project({
@@ -53,27 +55,11 @@ export default function Project({
           }
         </TextWrapper>
       </InfoColumn>
-      <CarouselDiv>
-        <CarouselProvider
-          naturalSlideWidth={350}
-          naturalSlideHeight={350}
-          totalSlides={slides}
-        >
-          <Slider className="slider">
-            {
-              images.map(obj => 
-                <Slide index={obj.idx}>
-                  <Image src={obj.src} />
-                </Slide> 
-              )
-            }
-          </Slider >
-          <ButtonBack className="slider-button">Back</ButtonBack>
-          <ButtonNext className="slider-button">Next</ButtonNext>
-      
-        </CarouselProvider>
-      </CarouselDiv>
-      
+      <InfoColumn>
+        <Carousel showArrows={true}>
+          {images.map(obj => <ImageWrapper><Image src={obj.src} /><p className="legend">Image {obj.idx + 1}</p></ImageWrapper>)}
+        </Carousel>
+      </InfoColumn>
     </ProjectContainer>
   )
 }

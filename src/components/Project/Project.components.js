@@ -6,6 +6,7 @@ export const ProjectContainer = styled.div`
   min-height: 50vh;
   padding: 2.5rem 1rem;
   display: flex;
+  justify-content: center;  
   background-color: ${({bgColor}) => (bgColor)};
   flex-direction: ${({imageLeft}) => (!imageLeft ? "row" : "row-reverse")}; 
   color: ${({textColor}) => (textColor)};
@@ -23,6 +24,14 @@ export const InfoColumn = styled.div`
   margin: 0 15px;
   width: 550px;
 
+  &:first-of-type {
+    flex-basis: 40%;
+  }
+
+  &:last-of-type {
+    flex-basis: 60%;
+  }
+
   @media screen and (max-width: 960px) {
     display: flex;
     max-width: 100%;
@@ -32,9 +41,7 @@ export const InfoColumn = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
   height: 400px;
-  min-width: 500px;
   transition: all 0.3s ease-in-out;
 
 `

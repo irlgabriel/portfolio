@@ -56,7 +56,7 @@ export default function Project({
         </TextWrapper>
       </InfoColumn>
       <InfoColumn>
-        <Carousel showArrows={true}>
+        <Carousel showThumbs={false} showArrows={true} className="carousel" bgColor={bgColor}>
           {images.map(obj => <ImageWrapper><Image src={obj.src} /><p className="legend">Image {obj.idx + 1}</p></ImageWrapper>)}
         </Carousel>
       </InfoColumn>

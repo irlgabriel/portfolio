@@ -33,9 +33,13 @@ export const InfoColumn = styled.div`
 
 export const ImageWrapper = styled.div`
   box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 10px" : "0 0 10px white")};
-  width: 500px;
+  height: 400px;
+  min-width: 500px;
   transition: all 0.3s ease-in-out;
 
+`
+export const Image = styled.img`
+  height: 100%;
 `
 
 export const TextWrapper = styled.div`
@@ -48,10 +52,6 @@ export const TextWrapper = styled.div`
   }
 `
 
-export const Image = styled.img`
-  width: 100%;
-  height: auto;
-`
 export const ProjectHeader = styled.section`
   display: flex;
   justify-content: flex-start;

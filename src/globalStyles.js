@@ -8,9 +8,6 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Roboto', sans-serif;
 }
 
-.carousel {
-  box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 5px" : "0 0 5px white")};
-}
 `
 
 export const MainContainer = styled.div`

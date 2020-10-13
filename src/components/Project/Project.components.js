@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Carousel } from "react-responsive-carousel";
 
 export const ProjectContainer = styled.div`
   padding-top: 15px;
@@ -122,4 +123,8 @@ export const ProjectIcon = styled.span`
   align-items: center;
   font-size: 1.5rem;
   color: ${({color}) => (color)};
+`
+
+export const CarouselComponent = styled(Carousel)`
+  box-shadow: ${({bgColor}) => (bgColor === "white" ? "0 0 5px" : "0 0 5px white")};
 `

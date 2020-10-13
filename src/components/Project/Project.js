@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import { Fade } from "react-reveal";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import {
@@ -15,7 +15,7 @@ import {
   ProjectIcon,
   Image,
   ImageWrapper,
-
+  CarouselComponent,
 } from "./Project.components";
 export default function Project({
   bgColor,
@@ -38,28 +38,30 @@ export default function Project({
   
 }) {
   return (
-    <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
-      <InfoColumn>
-        <TextWrapper>
-          <ProjectHeader>
-            <ProjectIcon color={projectIconColor}>{projectIcon}</ProjectIcon>
-            <TopLine>{projectTitle}</TopLine>
-            <ProjectLink bgColor={bgColor} href={liveURL}>Live</ProjectLink>
-            <ProjectLink bgColor={bgColor} href={codeURL}>Code</ProjectLink>
-          </ProjectHeader>
-         <Heading>{smallDesc}</Heading>
-          <Features>{features}</Features>
-          <Heading>{headingContent}</Heading>
-          {
-            subtitleContent.map(item => <SubtitleItem>{item}</SubtitleItem>)
-          }
-        </TextWrapper>
-      </InfoColumn>
-      <InfoColumn>
-        <Carousel showThumbs={false} showArrows={true} className="carousel" bgColor={bgColor}>
-          {images.map(obj => <ImageWrapper><Image src={obj.src} /><p className="legend">Image {obj.idx + 1}</p></ImageWrapper>)}
-        </Carousel>
-      </InfoColumn>
-    </ProjectContainer>
+    <Fade>
+      <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
+        <InfoColumn>
+          <TextWrapper>
+            <ProjectHeader>
+              <ProjectIcon color={projectIconColor}>{projectIcon}</ProjectIcon>
+              <TopLine>{projectTitle}</TopLine>
+              <ProjectLink bgColor={bgColor} href={liveURL}>Live</ProjectLink>
+              <ProjectLink bgColor={bgColor} href={codeURL}>Code</ProjectLink>
+            </ProjectHeader>
+          <Heading>{smallDesc}</Heading>
+            <Features>{features}</Features>
+            <Heading>{headingContent}</Heading>
+            {
+              subtitleContent.map(item => <SubtitleItem>{item}</SubtitleItem>)
+            }
+          </TextWrapper>
+        </InfoColumn>
+        <InfoColumn>
+            <CarouselComponent showThumbs={false} showArrows={true} className="carousel" bgColor={bgColor}>
+              {images.map(obj => <ImageWrapper><Image src={obj.src} /><p className="legend">Image {obj.idx + 1}</p></ImageWrapper>)}
+            </CarouselComponent>
+        </InfoColumn>
+      </ProjectContainer>
+    </Fade>
   )
 }

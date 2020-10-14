@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31ee2bfe38bc01ed34ba6087fb6f6d2c",
+    "revision": "bcafb718f4229ce2a532d384d1fa6128",
     "url": "/portfolio/index.html"
   },
   {
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.d05b7f02.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ff84b07d9cca4c67d3e7",
-    "url": "/portfolio/static/js/main.6e47bc5c.chunk.js"
+    "revision": "cb07cd61f7e845326941",
+    "url": "/portfolio/static/js/main.33125810.chunk.js"
   },
   {
     "revision": "f89f2099577e680dc7b6",
     "url": "/portfolio/static/js/runtime-main.70964fd7.js"
-  },
-  {
-    "revision": "156877dbb9600b65616e40f9012303f5",
-    "url": "/portfolio/static/media/facebook1.156877db.png"
   },
   {
     "revision": "847e2c3d7c181c669ed8b63cd89f19f2",
@@ -42,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "faa26ef607cb79e81e368dadc9fb25e9",
     "url": "/portfolio/static/media/facebook5.faa26ef6.png"
+  },
+  {
+    "revision": "59adcf10a3bfa662c7519a9d6d146110",
+    "url": "/portfolio/static/media/facebook6.59adcf10.png"
   },
   {
     "revision": "93f5074b016d45f17a5929536d5ce394",

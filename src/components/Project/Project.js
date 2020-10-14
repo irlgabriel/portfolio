@@ -34,34 +34,51 @@ export default function Project({
   projectIconColor,
   slides,
   id,
-  idx
-  
+  idx,
 }) {
   return (
     <Zoom>
-      <ProjectContainer imageLeft={imageLeft} bgColor={bgColor} textColor={textColor}>
+      <ProjectContainer
+        imageLeft={imageLeft}
+        bgColor={bgColor}
+        textColor={textColor}
+      >
         <InfoColumn>
           <TextWrapper>
             <ProjectHeader>
               <ProjectIcon color={projectIconColor}>{projectIcon}</ProjectIcon>
               <TopLine>{projectTitle}</TopLine>
-              <ProjectLink bgColor={bgColor} href={liveURL}>Live</ProjectLink>
-              <ProjectLink bgColor={bgColor} href={codeURL}>Code</ProjectLink>
+              <ProjectLink bgColor={bgColor} href={liveURL}>
+                Live
+              </ProjectLink>
+              <ProjectLink bgColor={bgColor} href={codeURL}>
+                Code
+              </ProjectLink>
             </ProjectHeader>
-          <Heading>{smallDesc}</Heading>
+            <Heading>{smallDesc}</Heading>
             <Features>{features}</Features>
             <Heading>{headingContent}</Heading>
-            {
-              subtitleContent.map(item => <SubtitleItem>{item}</SubtitleItem>)
-            }
+            {subtitleContent.map((item) => (
+              <SubtitleItem>{item}</SubtitleItem>
+            ))}
           </TextWrapper>
         </InfoColumn>
         <InfoColumn>
-            <CarouselComponent showThumbs={false} showArrows={true} className="carousel" bgColor={bgColor}>
-              {images.map(obj => <ImageWrapper><Image src={obj.src} /><p className="legend">Image {obj.idx + 1}</p></ImageWrapper>)}
-            </CarouselComponent>
+          <CarouselComponent
+            showThumbs={false}
+            showArrows={true}
+            className="carousel"
+            bgColor={bgColor}
+          >
+            {images.map((obj) => (
+              <ImageWrapper>
+                <Image src={obj.src} />
+                <p className="legend">Image {obj.idx + 1}</p>
+              </ImageWrapper>
+            ))}
+          </CarouselComponent>
         </InfoColumn>
       </ProjectContainer>
     </Zoom>
-  )
+  );
 }

@@ -1,13 +1,13 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { FaFirstOrderAlt } from 'react-icons/fa'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { FaFirstOrderAlt } from "react-icons/fa";
 
 export const NavContainer = styled.section`
   height: 80px;
   background: #101522;
   color: white;
   border-bottom: 1px solid lightsalmon;
-`
+`;
 
 export const Nav = styled.nav`
   height: 80px;
@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   justify-content: flex-start;
   margin-left: 60px;
   align-items: center;
-`
+`;
 export const NavMenu = styled.ul`
   display: flex;
   list-style: none;
@@ -29,16 +29,16 @@ export const NavMenu = styled.ul`
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({click}) => (click ? 0 : "-100%")};
+    left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
     background: #101522;
   }
-`
+`;
 
 export const NavItem = styled.li`
   margin: 0 10px;
-  padding: .5rem;
+  padding: 0.5rem;
 
   @media screen and (max-width: 960px) {
     border: none;
@@ -46,7 +46,7 @@ export const NavItem = styled.li`
     padding: 30px;
     width: 100%;
   }
-`
+`;
 
 export const NavLink = styled(Link)`
   text-decoration: none;
@@ -57,7 +57,7 @@ export const NavLink = styled(Link)`
   &:hover {
     color: lightsalmon;
   }
-`
+`;
 
 export const MobileMenu = styled.div`
   display: none;
@@ -79,8 +79,8 @@ export const NavLogo = styled.div`
   left: 20px;
   display: flex;
   align-items: center;
-`
+`;
 
 export const NavBrand = styled(FaFirstOrderAlt)`
   transform: scale(1.3);
-`
+`;

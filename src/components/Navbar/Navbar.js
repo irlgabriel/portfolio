@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import {
   NavContainer,
@@ -8,8 +8,8 @@ import {
   NavLink,
   MobileMenu,
   NavLogo,
-  NavBrand
-} from "./Navbar.components"
+  NavBrand,
+} from "./Navbar.components";
 
 export default function Navbar() {
   const [mobile, setMobile] = useState(true);
@@ -26,15 +26,15 @@ export default function Navbar() {
 
   const toggleClick = () => {
     setClick(!click);
-  }
+  };
 
   const closeMobileMenu = () => {
     setClick(false);
-  }
+  };
 
   window.addEventListener("resize", showButton);
 
-  return(
+  return (
     <NavContainer>
       <Nav>
         <NavLogo>
@@ -42,11 +42,11 @@ export default function Navbar() {
             <NavBrand />
           </NavLink>
         </NavLogo>
-        {mobile && 
+        {mobile && (
           <MobileMenu onClick={toggleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </MobileMenu>
-        }
+        )}
         <NavMenu click={click}>
           <NavItem onClick={closeMobileMenu}>
             <NavLink to="/">Projects</NavLink>
@@ -60,5 +60,5 @@ export default function Navbar() {
         </NavMenu>
       </Nav>
     </NavContainer>
-  )
+  );
 }

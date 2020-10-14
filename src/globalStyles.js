@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Roboto', sans-serif;
 }
 
-`
+`;
 
 export const MainContainer = styled.div`
   min-height: 100vh;
@@ -21,6 +21,6 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-`
+`;
 
 export default GlobalStyle;

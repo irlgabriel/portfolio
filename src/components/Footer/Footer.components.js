@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const MainContainer = styled.section`
-  padding: .75rem;
+  padding: 0.75rem;
   border-top: 1px solid white;
   color: white;
   min-height: 100px;
@@ -11,37 +11,32 @@ export const MainContainer = styled.section`
   justify-content: space-around;
   align-items: center;
 
-  @media screen and (max-width:960px) {
+  @media screen and (max-width: 960px) {
     flex-direction: column;
   }
-`
+`;
 
 export const ContactInfo = styled.div`
- 
   @media screen and (max-width: 960px) {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
-`
+`;
 export const TopLine = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-size: 1.5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   &:hover {
     color: lightsalmon;
   }
-`
+`;
 
-export const ContactHeader = styled.h3`
+export const ContactHeader = styled.h3``;
 
-`
-
-export const ContactIcon = styled.span`
-
-`
+export const ContactIcon = styled.span``;
 
 export const ContactLink = styled.a`
   text-decoration: none;
   color: whitesmoke;
-`
+`;

@@ -11,18 +11,11 @@ export const Heading = styled.h1`
 `
 
 export const InfoColumn = styled.section`
-  margin-right: auto;
   margin-left: 1rem;
-  max-width: 60%; 
+  max-width: 40%; 
   &:nth-child(odd) {
     margin-right: 0;
     margin-left: auto;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin: 1.5rem 0 0 0;
-    max-width: 100%;
-
   }
 `
 
@@ -49,7 +42,7 @@ export const ImageContainer = styled.div`
 
 export const ContainerFlex = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   background: whitesmoke;
   border-radius: 5px;
   padding: 1.3rem .5rem;

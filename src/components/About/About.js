@@ -18,13 +18,13 @@ export default function About() {
       <Heading>About me</Heading>
       <ContainerFlex>
         <ImageContainer src={require('../../images/me.jpeg')}></ImageContainer>
-          <InfoColumn>
-            <Content>
-              <Para>I am a 20 years old guy from Romania. I enjoy
-                coding and everything tech related. Other things I enjoy are
-                reading, working out and sightseeing.
-              </Para>
-            </Content>
+        <InfoColumn>
+          <Content>
+            <Para>I am a 20 years old guy from Romania. I enjoy
+              coding and everything tech related. Other things I enjoy are
+              reading, working out and sightseeing.
+            </Para>
+          </Content>
         </InfoColumn>
       </ContainerFlex>
      </Zoom>

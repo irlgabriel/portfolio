@@ -7,7 +7,7 @@ export const projects = [
     bgColor: "white",
     textColor: "#101522",
     images: [
-      { src: require("../../images/facebook1.png"), idx: 0 },
+      { src: require("../../images/facebook6.png"), idx: 0 },
       { src: require("../../images/facebook2.png"), idx: 1 },
       { src: require("../../images/facebook3.png"), idx: 2 },
       { src: require("../../images/facebook4.png"), idx: 3 },

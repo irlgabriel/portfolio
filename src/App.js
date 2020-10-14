@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GlobalStyle, { MainContainer } from './globalStyles'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ function App() {
       <MainContainer>
         <GlobalStyle />
         <Navbar />
-        <Route path='/' exact component={Home} />
+        <Route path='/' exact component={Home}/>
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
         <Footer />

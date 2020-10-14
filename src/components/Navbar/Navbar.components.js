@@ -12,7 +12,8 @@ export const NavContainer = styled.section`
 export const Nav = styled.nav`
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 60px;
   align-items: center;
 `
 export const NavMenu = styled.ul`
@@ -38,7 +39,6 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   margin: 0 10px;
   padding: .5rem;
-  border: 1px solid lightsalmon;
 
   @media screen and (max-width: 960px) {
     border: none;

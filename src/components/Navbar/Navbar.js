@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import {FaTimes, FaBars} from "react-icons/fa";
+import { FaTimes, FaBars } from "react-icons/fa";
 import {
   NavContainer,
   Nav,
@@ -14,6 +14,7 @@ import {
 export default function Navbar() {
   const [mobile, setMobile] = useState(true);
   const [click, setClick] = useState(false);
+  const [currentPage, setPage] = useState("Home");
 
   const showButton = () => {
     if (window.innerWidth <= 960) {

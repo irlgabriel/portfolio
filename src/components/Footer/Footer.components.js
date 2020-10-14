@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const MainContainer = styled.section`
-  padding: 1.5rem;
+  padding: .75rem;
   border-top: 1px solid white;
   color: white;
   min-height: 100px;
@@ -19,7 +19,7 @@ export const MainContainer = styled.section`
 export const ContactInfo = styled.div`
  
   @media screen and (max-width: 960px) {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
 `
 export const TopLine = styled.div`
@@ -28,7 +28,6 @@ export const TopLine = styled.div`
   justify-content: flex-start;
   font-size: 1.5rem;
   padding: .5rem;
-  border: 1px solid lightsalmon;
   &:hover {
     color: lightsalmon;
   }

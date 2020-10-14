@@ -13,11 +13,11 @@ import {
 
 export default function About() {
   return (
-    <Zoom>
-      <Container>
-        <Heading>About me</Heading>
-        <ContainerFlex>
-          <ImageContainer src={require('../../images/me.jpeg')}></ImageContainer>
+    <Container>
+      <Zoom>
+      <Heading>About me</Heading>
+      <ContainerFlex>
+        <ImageContainer src={require('../../images/me.jpeg')}></ImageContainer>
           <InfoColumn>
             <Content>
               <Para>I am a 20 years old guy from Romania. I enjoy
@@ -25,9 +25,9 @@ export default function About() {
                 reading, working out and sightseeing.
               </Para>
             </Content>
-          </InfoColumn>
-        </ContainerFlex>
-      </Container>
-    </Zoom>
+        </InfoColumn>
+      </ContainerFlex>
+     </Zoom>
+    </Container>
   )
 }

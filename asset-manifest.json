@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.d7d31a7d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.d7d31a7d.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.f41155bd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f41155bd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.70964fd7.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.70964fd7.js.map",
     "static/css/2.fb346933.chunk.css": "/portfolio/static/css/2.fb346933.chunk.css",
-    "static/js/2.d05b7f02.chunk.js": "/portfolio/static/js/2.d05b7f02.chunk.js",
-    "static/js/2.d05b7f02.chunk.js.map": "/portfolio/static/js/2.d05b7f02.chunk.js.map",
+    "static/js/2.4822aa53.chunk.js": "/portfolio/static/js/2.4822aa53.chunk.js",
+    "static/js/2.4822aa53.chunk.js.map": "/portfolio/static/js/2.4822aa53.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.852509252d1529c5c42f3383093bb4b6.js": "/portfolio/precache-manifest.852509252d1529c5c42f3383093bb4b6.js",
+    "precache-manifest.376a24cc74a162e6d4734854f004bbfd.js": "/portfolio/precache-manifest.376a24cc74a162e6d4734854f004bbfd.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/portfolio/static/css/2.fb346933.chunk.css.map",
-    "static/js/2.d05b7f02.chunk.js.LICENSE.txt": "/portfolio/static/js/2.d05b7f02.chunk.js.LICENSE.txt",
+    "static/js/2.4822aa53.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4822aa53.chunk.js.LICENSE.txt",
     "static/media/facebook2.png": "/portfolio/static/media/facebook2.847e2c3d.png",
     "static/media/facebook3.png": "/portfolio/static/media/facebook3.5ad0eb9b.png",
     "static/media/facebook4.png": "/portfolio/static/media/facebook4.b92d099d.png",
@@ -24,6 +24,8 @@
     "static/media/memory-game-2.png": "/portfolio/static/media/memory-game-2.5d4ec9ff.png",
     "static/media/memory-game-3.png": "/portfolio/static/media/memory-game-3.e9209321.png",
     "static/media/memory-game.png": "/portfolio/static/media/memory-game.9098cfff.png",
+    "static/media/mern1.png": "/portfolio/static/media/mern1.457ef9ad.png",
+    "static/media/mern2.png": "/portfolio/static/media/mern2.53a11ec5.png",
     "static/media/project3.png": "/portfolio/static/media/project3.1a411aa4.png",
     "static/media/weather2.png": "/portfolio/static/media/weather2.5649fc2d.png",
     "static/media/weather3.png": "/portfolio/static/media/weather3.22e8a1b3.png",
@@ -32,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.70964fd7.js",
     "static/css/2.fb346933.chunk.css",
-    "static/js/2.d05b7f02.chunk.js",
-    "static/js/main.d7d31a7d.chunk.js"
+    "static/js/2.4822aa53.chunk.js",
+    "static/js/main.f41155bd.chunk.js"
   ]
 }

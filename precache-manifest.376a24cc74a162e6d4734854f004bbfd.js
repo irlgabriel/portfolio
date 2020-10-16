@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "610402891b1cc74a4e83dd02773d8c79",
+    "revision": "e917f0922ae24f9f71719a7e7e357f84",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "57b40ca761c1189bd86c",
+    "revision": "2032a41ca0d38ef37c17",
     "url": "/portfolio/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "57b40ca761c1189bd86c",
-    "url": "/portfolio/static/js/2.d05b7f02.chunk.js"
+    "revision": "2032a41ca0d38ef37c17",
+    "url": "/portfolio/static/js/2.4822aa53.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/portfolio/static/js/2.d05b7f02.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.4822aa53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f2192930fe38978bfafc",
-    "url": "/portfolio/static/js/main.d7d31a7d.chunk.js"
+    "revision": "fd6c373b2e00100948ee",
+    "url": "/portfolio/static/js/main.f41155bd.chunk.js"
   },
   {
     "revision": "f89f2099577e680dc7b6",
@@ -70,6 +70,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9098cfff3f9936486ed974d5ab1e0ad7",
     "url": "/portfolio/static/media/memory-game.9098cfff.png"
+  },
+  {
+    "revision": "457ef9ad030d904019fd9ae874e61bc2",
+    "url": "/portfolio/static/media/mern1.457ef9ad.png"
+  },
+  {
+    "revision": "53a11ec5aaacf8013cc958d7cce4efff",
+    "url": "/portfolio/static/media/mern2.53a11ec5.png"
   },
   {
     "revision": "1a411aa4315047d16460a3fd302fa4fc",

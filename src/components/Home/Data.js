@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaNode } from "react-icons/fa";
 import { DiRuby } from "react-icons/di";
 
 export const projects = [
@@ -19,7 +19,7 @@ export const projects = [
     subtitleContent: [
       "Ruby on Rails",
       "Ruby",
-      "Javascript",
+      "Bootstrap",
       "HTML5",
       "CSS3",
       "PostgreSQL",
@@ -63,6 +63,38 @@ export const projects = [
     projectIconColor: "lightblue",
     imageLeft: true,
     key: "2",
+  },
+  {
+    bgColor: "white",
+    textColor: "#101522",
+    images: [
+      { src: require("../../images/mern1.png"), idx: 0 },
+      { src: require("../../images/mern2.png"), idx: 1 },
+    ],
+    alt: "Photo of shopping list project",
+    projectTitle: "Shopping List",
+    headingContent: "Frameworks and Technologies",
+    subtitleContent: [
+      "Node.js",
+      "Express.js",
+      "React",
+      "Redux",
+      "Heroku",
+      "Javascript",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+    ],
+    smallDesc: "A simple shopping list built with MERN stack",
+    features:
+      "Responsive Design, Smooth animations",
+    liveURL: "https://tranquil-anchorage-36599.herokuapp.com",
+    codeURL: "https://github.com/irlgabriel/mern-shopping-list",
+    projectIcon: <FaNode />,
+    projectIconColor: "orange",
+    imageLeft: false,
+    slides: 2,
+    key: "1",
   },
   {
     bgColor: "white",
@@ -145,4 +177,5 @@ export const projects = [
     imageLeft: false,
     key: "5",
   },
+  
 ];

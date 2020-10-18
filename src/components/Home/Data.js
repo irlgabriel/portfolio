@@ -77,6 +77,7 @@ export const projects = [
     subtitleContent: [
       "Node.js",
       "Express.js",
+      "JWT Auth",
       "React",
       "Redux",
       "Heroku",
@@ -87,7 +88,7 @@ export const projects = [
     ],
     smallDesc: "A simple shopping list built with MERN stack",
     features:
-      "Responsive Design, Smooth animations",
+      "Just a shopping list that you can add and remove items(once you log in). I know it is overkill to have a full stack app for this purpose, but I only built it to get familiar with node, express and redux. I will expand on this app's functionality very soon.",
     liveURL: "https://tranquil-anchorage-36599.herokuapp.com",
     codeURL: "https://github.com/irlgabriel/mern-shopping-list",
     projectIcon: <FaNode />,

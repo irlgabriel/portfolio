@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GlobalStyle, { MainContainer } from "./globalStyles";
 import { HashRouter as Router, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 // Components
 import { Navbar } from "./components";

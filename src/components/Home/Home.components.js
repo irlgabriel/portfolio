@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Col } from "reactstrap"
 
 export const Intro = styled.section`
   display: flex;
@@ -15,3 +16,7 @@ export const Heading = styled.h1`
   padding-bottom: 0.5rem;
   border-bottom: 1px solid lightgray;
 `;
+
+export const Sidebar = styled(Col)`
+
+`

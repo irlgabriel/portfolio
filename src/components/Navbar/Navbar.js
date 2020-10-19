@@ -1,64 +1,42 @@
 import React, { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import {
-  NavContainer,
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
   Nav,
-  NavMenu,
   NavItem,
   NavLink,
-  MobileMenu,
-  NavLogo,
-  NavBrand,
-} from "./Navbar.components";
+} from "reactstrap";
 
-export default function Navbar() {
-  const [mobile, setMobile] = useState(true);
-  const [click, setClick] = useState(false);
-  const [currentPage, setPage] = useState("Home");
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  };
-
-  const toggleClick = () => {
-    setClick(!click);
-  };
-
-  const closeMobileMenu = () => {
-    setClick(false);
-  };
-
-  window.addEventListener("resize", showButton);
-
+export default function AppNavbar() {
+  const [isOpen, setOpen] = useState(false)
+  const toggle = () => {
+    setOpen(!isOpen)
+  }
   return (
-    <NavContainer>
-      <Nav>
-        <NavLogo>
-          <NavLink to="/">
-            <NavBrand />
-          </NavLink>
-        </NavLogo>
-        {mobile && (
-          <MobileMenu onClick={toggleClick}>
-            {click ? <FaTimes /> : <FaBars />}
-          </MobileMenu>
-        )}
-        <NavMenu click={click}>
-          <NavItem onClick={closeMobileMenu}>
-            <NavLink to="/">Projects</NavLink>
-          </NavItem>
-          <NavItem onClick={closeMobileMenu}>
-            <NavLink to="/contact">Contact</NavLink>
-          </NavItem>
-          <NavItem onClick={closeMobileMenu}>
-            <NavLink to="/about">About</NavLink>
-          </NavItem>
-        </NavMenu>
-      </Nav>
-    </NavContainer>
+    <div>
+      <Navbar color="dark" dark={true} expand="sm">
+        <NavbarBrand href="#">Portfolio</NavbarBrand>
+        <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink>Project1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Project1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Project1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Project1</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 }

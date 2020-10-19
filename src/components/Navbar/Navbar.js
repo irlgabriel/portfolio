@@ -6,7 +6,6 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
   NavLink,
 } from "reactstrap";
 
@@ -22,18 +21,10 @@ export default function AppNavbar() {
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem tag="a" action href="#" >
-              <NavLink>Project1</NavLink>
-            </NavItem>
-            <NavItem tag="a" action href="#" >
-              <NavLink>Project1</NavLink>
-            </NavItem>
-            <NavItem tag="a" action href="#" >
-              <NavLink>Project1</NavLink>
-            </NavItem>
-            <NavItem tag="a" action href="#" >
-              <NavLink>Project1</NavLink>
-            </NavItem>
+            <NavLink href="">Project1</NavLink>
+            <NavLink href="">Project1</NavLink>
+            <NavLink href="">Project1</NavLink>
+            <NavLink href="">Project1</NavLink>
           </Nav>
         </Collapse>
       </Navbar>

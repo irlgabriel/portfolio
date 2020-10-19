@@ -14,7 +14,7 @@ export default function Home() {
     <Container className="mx-0 px-0 mb-auto" fluid={true}>
       <Sidebar className="mx-0 px-0" sm="4">
         <ListGroup>
-          <ListGroupItem tag="a" href="" action>Project 1
+          <ListGroupItem tag="a" href="" action>Project1
           </ListGroupItem>
           <ListGroupItem tag="a" href="" action>Project2
           </ListGroupItem>

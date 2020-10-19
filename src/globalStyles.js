@@ -7,13 +7,32 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
-`;
-
-export const MainContainer = styled.div`
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.bg-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: #2851A6 url("http://i.stack.imgur.com/spmUM.gif") left repeat-x;
+  background-size: auto 65%;
+  background-position: bottom;
+  z-index: -5 !important;
+
+}
+
+#main {
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
 `;
 
 export const Container = styled.div`

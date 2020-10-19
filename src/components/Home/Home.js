@@ -1,17 +1,22 @@
 import React from "react";
-import { Project } from "../../components";
-import { Intro, Heading, Sidebar } from "./Home.components";
-import { projects } from "./Data";
+
+// import { Project } from "../../components";
+import { Intro, Sidebar } from "./Home.components";
+// import { projects } from "./Data";
+
 import { MainProject } from "../../components";
 import {
   ListGroup,
   ListGroupItem,
-  Container,
+  Row,
+  Col,
+  Container
 } from "reactstrap"
 
 export default function Home() {
   return (
-    <Container className="mx-0 px-0 mb-auto" fluid={true}>
+    <Row id="main" className="text-light mx-0 px-0 mb-auto" noGutters={true}>
+      <div className="bg-img"></div>
       <Sidebar className="mx-0 px-0" sm="4">
         <ListGroup>
           <ListGroupItem tag="a" href="" action>Project1
@@ -22,7 +27,12 @@ export default function Home() {
           </ListGroupItem>
         </ListGroup>
       </Sidebar>
-      <MainProject></MainProject>
-    </Container>
+      <Col className="mx-0 px-0" sm="8">
+        <Container>
+          <h3 className="text-center">Title</h3>
+        </Container>
+        <MainProject />
+      </Col>
+    </Row>
   );
 }

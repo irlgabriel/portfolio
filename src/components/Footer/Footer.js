@@ -8,31 +8,24 @@ import {
 } from "reactstrap";
 
 export default function Footer() {
+  const contacts = [
+    { icon: <FaGithub />, contactLink: "https://github.com/irlgabriel", color: "inherit" },
+    { icon: <FaInstagramSquare />, contactLink: "https://www.instagram.com/gabriel.radu1/", color: "red" },
+    { icon: <FaFacebookSquare />, contactLink: "https://www.facebook.com/gabi.radu.75/", color: "blue" },
+    { icon: <AiFillMail />, contactLink: "mailto: radu.gabriel131@gmail.com", color: "palegoldenrod" },
+    { icon: <FaLinkedin />, contactLink: "https://www.linkedin.com/in/gabriel-radu-5023021b9/", color: "lightblue" }
+  ]
   return (
     <Container fluid={true} className="py-4 bg-dark p-3">
-      <ListGroup horizontal="sm">
-        <ListGroupItem className="text-center px-0" tag="a" href="https://github.com/irlgabriel" action>
-          <span className="mx-auto"><FaGithub />&nbsp;
-          Github</span>
-        </ListGroupItem>
-        <ListGroupItem className="text-center px-0" tag="a" href="https://www.instagram.com/gabriel.radu1/" action>
-          <span className="mx-auto"><FaInstagramSquare />&nbsp;
-          Instagram</span>
-        </ListGroupItem>
-        <ListGroupItem className="text-center px-0" tag="a" href="https://www.facebook.com/gabi.radu.75/" action>
-          <span className="mx-auto"><FaFacebookSquare />&nbsp;
-          Facebook</span>
-        </ListGroupItem>
-        <ListGroupItem className="text-center px-0" tag="a" href="mailto: radu.gabriel131@gmail.com" action>
-          <span className="mx-auto"><AiFillMail />&nbsp;
-          Mail</span>
-        </ListGroupItem>
-        <ListGroupItem className="text-center px-0" tag="a" href="https://www.linkedin.com/in/gabriel-radu-5023021b9/" action>
-          <span className="mx-auto"><FaLinkedin />&nbsp;
-          LinkedIn</span>
-        </ListGroupItem>
+      <ListGroup id="footer" className="mx-auto" horizontal="sm">
+        {
+          contacts.map(obj =>
+            <ListGroupItem style={{ fontSize: "1.5rem", color: obj.color }} className="text-center py-1 px-0" tag="a" href={obj.contactLink} action>
+              {obj.icon}
+            </ListGroupItem>
+          )
+        }
       </ListGroup>
-
     </Container>
   );
 }

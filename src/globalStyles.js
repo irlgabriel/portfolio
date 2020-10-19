@@ -25,13 +25,19 @@ const GlobalStyle = createGlobalStyle`
   background-size: auto 65%;
   background-position: bottom;
   z-index: -5 !important;
-
 }
 
 #main {
   width: 100%;
   flex: 1;
   position: relative;
+}
+
+#footer {
+  width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 }
 `;
 

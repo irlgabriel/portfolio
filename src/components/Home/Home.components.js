@@ -18,5 +18,5 @@ export const Heading = styled.h1`
 `;
 
 export const Sidebar = styled(Col)`
-
+  height: 100% !important;
 `

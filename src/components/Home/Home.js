@@ -11,17 +11,8 @@ import {
 
 export default function Home() {
   return (
-    <Container className="m-0 p-0 mb-auto" fluid={true}>{
-      /*
-      <Intro>
-        <Heading>Projects Overview</Heading>
-      </Intro>
-      {projects.map((project) => (
-        <Project {...project} key={project.key} />
-      ))}
-      */
-      }
-      <Sidebar className="m-0 p-0" sm="4">
+    <Container className="mx-0 px-0 mb-auto" fluid={true}>
+      <Sidebar className="mx-0 px-0" sm="4">
         <ListGroup>
           <ListGroupItem tag="a" href="" action>Project 1
           </ListGroupItem>

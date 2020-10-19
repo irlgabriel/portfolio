@@ -22,16 +22,16 @@ export default function AppNavbar() {
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            <NavItem tag="a" action href="#" >
               <NavLink>Project1</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem tag="a" action href="#" >
               <NavLink>Project1</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem tag="a" action href="#" >
               <NavLink>Project1</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem tag="a" action href="#" >
               <NavLink>Project1</NavLink>
             </NavItem>
           </Nav>

@@ -8,6 +8,7 @@ import {
   NavbarBrand,
   Nav,
   NavLink,
+  Container
 } from "reactstrap";
 
 export default function AppNavbar() {
@@ -17,21 +18,18 @@ export default function AppNavbar() {
     setOpen(!isOpen)
   }
   return (
-    <div>
-      
+    <Container fluid={true} className="px-0">
       <Navbar color="dark" dark={true} expand="sm">
         <NavbarBrand href="#">Portfolio</NavbarBrand>
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <Link to="/"><NavLink onClick={() => setLocation("/")}>Home</NavLink></Link>
-            <Link to="/about"><NavLink onClick={() => setLocation("/about")}>About</NavLink></Link>
-            <Link to="/contact"><NavLink onClick={() => setLocation("/contact")}>Contact</NavLink></Link>
-            <p>{currentLocation}</p>
-
+            <Link to="/"><NavLink active={currentLocation === '/'} onClick={() => setLocation("/")}>Home</NavLink></Link>
+            <Link to="/about"><NavLink active={currentLocation === '/about'} onClick={() => setLocation("/about")}>About</NavLink></Link>
+            <Link to="/contact"><NavLink active={currentLocation === '/contact'} onClick={() => setLocation("/contact")}>Contact</NavLink></Link>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </Container>
   );
 }

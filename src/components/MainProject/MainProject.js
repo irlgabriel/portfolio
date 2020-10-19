@@ -7,7 +7,7 @@ import {
 export default function MainProject() {
   return (
     <Container fluid={true}>
-      asdada
+      asda
     </Container>
   )
 }

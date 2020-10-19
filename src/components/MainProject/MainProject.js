@@ -7,7 +7,7 @@ import {
 export default function MainProject() {
   return (
     <Container fluid={true}>
-      asda
+      This is a MainProject Component
     </Container>
   )
 }

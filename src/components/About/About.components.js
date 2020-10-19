@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 1rem;
-  margin-bottom: auto;
-  min-height: 70vh;
+  flex: 1;
 `;
 
 export const Heading = styled.h1`
@@ -32,7 +31,7 @@ export const ImageContainer = styled.div`
   background-position: center;
   width: 250px;
   height: 300px;
-
+  transition: all .3s ease;
   &:hover {
     transform: scale(1.02);
   }

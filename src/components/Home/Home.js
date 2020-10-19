@@ -19,7 +19,7 @@ export default function Home() {
       <div className="bg-img"></div>
       <Sidebar className="h-100 w-100 mx-0 px-0" sm="3">
         <ListGroup className="h-100">
-          <ListGroupItem color="dark" tag="a" href="" action active>Project1
+          <ListGroupItem color="dark" tag="a" href="#who-am-i" action active>Who
           </ListGroupItem>
           <ListGroupItem color="dark" tag="a" href="" action>Project2
           </ListGroupItem>
@@ -28,17 +28,17 @@ export default function Home() {
         </ListGroup>
       </Sidebar>
       <Col className="mx-0 px-0" sm="9">
-        <Zoom>
-          <Container fluid={true}>
-            <h3 className="text-center">Who I am</h3>
+        <Container className="mt-4 x-0" fluid={true}>
+          <Container id="who-am-i" className="px-0" fluid={true}>
+            <h3 className="text-center">Who am I</h3>
             <p>
-              &nbsp;&nbsp;&nbsp;I am 20 years old, living in Romania and I absolutely
+              I am 20 years old, living in Romania and I absolutely
               love learning web development and take great pleasure
               in getting better at it everyday. 
             </p>
           </Container>
-          <MainProject />
-        </Zoom>
+        </Container>
+        <MainProject />
       </Col>
     </Row>
   );

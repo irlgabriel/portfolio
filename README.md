@@ -6,9 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### - I am rebuilding this app using react's bootstrap.
 
 ## Features: 
-### - Magic scroll for the sidebar!
+### - Scroll Spy for the sidebar!
 ### - Mobile design
-### - Custom styles (I don't really want it to look like a bootstrap site, just trying to get familiar with reactstrap)
+### - Custom styles (I don't really want it to look like a bootstrap site, just trying to get familiar with reactstrap along the way)
 
 ## Issues: 
-### - Footer items are not centered!
+### - Footer items are not centered! (done)
+### - ListGroup doesn't span the whole height of the main div

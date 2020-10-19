@@ -20,7 +20,7 @@ export default function Footer() {
       <ListGroup id="footer" className="mx-auto" horizontal="sm">
         {
           contacts.map(obj =>
-            <ListGroupItem style={{ fontSize: "1.5rem", color: obj.color }} className="text-center py-1 px-0" tag="a" href={obj.contactLink} action>
+            <ListGroupItem style={{ fontSize: "2rem", color: obj.color, background: obj.bg }} className="text-center py-1 px-0" tag="a" href={obj.contactLink} action>
               {obj.icon}
             </ListGroupItem>
           )

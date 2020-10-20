@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import { Zoom } from "react-reveal"
 import {
-  Container,
   Carousel,
   CarouselItem,
   CarouselIndicators,
   CarouselControl,
+  ListGroupItem,
   Card,
   CardBody,
   CardTitle,
   CardHeader,
   CardSubtitle,
-  CardFooter
+  CardFooter,
+  Row,
+  Col
 } from "reactstrap"
 import {
   ImageContainer
@@ -44,11 +47,12 @@ export default function MainProject(
 
 
   return (
+    <Zoom>
     <Card id={project.id} className="card text-light mt-2" style={{background: "transparent"}}>
       <CardHeader>
         <CardTitle className="d-inline-block h3">{project.name}</CardTitle>
           {project.techIcons.map(icon => <span className="mx-2" style={{fontSize: "2rem"}}>{icon}</span>)}
-        <CardSubtitle>Ruby on Rails</CardSubtitle>
+        <CardSubtitle></CardSubtitle>
         <Carousel
         interval={false}
         activeIndex={activeIndex}
@@ -80,9 +84,18 @@ export default function MainProject(
         </p>
       </CardBody>
       <CardFooter>
-
+        <Row noGutters className="mx-0">
+          <Col className="mx-0" className="border-left-radius-5 text-center text-dark ">
+            <ListGroupItem tag="a" href={project.liveURL} action>
+              <span className="">Live</span>
+              </ListGroupItem>
+          </Col>
+          <Col className="mx-0" className="border-right-radius-5 text-center text-dark ">
+            <ListGroupItem tag="a" href={project.codeURL} action>Code</ListGroupItem>
+          </Col>
+        </Row>
       </CardFooter>
     </Card>
-
+    </Zoom>
   )
 }

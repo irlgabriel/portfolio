@@ -16,13 +16,13 @@ export default function AppNavbar() {
     setOpen(!isOpen)
   }
   return (
-    <Container fluid={true} className="px-0">
+    <Container style={{borderBottom: "1px solid white"}} fluid={true} className="px-0">
       <Navbar color="dark" dark={true} expand="sm">
         <NavbarBrand href="/">Portfolio</NavbarBrand>
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavLink tag="span" active>Home</NavLink>
+            <NavLink tag="a" href="/" active>Home</NavLink>
           </Nav>
         </Collapse>
       </Navbar>

@@ -36,7 +36,19 @@ body {
   position: relative;
 }
 
+.selected {
+  background: darkslategrey;
+}
+.border-right-radius-5 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.border-left-radius-5 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 #footer {
+  border-top: 1px solid white;
   width: 50%;
   @media screen and (max-width: 768px) {
     width: 90%;

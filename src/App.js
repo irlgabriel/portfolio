@@ -10,11 +10,11 @@ import { Navbar, Home, Footer } from "./components";
 function App() {
 
   return (
-    <Container fluid={true} className="px-0">
-        <GlobalStyle />
-        <Navbar />
-        <Home />
-        <Footer />
+    <Container fluid={true} className="px-0 bg-dark">
+      <GlobalStyle />
+      <Navbar />
+      <Home />
+      <Footer />
     </Container>
   );
 }

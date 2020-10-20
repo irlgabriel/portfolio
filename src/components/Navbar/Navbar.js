@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { FaTimes, FaBars } from "react-icons/fa";
 import {
   Collapse,
@@ -13,7 +12,6 @@ import {
 
 export default function AppNavbar() {
   const [isOpen, setOpen] = useState(false)
-  const [currentLocation, setLocation] = useState(useLocation().pathname)
   const toggle = () => {
     setOpen(!isOpen)
   }
@@ -24,9 +22,7 @@ export default function AppNavbar() {
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <Link to="/"><NavLink tag="span" active={currentLocation === '/'} onClick={() => setLocation("/")}>Home</NavLink></Link>
-            <Link to="/about"><NavLink tag="span" active={currentLocation === '/about'} onClick={() => setLocation("/about")}>About</NavLink></Link>
-            <Link to="/contact"><NavLink tag="span" active={currentLocation === '/contact'} onClick={() => setLocation("/contact")}>Contact</NavLink></Link>
+            <NavLink tag="span" active>Home</NavLink>
           </Nav>
         </Collapse>
       </Navbar>

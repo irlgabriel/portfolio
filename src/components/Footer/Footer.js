@@ -16,7 +16,7 @@ export default function Footer() {
     { icon: <FaLinkedin />, contactLink: "https://www.linkedin.com/in/gabriel-radu-5023021b9/", color: "lightblue" }
   ]
   return (
-    <Container fluid={true} className="py-4 bg-dark p-3">
+    <Container fluid={true} className="bg-dark py-4 p-3">
       <ListGroup id="footer" className="mx-auto" horizontal="sm">
         {
           contacts.map((obj, index) =>

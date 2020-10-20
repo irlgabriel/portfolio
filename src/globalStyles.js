@@ -47,6 +47,9 @@ body {
   border-radius: 0px !important;
 }
 
+.card {
+  border: 1px solid white;
+}
 `;
 
 export const Container = styled.div`

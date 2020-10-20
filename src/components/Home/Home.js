@@ -1,12 +1,12 @@
 import React from "react";
 import ScrollSpy from "react-scrollspy"
+import { mainProjects } from "../Home/Data"
 // import { Project } from "../../components";
 import { Sidebar } from "./Home.components";
 // import { projects } from "./Data";
 
 import { MainProject } from "../../components";
 import {
-  ListGroup,
   ListGroupItem,
   Row,
   Col,
@@ -15,14 +15,14 @@ import {
 
 export default function Home() {
   return (
-    <Row id="main" className="text-light mx-0 px-0 mb-auto" noGutters={true}>
-      <div className="bg-img"></div>
-      <Sidebar id="sidebar-nav" className="sticky-top mx-0 px-0" sm="3">
-        <ScrollSpy items={['who-am-i', 'projects']} currentClassName="active" style={{borderRadius: "0px"}}>
-          <ListGroupItem tag="a" href="#who-am-i" action>Who am I
-          </ListGroupItem>
-          <ListGroupItem tag="a" href="##projects" action>Facebook Clone
-          </ListGroupItem>
+    <Row id="main" className="bg-dark text-light mx-0 px-0 mb-auto" noGutters={true}>
+      {/*<div className="bg-img"></div>*/}
+      <Sidebar className="hidden-md-down sticky-top mx-0 px-0" sm="3">
+        <ScrollSpy items={['who-am-i', 'facebook-clone', 'weather-app', 'mern-app']} currentClassName="active">
+          <ListGroupItem tag="a" href="#who-am-i" action>Who am I</ListGroupItem>
+          <ListGroupItem tag="a" href="#facebook-clone" action>Facebook Clone</ListGroupItem>
+          <ListGroupItem tag="a" href="#weather-app" action>Weather App</ListGroupItem>
+          <ListGroupItem tag="a" href="#mern-app" action>Mern Shopping List</ListGroupItem>
         </ScrollSpy>
       </Sidebar>
       <Col className="mx-0 px-0" sm="9">
@@ -36,10 +36,12 @@ export default function Home() {
             </p>
           </Container>
         </Container>
-        <Container id="projects">
-          <h1>Projects</h1>
-          <hr />
-          <MainProject />
+        <Container>
+          <h1 className="text-center" >Projects</h1>
+          {
+            mainProjects.map(project =>
+            <MainProject {...project}/>)
+          }
         </Container>
       </Col>
     </Row>

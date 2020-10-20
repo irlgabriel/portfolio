@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { mainProjects } from "../Home/Data"
 import {
   Container,
   Carousel,
@@ -18,27 +19,17 @@ export default function MainProject() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  const items = [
-    {
-      src: require("../../images/facebook2.png")
-    },
-    {
-      src: require("../../images/facebook3.png")
-    },
-    {
-      src: require("../../images/facebook4.png")
-    },
-  ]
+  const projectImages = mainProjects.map(project => project.images)
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === projectImages.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   }
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? projectImages.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   }
 
@@ -57,17 +48,17 @@ export default function MainProject() {
       next={next}
       previous={previous}
       >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+      <CarouselIndicators items={projectImages} activeIndex={activeIndex} onClickHandler={goToIndex} />
       {
-        items.map((item) => {
+        projectImages.map((img) => {
           return (
             <CarouselItem
               
               onExiting={() => setAnimating(true)}
               onExited={() => setAnimating(false)}
-              key={item.src}
+              key={img.src}
             >
-              <img src={item.src} />
+              <img src={img.src} />
             </CarouselItem>
           );
         })

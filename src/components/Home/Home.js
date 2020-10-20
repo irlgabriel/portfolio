@@ -18,12 +18,11 @@ export default function Home() {
     <Row id="main" className="text-light mx-0 px-0 mb-auto" noGutters={true}>
       <div className="bg-img"></div>
       <Sidebar id="sidebar-nav" className="sticky-top mx-0 px-0" sm="3">
-        <ScrollSpy items={['who-am-i', 'projects']} currentClassName="active" style={{borderRadius: "0px", opacity: "0.5"}}>
-          <ListGroupItem color="dark" tag="a" href="#who-am-i" action>Who am I
+        <ScrollSpy items={['who-am-i', 'projects']} currentClassName="active" style={{borderRadius: "0px"}}>
+          <ListGroupItem tag="a" href="#who-am-i" action>Who am I
           </ListGroupItem>
-          <ListGroupItem color="dark" tag="a" href="##projects" action>Facebook Clone
+          <ListGroupItem tag="a" href="##projects" action>Facebook Clone
           </ListGroupItem>
-
         </ScrollSpy>
       </Sidebar>
       <Col className="mx-0 px-0" sm="9">
@@ -39,6 +38,7 @@ export default function Home() {
         </Container>
         <Container id="projects">
           <h1>Projects</h1>
+          <hr />
           <MainProject />
         </Container>
       </Col>

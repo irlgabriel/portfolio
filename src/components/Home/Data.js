@@ -2,7 +2,7 @@ import React from "react";
 import { FaReact, FaNode } from "react-icons/fa";
 import { DiRuby } from "react-icons/di";
 
-export const projects = [
+export const mainProjects = [
   {
     bgColor: "white",
     textColor: "#101522",
@@ -96,7 +96,9 @@ export const projects = [
     imageLeft: false,
     slides: 2,
     key: "1",
-  },
+  }
+]
+export const projects = [
   {
     bgColor: "white",
     textColor: "#101522",

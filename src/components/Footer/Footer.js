@@ -12,7 +12,7 @@ export default function Footer() {
     { icon: <FaGithub />, contactLink: "https://github.com/irlgabriel", color: "inherit" },
     { icon: <FaInstagramSquare />, contactLink: "https://www.instagram.com/gabriel.radu1/", color: "red" },
     { icon: <FaFacebookSquare />, contactLink: "https://www.facebook.com/gabi.radu.75/", color: "blue" },
-    { icon: <AiFillMail />, contactLink: "mailto: radu.gabriel131@gmail.com", color: "palegoldenrod" },
+    { icon: <AiFillMail />, contactLink: "mailto: radu.gabriel131@gmail.com", color: "gold" },
     { icon: <FaLinkedin />, contactLink: "https://www.linkedin.com/in/gabriel-radu-5023021b9/", color: "lightblue" }
   ]
   return (

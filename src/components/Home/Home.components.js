@@ -20,3 +20,24 @@ export const Heading = styled.h1`
 export const Sidebar = styled(Col)`
   height: 100% !important;
 `
+
+
+export const ImageContainer = styled.div`
+  background-image: url(${({ src }) => src});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+
+  transition: all .3s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+`
+
+export const Image = styled.img`
+  max-width: 400px;
+  height: 300px;
+`

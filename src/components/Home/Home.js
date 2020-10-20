@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ScrollSpy from "react-scrollspy"
 import { mainProjects } from "../Home/Data"
 // import { Project } from "../../components";
-import { Sidebar } from "./Home.components";
+import { Sidebar, Image } from "./Home.components";
 // import { projects } from "./Data";
 import { ListItem, ListItemText} from '@material-ui/core/'
 
@@ -44,18 +44,20 @@ export default function Home() {
       </ScrollSpy>
       </Sidebar>
       <Col className="mx-0 px-0" xs="12" sm="9">
-        <Container data-spy="scroll" data-target="#sidebar-nav" className="mt-4 x-0" fluid={true}>
-          <Container id="who-am-i" className="px-0" fluid={true}>
-            <h3 className="text-center">Who am I</h3>
+        <Container className="mt-4 x-0" fluid={true}>
+          <Container fluid id="who-am-i" className="clearfix px-3 mx-0">
+            <h2>Who am I</h2>
+            <Image className="float-left mr-3" src={require('../../images/me.jpeg')} />
             <p>
-              I am 20 years old, living in Romania and I absolutely
+              I am 21 years old, living in Romania and I absolutely
               love learning web development and take great pleasure
-              in getting better at it everyday. 
+              in getting better at it everyday. Other things that I enjoy
+              are reading, working out, sightseeing and driving. 
             </p>
           </Container>
         </Container>
         <Container>
-          <h1 className="text-center" >Projects</h1>
+          <h1 className="text-center my-4" >Projects</h1>
           {
             mainProjects.map(project =>
             <MainProject {...project}/>)

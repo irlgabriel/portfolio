@@ -48,11 +48,11 @@ export default function MainProject(
 
   return (
     <Zoom>
-    <Card id={project.id} className="card text-light mt-2" style={{background: "transparent"}}>
+    <Card id={project.id} className="border-0 card text-light mt-2" style={{background: "transparent"}}>
       <CardHeader>
         <CardTitle className="d-inline-block h3">{project.name}</CardTitle>
           {project.techIcons.map(icon => <span className="mx-2" style={{fontSize: "2rem"}}>{icon}</span>)}
-        <CardSubtitle></CardSubtitle>
+        <CardSubtitle className="mb-3"></CardSubtitle>
         <Carousel
         interval={false}
         activeIndex={activeIndex}
@@ -87,11 +87,13 @@ export default function MainProject(
         <Row noGutters className="mx-0">
           <Col className="mx-0" className="border-left-radius-5 text-center text-dark ">
             <ListGroupItem tag="a" href={project.liveURL} action>
-              <span className="">Live</span>
+              <span className="font-weight-bold">Live</span>
               </ListGroupItem>
           </Col>
           <Col className="mx-0" className="border-right-radius-5 text-center text-dark ">
-            <ListGroupItem tag="a" href={project.codeURL} action>Code</ListGroupItem>
+            <ListGroupItem tag="a" href={project.codeURL} action>
+              <span className="font-weight-bold">Code</span>
+              </ListGroupItem>
           </Col>
         </Row>
       </CardFooter>

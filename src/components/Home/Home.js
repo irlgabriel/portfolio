@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Row id="main" className="bg-dark text-light mx-0 px-0 mb-4" noGutters={true}>
       {/*<div className="bg-img"></div>*/}
-      <Sidebar className="sticky-top mx-0 px-0" sm="3">
+      <Sidebar className="d-none d-md-block sticky-top mx-0 px-0" sm="3">
       <ScrollSpy items={['who-am-i', 'facebook-clone', 'weather-app', 'mern-app', 'book-library', 'cv-generator', 'netflix-memory-game']} currentClassName="selected">
         <ListItem component="a" href="#who-am-i" className="selected">
           <ListItemText className="text-light text-decoration-none">Who am I</ListItemText>
@@ -43,9 +43,9 @@ export default function Home() {
         </ListItem>
       </ScrollSpy>
       </Sidebar>
-      <Col className="mx-0 px-0" xs="12" sm="9">
-        <Container className="mt-4 x-0" fluid={true}>
-          <Container fluid id="who-am-i" className="clearfix px-3 mx-0">
+      <Col className="mx-0 px-0">
+        <Container className="mt-4 px-0" fluid={true}>
+          <Container fluid id="who-am-i" className="clearfix mx-0">
             <h2>Who am I</h2>
             <Image className="float-left mr-3" src={require('../../images/me.jpeg')} />
             <p>
@@ -55,9 +55,9 @@ export default function Home() {
               are reading, working out, sightseeing and driving. 
             </p>
           </Container>
-        </Container>
+        </Container>  
         <Container>
-          <h1 className="text-center my-4" >Projects</h1>
+          <h1 className="border-top border-light pt-3 my-4" >Projects</h1>
           {
             mainProjects.map(project =>
             <MainProject {...project}/>)

@@ -19,8 +19,8 @@ export default function Footer() {
     <Container fluid={true} className="py-4 bg-dark p-3">
       <ListGroup id="footer" className="mx-auto" horizontal="sm">
         {
-          contacts.map(obj =>
-            <ListGroupItem style={{ fontSize: "2rem", color: obj.color, background: obj.bg }} className="text-center py-1 px-0" tag="a" href={obj.contactLink} action>
+          contacts.map((obj, index) =>
+            <ListGroupItem key={index} style={{ fontSize: "2rem", color: obj.color, background: obj.bg }} className="text-center py-1 px-0" tag="a" href={obj.contactLink} action>
               {obj.icon}
             </ListGroupItem>
           )

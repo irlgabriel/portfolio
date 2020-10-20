@@ -42,6 +42,11 @@ body {
     width: 90%;
   }
 }
+
+.border-radius-0{
+  border-radius: 0px !important;
+}
+
 `;
 
 export const Container = styled.div`

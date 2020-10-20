@@ -1,8 +1,8 @@
 import React from "react";
+import ScrollSpy from "react-scrollspy"
 // import { Project } from "../../components";
-import { Intro, Sidebar } from "./Home.components";
+import { Sidebar } from "./Home.components";
 // import { projects } from "./Data";
-import { Zoom } from "react-reveal"
 
 import { MainProject } from "../../components";
 import {
@@ -17,18 +17,17 @@ export default function Home() {
   return (
     <Row id="main" className="text-light mx-0 px-0 mb-auto" noGutters={true}>
       <div className="bg-img"></div>
-      <Sidebar className="h-100 w-100 mx-0 px-0" sm="3">
-        <ListGroup className="h-100">
-          <ListGroupItem color="dark" tag="a" href="#who-am-i" action active>Who
+      <Sidebar id="sidebar-nav" className="sticky-top mx-0 px-0" sm="3">
+        <ScrollSpy items={['who-am-i', 'projects']} currentClassName="active" style={{borderRadius: "0px", opacity: "0.5"}}>
+          <ListGroupItem color="dark" tag="a" href="#who-am-i" action>Who am I
           </ListGroupItem>
-          <ListGroupItem color="dark" tag="a" href="" action>Project2
+          <ListGroupItem color="dark" tag="a" href="##projects" action>Facebook Clone
           </ListGroupItem>
-          <ListGroupItem color="dark" tag="a" href="" action>Project3
-          </ListGroupItem>
-        </ListGroup>
+
+        </ScrollSpy>
       </Sidebar>
       <Col className="mx-0 px-0" sm="9">
-        <Container className="mt-4 x-0" fluid={true}>
+        <Container data-spy="scroll" data-target="#sidebar-nav" className="mt-4 x-0" fluid={true}>
           <Container id="who-am-i" className="px-0" fluid={true}>
             <h3 className="text-center">Who am I</h3>
             <p>
@@ -38,7 +37,10 @@ export default function Home() {
             </p>
           </Container>
         </Container>
-        <MainProject />
+        <Container id="projects">
+          <h1>Projects</h1>
+          <MainProject />
+        </Container>
       </Col>
     </Row>
   );

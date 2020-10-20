@@ -1,14 +1,18 @@
 import React from "react";
-import { Heading, Container, Paragraph } from "./Contact.components";
 import { Zoom } from "react-reveal";
+import { 
+  Container,
+
+} from "reactstrap"
 
 export default function Contact() {
   return (
-    <Container className="text-light" style={{position: "relative", flex: "1"}}>
+    <Container className="text-light px-0" fluid={true} style={{position: "relative", flex: "1"}}>
       <div className="bg-img"></div>
         <Zoom>
-          <Heading>Get in touch with me!</Heading>
-          <Paragraph>I don't know what to put in here yet</Paragraph>
+          <Container>
+            <h2 className="mt-2">Get in touch with me!</h2>
+          </Container>
         </Zoom>
     </Container>
   );

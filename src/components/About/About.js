@@ -2,11 +2,6 @@ import React from "react";
 import { Zoom } from "react-reveal";
 
 import {
-  ContainerFlex,
-  Heading,
-  InfoColumn,
-  Content,
-  Para,
   ImageContainer,
 } from "./About.components";
 

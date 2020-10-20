@@ -20,13 +20,13 @@ export default function AppNavbar() {
   return (
     <Container fluid={true} className="px-0">
       <Navbar color="dark" dark={true} expand="sm">
-        <NavbarBrand href="#">Portfolio</NavbarBrand>
+        <NavbarBrand href="/">Portfolio</NavbarBrand>
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <Link to="/"><NavLink active={currentLocation === '/'} onClick={() => setLocation("/")}>Home</NavLink></Link>
-            <Link to="/about"><NavLink active={currentLocation === '/about'} onClick={() => setLocation("/about")}>About</NavLink></Link>
-            <Link to="/contact"><NavLink active={currentLocation === '/contact'} onClick={() => setLocation("/contact")}>Contact</NavLink></Link>
+            <Link to="/"><NavLink tag="span" active={currentLocation === '/'} onClick={() => setLocation("/")}>Home</NavLink></Link>
+            <Link to="/about"><NavLink tag="span" active={currentLocation === '/about'} onClick={() => setLocation("/about")}>About</NavLink></Link>
+            <Link to="/contact"><NavLink tag="span" active={currentLocation === '/contact'} onClick={() => setLocation("/contact")}>Contact</NavLink></Link>
           </Nav>
         </Collapse>
       </Navbar>

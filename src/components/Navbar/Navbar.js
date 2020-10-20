@@ -22,7 +22,7 @@ export default function AppNavbar() {
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavLink tag="a" href="/" active>Home</NavLink>
+            <NavLink tag="a" href="/portfolio" active>Home</NavLink>
           </Nav>
         </Collapse>
       </Navbar>

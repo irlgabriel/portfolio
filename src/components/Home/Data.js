@@ -45,7 +45,7 @@ export const mainProjects = [
       <FaHtml5 color="orange"/>,
       <FaCss3 color="blue"/>,
     ],
-    desc: "An ugly(I intend to fix this soon by re-building it with React MaterialUI and giving it a 'mobiley' look) weather app that takes data from OpenWeatherMap API and displays weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer).",
+    desc: "An ugly weather app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer).",
     liveURL: "https://irlgabriel.github.io/weather-app/",
     codeURL: "https://github.com/irlgabriel/weather-app/",
     projectIcon: <FaReact fontSize="2.5rem" color="lightblue"/>,

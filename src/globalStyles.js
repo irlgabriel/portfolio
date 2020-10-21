@@ -60,7 +60,7 @@ body {
 }
 
 .card {
-  border: 1px solid white;
+  border: 1px solid darkslategrey;
 }
 `;
 

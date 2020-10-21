@@ -20,25 +20,25 @@ export default function Home() {
       {/*<div className="bg-img"></div>*/}
       <Sidebar className="d-none d-md-block sticky-top mx-0 px-0" sm="3">
       <ScrollSpy items={['who-am-i', 'facebook-clone', 'weather-app', 'mern-app', 'book-library', 'cv-generator', 'netflix-memory-game']} currentClassName="selected">
-        <ListItem component="a" href="#who-am-i" className="selected">
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#who-am-i" className="selected">
           <ListItemText className="text-light text-decoration-none">Who am I</ListItemText>
         </ListItem>
-        <ListItem component="a" href="#facebook-clone">
+        <ListItem style={{transition: "all .4s ease-in-out"}} component="a" href="#facebook-clone">
           <ListItemText className="text-light text-decoration-none">Facebook Clone</ListItemText>
         </ListItem>
-        <ListItem component="a" href="#weather-app">
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#weather-app">
           <ListItemText className="text-light text-decoration-none">Weather App</ListItemText>
         </ListItem>
-        <ListItem component="a" href="#mern-app">
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#mern-app">
           <ListItemText className="text-light text-decoration-none">Mern Shopping List</ListItemText>
         </ListItem>
-        <ListItem component="a" href="#book-library">
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#book-library">
           <ListItemText className="text-light text-decoration-none">Book Library</ListItemText>
         </ListItem>
-        <ListItem component="a" href="#cv-generator">
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#cv-generator">
           <ListItemText className="text-light text-decoration-none">CV Generator</ListItemText>
         </ListItem>
-        <ListItem component="a" href="#netflix-memory-game">
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#netflix-memory-game">
           <ListItemText className="text-light text-decoration-none">Netflix Memory Game</ListItemText>
         </ListItem>
       </ScrollSpy>
@@ -50,7 +50,7 @@ export default function Home() {
             <Image className="float-left mr-3" src={require('../../images/me.jpeg')} />
             <p>
               I am 21 years old, living in Romania and I absolutely
-              love learning web development and take great pleasure
+              love learning web development and find great pleasure
               in getting better at it everyday. Other things that I enjoy
               are reading, working out, sightseeing and driving. 
             </p>

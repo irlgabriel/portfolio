@@ -36,7 +36,6 @@ export const mainProjects = [
     images: [
       { src: require("../../images/weather2.png"), idx: 0 },
       { src: require("../../images/weather3.png"), idx: 1 },
-      { src: require("../../images/weather4.png"), idx: 2 },
     ],
     techIcons: [
       <FaReact color="lightblue"/>,

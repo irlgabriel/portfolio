@@ -16,7 +16,7 @@ export default function Footer() {
     { icon: <FaFacebookSquare />, contactLink: "https://www.facebook.com/gabi.radu.75/", color: "blue" },
   ]
   return (
-    <Container style={{borderTop: "1px solid white"}} fluid={true} className="bg-dark py-4 p-3">
+    <Container style={{borderTop: "1px solid darkslategray"}} fluid={true} className="bg-dark py-4 p-3">
       <ListGroup id="footer" className="mx-auto" horizontal="sm">
         {
           contacts.map((obj, index) =>

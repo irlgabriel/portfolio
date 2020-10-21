@@ -85,13 +85,13 @@ export default function MainProject(
       </CardBody>
       <CardFooter>
         <Row noGutters className="mx-0">
-          <Col className="mx-0" className="border-left-radius-5 text-center text-dark ">
-            <ListGroupItem tag="a" href={project.liveURL} action>
+          <Col className="border-left-radius-5 text-center text-dark ">
+            <ListGroupItem style={{backgroundColor: "darkslategray"}} className="text-light" tag="a" href={project.liveURL} action>
               <span className="font-weight-bold">Live</span>
             </ListGroupItem>
           </Col>
-          <Col className="mx-0" className="border-right-radius-5 text-center text-dark ">
-            <ListGroupItem tag="a" href={project.codeURL} action>
+          <Col className="border-right-radius-5 text-center text-dark ">
+            <ListGroupItem style={{backgroundColor: "darkslategray"}} className="text-light" tag="a" href={project.codeURL} action>
               <span className="font-weight-bold">Code</span>
             </ListGroupItem>
           </Col>

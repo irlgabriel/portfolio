@@ -48,7 +48,7 @@ body {
   border-bottom-left-radius: 5px;
 }
 #footer {
-  border-top: 1px solid white;
+  border-top: 1px solid darkslategray;;
   width: 50%;
   @media screen and (max-width: 768px) {
     width: 90%;

@@ -57,7 +57,7 @@ export default function Home() {
           </Container>
         </Container>  
         <Container>
-          <h1 className="border-top border-light pt-3 my-4" >Projects</h1>
+          <h1 style={{borderTop: "1px solid darkslategray"}} className="pt-3 my-4" >Projects</h1>
           {
             mainProjects.map(project =>
             <MainProject {...project}/>)

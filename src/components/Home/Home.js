@@ -19,9 +19,12 @@ export default function Home() {
     <Row id="main" className="bg-dark text-light mx-0 px-0 mb-4" noGutters={true}>
       {/*<div className="bg-img"></div>*/}
       <Sidebar className="d-none d-md-block sticky-top mx-0 px-0" sm="3">
-      <ScrollSpy items={['who-am-i', 'facebook-clone', 'weather-app', 'mern-app', 'book-library', 'cv-generator', 'netflix-memory-game']} currentClassName="selected">
+      <ScrollSpy items={['who-am-i', 'covid-app', 'facebook-clone', 'weather-app', 'mern-app', 'book-library', 'cv-generator', 'netflix-memory-game']} currentClassName="selected">
         <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#who-am-i" className="selected">
           <ListItemText className="text-light text-decoration-none">Who am I</ListItemText>
+        </ListItem>
+        <ListItem style={{transition: "all .3s ease-in-out"}} component="a" href="#covid-app">
+          <ListItemText className="text-light text-decoration-none">Covid-19 Charts</ListItemText>
         </ListItem>
         <ListItem style={{transition: "all .4s ease-in-out"}} component="a" href="#facebook-clone">
           <ListItemText className="text-light text-decoration-none">Facebook Clone</ListItemText>

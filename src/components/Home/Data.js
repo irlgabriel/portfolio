@@ -1,9 +1,30 @@
 import React from "react";
-import { FaReact, FaNode, FaBootstrap, FaAws, FaCss3, FaHtml5 } from "react-icons/fa";
+import { FaSass, FaReact, FaNode, FaBootstrap, FaAws, FaCss3, FaHtml5 } from "react-icons/fa";
 import { DiRuby } from "react-icons/di";
 import { SiHeroku, SiReactrouter, SiPostgresql, SiJavascript, SiRedux, SiMongodb, SiFirebase, SiRails, SiStyledComponents} from "react-icons/si"
 
 export const mainProjects = [
+  {
+    id: "covid-app",
+    name: "Covid-19 Charts",
+    images: [
+      { src: require("../../images/covid2.png")},
+      { src: require("../../images/covid1.png")},
+      { src: require("../../images/covid3.png")}
+    ],
+    techIcons: [
+      <FaReact color="lightblue"/>,
+      <FaBootstrap color="purple"/>,
+      <FaCss3 color="royalblue"/>,
+      <FaHtml5 color="red"/>,
+      <SiJavascript color="yellow"/>,
+      <FaSass color="red"/>,
+    ],
+    desc: "A react app that takes data from two different APIs and uses Recharts npm library to display some charts with Covid-19 information around the world. I will extend its functionality very soon once I find some more reliable free APIs.",
+    liveURL: "https://irlgabriel.github.io/covid-19-tracker",
+    codeURL: "https://github.com/irlgabriel/covid-19-tracker",
+    key: "0",
+  },
   { 
     id: "facebook-clone",
     name: "Facebook Clone",
@@ -19,7 +40,7 @@ export const mainProjects = [
       <DiRuby color="red" />,
       <FaBootstrap color="purple"/>,
       <FaHtml5 color="orange"/>,
-      <FaCss3 color="blue"/>,
+      <FaCss3 color="royalblue"/>,
       <SiPostgresql color="green"/>,
       <FaAws color="yellow"/>,
       <SiHeroku color="violet"/>,
@@ -42,7 +63,7 @@ export const mainProjects = [
       <SiStyledComponents color="gray"/>,
       <SiJavascript color="yellow"/>,
       <FaHtml5 color="orange"/>,
-      <FaCss3 color="blue"/>,
+      <FaCss3 color="royalblue"/>,
     ],
     desc: "An ugly weather app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer).",
     liveURL: "https://irlgabriel.github.io/weather-app/",
@@ -68,7 +89,7 @@ export const mainProjects = [
       <SiJavascript color="yellow"/>,
       <FaBootstrap color="purple"/>,
       <FaHtml5 color="orange"/>,
-      <FaCss3 color="blue"/>,
+      <FaCss3 color="royalblue"/>,
     ],
     desc: "A simple shopping list built with the MERN stack. I know it is pointless(the app in itself) and overkill to have a custom back-end for such an app while I could have used firebase or other BaaS but I created this one to get familiar with node, Express and mongoDB. I plan to turn it into a e-commerce style website with items and a shopping cart in the future. Oh and it also has custom JWT Authentication on the backend!",
     liveURL: "https://tranquil-anchorage-36599.herokuapp.com",
@@ -93,7 +114,7 @@ export const mainProjects = [
       <SiFirebase color="orange"/>,
       <SiStyledComponents color="gray"/>,
       <FaHtml5 color="orange"/>,
-      <FaCss3 color="blue"/>,
+      <FaCss3 color="royalblue"/>,
     ],
     desc: "A small app that I've built to get used with firebase and its services (firestore and auth more specifically). I reached the conclusion that it is a great tool (and very easy to learn and implement) for smaller apps that do not need full fledged backends.",
     liveURL: "https://irlgabriel.github.io/library-project-redo/#/",
@@ -113,7 +134,7 @@ export const mainProjects = [
       <SiJavascript color="yellow"/>,
       <SiStyledComponents color="gray"/>,
       <FaHtml5 color="orange"/>,
-      <FaCss3 color="blue"/>,
+      <FaCss3 color="royalblue"/>,
     ],
     desc: "Just a small app that helped me understand and manage state more easily. I have got a bit of a taste of form client-side validations since it revolves a lot around valid informations being input.",
     liveURL: "https://irlgabriel.github.io/Cv-project",
@@ -134,7 +155,7 @@ export const mainProjects = [
       <SiJavascript color="yellow"/>,
       <SiStyledComponents color="gray"/>,
       <FaHtml5 color="orange"/>,
-      <FaCss3 color="blue"/>,
+      <FaCss3 color="royalblue"/>,
     ],
     desc:
       "More React Hooks practice - A very brief app without any backend (I don't think it is necessary either with this kind of game anyway - maybe just to store the highest-score, but this is not a game that you come back to anyway because it is very boring and the only reason I've built it is to practice React Hooks).",

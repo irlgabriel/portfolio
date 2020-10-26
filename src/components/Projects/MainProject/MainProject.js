@@ -48,7 +48,7 @@ export default function MainProject(
 
   return (
     <Zoom>
-    <Card id={project.id} className="card text-light mt-2" style={{background: "transparent"}}>
+    <Card id={project.id} className="card mt-2" style={{background: "transparent"}}>
       <CardHeader>
         <CardTitle className="d-inline-block h3">{project.name}</CardTitle>
           {project.techIcons.map(icon => <span className="mx-2" style={{fontSize: "2rem"}}>{icon}</span>)}

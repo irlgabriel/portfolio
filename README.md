@@ -6,5 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### - Mobile design
 ### - Custom styles (I don't really want it to look like a bootstrap site, just trying to get familiar with reactstrap along the way)
 
+
 ## Upcoming features: 
 ### - Add Dark Mode!
+

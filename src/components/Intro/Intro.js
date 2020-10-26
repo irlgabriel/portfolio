@@ -5,7 +5,7 @@ import {
 
 export default () => {
   return(
-    <Container>
+    <Container fluid style={{minHeight: "100vh"}}>
       INTRO
     </Container>
   )

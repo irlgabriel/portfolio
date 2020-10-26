@@ -71,6 +71,14 @@ body {
 .card {
   border: 1px solid darkslategrey;
 }
+.container-info {
+  position: absolute;
+  top:0;
+  left:0;
+  padding: .5rem 1rem;
+  background: white;
+  
+}
 `;
 
 export const Container = styled.div`
@@ -79,5 +87,7 @@ export const Container = styled.div`
   max-width: 1300px;
   margin: 0 auto;
 `;
+
+
 
 export default GlobalStyle;

@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Router basename="/">
-      <Container fluid={true} className='px-0 bg-dark'>
+      <Container fluid={true} className='px-0'>
         <GlobalStyle />
         <Navbar />
         <Route path="/what" exact component={Projects} />

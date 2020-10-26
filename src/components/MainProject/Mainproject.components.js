@@ -1,11 +1,4 @@
 import styled from "styled-components"
-import {
-  Col,
-} from "reactstrap";
-
-export const Sidebar = styled(Col)`
-
-`
 
 export const ImageContainer = styled.div`
   background-image: url(${({ src }) => src});

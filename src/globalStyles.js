@@ -36,9 +36,18 @@ body {
   position: relative;
 }
 
-.selected {
-  background: darkslategrey;
+.list-group-item {
+  border: none;
 }
+
+.active {
+  border: none;
+  h4 {
+    transform: translateY(-5px);
+    color: rgba(200,0,10,.8) !important;
+  }
+}
+
 .border-right-radius-5 {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;

@@ -16,7 +16,7 @@ export default function AppNavbar() {
     setOpen(!isOpen)
   }
   return (
-    <Container style={{borderBottom: "1px solid darkslategray"}} fluid={true} className="px-0">
+    <Container fluid={true} className="px-0">
       <Navbar color="dark" dark={true} expand="sm">
         <NavbarBrand href="/">Portfolio</NavbarBrand>
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>

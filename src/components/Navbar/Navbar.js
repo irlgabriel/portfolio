@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -22,7 +23,9 @@ export default function AppNavbar() {
         <NavbarToggler onClick={toggle}>{isOpen ? <FaTimes /> : <FaBars />}</NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavLink tag="a" href="/portfolio" active>Home</NavLink>
+            <Link to="/"><NavLink>Intro</NavLink></Link>
+            <Link to="/what"><NavLink>What</NavLink></Link>
+            <Link to="/who"><NavLink>Who</NavLink></Link>
           </Nav>
         </Collapse>
       </Navbar>

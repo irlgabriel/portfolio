@@ -1,25 +1,22 @@
 import React from "react";
-import { mainProjects } from "../Home/Data"
-import { Image } from "./Home.components";
+import { mainProjects } from "./Data"
 import { 
   Sidebar,
   MainProject,
-} from "../../components";
+} from "..";
 import {
   Row,
   Col,
   Container
 } from "reactstrap"
 
-export default function Home() {
-
+export default () => {
   return (
-    <Row id="main" className="bg-dark text-light mx-0 px-0 mb-4" noGutters={true}>
+    <Row id="main" className="bg-dark text-light mx-0 px-0" noGutters={true}>
       <Sidebar color="#292b2c"/>
       <Col className="mx-0 px-0">
-        
         <Container>
-          <h1 style={{borderTop: "1px solid darkslategray"}} className="pt-3 my-4" >Projects</h1>
+          <h1>Projects</h1>
           {
             mainProjects.map(project =>
             <MainProject {...project}/>)

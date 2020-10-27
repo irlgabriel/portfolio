@@ -40,3 +40,7 @@ export const Image = styled.img`
   max-width: 400px;
   height: 300px;
 `;
+
+export const Carousel = styled.div`
+  margin: 0 .5rem;
+`

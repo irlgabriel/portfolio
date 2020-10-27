@@ -14,15 +14,23 @@ const GlobalStyle = createGlobalStyle`
 body {
   position: relative;
 }
+
+.footer-item {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
 #everywhere-container {
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-#background {
+#intro-image {
   position: absolute;
-  top:70px;
+  top:0px;
   bottom:0px;
   left:0px;
   right: 0px;
@@ -31,8 +39,9 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   z-index: -1;
-  filter: blur(4px);
 }
+
+
 
 #main {
   width: 100%;
@@ -90,12 +99,23 @@ body {
   background: white;
 }
 
-.active {
-  transform: translateY(-0.5rem);
-  color: royalblue !important;
-}
 #img-me {
   background-image: url("images/me.jpeg")
+}
+
+.page-enter {
+  transform: translateX(-100%);
+}
+.page-enter-active {
+  transform: translateX(0%);
+  transition: all 300ms;
+}
+.page-exit {
+  transform: translateX(0%);
+}
+.page-exit-active {
+  transform: translateX(100%);
+  transition: all 300ms;
 }
 `;
 

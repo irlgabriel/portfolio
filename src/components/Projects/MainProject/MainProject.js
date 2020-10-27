@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Zoom } from "react-reveal"
+import { Zoom } from "react-reveal";
 import {
   Carousel,
   CarouselItem,
@@ -13,91 +13,118 @@ import {
   CardSubtitle,
   CardFooter,
   Row,
-  Col
-} from "reactstrap"
-import {
-  ImageContainer
-} from "./Mainproject.components"
+  Col,
+} from "reactstrap";
+import { ImageContainer } from "./Mainproject.components";
 
-
-export default function MainProject(
-  project
-) {
+export default function MainProject(project) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  const projectImages = project.images
+  const projectImages = project.images;
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === projectImages.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex =
+      activeIndex === projectImages.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? projectImages.length - 1 : activeIndex - 1;
+    const nextIndex =
+      activeIndex === 0 ? projectImages.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const goToIndex = (newIndex) => {
     if (animating) return;
     setActiveIndex(newIndex);
-  }
-
+  };
 
   return (
     <Zoom>
-    <Card id={project.id} className="card mt-2" style={{background: "transparent"}}>
-      <CardHeader>
-        <CardTitle className="d-inline-block h3">{project.name}</CardTitle>
-          {project.techIcons.map(icon => <span className="mx-2" style={{fontSize: "2rem"}}>{icon}</span>)}
-        <CardSubtitle className="mb-3"></CardSubtitle>
-        <Carousel
-        interval={false}
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        >
-        <CarouselIndicators items={projectImages} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {
-          projectImages.map((img) => {
-            return (
-              <CarouselItem
-                
-                onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
-                key={img.src}
+      <Card
+        id={project.id}
+        className="card mt-2"
+        style={{ background: "transparent" }}
+      >
+        <CardHeader>
+          <CardTitle className="d-inline-block h3">{project.name}</CardTitle>
+          {project.techIcons.map((icon) => (
+            <span className="mx-2" style={{ fontSize: "2rem" }}>
+              {icon}
+            </span>
+          ))}
+          <CardSubtitle className="mb-3"></CardSubtitle>
+          <Carousel
+            interval={false}
+            activeIndex={activeIndex}
+            next={next}
+            previous={previous}
+          >
+            <CarouselIndicators
+              items={projectImages}
+              activeIndex={activeIndex}
+              onClickHandler={goToIndex}
+            />
+            {projectImages.map((img) => {
+              return (
+                <CarouselItem
+                  onExiting={() => setAnimating(true)}
+                  onExited={() => setAnimating(false)}
+                  key={img.src}
+                >
+                  <ImageContainer src={img.src} />
+                </CarouselItem>
+              );
+            })}
+            <CarouselControl
+              direction="prev"
+              directionText="Previous"
+              onClickHandler={previous}
+            />
+            <CarouselControl
+              direction="next"
+              directionText="Next"
+              onClickHandler={next}
+            />
+          </Carousel>
+        </CardHeader>
+        <CardBody>
+          {/* Description */}
+          <p>{project.desc}</p>
+        </CardBody>
+        <CardFooter>
+          <Row noGutters className="mx-0">
+            <Col className="border-left-radius-5 text-center text-dark ">
+              <ListGroupItem
+                style={{
+                  borderRight: "1px solid white",
+                  backgroundColor: "darkslategray",
+                }}
+                className="text-light"
+                tag="a"
+                href={project.liveURL}
+                action
               >
-                <ImageContainer src={img.src} />
-              </CarouselItem>
-            );
-          })
-        }
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-        </Carousel>
-      </CardHeader>
-      <CardBody>
-        {/* Description */}
-        <p>{project.desc}
-        </p>
-      </CardBody>
-      <CardFooter>
-        <Row noGutters className="mx-0">
-          <Col className="border-left-radius-5 text-center text-dark ">
-            <ListGroupItem style={{backgroundColor: "darkslategray"}} className="text-light" tag="a" href={project.liveURL} action>
-              <span className="font-weight-bold">Live</span>
-            </ListGroupItem>
-          </Col>
-          <Col className="border-right-radius-5 text-center text-dark ">
-            <ListGroupItem style={{backgroundColor: "darkslategray"}} className="text-light" tag="a" href={project.codeURL} action>
-              <span className="font-weight-bold">Code</span>
-            </ListGroupItem>
-          </Col>
-        </Row>
-      </CardFooter>
-    </Card>
+                <span className="font-weight-bold">Live</span>
+              </ListGroupItem>
+            </Col>
+            <Col className="border-right-radius-5 text-center text-dark ">
+              <ListGroupItem
+                style={{ backgroundColor: "darkslategray" }}
+                className="text-light"
+                tag="a"
+                href={project.codeURL}
+                action
+              >
+                <span className="font-weight-bold">Code</span>
+              </ListGroupItem>
+            </Col>
+          </Row>
+        </CardFooter>
+      </Card>
     </Zoom>
-  )
+  );
 }

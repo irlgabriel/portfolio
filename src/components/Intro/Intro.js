@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  Container
-} from "reactstrap"
+import { Container } from "reactstrap";
 
 export default () => {
-  return(
-    <Container fluid style={{minHeight: "100vh"}}>
-      INTRO
+  return (
+    <Container className="border mb-auto" fluid>
+      <h2>INTRO</h2>
     </Container>
-  )
-}
+  );
+};

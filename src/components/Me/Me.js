@@ -1,13 +1,24 @@
 import React from "react";
-import {
-  Container
-} from "reactstrap";
+import { Row, Col } from "reactstrap";
 
 export default () => {
-  return(
-    <Container fluid style={{minHeight: "100vh"}}> 
-      <Container fluid style={{border: "1px solid red", position: "relative"}}>
-      </Container>
-    </Container>
-  )
-}
+  return (
+    <Row className="mb-auto" style={{ height: "100%" }} fluid>
+      <Col
+        className="border d-flex justify-content-center align-items-center"
+        id="img-me"
+        md="6"
+        sm="12"
+      >
+        <h2>A NICE PICTURE OF ME</h2>
+      </Col>
+      <Col
+        className="border d-flex justify-content-center align-items-center"
+        md="6"
+        sm="12"
+      >
+        <h2>SOME NICE INFO ABOUT ME</h2>
+      </Col>
+    </Row>
+  );
+};

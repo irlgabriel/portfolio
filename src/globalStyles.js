@@ -7,27 +7,31 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+.slide {
+  background-color: gray !important;
+}
+
 body {
   position: relative;
 }
-#root {
+#everywhere-container {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.bg-img {
+#background {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border: none;
-  width: 100%;
-  height: 100%;
-  background: #2851A6 url("http://i.stack.imgur.com/spmUM.gif") left repeat-x;
-  background-size: auto 65%;
-  background-position: bottom;
-  z-index: -5 !important;
+  top:70px;
+  bottom:0px;
+  left:0px;
+  right: 0px;
+  background-image: url("https://images.pexels.com/photos/2546926/pexels-photo-2546926.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  z-index: -1;
+  filter: blur(4px);
 }
 
 #main {
@@ -36,15 +40,23 @@ body {
   position: relative;
 }
 
+.list-group h5 {
+  font-family: 'Press Start 2P', 'Roboto';
+  font-size: 12px;
+}
+
 .list-group-item {
   border: none;
 }
 
-.active {
+.selected {
   border: none;
-  h4 {
-    transform: translateY(-5px);
-    color: rgba(200,0,10,.8) !important;
+  color: royalblue !important;
+  h5, a {
+    transform: translateY(-0.5rem);
+    color: royalblue !important;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid royalblue;
   }
 }
 
@@ -57,7 +69,6 @@ body {
   border-bottom-left-radius: 5px;
 }
 #footer {
-  border-top: 1px solid darkslategray;;
   width: 50%;
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -77,7 +88,14 @@ body {
   left:0;
   padding: .5rem 1rem;
   background: white;
-  
+}
+
+.active {
+  transform: translateY(-0.5rem);
+  color: royalblue !important;
+}
+#img-me {
+  background-image: url("images/me.jpeg")
 }
 `;
 
@@ -87,7 +105,5 @@ export const Container = styled.div`
   max-width: 1300px;
   margin: 0 auto;
 `;
-
-
 
 export default GlobalStyle;

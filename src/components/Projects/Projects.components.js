@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Col } from "reactstrap"
+import { Col } from "reactstrap";
 
 export const Intro = styled.section`
   display: flex;
@@ -19,8 +19,7 @@ export const Heading = styled.h1`
 
 export const Sidebar = styled(Col)`
   height: 100% !important;
-`
-
+`;
 
 export const ImageContainer = styled.div`
   background-image: url(${({ src }) => src});
@@ -31,13 +30,13 @@ export const ImageContainer = styled.div`
   max-height: 100%;
   margin: 0 auto;
 
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   &:hover {
     transform: scale(1.02);
   }
-`
+`;
 
 export const Image = styled.img`
   max-width: 400px;
   height: 300px;
-`
+`;

@@ -43,4 +43,6 @@ export const Image = styled.img`
 
 export const Carousel = styled.div`
   margin: 0 .5rem;
+  overflow: scroll;
+  height: 400px;
 `

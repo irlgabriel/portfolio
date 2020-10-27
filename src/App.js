@@ -1,6 +1,6 @@
 import React from "react";
 import GlobalStyle from "./globalStyles";
-import { HashRouter as Router, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Route} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Components
@@ -9,9 +9,6 @@ import { Navbar, Projects, Footer, Intro, Me } from "./components";
 import { CSSTransition } from "react-transition-group";
 import { routes } from "./routes";
 function App() {
-  const handleScroll = () => {
-    
-  }
   return (
     <Router basename="/">
       <Container id="everywhere-container" fluid={true} className="px-0"
@@ -28,15 +25,12 @@ function App() {
                 unmountOnExit
               >
                 <div className="page mb-auto">
-                  <Component
-                    onScroll={handleScroll}
-                  />
+                  <Component/>
                 </div>
               </CSSTransition>
             )}
           </Route>
         ))}
-        <Footer />
       </Container>
     </Router>
   );

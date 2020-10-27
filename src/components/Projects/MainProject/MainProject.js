@@ -6,7 +6,7 @@ import {
   CarouselIndicators,
   CarouselControl,
   ListGroupItem,
-  Card,
+  Card, 
   CardBody,
   CardTitle,
   CardHeader,
@@ -16,24 +16,25 @@ import {
   Col,
 } from "reactstrap";
 import { ImageContainer } from "./Mainproject.components";
+import { CSSTransition } from "react-transition-group";
 
-export default function MainProject(project) {
+
+export default function MainProject({setAnimatingMain, images, id, name, techIcons, desc, key, liveURL, codeURL }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  const projectImages = project.images;
 
   const next = () => {
     if (animating) return;
     const nextIndex =
-      activeIndex === projectImages.length - 1 ? 0 : activeIndex + 1;
+      activeIndex === images.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
     const nextIndex =
-      activeIndex === 0 ? projectImages.length - 1 : activeIndex - 1;
+      activeIndex === 0 ? images.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
@@ -43,15 +44,19 @@ export default function MainProject(project) {
   };
 
   return (
-    <Zoom>
+    <CSSTransition 
+      classNames="main-carousel"
+      timeout="300"
+      onExited={setAnimatingMain}
+    >
       <Card
-        id={project.id}
+        id={id}
         className="card mt-2"
         style={{ background: "transparent" }}
       >
         <CardHeader>
-          <CardTitle className="d-inline-block h3">{project.name}</CardTitle>
-          {project.techIcons.map((icon) => (
+          <CardTitle className="d-inline-block h3">{name}</CardTitle>
+          {techIcons.map((icon) => (
             <span className="mx-2" style={{ fontSize: "2rem" }}>
               {icon}
             </span>
@@ -64,11 +69,11 @@ export default function MainProject(project) {
             previous={previous}
           >
             <CarouselIndicators
-              items={projectImages}
+              items={images}
               activeIndex={activeIndex}
               onClickHandler={goToIndex}
             />
-            {projectImages.map((img) => {
+            {images.map((img) => {
               return (
                 <CarouselItem
                   onExiting={() => setAnimating(true)}
@@ -93,7 +98,7 @@ export default function MainProject(project) {
         </CardHeader>
         <CardBody>
           {/* Description */}
-          <p>{project.desc}</p>
+          <p>{desc}</p>
         </CardBody>
         <CardFooter>
           <Row noGutters className="mx-0">
@@ -105,7 +110,7 @@ export default function MainProject(project) {
                 }}
                 className="text-light"
                 tag="a"
-                href={project.liveURL}
+                href={liveURL}
                 action
               >
                 <span className="font-weight-bold">Live</span>
@@ -116,7 +121,7 @@ export default function MainProject(project) {
                 style={{ backgroundColor: "darkslategray" }}
                 className="text-light"
                 tag="a"
-                href={project.codeURL}
+                href={codeURL}
                 action
               >
                 <span className="font-weight-bold">Code</span>
@@ -125,6 +130,6 @@ export default function MainProject(project) {
           </Row>
         </CardFooter>
       </Card>
-    </Zoom>
+    </CSSTransition>
   );
 }

@@ -26,20 +26,16 @@ export default () => {
     }
   }
   return (
-    <Row id="main" className="mx-0 px-0" noGutters={true}>
-      <Col className="mx-0 px-0">
-        <div onWheel={handleScroll}>
-          <CSSTransition 
-            in={animating}
-            classNames="section-scroll"
-            timeout={700}
-          >
-            <div className="section-scroll">
-              <MainProject setParentAnimating={setAnimating} {...mainProjects[slide]} />
-            </div>
-          </CSSTransition>
+    <div onWheel={handleScroll}>
+      <CSSTransition 
+        in={animating}
+        classNames="section-scroll"
+        timeout={700}
+      >
+        <div className="section-scroll">
+          <MainProject setParentAnimating={setAnimating} {...mainProjects[slide]} />
         </div>
-      </Col>
-    </Row>
+      </CSSTransition>
+    </div>
   );
 };

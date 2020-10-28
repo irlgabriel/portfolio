@@ -19,14 +19,14 @@ export default () => {
         if(animating) return;
         if(e.deltaY > 0) {
           if(slide !== slides - 1) {
-            setSlide(slide + 1);
             setAnimating(true);
+            setSlide(slide + 1);
           }
         } 
         if(e.deltaY < 0) {
           if(slide !== 0) {
-            setSlide(slide - 1);
             setAnimating(true);
+            setSlide(slide - 1);
           }
         }
       }
@@ -43,8 +43,8 @@ export default () => {
           node.addEventListener('transitionend', () => {setAnimating(false)}, false);
         }}
       >
-        <div className="section-scroll">
-          <MainProject {...mainProjects[slide]} />
+        <div>
+          <MainProject className="section-scroll" {...mainProjects[slide]} />
         </div>
       </CSSTransition>
     </div>

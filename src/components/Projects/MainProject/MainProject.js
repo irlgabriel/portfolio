@@ -43,7 +43,7 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
   return (
     <Card
       id={id}
-      className="card mt-2"
+      className="card mt-2 p-relative"
       style={{ background: "transparent" }}
     >
       <CardHeader>

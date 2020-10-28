@@ -102,6 +102,28 @@ body {
 #img-me {
   background-image: url("images/me.jpeg")
 }
+.projects-carousel {
+  display: inline-block;
+  width: 90%;
+}
+.carousel-bubbles {
+  width: 5%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bubble {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  margin: 5px 0;
+  transition: all 600ms ease-in-out;
+}
+.checked-bubble {
+  background: royalblue;
+}
 
 // REACT-TRANSITION-GROUP ANIMATIONS
 .page {
@@ -132,24 +154,19 @@ body {
   transition: opacity 300ms, transform 300ms;
 }
 
-.section-scroll {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-.section-scroll-enter {
-  transform: translateY(100%);
-}
-.section-scroll-enter-active {
-  transform: translateY(0%);
-  transition: all 1200ms ease-in-out;
-}
 .section-scroll-exit {
-  transform: translateY(0%);
+  transform: translateY(200%);
 }
 .section-scroll-exit-active {
-  transform: translateY(-100%);
-  transition: all 1200ms ease-in-out;
+  transform: translateY(0%);
+  transition: all 600ms ease-in-out;
+}
+.section-scroll-enter {
+  transform: translateY(0%);
+}
+.section-scroll-enter-active {
+  transform: translateY(-200%);
+  transition: all 600ms ease-in-out;
 }
 `;
 

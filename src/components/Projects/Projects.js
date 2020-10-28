@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { mainProjects } from "./Data";
 import { MainProject } from "..";
 import { CSSTransition } from "react-transition-group";
+import { Row, Col } from "reactstrap";
 
 
 export default () => {
@@ -35,19 +36,23 @@ export default () => {
   }
   return (
     <div className="mx-2 my-2 p-relative" onWheel={handleScroll}>
+      <div>
       <CSSTransition 
-        in={animating}
-        classNames="section-scroll"
-        timeout={1200}
-        addEndListener={(node) => {
-          // use the css transitionend event to mark the finish of a transition
-          node.addEventListener('transitionend', () => {setAnimating(false)}, false);
-        }}
+      in={animating}
+      classNames="section-scroll"
+      timeout={600}
+      onEntered={() => setAnimating(false)}
       >
-        <div>
-          <MainProject className="section-scroll" {...mainProjects[slide]} />
+        <div className="projects-carousel section-scroll">
+          <MainProject {...mainProjects[slide]} />
         </div>
       </CSSTransition>
+        <div className="carousel-bubbles">
+          {mainProjects.map((p, index) =>
+            <div onClick={() => setSlide(index)} className={`bubble ${mainProjects[slide].id === p.id ? "checked-bubble" : ""}`} data-id={p.id}></div>  
+          )}
+        </div>
+      </div>      
     </div>
   );
 };

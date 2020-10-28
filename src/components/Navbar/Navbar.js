@@ -4,7 +4,6 @@ import { Intro, Me, Projects } from "../../components";
 import { Navbar, Nav, Container } from "reactstrap";
 import { NavLink } from "./Navbar.components";
 
-
 export default function AppNavbar() {
   const [location, setLocation] = useState(useLocation().pathname);
 

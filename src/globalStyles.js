@@ -7,8 +7,9 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
 .slide {
-  background-color: gray !important;
+  background: lightgray;
 }
 
 body {
@@ -100,11 +101,11 @@ body {
 }
 
 #img-me {
-  background-image: url("images/me.jpeg")
+  background-image: url("../src/images/me.jpeg")
 }
-.projects-carousel {
-  flex: 1;
-}
+
+
+
 .carousel-bubbles {
   width: 5%;
   display: flex;
@@ -117,7 +118,7 @@ body {
   border-radius: 50%;
   border: 1px solid gray;
   margin: 5px auto;
-  transition: all 1200ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 .checked-bubble {
   background: royalblue;
@@ -126,8 +127,12 @@ body {
 .project-container {
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
+.projects-carousel {
+  width: 90% !important;
+}
+
 
 // REACT-TRANSITION-GROUP ANIMATIONS
 .page {

@@ -4,7 +4,6 @@ import { MainProject } from "..";
 import { CSSTransition } from "react-transition-group";
 import { Row, Col } from "reactstrap";
 
-
 export default () => {
   const slides = mainProjects.length;
   const [slide, setSlide] = useState(0);
@@ -15,47 +14,59 @@ export default () => {
   const handleScroll = (e) => {
     // Check for kinetic scroll first
     var curTime = new Date().getTime();
-    if(typeof prevTime !== 'undefined'){
+    if (typeof prevTime !== "undefined") {
       var timeDiff = curTime - prevTime;
-      if(timeDiff > 100) {
-        if(animating) return;
-        if(e.deltaY > 0) {
-          setScroll(true)
-          if(slide !== slides - 1) {
+      if (timeDiff > 100) {
+        if (animating) return;
+        if (e.deltaY > 0) {
+          setScroll(true);
+          if (slide !== slides - 1) {
             setAnimating(true);
-            setSlide(slide + 1);  
+            setTimeout(() => {
+              setSlide(slide + 1);
+            }, 300);
           }
-        } 
-        if(e.deltaY < 0) {
-          setScroll(false)
-          if(slide !== 0) {
+        }
+        if (e.deltaY < 0) {
+          setScroll(false);
+          if (slide !== 0) {
             setAnimating(true);
-            setSlide(slide - 1);
+            setTimeout(() => {
+              setSlide(slide - 1);
+            }, 300);
           }
         }
       }
     }
     prevTime = curTime;
-  }
+  };
   return (
     <div className="mx-2 my-2 p-relative" onWheel={handleScroll}>
       <div className="project-container">
-        <CSSTransition 
-        in={animating}
-        classNames={`${scrollUp ? "section-scroll" : "section-scroll-inverse"}`}
-        timeout={600}
-        onEntered={() => setAnimating(false)}
+        <CSSTransition
+          in={animating}
+          classNames={`${
+            scrollUp ? "section-scroll" : "section-scroll-inverse"
+          }`}
+          timeout={600}
+          onEntered={() => setAnimating(false)}
         >
-          <div className="projects-carousel section-scroll">
+          <div className="projects-carousel">
             <MainProject {...mainProjects[slide]} />
           </div>
         </CSSTransition>
         <div className="carousel-bubbles">
-          {mainProjects.map((p, index) =>
-            <div onClick={() => setSlide(index)} className={`bubble ${mainProjects[slide].id === p.id ? "checked-bubble" : ""}`} data-id={p.id}></div>  
-          )}
+          {mainProjects.map((p, index) => (
+            <div
+              onClick={() => setSlide(index)}
+              className={`bubble ${
+                mainProjects[slide].id === p.id ? "checked-bubble" : ""
+              }`}
+              data-id={p.id}
+            ></div>
+          ))}
         </div>
-      </div>      
+      </div>
     </div>
   );
 };

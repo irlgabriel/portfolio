@@ -5,33 +5,34 @@ import {
   CarouselIndicators,
   CarouselControl,
   ListGroupItem,
-  Card, 
-  CardBody,
-  CardTitle,
-  CardHeader,
-  CardSubtitle,
-  CardFooter,
   Row,
+  Container,
   Col,
+  Toast,
 } from "reactstrap";
 import { ImageContainer } from "./Mainproject.components";
 
-
-export default function MainProject({ images, id, name, techIcons, desc, liveURL, codeURL, setParentAnimating }) {
+export default function MainProject({
+  images,
+  id,
+  name,
+  techIcons,
+  desc,
+  liveURL,
+  codeURL,
+  setParentAnimating,
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-
   const next = () => {
     if (animating) return;
-    const nextIndex =
-      activeIndex === images.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex =
-      activeIndex === 0 ? images.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
@@ -41,22 +42,10 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
   };
 
   return (
-    <Card
-      id={id}
-      className="card mt-2 p-relative"
-      style={{ background: "transparent" }}
-    >
-      <CardHeader>
-        <CardTitle className="d-inline-block h3">{name}</CardTitle>
-        {techIcons.map((icon) => (
-          <span className="mx-2" style={{ fontSize: "2rem" }}>
-            {icon}
-          </span>
-        ))}
-        <CardSubtitle className="mb-3"></CardSubtitle>
-        {
-          
+    <Row className="project-row" id={id}>
+      <Col xs="12" sm="6" className="project-carousel-col">
         <Carousel
+          style={{ width: "400px" }}
           interval={false}
           activeIndex={activeIndex}
           next={next}
@@ -89,20 +78,22 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
             onClickHandler={next}
           />
         </Carousel>
-        }
-      </CardHeader>
-      <CardBody>
-        <p>{desc}</p>
-      </CardBody>
-      <CardFooter>
-        <Row noGutters className="mx-0">
-          <Col className="border-left-radius-5 text-center text-dark ">
+      </Col>
+      <Col xs="12" sm="6" className="project-info-col">
+        <Row noGutters>
+          <Container fluid className="flex-wrap d-flex align-items-center px-0">
+            <h3 className="mb-0">{name}</h3>
+            {techIcons.map((icon) => (
+              <span className="mx-2" style={{ fontSize: "2rem" }}>
+                {icon}
+              </span>
+            ))}
+          </Container>
+          <Col className="my-2 border-left-radius-5 border text-center text-dark ">
             <ListGroupItem
               style={{
                 borderRight: "1px solid white",
-                backgroundColor: "darkslategray",
               }}
-              className="text-light"
               tag="a"
               href={liveURL}
               action
@@ -110,19 +101,14 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
               <span className="font-weight-bold">Live</span>
             </ListGroupItem>
           </Col>
-          <Col className="border-right-radius-5 text-center text-dark ">
-            <ListGroupItem
-              style={{ backgroundColor: "darkslategray" }}
-              className="text-light"
-              tag="a"
-              href={codeURL}
-              action
-            >
+          <Col className="my-2 border-right-radius-5 border text-center text-dark ">
+            <ListGroupItem tag="a" href={codeURL} action>
               <span className="font-weight-bold">Code</span>
             </ListGroupItem>
           </Col>
+          <p className="py-2 px-2">{desc}</p>
         </Row>
-      </CardFooter>
-    </Card>
+      </Col>
+    </Row>
   );
 }

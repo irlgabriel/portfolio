@@ -4,7 +4,6 @@ import { contacts } from "./Data";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 
 export default function Footer() {
-  
   return (
     <Container fluid={true} className="py-2">
       <ListGroup id="footer" className="mx-auto" horizontal="sm">

@@ -117,6 +117,22 @@ body {
   transform: translateX(100%);
   transition: all 300ms;
 }
+
+
+.section-scroll-enter {
+  transform: translateY(100%);
+}
+.section-scroll-enter-active {
+  transform: translateY(0);
+  transition: transform 700ms ease-in-out;
+}
+.page-carousel-exit {
+  transform: translateY(0);
+}
+.page-carousel-exit-active {
+  transform: translateY(-100%);
+  transition: transform 700ms ease-in-out;
+}
 `;
 
 export const Container = styled.div`

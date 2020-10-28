@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Zoom } from "react-reveal";
+import React, { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselItem,
@@ -16,14 +15,18 @@ import {
   Col,
 } from "reactstrap";
 import { ImageContainer } from "./Mainproject.components";
-import { CSSTransition } from "react-transition-group";
 
 
-export default function MainProject({setAnimatingMain, images, id, name, techIcons, desc, key, liveURL, codeURL }) {
+export default function MainProject({ images, id, name, techIcons, desc, liveURL, codeURL, setParentAnimating }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-
+  useEffect(() => {
+    setTimeout(() => {
+      setParentAnimating(false)
+    }, 700)
+  }, [])
+  
   const next = () => {
     if (animating) return;
     const nextIndex =
@@ -44,92 +47,86 @@ export default function MainProject({setAnimatingMain, images, id, name, techIco
   };
 
   return (
-    <CSSTransition 
-      classNames="main-carousel"
-      timeout="300"
-      onExited={setAnimatingMain}
+    <Card
+      id={id}
+      className="card mt-2"
+      style={{ background: "transparent" }}
     >
-      <Card
-        id={id}
-        className="card mt-2"
-        style={{ background: "transparent" }}
-      >
-        <CardHeader>
-          <CardTitle className="d-inline-block h3">{name}</CardTitle>
-          {techIcons.map((icon) => (
-            <span className="mx-2" style={{ fontSize: "2rem" }}>
-              {icon}
-            </span>
-          ))}
-          <CardSubtitle className="mb-3"></CardSubtitle>
-          <Carousel
-            interval={false}
+      <CardHeader>
+        <CardTitle className="d-inline-block h3">{name}</CardTitle>
+        {techIcons.map((icon) => (
+          <span className="mx-2" style={{ fontSize: "2rem" }}>
+            {icon}
+          </span>
+        ))}
+        <CardSubtitle className="mb-3"></CardSubtitle>
+        <Carousel
+          interval={false}
+          activeIndex={activeIndex}
+          next={next}
+          previous={previous}
+        >
+          <CarouselIndicators
+            items={images}
             activeIndex={activeIndex}
-            next={next}
-            previous={previous}
-          >
-            <CarouselIndicators
-              items={images}
-              activeIndex={activeIndex}
-              onClickHandler={goToIndex}
-            />
-            {images.map((img) => {
-              return (
-                <CarouselItem
-                  onExiting={() => setAnimating(true)}
-                  onExited={() => setAnimating(false)}
-                  key={img.src}
-                >
-                  <ImageContainer src={img.src} />
-                </CarouselItem>
-              );
-            })}
-            <CarouselControl
-              direction="prev"
-              directionText="Previous"
-              onClickHandler={previous}
-            />
-            <CarouselControl
-              direction="next"
-              directionText="Next"
-              onClickHandler={next}
-            />
-          </Carousel>
-        </CardHeader>
-        <CardBody>
-          {/* Description */}
-          <p>{desc}</p>
-        </CardBody>
-        <CardFooter>
-          <Row noGutters className="mx-0">
-            <Col className="border-left-radius-5 text-center text-dark ">
-              <ListGroupItem
-                style={{
-                  borderRight: "1px solid white",
-                  backgroundColor: "darkslategray",
-                }}
-                className="text-light"
-                tag="a"
-                href={liveURL}
-                action
+            onClickHandler={goToIndex}
+          />
+          {images.map((img) => {
+            return (
+              <CarouselItem
+                onExiting={() => setAnimating(true)}
+                onExited={() => setAnimating(false)}
+                key={img.src}
               >
-                <span className="font-weight-bold">Live</span>
-              </ListGroupItem>
-            </Col>
-            <Col className="border-right-radius-5 text-center text-dark ">
-              <ListGroupItem
-                style={{ backgroundColor: "darkslategray" }}
-                className="text-light"
-                tag="a"
-                href={codeURL}
-                action
-              >
-                <span className="font-weight-bold">Code</span>
-              </ListGroupItem>
-            </Col>
-          </Row>
-        </CardFooter>
-      </Card>
-    </CSSTransition>
+                <ImageContainer src={img.src} />
+              </CarouselItem>
+            );
+          })}
+          <CarouselControl
+            direction="prev"
+            directionText="Previous"
+            onClickHandler={previous}
+          />
+          <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={next}
+          />
+        </Carousel>
+      </CardHeader>
+      <CardBody>
+        {/* Description */}
+        <p>{desc}</p>
+      </CardBody>
+      <CardFooter>
+        <Row noGutters className="mx-0">
+          <Col className="border-left-radius-5 text-center text-dark ">
+            <ListGroupItem
+              style={{
+                borderRight: "1px solid white",
+                backgroundColor: "darkslategray",
+              }}
+              className="text-light"
+              tag="a"
+              href={liveURL}
+              action
+            >
+              <span className="font-weight-bold">Live</span>
+            </ListGroupItem>
+          </Col>
+          <Col className="border-right-radius-5 text-center text-dark ">
+            <ListGroupItem
+              style={{ backgroundColor: "darkslategray" }}
+              className="text-light"
+              tag="a"
+              href={codeURL}
+              action
+            >
+              <span className="font-weight-bold">Code</span>
+            </ListGroupItem>
+          </Col>
+        </Row>
+      </CardFooter>
+    </Card>
   );
 }

@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { mainProjects } from "./Data";
-import { Sidebar, MainProject } from "..";
-import { Row, Col, Container } from "reactstrap";
-import { Carousel } from "./Projects.components";
+import { MainProject } from "..";
+import { Row, Col } from "reactstrap";
+import { CSSTransition } from "react-transition-group";
+
 
 export default () => {
-  const [slides, setSlides] = useState(mainProjects.length)
+  const slides = mainProjects.length;
   const [slide, setSlide] = useState(0);
   const [animating, setAnimating] = useState(false);
 
   const handleScroll = (e) => {
-    console.log(e);
-    if(!animating) {
-      if(slide >= slides.length - 1) {
-        setAnimating(true);
-        setSlide(0);
-      } else {
+    if(animating) return;
+    if(e.deltaY > 0) {
+      if(slide !== slides - 1) {
         setSlide(slide + 1);
+        setAnimating(true);
+      }
+    } 
+    if(e.deltaY < 0) {
+      if(slide !== 0) {
+        setSlide(slide - 1);
         setAnimating(true);
       }
     }
@@ -24,9 +28,17 @@ export default () => {
   return (
     <Row id="main" className="mx-0 px-0" noGutters={true}>
       <Col className="mx-0 px-0">
-        <Carousel onWheel={handleScroll}>
-          <MainProject setAnimatingMain={setAnimating} {...mainProjects[slide]} />
-        </Carousel>
+        <div onWheel={handleScroll}>
+          <CSSTransition 
+            in={animating}
+            classNames="section-scroll"
+            timeout={700}
+          >
+            <div className="section-scroll">
+              <MainProject setParentAnimating={setAnimating} {...mainProjects[slide]} />
+            </div>
+          </CSSTransition>
+        </div>
       </Col>
     </Row>
   );

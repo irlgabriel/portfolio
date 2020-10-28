@@ -21,12 +21,6 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setParentAnimating(false)
-    }, 700)
-  }, [])
-  
   const next = () => {
     if (animating) return;
     const nextIndex =
@@ -60,6 +54,7 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
           </span>
         ))}
         <CardSubtitle className="mb-3"></CardSubtitle>
+        {
         <Carousel
           interval={false}
           activeIndex={activeIndex}
@@ -93,9 +88,9 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
             onClickHandler={next}
           />
         </Carousel>
+        }
       </CardHeader>
       <CardBody>
-        {/* Description */}
         <p>{desc}</p>
       </CardBody>
       <CardFooter>

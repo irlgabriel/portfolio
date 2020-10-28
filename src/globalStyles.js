@@ -103,6 +103,7 @@ body {
   background-image: url("images/me.jpeg")
 }
 
+// REACT-TRANSITION-GROUP ANIMATIONS
 .page-enter {
   transform: translateX(-100%);
 }
@@ -117,7 +118,6 @@ body {
   transform: translateX(100%);
   transition: all 300ms;
 }
-
 
 .section-scroll-enter {
   transform: translateY(100%);

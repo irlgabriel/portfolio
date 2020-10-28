@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { mainProjects } from "./Data";
 import { MainProject } from "..";
-import { Row, Col } from "reactstrap";
 import { CSSTransition } from "react-transition-group";
 
 
@@ -10,30 +9,42 @@ export default () => {
   const [slide, setSlide] = useState(0);
   const [animating, setAnimating] = useState(false);
 
+  var prevTime = new Date().getTime();
   const handleScroll = (e) => {
-    if(animating) return;
-    if(e.deltaY > 0) {
-      if(slide !== slides - 1) {
-        setSlide(slide + 1);
-        setAnimating(true);
-      }
-    } 
-    if(e.deltaY < 0) {
-      if(slide !== 0) {
-        setSlide(slide - 1);
-        setAnimating(true);
+    // Check for kinetic scroll first
+    var curTime = new Date().getTime();
+    if(typeof prevTime !== 'undefined'){
+      var timeDiff = curTime - prevTime;
+      if(timeDiff > 100) {
+        if(animating) return;
+        if(e.deltaY > 0) {
+          if(slide !== slides - 1) {
+            setSlide(slide + 1);
+            setAnimating(true);
+          }
+        } 
+        if(e.deltaY < 0) {
+          if(slide !== 0) {
+            setSlide(slide - 1);
+            setAnimating(true);
+          }
+        }
       }
     }
+    prevTime = curTime;
   }
   return (
-    <div onWheel={handleScroll}>
+    <div className="mx-2 my-2 overflow-hidden" onWheel={handleScroll}>
       <CSSTransition 
         in={animating}
         classNames="section-scroll"
-        timeout={700}
+        addEndListener={(node) => {
+          // use the css transitionend event to mark the finish of a transition
+          node.addEventListener('transitionend', () => {setAnimating(false)}, false);
+        }}
       >
         <div className="section-scroll">
-          <MainProject setParentAnimating={setAnimating} {...mainProjects[slide]} />
+          <MainProject {...mainProjects[slide]} />
         </div>
       </CSSTransition>
     </div>

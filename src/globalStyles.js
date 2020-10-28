@@ -104,34 +104,52 @@ body {
 }
 
 // REACT-TRANSITION-GROUP ANIMATIONS
-.page-enter {
-  transform: translateX(-100%);
-}
-.page-enter-active {
-  transform: translateX(0%);
-  transition: all 300ms;
-}
-.page-exit {
-  transform: translateX(0%);
-}
-.page-exit-active {
-  transform: translateX(100%);
-  transition: all 300ms;
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
 }
 
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.section-scroll {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
 .section-scroll-enter {
   transform: translateY(100%);
 }
 .section-scroll-enter-active {
   transform: translateY(0%);
-  transition: transform 700ms ease-in-out;
+  transition: all 1200ms ease-in-out;
 }
-.page-carousel-exit {
+.section-scroll-exit {
   transform: translateY(0%);
 }
-.page-carousel-exit-active {
+.section-scroll-exit-active {
   transform: translateY(-100%);
-  transition: transform 700ms ease-in-out;
+  transition: all 1200ms ease-in-out;
 }
 `;
 

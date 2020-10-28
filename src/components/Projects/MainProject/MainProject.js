@@ -55,6 +55,7 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
         ))}
         <CardSubtitle className="mb-3"></CardSubtitle>
         {
+          /*
         <Carousel
           interval={false}
           activeIndex={activeIndex}
@@ -88,6 +89,7 @@ export default function MainProject({ images, id, name, techIcons, desc, liveURL
             onClickHandler={next}
           />
         </Carousel>
+        */
         }
       </CardHeader>
       <CardBody>

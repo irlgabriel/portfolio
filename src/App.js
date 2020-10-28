@@ -15,22 +15,24 @@ function App() {
       >
         <GlobalStyle />
         <Navbar />
-        {routes.map(({ path, Component }) => (
-          <Route key={path} exact path={path}>
-            {({ match }) => (
-              <CSSTransition
-                in={match !== null}
-                timeout={300}
-                classNames="page"
-                unmountOnExit
-              >
-                <div className="page mb-auto">
-                  <Component/>
-                </div>
-              </CSSTransition>
-            )}
-          </Route>
-        ))}
+        <Container className="p-relative">
+          {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path}>
+              {({ match }) => (
+                <CSSTransition
+                  in={match !== null}
+                  timeout={300}
+                  classNames="page"
+                  unmountOnExit
+                >
+                  <div className="page mb-auto">
+                    <Component/>
+                  </div>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
+        </Container>
       </Container>
     </Router>
   );

@@ -20,7 +20,7 @@ export default () => {
         if(e.deltaY > 0) {
           if(slide !== slides - 1) {
             setAnimating(true);
-            setSlide(slide + 1);
+            setSlide(slide + 1);  
           }
         } 
         if(e.deltaY < 0) {
@@ -34,10 +34,11 @@ export default () => {
     prevTime = curTime;
   }
   return (
-    <div className="mx-2 my-2 overflow-hidden" onWheel={handleScroll}>
+    <div className="mx-2 my-2 p-relative" onWheel={handleScroll}>
       <CSSTransition 
         in={animating}
         classNames="section-scroll"
+        timeout={1200}
         addEndListener={(node) => {
           // use the css transitionend event to mark the finish of a transition
           node.addEventListener('transitionend', () => {setAnimating(false)}, false);

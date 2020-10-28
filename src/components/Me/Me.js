@@ -3,7 +3,7 @@ import { Row, Col } from "reactstrap";
 
 export default () => {
   return (
-    <Row className="mb-auto" style={{ height: "100%" }} fluid>
+    <Row className="mb-auto">
       <Col
         className="border d-flex justify-content-center align-items-center"
         id="img-me"

@@ -103,26 +103,30 @@ body {
   background-image: url("images/me.jpeg")
 }
 .projects-carousel {
-  display: inline-block;
-  width: 90%;
+  flex: 1;
 }
 .carousel-bubbles {
   width: 5%;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .bubble {
   width: 25px;
   height: 25px;
   border-radius: 50%;
   border: 1px solid gray;
-  margin: 5px 0;
-  transition: all 600ms ease-in-out;
+  margin: 5px auto;
+  transition: all 1200ms ease-in-out;
 }
 .checked-bubble {
   background: royalblue;
+}
+
+.project-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 // REACT-TRANSITION-GROUP ANIMATIONS
@@ -166,6 +170,22 @@ body {
 }
 .section-scroll-enter-active {
   transform: translateY(-200%);
+  transition: all 600ms ease-in-out;
+}
+
+
+.section-scroll-inverse-exit {
+  transform: translateY(-200%);
+}
+.section-scroll-inverse-exit-active {
+  transform: translateY(0%);
+  transition: all 600ms ease-in-out;
+}
+.section-scroll-inverse-enter {
+  transform: translateY(0%);
+}
+.section-scroll-inverse-enter-active {
+  transform: translateY(200%);
   transition: all 600ms ease-in-out;
 }
 `;

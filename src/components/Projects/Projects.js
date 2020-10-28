@@ -9,6 +9,7 @@ export default () => {
   const slides = mainProjects.length;
   const [slide, setSlide] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [scrollUp, setScroll] = useState(false);
 
   var prevTime = new Date().getTime();
   const handleScroll = (e) => {
@@ -19,12 +20,14 @@ export default () => {
       if(timeDiff > 100) {
         if(animating) return;
         if(e.deltaY > 0) {
+          setScroll(true)
           if(slide !== slides - 1) {
             setAnimating(true);
             setSlide(slide + 1);  
           }
         } 
         if(e.deltaY < 0) {
+          setScroll(false)
           if(slide !== 0) {
             setAnimating(true);
             setSlide(slide - 1);
@@ -36,17 +39,17 @@ export default () => {
   }
   return (
     <div className="mx-2 my-2 p-relative" onWheel={handleScroll}>
-      <div>
-      <CSSTransition 
-      in={animating}
-      classNames="section-scroll"
-      timeout={600}
-      onEntered={() => setAnimating(false)}
-      >
-        <div className="projects-carousel section-scroll">
-          <MainProject {...mainProjects[slide]} />
-        </div>
-      </CSSTransition>
+      <div className="project-container">
+        <CSSTransition 
+        in={animating}
+        classNames={`${scrollUp ? "section-scroll" : "section-scroll-inverse"}`}
+        timeout={600}
+        onEntered={() => setAnimating(false)}
+        >
+          <div className="projects-carousel section-scroll">
+            <MainProject {...mainProjects[slide]} />
+          </div>
+        </CSSTransition>
         <div className="carousel-bubbles">
           {mainProjects.map((p, index) =>
             <div onClick={() => setSlide(index)} className={`bubble ${mainProjects[slide].id === p.id ? "checked-bubble" : ""}`} data-id={p.id}></div>  

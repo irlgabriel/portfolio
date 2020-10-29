@@ -8,9 +8,11 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Roboto', sans-serif;
 }
 
+/*
 .slide {
   background: lightgray;
 }
+*/
 
 body {
   position: relative;
@@ -28,6 +30,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 #intro-image {
   position: absolute;
@@ -35,14 +38,13 @@ body {
   bottom:0px;
   left:0px;
   right: 0px;
-  background-image: url("https://images.pexels.com/photos/2546926/pexels-photo-2546926.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  z-index: -1;
+  z-index: -4;
+  //filter: blur(4px);
 }
-
-
 
 #main {
   width: 100%;
@@ -104,7 +106,34 @@ body {
   background-image: url("../src/images/me.jpeg")
 }
 
+.project-info-col {
+  position: relative;
+}
 
+#some-div-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(70, 72, 82, 0.3);
+  z-index: -3;
+}
+
+.project-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  padding: 4px 0;
+  border: 1px solid white;
+  border-radius: 4px;
+  background: darkslategray;
+  a {
+    color: white !important;
+    text-decoration: none;
+  }
+}
 
 .carousel-bubbles {
   width: 5%;
@@ -116,9 +145,13 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 1px solid gray;
+  border: 1px solid white;
   margin: 5px auto;
   transition: all 600ms ease-in-out;
+  &:hover {
+    background: lightskyblue;
+    transform: scale(1.03);
+  }
 }
 .checked-bubble {
   background: royalblue;

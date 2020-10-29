@@ -58,7 +58,13 @@ export default () => {
         <div className="carousel-bubbles">
           {mainProjects.map((p, index) => (
             <div
-              onClick={() => setSlide(index)}
+              onClick={() => {
+                if(slide !== index) {
+                  setAnimating(true);
+                  index < slide ? setScroll(false) : setScroll(true)
+                  setTimeout(() => setSlide(index), 300)
+                }
+              }}
               className={`bubble ${
                 mainProjects[slide].id === p.id ? "checked-bubble" : ""
               }`}

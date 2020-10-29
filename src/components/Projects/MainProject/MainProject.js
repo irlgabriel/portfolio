@@ -42,7 +42,7 @@ export default function MainProject({
   };
 
   return (
-    <Row className="project-row" id={id}>
+    <Row className="project-row text-light" id={id}>
       <Col xs="12" sm="6" className="project-carousel-col">
         <Carousel
           style={{ width: "400px" }}
@@ -80,31 +80,23 @@ export default function MainProject({
         </Carousel>
       </Col>
       <Col xs="12" sm="6" className="project-info-col">
+        <div className="blurred-background"></div>
         <Row noGutters>
-          <Container fluid className="flex-wrap d-flex align-items-center px-0">
-            <h3 className="mb-0">{name}</h3>
+          <Container fluid className="ml-2 mb-2 flex-wrap d-flex align-items-center px-0">
+            <h3 className="font-weight-bold mb-0">{name}</h3>
             {techIcons.map((icon) => (
-              <span className="mx-2" style={{ fontSize: "2rem" }}>
-                {icon}
-              </span>
+              <i className="mx-2">{icon}</i>
             ))}
           </Container>
-          <Col className="my-2 border-left-radius-5 border text-center text-dark ">
-            <ListGroupItem
-              style={{
-                borderRight: "1px solid white",
-              }}
-              tag="a"
-              href={liveURL}
-              action
-            >
+          <Col xs={2} className="project-link">
+            <a href={liveURL}>
               <span className="font-weight-bold">Live</span>
-            </ListGroupItem>
+            </a>
           </Col>
-          <Col className="my-2 border-right-radius-5 border text-center text-dark ">
-            <ListGroupItem tag="a" href={codeURL} action>
+          <Col xs={2} className="project-link">
+            <a href={codeURL}>
               <span className="font-weight-bold">Code</span>
-            </ListGroupItem>
+            </a>
           </Col>
           <p className="py-2 px-2">{desc}</p>
         </Row>

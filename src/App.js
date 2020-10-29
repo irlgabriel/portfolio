@@ -2,7 +2,7 @@ import React from "react";
 import GlobalStyle from "./globalStyles";
 import { HashRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./styles.css"
 
 // Components
 import { Cont as Container } from "./App.components";
@@ -18,7 +18,7 @@ function App() {
         <div id="some-div-overlay"></div>
         <GlobalStyle />
         <Navbar />
-        <Container fluid className="mb-auto p-relative">
+        <Container fluid id="page-wrapper" className="mb-auto p-relative">
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {({ match }) => (
@@ -28,7 +28,7 @@ function App() {
                   classNames="page"
                   unmountOnExit
                 >
-                  <div className="mb-auto">
+                  <div>
                     <Component />
                   </div>
                 </CSSTransition>

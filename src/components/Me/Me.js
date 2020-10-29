@@ -3,9 +3,9 @@ import { Row, Col } from "reactstrap";
 
 export default () => {
   return (
-    <Row className="mb-auto text-light">
+    <Row className="me text-light">
       <Col
-        className="border d-flex justify-content-center align-items-center"
+        className="h-100 border d-flex justify-content-center align-items-center"
         id="img-me"
         md="6"
         sm="12"
@@ -13,7 +13,7 @@ export default () => {
         <h2>A NICE PICTURE OF ME</h2>
       </Col>
       <Col
-        className="border d-flex justify-content-center align-items-center"
+        className="h-100 border d-flex justify-content-center align-items-center"
         md="6"
         sm="12"
       >

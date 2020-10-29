@@ -102,13 +102,6 @@ body {
   background: white;
 }
 
-#img-me {
-  background-image: url("src/images/me.jpeg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-}
-
 .project-info-col {
   position: relative;
 }

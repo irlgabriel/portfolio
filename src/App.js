@@ -28,7 +28,7 @@ function App() {
                   classNames="page"
                   unmountOnExit
                 >
-                  <div>
+                  <div id="inner-wrapper" className="border">
                     <Component />
                   </div>
                 </CSSTransition>

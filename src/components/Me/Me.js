@@ -3,21 +3,12 @@ import { Row, Col } from "reactstrap";
 
 export default () => {
   return (
-    <Row className="me text-light">
-      <Col
-        className="h-100 border d-flex justify-content-center align-items-center"
-        id="img-me"
-        md="6"
-        sm="12"
-      >
-        <h2>A NICE PICTURE OF ME</h2>
+    <Row noGutters className="border me text-light">
+      <Col xs="12" sm="6" noGutters className="d-flex justify-content-center">
+        <img style={{width: "350px"}} src={require("../../images/me.jpeg")} />
       </Col>
-      <Col
-        className="h-100 border d-flex justify-content-center align-items-center"
-        md="6"
-        sm="12"
-      >
-        <h2>SOME NICE INFO ABOUT ME</h2>
+      <Col xs="12" sm="6">
+        
       </Col>
     </Row>
   );

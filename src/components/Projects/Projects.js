@@ -59,7 +59,7 @@ export default () => {
           {mainProjects.map((p, index) => (
             <div
               onClick={() => {
-                if(slide !== index) {
+                if(slide !== index && !animating) {
                   setAnimating(true);
                   index < slide ? setScroll(false) : setScroll(true)
                   setTimeout(() => setSlide(index), 300)

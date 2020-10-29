@@ -1,16 +1,18 @@
 #img-me {
-  background-image: url("images/me.jpeg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
+  min-height: 300px;
+  width: 400px;
+}
+
+#page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#inner-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .me {
   flex: 1;
-}
-#page-wrapper {
-  flex: 1;
-}
-
-.h-100 {
-  height: 100% !important;
 }

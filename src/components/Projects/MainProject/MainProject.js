@@ -45,7 +45,7 @@ export default function MainProject({
     <Row className="project-row text-light" id={id}>
       <Col xs="12" sm="6" className="project-carousel-col">
         <Carousel
-          style={{ width: "400px" }}
+          style={{ height: "300px" }}
           interval={false}
           activeIndex={activeIndex}
           next={next}

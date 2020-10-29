@@ -3,7 +3,7 @@ import { Row, Col } from "reactstrap";
 
 export default () => {
   return (
-    <Row className="mb-auto">
+    <Row className="mb-auto text-light">
       <Col
         className="border d-flex justify-content-center align-items-center"
         id="img-me"

@@ -103,7 +103,10 @@ body {
 }
 
 #img-me {
-  background-image: url("../src/images/me.jpeg")
+  background-image: url("src/images/me.jpeg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 .project-info-col {
@@ -149,8 +152,7 @@ body {
   margin: 5px auto;
   transition: all 600ms ease-in-out;
   &:hover {
-    background: lightskyblue;
-    transform: scale(1.03);
+    background: royalblue;
   }
 }
 .checked-bubble {
@@ -161,9 +163,13 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  margin-bottom: auto;
 }
 .projects-carousel {
   width: 90% !important;
+}
+.project-carousel-col {
+  max-height: 300px !important;
 }
 
 

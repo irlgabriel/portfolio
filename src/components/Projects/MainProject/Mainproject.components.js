@@ -7,7 +7,7 @@ export const ImageContainer = styled.div`
   background-position: center;
   width: 80%;
   margin: 0 auto;
-  min-height: 400px;
+  min-height: 300px;
   max-height: 650px;
   transition: all 0.3s ease;
 `;

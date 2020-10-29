@@ -6,7 +6,7 @@ import { Container, ListGroup, ListGroupItem } from "reactstrap";
 export default function Footer() {
   return (
     <Container fluid={true} className="py-2">
-      <ListGroup id="footer" className="mx-auto" horizontal="sm">
+      <ListGroup id="footer" horizontal="xs" className="mx-auto">
         {contacts.map((obj, index) => (
           <ListGroupItem
             key={index}

@@ -18,7 +18,7 @@ function App() {
         <div id="some-div-overlay"></div>
         <GlobalStyle />
         <Navbar />
-        <Container fluid className="p-relative">
+        <Container fluid className="mb-auto p-relative">
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {({ match }) => (
@@ -36,6 +36,7 @@ function App() {
             </Route>
           ))}
         </Container>
+      <Footer/>
       </Container>
     </Router>
   );

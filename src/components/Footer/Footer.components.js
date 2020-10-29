@@ -11,15 +11,10 @@ export const MainContainer = styled.section`
   justify-content: space-around;
   align-items: center;
 
-  @media screen and (max-width: 960px) {
-    flex-direction: column;
-  }
 `;
 
 export const ContactInfo = styled.div`
-  @media screen and (max-width: 960px) {
-    margin-bottom: 0.5rem;
-  }
+
 `;
 export const TopLine = styled.div`
   display: flex;

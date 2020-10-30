@@ -159,10 +159,11 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: auto;
 }
 .projects-carousel {
-  width: 90% !important;
+  max-width: 90% !important;
 }
 .project-carousel-col {
   max-height: 300px !important;

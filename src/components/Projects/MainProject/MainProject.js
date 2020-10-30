@@ -43,41 +43,8 @@ export default function MainProject({
 
   return (
     <Row className="project-row text-light" id={id}>
-      <Col xs="12" sm="6" className="project-carousel-col">
-        <Carousel
-          style={{ height: "300px" }}
-          interval={false}
-          activeIndex={activeIndex}
-          next={next}
-          previous={previous}
-        >
-          <CarouselIndicators
-            items={images}
-            activeIndex={activeIndex}
-            onClickHandler={goToIndex}
-          />
-          {images.map((img) => {
-            return (
-              <CarouselItem
-                onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
-                key={img.src}
-              >
-                <ImageContainer src={img.src} />
-              </CarouselItem>
-            );
-          })}
-          <CarouselControl
-            direction="prev"
-            directionText="Previous"
-            onClickHandler={previous}
-          />
-          <CarouselControl
-            direction="next"
-            directionText="Next"
-            onClickHandler={next}
-          />
-        </Carousel>
+      <Col xs="12" sm="6" className="project-image-col">
+        <img src={images[0].src} />
       </Col>
       <Col xs="12" sm="6" className="project-info-col">
         <div className="blurred-background"></div>

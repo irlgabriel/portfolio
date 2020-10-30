@@ -41,38 +41,36 @@ export default () => {
     prevTime = curTime;
   };
   return (
-    <div className="mx-2 my-2 p-relative" onWheel={handleScroll}>
-      <div className="project-container">
-        <CSSTransition
-          in={animating}
-          classNames={`${
-            scrollUp ? "section-scroll" : "section-scroll-inverse"
-          }`}
-          timeout={600}
-          onEntered={() => setAnimating(false)}
-        >
-          <div className="projects-carousel">
-            <MainProject {...mainProjects[slide]} />
-          </div>
-        </CSSTransition>
-        <div className="carousel-bubbles">
-          {mainProjects.map((p, index) => (
-            <div
-              onClick={() => {
-                if(slide !== index && !animating) {
-                  setAnimating(true);
-                  index < slide ? setScroll(false) : setScroll(true)
-                  setTimeout(() => setSlide(index), 300)
-                }
-              }}
-              className={`bubble ${
-                mainProjects[slide].id === p.id ? "checked-bubble" : ""
-              }`}
-              data-id={p.id}
-            ></div>
-          ))}
+    <div className="project-container" onWheel={handleScroll}>
+      <CSSTransition
+        in={animating}
+        classNames={`${
+          scrollUp ? "section-scroll" : "section-scroll-inverse"
+        }`}
+        timeout={600}
+        onEntered={() => setAnimating(false)}
+      >
+        <div className="projects-carousel">
+          <MainProject {...mainProjects[slide]} />
         </div>
+      </CSSTransition>
+      <div className="carousel-bubbles">
+        {mainProjects.map((p, index) => (
+          <div
+            onClick={() => {
+              if(slide !== index && !animating) {
+                setAnimating(true);
+                index < slide ? setScroll(false) : setScroll(true)
+                setTimeout(() => setSlide(index), 300)
+              }
+            }}
+            className={`bubble ${
+              mainProjects[slide].id === p.id ? "checked-bubble" : ""
+            }`}
+            data-id={p.id}
+          ></div>
+        ))}
       </div>
-    </div>
+  </div>
   );
 };

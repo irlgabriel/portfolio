@@ -104,7 +104,18 @@ body {
   padding: .5rem 1rem;
   background: white;
 }
+.project-wrapper {
+  display: flex;
+  align-items: center;
+}
 
+
+.project-row {
+  align-items: center;
+}
+.project-image-col img{
+  max-width: 100%;
+}
 .project-info-col {
   position: relative;
 }

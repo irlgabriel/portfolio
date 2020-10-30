@@ -5,7 +5,7 @@ export default () => {
   return (
     <Row noGutters className="border me text-light">
       <Col xs="12" sm="6" noGutters className="d-flex justify-content-center">
-        <img style={{width: "350px", maxHeight: "400px"}} src={require("../../images/me.jpeg")} />
+        <img style={{maxWidth: "350px", maxHeight: "350px"}} src={require("../../images/me.jpeg")} />
       </Col>
       <Col xs="12" sm="6">
         

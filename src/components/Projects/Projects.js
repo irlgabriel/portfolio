@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { mainProjects } from "./Data";
 import { MainProject } from "..";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Row, Col } from "reactstrap";
 
 export default () => {

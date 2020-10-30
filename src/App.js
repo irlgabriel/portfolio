@@ -7,7 +7,7 @@ import "./styles.css"
 // Components
 import { Cont as Container } from "./App.components";
 import { Navbar, Projects, Footer, Intro, Me } from "./components";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { routes } from "./routes";
 function App() {
 

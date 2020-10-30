@@ -51,6 +51,9 @@ body {
   flex: 1;
   position: relative;
 }
+.page-wrapper, .inner-wrapper {
+  position: relative;
+}
 
 .list-group h5 {
   font-family: 'Press Start 2P', 'Roboto';
@@ -165,16 +168,13 @@ body {
   max-height: 300px !important;
 }
 
-
-// REACT-TRANSITION-GROUP ANIMATIONS
-.page {
-  position: absolute;
-  left: 15px;
-  right: 15px;
+#page-wrapper {
+  position: relative;
 }
 
+// REACT-TRANSITION-GROUP ANIMATIONS
+
 .page-enter {
-  opacity: 0;
   transform: scale(1.1);
 }
 
@@ -185,7 +185,6 @@ body {
 }
 
 .page-exit {
-  opacity: 1;
   transform: scale(1);
 }
 
@@ -194,6 +193,8 @@ body {
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
+
+
 
 .section-scroll-exit {
   transform: translateY(200%);

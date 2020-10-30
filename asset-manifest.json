@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.97137cab.chunk.css",
-    "main.js": "/portfolio/static/js/main.b4f288d4.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.b4f288d4.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.1b302538.chunk.css",
+    "main.js": "/portfolio/static/js/main.f2826452.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f2826452.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.70964fd7.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.70964fd7.js.map",
     "static/css/2.9db35e51.chunk.css": "/portfolio/static/css/2.9db35e51.chunk.css",
-    "static/js/2.6930d620.chunk.js": "/portfolio/static/js/2.6930d620.chunk.js",
-    "static/js/2.6930d620.chunk.js.map": "/portfolio/static/js/2.6930d620.chunk.js.map",
+    "static/js/2.fe94d5b0.chunk.js": "/portfolio/static/js/2.fe94d5b0.chunk.js",
+    "static/js/2.fe94d5b0.chunk.js.map": "/portfolio/static/js/2.fe94d5b0.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.6d5f8ed4ebf1e5b4c2fa22995d20f5fa.js": "/portfolio/precache-manifest.6d5f8ed4ebf1e5b4c2fa22995d20f5fa.js",
+    "precache-manifest.892496edf66b07e82245a8ee5938b7d4.js": "/portfolio/precache-manifest.892496edf66b07e82245a8ee5938b7d4.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.9db35e51.chunk.css.map": "/portfolio/static/css/2.9db35e51.chunk.css.map",
-    "static/css/main.97137cab.chunk.css.map": "/portfolio/static/css/main.97137cab.chunk.css.map",
-    "static/js/2.6930d620.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6930d620.chunk.js.LICENSE.txt",
+    "static/css/main.1b302538.chunk.css.map": "/portfolio/static/css/main.1b302538.chunk.css.map",
+    "static/js/2.fe94d5b0.chunk.js.LICENSE.txt": "/portfolio/static/js/2.fe94d5b0.chunk.js.LICENSE.txt",
     "static/media/covid1.png": "/portfolio/static/media/covid1.bb8421d2.png",
     "static/media/covid2.png": "/portfolio/static/media/covid2.30337861.png",
     "static/media/covid3.png": "/portfolio/static/media/covid3.28c2ce92.png",
@@ -26,7 +26,7 @@
     "static/media/library3.png": "/portfolio/static/media/library3.93f5074b.png",
     "static/media/library4.png": "/portfolio/static/media/library4.bccd5800.png",
     "static/media/library5.png": "/portfolio/static/media/library5.4ad57d21.png",
-    "static/media/styles.css": "/portfolio/static/media/me.dd46500b.jpeg",
+    "static/media/me.jpeg": "/portfolio/static/media/me.dd46500b.jpeg",
     "static/media/memory-game-2.png": "/portfolio/static/media/memory-game-2.5d4ec9ff.png",
     "static/media/memory-game-3.png": "/portfolio/static/media/memory-game-3.e9209321.png",
     "static/media/memory-game.png": "/portfolio/static/media/memory-game.9098cfff.png",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.70964fd7.js",
     "static/css/2.9db35e51.chunk.css",
-    "static/js/2.6930d620.chunk.js",
-    "static/css/main.97137cab.chunk.css",
-    "static/js/main.b4f288d4.chunk.js"
+    "static/js/2.fe94d5b0.chunk.js",
+    "static/css/main.1b302538.chunk.css",
+    "static/js/main.f2826452.chunk.js"
   ]
 }

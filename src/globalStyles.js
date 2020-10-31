@@ -123,10 +123,11 @@ body {
 // MAIN LAYOUT
 #page-wrapper {
   flex: 1;
+  overflow: hidden;
 }
 #projects-slider {
-  max-height: 500px;
-  overflow: hidden;
+  
+  height: 100% !important;
 }
 .project-slide {
   height: 100% !important;

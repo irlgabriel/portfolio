@@ -25,18 +25,15 @@ export const mainProjects = [
   {
     id: "covid-app",
     name: "Covid-19 Charts",
-    images: [
-      { src: require("../../images/covid2.png") },
-      { src: require("../../images/covid1.png") },
-      { src: require("../../images/covid3.png") },
-    ],
+    images: 
+      { src: require("../../images/covid19app.png") },
     techIcons: [
-      <FaReact color="lightblue" />,
-      <FaBootstrap color="purple" />,
-      <FaCss3 color="royalblue" />,
-      <FaHtml5 color="red" />,
-      <SiJavascript color="yellow" />,
-      <FaSass color="red" />,
+      <FaReact size={32}  color="lightblue" />,
+      <FaBootstrap size={32}  color="purple" />,
+      <FaCss3 size={32}  color="royalblue" />,
+      <FaHtml5 size={32}  color="red" />,
+      <SiJavascript size={32}  color="yellow" />,
+      <FaSass size={32}  color="red" />,
     ],
     desc:
       "A react app that takes data from two different APIs and uses Recharts npm library to display some (hopefully useful) charts with Covid-19 information around the world. ",
@@ -47,43 +44,36 @@ export const mainProjects = [
   {
     id: "facebook-clone",
     name: "Facebook Clone",
-    images: [
-      { src: require("../../images/facebook6.png"), idx: 0 },
-      { src: require("../../images/facebook2.png"), idx: 1 },
-      { src: require("../../images/facebook3.png"), idx: 2 },
-      { src: require("../../images/facebook4.png"), idx: 3 },
-      { src: require("../../images/facebook5.png"), idx: 4 },
-    ],
+    images: 
+      { src: require("../../images/facebookapp.png"), idx: 0 },      
     techIcons: [
-      <SiRails color="red" />,
-      <DiRuby color="red" />,
-      <FaBootstrap color="purple" />,
-      <FaHtml5 color="orange" />,
-      <FaCss3 color="royalblue" />,
-      <SiPostgresql color="green" />,
-      <FaAws color="yellow" />,
-      <SiHeroku color="violet" />,
+      <SiRails size={32}  color="red" />,
+      <DiRuby size={32}  color="red" />,
+      <FaBootstrap size={32}  color="purple" />,
+      <FaHtml5 size={32}  color="orange" />,
+      <FaCss3 size={32}  color="royalblue" />,
+      <SiPostgresql size={32}  color="green" />,
+      <FaAws size={32}  color="yellow" />,
+      <SiHeroku size={32}  color="violet" />,
     ],
     desc:
       "A facebook clone built with ruby on rails. This was a great challenge for me, I learned a lot about Rails' Model-View-Controller arhitecture, Forms, HTTP requests, Relational Databases, Schemas and so much more. By far the greatest challenge was figuring out how to add the Friend Request and Notification features, with a very close second being rails' database associations.",
     liveURL: "https://whispering-bayou-85275.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/facebook-odin",
-    projectIcon: <DiRuby fontSize="2.5rem" color="red" />,
+    projectIcon: <DiRuby size={32}  fontSize="2.5rem" color="red" />,
     key: "1",
   },
   {
     name: "Weather App",
     id: "weather-app",
-    images: [
-      { src: require("../../images/weather2.png"), idx: 0 },
-      { src: require("../../images/weather3.png"), idx: 1 },
-    ],
+    images: 
+      { src: require("../../images/weatherapp.png"), idx: 0 },
     techIcons: [
-      <FaReact color="lightblue" />,
-      <SiStyledComponents color="gray" />,
-      <SiJavascript color="yellow" />,
-      <FaHtml5 color="orange" />,
-      <FaCss3 color="royalblue" />,
+      <FaReact size={32} color="lightblue" />,
+      <SiStyledComponents size={32} color="gray" />,
+      <SiJavascript  size={32}color="yellow" />,
+      <FaHtml5 size={32} color="orange" />,
+      <FaCss3 size={32} color="royalblue" />,
     ],
     desc:
       "An ugly weather app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer).",
@@ -95,22 +85,20 @@ export const mainProjects = [
   {
     name: "MERN Shopping List",
     id: "mern-app",
-    images: [
-      { src: require("../../images/mern1.png"), idx: 0 },
-      { src: require("../../images/mern2.png"), idx: 1 },
-    ],
+    images: 
+      { src: require("../../images/mernapp.png"), idx: 0 },
     techIcons: [
-      <FaNode color="green" />,
-      <SiMongodb color="olivedrab" />,
+      <FaNode size={32} color="green" />,
+      <SiMongodb size={32} color="olivedrab" />,
       //"Express.js",
       //"JWT Auth",
-      <FaReact color="lightblue" />,
-      <SiRedux color="purple" />,
-      <SiHeroku color="pink" />,
-      <SiJavascript color="yellow" />,
-      <FaBootstrap color="purple" />,
-      <FaHtml5 color="orange" />,
-      <FaCss3 color="royalblue" />,
+      <FaReact  size={32}color="lightblue" />,
+      <SiRedux size={32} color="purple" />,
+      <SiHeroku size={32} color="pink" />,
+      <SiJavascript size={32} color="yellow" />,
+      <FaBootstrap size={32} color="purple" />,
+      <FaHtml5 size={32} color="orange" />,
+      <FaCss3  size={32}color="royalblue" />,
     ],
     desc:
       "A simple shopping list built with the MERN stack. I know it is pointless(the app in itself too) and overkill to have a custom back-end for such an app while I could have used firebase or other BaaS but I created this one to get familiar with node, Express and mongoDB. I plan to turn it into a e-commerce style website with items and a shopping cart in the future. Oh and it also has custom JWT Authentication on the backend!",
@@ -122,21 +110,18 @@ export const mainProjects = [
   {
     name: "Book Library",
     id: "book-library",
-    images: [
-      { src: require("../../images/library3.png"), idx: 0 },
-      { src: require("../../images/library4.png"), idx: 1 },
-      { src: require("../../images/library5.png"), idx: 2 },
-    ],
+    images: 
+      { src: require("../../images/libraryapp.png"), idx: 0 },
     alt: "Photo of library project",
     projectTitle: "Library",
     techIcons: [
-      <FaReact color="lightblue" />,
-      <SiReactrouter />,
-      <SiJavascript color="yellow" />,
-      <SiFirebase color="orange" />,
-      <SiStyledComponents color="gray" />,
-      <FaHtml5 color="orange" />,
-      <FaCss3 color="royalblue" />,
+      <FaReact size={32}  color="lightblue" />,
+      <SiReactrouter size={32}  />,
+      <SiJavascript size={32}  color="yellow" />,
+      <SiFirebase size={32}  color="orange" />,
+      <SiStyledComponents size={32}  color="gray" />,
+      <FaHtml5 size={32}  color="orange" />,
+      <FaCss3 size={32}  color="royalblue" />,
     ],
     desc:
       "A small app that I've built to get used with firebase and its services (firestore and auth more specifically). I reached the conclusion that it is a great tool (and very easy to learn and implement) for smaller apps that do not need full fledged backends.",
@@ -148,16 +133,14 @@ export const mainProjects = [
   {
     name: "CV Generator",
     id: "cv-generator",
-    images: [
-      { src: require("../../images/project3.png"), idx: 0 },
-      { src: require("../../images/cv2.png") },
-    ],
+    images: 
+      { src: require("../../images/cvapp.png"), idx: 0 },
     techIcons: [
-      <FaReact color="lightblue" />,
-      <SiJavascript color="yellow" />,
-      <SiStyledComponents color="gray" />,
-      <FaHtml5 color="orange" />,
-      <FaCss3 color="royalblue" />,
+      <FaReact  size={32} color="lightblue" />,
+      <SiJavascript size={32}  color="yellow" />,
+      <SiStyledComponents size={32}  color="gray" />,
+      <FaHtml5 size={32}  color="orange" />,
+      <FaCss3 size={32}  color="royalblue" />,
     ],
     desc:
       "Just a small app that helped me understand and manage state more easily. I have got a bit of a taste of form client-side validations since it revolves a lot around valid informations being input.",
@@ -169,17 +152,14 @@ export const mainProjects = [
   {
     name: "Netflix Memory Game",
     id: "netflix-memory-game",
-    images: [
-      { src: require("../../images/memory-game.png"), idx: 0 },
-      { src: require("../../images/memory-game-2.png"), idx: 1 },
-      { src: require("../../images/memory-game-3.png"), idx: 2 },
-    ],
+    images: 
+      { src: require("../../images/memorycardapp.png"), idx: 0 },
     techIcons: [
-      <FaReact color="lightblue" />,
-      <SiJavascript color="yellow" />,
-      <SiStyledComponents color="gray" />,
-      <FaHtml5 color="orange" />,
-      <FaCss3 color="royalblue" />,
+      <FaReact size={32}  color="lightblue" />,
+      <SiJavascript size={32}  color="yellow" />,
+      <SiStyledComponents size={32}  color="gray" />,
+      <FaHtml5 size={32}  color="orange" />,
+      <FaCss3  size={32} color="royalblue" />,
     ],
     desc:
       "More React Hooks practice - A very brief app without any backend (I don't think it is necessary either with this kind of game anyway - maybe just to store the highest-score, but this is not a game that you come back to anyway because it is very boring and the only reason I've built it is to practice React Hooks).",

@@ -34,7 +34,7 @@ export default () => {
     prevTime = curTime;
   };
   return (
-    <div style={{transform: `translate: (${- (slide * 100/7)}px, 0px)`}} id="projects-slider">
+    <div style={{translateX: `15px`}} id="projects-slider">
       {
         mainProjects.map(project => 
           <MainProject key={project.id} {...project} />

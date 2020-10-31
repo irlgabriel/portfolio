@@ -1,9 +1,9 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 
 export default () => {
   return (
-    <Row noGutters id="me">
-    </Row>
+    <Container fluid id="me">
+    </Container>
   );
 };

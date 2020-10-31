@@ -24,7 +24,7 @@ export default function MainProject({
             <i className="tech-icon">{icon}</i>
           ))}
           <Row noGutters>
-            <Col noGutters xs={2} className="project-link">
+            <Col noGutters   xs={2} className="project-link">
               <a href={liveURL}>
                 <span className="font-weight-bold">Live</span>
               </a>

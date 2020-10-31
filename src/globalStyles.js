@@ -35,8 +35,10 @@ body {
   z-index: -4;
   //filter: blur(4px);
 }
+#navbar {
+  height: 80px;
+}
 #footer {
-  width: 80% !important;
 }
 .footer-item {
   transition: all 0.3s ease-in-out;
@@ -123,11 +125,11 @@ body {
   flex: 1;
 }
 #projects-slider {
-  flex: 1;
+  max-height: 500px;
   overflow: hidden;
 }
 .project-slide {
-  height: 100%;
+  height: 100% !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,6 +141,9 @@ body {
   width: 80%;
   padding: 0 !important;
 }
+
+
+
 // REACT-TRANSITION-GROUP ANIMATIONS
 
 .page-enter {
@@ -160,8 +165,6 @@ body {
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
-
-
 
 .section-scroll-exit {
   transform: translateY(200%);

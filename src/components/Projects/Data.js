@@ -25,11 +25,8 @@ export const mainProjects = [
   {
     id: "covid-app",
     name: "Covid-19 Charts",
-    images: [
-      { src: require("../../images/covid2.png") },
-      { src: require("../../images/covid1.png") },
-      { src: require("../../images/covid3.png") },
-    ],
+    images: 
+      { src: require("../../images/covid19app.png") },
     techIcons: [
       <FaReact size={32}  color="lightblue" />,
       <FaBootstrap size={32}  color="purple" />,
@@ -47,13 +44,8 @@ export const mainProjects = [
   {
     id: "facebook-clone",
     name: "Facebook Clone",
-    images: [
-      { src: require("../../images/facebook6.png"), idx: 0 },
-      { src: require("../../images/facebook2.png"), idx: 1 },
-      { src: require("../../images/facebook3.png"), idx: 2 },
-      { src: require("../../images/facebook4.png"), idx: 3 },
-      { src: require("../../images/facebook5.png"), idx: 4 },
-    ],
+    images: 
+      { src: require("../../images/facebookapp.png"), idx: 0 },      
     techIcons: [
       <SiRails size={32}  color="red" />,
       <DiRuby size={32}  color="red" />,
@@ -74,10 +66,8 @@ export const mainProjects = [
   {
     name: "Weather App",
     id: "weather-app",
-    images: [
-      { src: require("../../images/weather2.png"), idx: 0 },
-      { src: require("../../images/weather3.png"), idx: 1 },
-    ],
+    images: 
+      { src: require("../../images/weatherapp.png"), idx: 0 },
     techIcons: [
       <FaReact size={32} color="lightblue" />,
       <SiStyledComponents size={32} color="gray" />,
@@ -95,10 +85,8 @@ export const mainProjects = [
   {
     name: "MERN Shopping List",
     id: "mern-app",
-    images: [
-      { src: require("../../images/mern1.png"), idx: 0 },
-      { src: require("../../images/mern2.png"), idx: 1 },
-    ],
+    images: 
+      { src: require("../../images/mernapp.png"), idx: 0 },
     techIcons: [
       <FaNode size={32} color="green" />,
       <SiMongodb size={32} color="olivedrab" />,
@@ -122,11 +110,8 @@ export const mainProjects = [
   {
     name: "Book Library",
     id: "book-library",
-    images: [
-      { src: require("../../images/library3.png"), idx: 0 },
-      { src: require("../../images/library4.png"), idx: 1 },
-      { src: require("../../images/library5.png"), idx: 2 },
-    ],
+    images: 
+      { src: require("../../images/libraryapp.png"), idx: 0 },
     alt: "Photo of library project",
     projectTitle: "Library",
     techIcons: [
@@ -148,10 +133,8 @@ export const mainProjects = [
   {
     name: "CV Generator",
     id: "cv-generator",
-    images: [
-      { src: require("../../images/project3.png"), idx: 0 },
-      { src: require("../../images/cv2.png") },
-    ],
+    images: 
+      { src: require("../../images/cvapp.png"), idx: 0 },
     techIcons: [
       <FaReact  size={32} color="lightblue" />,
       <SiJavascript size={32}  color="yellow" />,
@@ -169,11 +152,8 @@ export const mainProjects = [
   {
     name: "Netflix Memory Game",
     id: "netflix-memory-game",
-    images: [
-      { src: require("../../images/memory-game.png"), idx: 0 },
-      { src: require("../../images/memory-game-2.png"), idx: 1 },
-      { src: require("../../images/memory-game-3.png"), idx: 2 },
-    ],
+    images: 
+      { src: require("../../images/memorycardapp.png"), idx: 0 },
     techIcons: [
       <FaReact size={32}  color="lightblue" />,
       <SiJavascript size={32}  color="yellow" />,

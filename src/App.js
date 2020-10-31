@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router basename="/">
-      <Container id="everywhere-container" fluid={true} className="px-0">
+      <Container id="topmost-container" fluid={true} className="px-0">
         <div id="intro-image"></div>
         <div id="some-div-overlay"></div>
         <GlobalStyle />
@@ -28,9 +28,7 @@ function App() {
                   classNames="page"
                   unmountOnExit
                 >
-                  <div id="inner-wrapper" className="border">
-                    <Component />
-                  </div>
+                  <Component />
                 </CSSTransition>
               )}
             </Route>

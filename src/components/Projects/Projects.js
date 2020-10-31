@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { mainProjects } from "./Data";
 import { MainProject } from "..";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { Row, Col } from "reactstrap";
 
 export default () => {
   const slides = mainProjects.length;
@@ -41,36 +40,12 @@ export default () => {
     prevTime = curTime;
   };
   return (
-    <div className="project-container" onWheel={handleScroll}>
-      <CSSTransition
-        in={animating}
-        classNames={`${
-          scrollUp ? "section-scroll" : "section-scroll-inverse"
-        }`}
-        timeout={600}
-        onEntered={() => setAnimating(false)}
-      >
-        <div className="projects-carousel">
-          <MainProject {...mainProjects[slide]} />
-        </div>
-      </CSSTransition>
-      <div className="carousel-bubbles">
-        {mainProjects.map((p, index) => (
-          <div
-            onClick={() => {
-              if(slide !== index && !animating) {
-                setAnimating(true);
-                index < slide ? setScroll(false) : setScroll(true)
-                setTimeout(() => setSlide(index), 300)
-              }
-            }}
-            className={`bubble ${
-              mainProjects[slide].id === p.id ? "checked-bubble" : ""
-            }`}
-            data-id={p.id}
-          ></div>
-        ))}
-      </div>
-  </div>
+    <div id="projects-slider">
+      {
+        mainProjects.map(project => 
+          <MainProject {...project} />
+      )
+      }
+    </div>
   );
 };

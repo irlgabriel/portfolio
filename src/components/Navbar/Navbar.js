@@ -10,7 +10,7 @@ export default function AppNavbar() {
   const [location, setLocation] = useState(useLocation().pathname);
   
   return (
-    <Container fluid className="px-0">
+    <Container fluid id="navbar">
       <ToastContainer />
       <Navbar className="w-75 ml-auto">
         <Nav className="w-100 flex-row justify-content-between">

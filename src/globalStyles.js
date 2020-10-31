@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -18,7 +18,7 @@ body {
 }
 #topmost-container {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -88,12 +88,10 @@ body {
   border: 1px solid red;
 }
 .project-image {
-  max-width: 450px;
-  max-height: 400px;
+  height: 100%;
+  width: 100%;
 }
-.project-info-col {
-  position: relative;
-}
+
 
 #some-div-overlay {
   position: absolute;
@@ -119,28 +117,28 @@ body {
   }
 }
 
-.carousel-bubbles {
 
+// MAIN LAYOUT
+#page-wrapper {
+  flex: 1;
 }
-.bubble {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 1px solid white;
-  margin: 5px auto;
-  transition: all 600ms ease-in-out;
-  &:hover {
-    background: royalblue;
-  }
+#projects-slider {
+  flex: 1;
+  overflow: hidden;
 }
-.checked-bubble {
-  background: royalblue;
+.project-slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
-
-
+#hover-info {
+  display: none;
+}
+#image-container { 
+  width: 80%;
+  padding: 0 !important;
+}
 // REACT-TRANSITION-GROUP ANIMATIONS
 
 .page-enter {

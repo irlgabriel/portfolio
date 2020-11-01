@@ -14,12 +14,18 @@ export default function MainProject({
   liveURL,
   codeURL,
 }) {
+  const hoverHandler = (e) => {
+    const tar = e.target
+    const overlay = document.getElementById(`hover-info-${tar.id}`)
+    console.log(overlay)
+  }
   return (
     <Container fluid className="project-slide" id={id}>
-      <Container fluid id="image-container">
+      <Container onMouseEnter={hoverHandler} fluid id="image-container">
+        <div className="some-div-overlay"></div>
         <img src={images.src} className="project-image" />
-        {/*
-        <Container id="hover-info" fluid>
+        {
+        <Container className="hover-info" id={`hover-info-${id}`} fluid>
           <h3 className="font-weight-bold mb-0">{name}</h3>
           {techIcons.map((icon) => (
             <i className="tech-icon">{icon}</i>
@@ -38,8 +44,7 @@ export default function MainProject({
           </Row>
         <p>{desc}</p>
         </Container>
-        */
-          }
+        }
       </Container>
     </Container>
   );

@@ -5,8 +5,8 @@ import { MainProject } from "..";
 export default () => {
   const slides = mainProjects.length;
   const [slide, setSlide] = useState(0);
-  const [styles, setStyles] = useState({});
-  const [scrollUp, setScroll] = useState(false);
+  const [styles, setStyles] = useState({transform: `translate(0px, 0%)`});
+  const [scrollUp, setScroll] = useState(true);
 
   var prevTime = new Date().getTime();
   const handleScroll = (e) => {
@@ -18,15 +18,15 @@ export default () => {
         if (e.deltaY > 0) {
           setScroll(true);
           if (slide !== slides - 1) {
-            setSlide(slide + 1);
-            setStyles({translateX: - slide * 100/slides})
+            setSlide((slide) => slide + 1);
+            setStyles({transform: `translate(0px, ${(slide + 1) * -100}%)`})
           }
         }
         if (e.deltaY < 0) {
           setScroll(false);
           if (slide !== 0) {
-            setSlide(slide - 1);
-            setStyles({translateX: - slide * 100/slides})
+            setSlide((slide) => slide - 1);
+            setStyles({transform: `translate(0px, ${(slide - 1) * -100}%)`})
           }
         }
       }
@@ -34,11 +34,11 @@ export default () => {
     prevTime = curTime;
   };
   return (
-    <div style={{translateX: `15px`}} id="projects-slider">
+    <div style={styles} id="projects-slider" onWheel={handleScroll}>
       {
         mainProjects.map(project => 
           <MainProject key={project.id} {...project} />
-      )
+        )
       }
     </div>
   );

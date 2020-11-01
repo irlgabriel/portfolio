@@ -95,7 +95,7 @@ body {
 }
 
 
-#some-div-overlay {
+.some-div-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -126,7 +126,7 @@ body {
   overflow: hidden;
 }
 #projects-slider {
-  
+  transition: all .5s ease-in;
   height: 100% !important;
 }
 .project-slide {
@@ -135,12 +135,15 @@ body {
   justify-content: center;
   align-items: center;
 }
-#hover-info {
+.hover-info {
   display: none;
 }
 #image-container { 
-  width: 80%;
+  max-height: 100%;
+  max-width: 65%;
   padding: 0 !important;
+  position: relative;
+  z-index: -4;
 }
 
 

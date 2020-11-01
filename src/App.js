@@ -15,7 +15,7 @@ function App() {
     <Router basename="/">
       <Container id="topmost-container" fluid={true}>
         <div id="intro-image"></div>
-        <div id="some-div-overlay"></div>
+        <div className="some-div-overlay"></div>
         <GlobalStyle />
         <Navbar />
         <Container fluid id="page-wrapper">

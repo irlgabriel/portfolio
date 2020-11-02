@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
 import {
   Container,
   Row,
@@ -27,32 +28,33 @@ export default function MainProject({
   return (
     <Container fluid className="project-slide" id={id}>
       <Container onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} fluid id="image-container">
-        {
-          isMouseInside && 
-            <div className="image-overlay"></div>
-        }
-          <img src={images.src} className="project-image" />
-        {
-        <Container style={styles} className="hover-info" id={`hover-info-${id}`} fluid>
-          <h3 className="font-weight-bold mb-0">{name}</h3>
-          {techIcons.map((icon) => (
-            <i className="tech-icon">{icon}</i>
-          ))}
-          <Row id="code-links" noGutters>
-            <Col noGutters xs={2} className="project-link">
-              <a href={liveURL}>
-                <span className="font-weight-bold">Live</span>
-              </a>
-            </Col>
-            <Col noGutters xs={2} className="project-link">
-              <a href={codeURL}>
-                <span className="font-weight-bold">Code</span>
-              </a>
-            </Col>
-          </Row>
-        <p>{desc}</p>
-        </Container>
-        }
+        <img src={images.src} className="project-image" />
+          <CSSTransition
+            in={isMouseInside}
+            timeout={500}
+            classNames="fade2"
+            unmountOnExit
+          >
+            <Container className="hover-info" id={`hover-info-${id}`} fluid>
+              <div className="image-overlay"></div>
+              <h3 className="project-title">{name}</h3>
+              <div className="tech-icons-container">
+                {techIcons.map((icon) => (
+                  <i className="tech-icon">{icon}</i>
+                ))}
+              </div>
+              <p>{desc}</p>
+              <Row className="code-links" noGutters>
+                <Col tag="a" href={liveURL} noGutters xs={2} className="ml-auto project-link">
+                  Live
+                </Col>
+                <Col tag="a" href={codeURL} noGutters xs={2} className="project-link">
+                  Code
+                </Col>
+              </Row>
+            </Container>
+          </CSSTransition>
+        
       </Container>
     </Container>
   );

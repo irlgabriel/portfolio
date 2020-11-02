@@ -40,6 +40,7 @@ body {
   height: 50px;
 }
 
+
 .footer-item {
   padding: 0;
   transition: all 0.3s ease-in-out;
@@ -100,33 +101,42 @@ body {
   bottom: 0;
   right: 0;
   background: rgba(70, 72, 82, 0.7);
+  z-index: -4;
 }
-
+.tech-icons-container {
+  margin: 4px 0;
+}
+.tech-icon {
+  margin: 0 4px;
+}
 .project-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 0;
   border: 1px solid white;
+  margin: 6px;
+  padding: 4px;
   border-radius: 4px;
   background: darkslategray;
-  a {
-    color: white !important;
+  color: white !important;
+  text-decoration: none;
+  &:hover {
     text-decoration: none;
   }
 }
 
+#code-links {
+  justify-content: space-between;
+}
 
 // MAIN LAYOUT
 #page-wrapper {
   flex: 1;
   overflow: hidden;
-  border: 1px solid red;
 }
 #projects-slider {
   transition: all 1.2s cubic-bezier(.43,.35,0,1);
   height: 100% !important;
-  border: 1px solid royalblue;
 }
 .project-slide {
   height: 100% !important;
@@ -137,8 +147,13 @@ body {
 .hover-info {
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   color: white;
   position: absolute;
+  z-index: 2212;
+  display: flex;
+  flex-direction: column;
 }
 #image-container { 
   max-height: 100%;
@@ -152,26 +167,71 @@ body {
 
 // REACT-TRANSITION-GROUP ANIMATIONS
 
-.page-enter {
+.fade-enter {
   opacity: 0;
   transform: scale(1.1);
 }
 
-.page-enter-active {
+.fade-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 500, transform 500;
 }
 
-.page-exit {
+.fade-exit {
   opacity: 1;
   transform: scale(1);
 }
 
-.page-exit-active {
+.fade-exit-active {
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 500, transform 500;
+}
+
+.fade2-enter {
+  opacity: 0;
+}
+.fade2-enter-active {
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+.fade2-exit {
+  opacity: 1;
+}
+.fade2-exit-active {
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.fade-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fade-abs-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.fade-abs-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500, transform 500;
+}
+
+.fade-abs-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-abs-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500, transform 500;
 }
 
 .section-scroll-exit {

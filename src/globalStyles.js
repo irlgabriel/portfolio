@@ -17,6 +17,7 @@ body {
   position: relative;
 }
 #topmost-container {
+  padding: 0 !important;
   position: relative;
   height: 100vh;
   display: flex;
@@ -36,11 +37,11 @@ body {
   //filter: blur(4px);
 }
 #navbar {
-  height: 80px;
+  height: 50px;
 }
-#footer {
-}
+
 .footer-item {
+  padding: 0;
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: translateY(-10px);
@@ -54,6 +55,7 @@ body {
 
 .list-group-item {
   border: none;
+  padding: 0 !important;
 }
 
 .selected {
@@ -78,23 +80,10 @@ body {
 .border-radius-0{
   border-radius: 0px !important;
 }
-
-.project-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.project-hover {
-  position: absolute;
-  opacity: 1;
-  border: 1px solid red;
-}
 .project-image {
   height: 100%;
   width: 100%;
 }
-
-
 .page-overlay {
   position: absolute;
   top: 0;
@@ -164,6 +153,7 @@ body {
 // REACT-TRANSITION-GROUP ANIMATIONS
 
 .page-enter {
+  opacity: 0;
   transform: scale(1.1);
 }
 
@@ -174,6 +164,7 @@ body {
 }
 
 .page-exit {
+  opacity: 1;
   transform: scale(1);
 }
 

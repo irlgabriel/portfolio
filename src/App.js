@@ -23,6 +23,7 @@ function App() {
             <Route key={path} exact path={path}>
               {({ match }) => (
                 <CSSTransition
+                  key={path}
                   in={match !== null}
                   timeout={300}
                   classNames="page"

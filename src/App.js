@@ -7,7 +7,7 @@ import "./styles.css"
 // Components
 import { Container } from "reactstrap";
 import { Navbar, Projects, Footer, Intro, Me } from "./components";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { routes } from "./routes";
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
         <div className="page-overlay"></div>
         <GlobalStyle />
         <Navbar />
-        <Container fluid id="page-wrapper">
+        <TransitionGroup fluid id="page-wrapper">
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {({ match }) => (
@@ -34,7 +34,7 @@ function App() {
               )}
             </Route>
           ))}
-        </Container>
+        </TransitionGroup>
       <Footer/>
       </Container>
     </Router>

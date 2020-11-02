@@ -8,11 +8,7 @@ import {
 import { AiFillMail } from "react-icons/ai";
 
 export const contacts = [
-  {
-    icon: <FaGithub />,
-    contactLink: "https://github.com/irlgabriel",
-    color: "inherit",
-  },
+
   {
     icon: <FaLinkedin />,
     contactLink: "https://www.linkedin.com/in/gabriel-radu-5023021b9/",
@@ -22,6 +18,11 @@ export const contacts = [
     icon: <AiFillMail />,
     contactLink: "mailto: radu.gabriel131@gmail.com",
     color: "gold",
+  },
+  {
+    icon: <FaGithub />,
+    contactLink: "https://github.com/irlgabriel",
+    color: "inherit",
   },
   {
     icon: <FaInstagramSquare />,

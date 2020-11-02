@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -14,18 +14,26 @@ export default function MainProject({
   liveURL,
   codeURL,
 }) {
-  const hoverHandler = (e) => {
-    const tar = e.target
-    const overlay = document.getElementById(`hover-info-${tar.id}`)
-    console.log(overlay)
-  }
+  const [isMouseInside, setMouse] = useState(false);
+  const [styles, setStyles] = useState({display: "none"});
+
+  useEffect(() => {
+    if(!isMouseInside) {
+      setStyles({display: "none"})
+    } else {
+      setStyles({display: "block"})
+    }
+  },[isMouseInside])
   return (
     <Container fluid className="project-slide" id={id}>
-      <Container onMouseEnter={hoverHandler} fluid id="image-container">
-        <div className="some-div-overlay"></div>
-        <img src={images.src} className="project-image" />
+      <Container onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} fluid id="image-container">
         {
-        <Container className="hover-info" id={`hover-info-${id}`} fluid>
+          isMouseInside && 
+            <div className="image-overlay"></div>
+        }
+          <img src={images.src} className="project-image" />
+        {
+        <Container style={styles} className="hover-info" id={`hover-info-${id}`} fluid>
           <h3 className="font-weight-bold mb-0">{name}</h3>
           {techIcons.map((icon) => (
             <i className="tech-icon">{icon}</i>

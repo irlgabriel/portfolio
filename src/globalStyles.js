@@ -95,7 +95,7 @@ body {
 }
 
 
-.some-div-overlay {
+.page-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,6 +103,14 @@ body {
   right: 0;
   background: rgba(70, 72, 82, 0.3);
   z-index: -3;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(70, 72, 82, 0.7);
 }
 
 .project-link {
@@ -124,10 +132,12 @@ body {
 #page-wrapper {
   flex: 1;
   overflow: hidden;
+  border: 1px solid red;
 }
 #projects-slider {
-  transition: all .5s ease-in;
+  transition: all 1.2s cubic-bezier(.43,.35,0,1);
   height: 100% !important;
+  border: 1px solid royalblue;
 }
 .project-slide {
   height: 100% !important;
@@ -136,14 +146,17 @@ body {
   align-items: center;
 }
 .hover-info {
-  display: none;
+  top: 0;
+  left: 0;
+  color: white;
+  position: absolute;
 }
 #image-container { 
   max-height: 100%;
   max-width: 65%;
   padding: 0 !important;
   position: relative;
-  z-index: -4;
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
 }
 
 

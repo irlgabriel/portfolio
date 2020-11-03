@@ -3,7 +3,8 @@ import { CSSTransition } from "react-transition-group";
 import {
   Container,
   Row,
-  Col
+  Col,
+  Spinner
 } from "reactstrap";
 
 export default function MainProject({
@@ -15,16 +16,8 @@ export default function MainProject({
   liveURL,
   codeURL,
 }) {
+  const [fakeLoading, setLoading] = useState(true);
   const [isMouseInside, setMouse] = useState(false);
-  const [styles, setStyles] = useState({display: "none"});
-
-  useEffect(() => {
-    if(!isMouseInside) {
-      setStyles({display: "none"})
-    } else {
-      setStyles({display: "block"})
-    }
-  },[isMouseInside])
   return (
     <Container fluid className="project-slide" id={id}>
       <Container onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} fluid id="image-container">

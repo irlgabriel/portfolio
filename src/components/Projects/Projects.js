@@ -34,12 +34,22 @@ export default () => {
     prevTime = curTime;
   };
   return (
-    <div style={styles} id="projects-slider" onWheel={handleScroll}>
-      {
-        mainProjects.map(project => 
-          <MainProject key={project.id} {...project} />
-        )
-      }
+    <div style={{overflow: "hidden"}}>
+      <div className="projects-sidebar">
+        {
+          mainProjects.map(project => 
+            <div className="project-sidebar-item" data-id={project.id}></div>  
+          )
+        }
+        </div>
+      <div style={styles} id="projects-slider" onWheel={handleScroll}>
+        
+        {
+          mainProjects.map(project => 
+            <MainProject key={project.id} {...project} />
+          )
+        }
+      </div>
     </div>
   );
 };

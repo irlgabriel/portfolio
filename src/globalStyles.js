@@ -124,6 +124,10 @@ body {
     text-decoration: none;
   }
 }
+#intro-title {
+  text-align: center;
+  color: white;
+}
 
 #code-links {
   justify-content: space-between;
@@ -137,12 +141,26 @@ body {
 #projects-slider {
   transition: all 1.2s cubic-bezier(.43,.35,0,1);
   height: 100% !important;
+  border: 1px solid royalblue;
 }
 .project-slide {
   height: 100% !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
+}
+.projects-sidebar {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+.project-sidebar-item {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 5px 0;
+  border: 1px solid black;
 }
 .hover-info {
   top: 0;

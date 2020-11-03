@@ -18,7 +18,7 @@ function App() {
         <div className="page-overlay"></div>
         <GlobalStyle />
         <Navbar />
-        <TransitionGroup fluid id="page-wrapper">
+        <TransitionGroup className="container-fluid" id="page-wrapper">
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path}>
               {({ match }) => (

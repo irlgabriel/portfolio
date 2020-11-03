@@ -19,14 +19,14 @@ export default () => {
           setScroll(true);
           if (slide !== slides - 1) {
             setSlide((slide) => slide + 1);
-            setStyles({transform: `translate(0px, ${(slide + 1) * -100}%)`})
+            setStyles({transform: `translate(0px, ${(slide + 1) * -100/7}%)`})
           }
         }
         if (e.deltaY < 0) {
           setScroll(false);
           if (slide !== 0) {
             setSlide((slide) => slide - 1);
-            setStyles({transform: `translate(0px, ${(slide - 1) * -100}%)`})
+            setStyles({transform: `translate(0px, ${(slide - 1) * -100/7}%)`})
           }
         }
       }
@@ -34,14 +34,7 @@ export default () => {
     prevTime = curTime;
   };
   return (
-    <div style={{overflow: "hidden"}}>
-      <div className="projects-sidebar">
-        {
-          mainProjects.map(project => 
-            <div className="project-sidebar-item" data-id={project.id}></div>  
-          )
-        }
-        </div>
+
       <div style={styles} id="projects-slider" onWheel={handleScroll}>
         
         {
@@ -50,6 +43,15 @@ export default () => {
           )
         }
       </div>
-    </div>
   );
 };
+
+/*
+<div className="projects-sidebar">
+  {
+    mainProjects.map(project => 
+      <div className="project-sidebar-item" data-id={project.id}></div>  
+    )
+  }
+</div>
+*/

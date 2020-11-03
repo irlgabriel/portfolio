@@ -4,7 +4,6 @@ import {
   Container,
   Row,
   Col,
-  Spinner
 } from "reactstrap";
 
 export default function MainProject({
@@ -16,7 +15,6 @@ export default function MainProject({
   liveURL,
   codeURL,
 }) {
-  const [fakeLoading, setLoading] = useState(true);
   const [isMouseInside, setMouse] = useState(false);
   return (
     <Container fluid className="project-slide" id={id}>

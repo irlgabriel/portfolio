@@ -19,7 +19,7 @@ body {
 #topmost-container {
   padding: 0 !important;
   position: relative;
-  height: 100vh;
+  height: 100vh !important;
   display: flex;
   flex-direction: column;
 }
@@ -128,23 +128,24 @@ body {
   text-align: center;
   color: white;
 }
-
 #code-links {
   justify-content: space-between;
 }
-
 // MAIN LAYOUT
 #page-wrapper {
   flex: 1;
   overflow: hidden;
 }
 #projects-slider {
-  transition: all 1.2s cubic-bezier(.43,.35,0,1);
-  height: 100% !important;
+  transition: all 1.5s cubic-bezier(.43,.35,0,1);
   border: 1px solid royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .project-slide {
-  height: 100% !important;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;

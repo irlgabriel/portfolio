@@ -51,7 +51,7 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
             <div className={`project-sidebar-item ${index === slide ? "active-sidebar" : ""}`} id={project.id}>
             </div>
             <CSSTransition
-              in={sidebar}
+              in={sidebar || index === slide}
               timeout={500}
               unmountOnExit
               classNames="left-slide"

@@ -163,12 +163,13 @@ body {
   justify-content: center;
 }
 .project-sidebar-item {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   border: 2px solid black;
   transition: all .5s ease-in-out;
   position: relative;
+  margin: .45rem 0;
 }
 .active-sidebar {
   background: royalblue;
@@ -190,9 +191,10 @@ body {
   display: flex;
   align-items: center;
   p {
+    margin-left: 5px;
     margin-bottom: 0;
     line-height: 1;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -243,7 +245,7 @@ body {
 .fade-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 500, transform 500;
+  transition: all .5s;
 }
 
 .fade-exit {
@@ -254,7 +256,7 @@ body {
 .fade-exit-active {
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 500, transform 500;
+  transition: all .5s;
 }
 
 .fade2-enter {

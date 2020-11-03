@@ -135,6 +135,7 @@ body {
 #page-wrapper {
   flex: 1;
   overflow: hidden;
+
 }
 #projects-slider {
   transition: all 1.5s cubic-bezier(.43,.35,0,1);
@@ -143,6 +144,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 700%;
+
 }
 .project-slide {
   flex: 1;
@@ -155,13 +158,19 @@ body {
   position: absolute;
   right: 10%;
   top: 30%;
+  z-index: 15;
 }
 .project-sidebar-item {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   margin: 5px 0;
-  border: 1px solid black;
+  border: 2px solid black;
+  transition: all .5s ease-in-out;
+}
+.active-sidebar {
+  background: royalblue;
+  z-index: 122;
 }
 .hover-info {
   top: 0;

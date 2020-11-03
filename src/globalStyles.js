@@ -128,6 +128,13 @@ body {
   text-align: center;
   color: white;
 }
+.project-title {
+  margin-top: .5rem;
+}
+.project-desc {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
 #code-links {
   justify-content: space-between;
 }
@@ -138,6 +145,11 @@ body {
   display: flex;
   padding: 0;
 }
+#inner-page-wrapper {
+  display: flex;
+  flex-direction: row;
+
+}
 #projects-slider {
   transition: all 1.5s cubic-bezier(.43,.35,0,1);
   display: flex;
@@ -145,7 +157,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: 700%;
-  max-width: 80%;
+  max-width: 70%;
 
 }
 .project-slide {
@@ -160,7 +172,9 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
+  overflow-x: hidden;
 }
 .project-sidebar-item {
   height: 30px;
@@ -211,7 +225,7 @@ body {
 }
 #image-container { 
   max-height: 100%;
-  max-width: 65%;
+  max-width: 75%;
   padding: 0 !important;
   position: relative;
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
@@ -222,7 +236,7 @@ body {
 // REACT-TRANSITION-GROUP ANIMATIONS
 
 .left-slide-enter {
-  transform: translateX(300%);
+  transform: translateX(-300%);
 }
 .left-slide-enter-active{
   transform: translateX(0);
@@ -232,7 +246,7 @@ body {
   transform: translateX(0);
 }
 .left-slide-exit-active {
-  transform: translateX(300%);
+  transform: translateX(-300%);
   transition: all .5s;
 }
 
@@ -245,7 +259,7 @@ body {
 .fade-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: all .5s;
+  transition: all 5s;
 }
 
 .fade-exit {
@@ -256,7 +270,7 @@ body {
 .fade-exit-active {
   opacity: 0;
   transform: scale(0.9);
-  transition: all .5s;
+  transition: all 5s;
 }
 
 .fade2-enter {

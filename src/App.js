@@ -14,20 +14,20 @@ function App() {
   const [currentSlide, setSlide] = useState(0);
   const [sidebar, setSidebar] = useState(false);
   return (
-    <Router basename="/">
+    <Router>
       <GlobalStyle />
       <Container id="topmost-container" fluid={true}>
       <div id="intro-image"></div>
       <div className="page-overlay"></div>
       <Navbar />
-      <TransitionGroup className="container-fluid" id="page-wrapper">
+      <TransitionGroup id="page-wrapper">
         {routes.map(({ path, Component }) => (
-          <Route key={path} exact path={path}>
+          <Route exact path={path} key={path}>
             {({ match }) => (
               <CSSTransition
                 key={path}
                 in={match !== null}
-                timeout={500}
+                timeout={5000}
                 classNames="fade"
                 unmountOnExit
               >

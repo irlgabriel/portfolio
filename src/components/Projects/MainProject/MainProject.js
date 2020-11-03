@@ -28,18 +28,18 @@ export default function MainProject({
           >
             <Container className="hover-info" id={`hover-info-${id}`} fluid>
               <div className="image-overlay"></div>
-              <h3 className="project-title">{name}</h3>
+              <h5 style={{lineHeight: "1",marginBottom: "0" }} className="project-title">{name}</h5>
               <div className="tech-icons-container">
-                {techIcons.map((icon) => (
-                  <i className="tech-icon">{icon}</i>
+                {techIcons.map((icon, index) => (
+                  <i key={index} className="tech-icon">{icon}</i>
                 ))}
               </div>
-              <p>{desc}</p>
+              <p className="project-desc">{desc}</p>
               <Row className="code-links" noGutters>
-                <Col tag="a" href={liveURL} noGutters xs={2} className="ml-auto project-link">
+                <Col tag="a" href={liveURL} xs={2} className="ml-auto project-link">
                   Live
                 </Col>
-                <Col tag="a" href={codeURL} noGutters xs={2} className="project-link">
+                <Col tag="a" href={codeURL} xs={2} className="project-link">
                   Code
                 </Col>
               </Row>

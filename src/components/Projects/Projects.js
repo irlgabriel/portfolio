@@ -36,7 +36,7 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
     }
   }, [slide])
   return (
-      <div class="d-flex">
+      <div id="inner-page-wrapper">
         <div style={styles} id="projects-slider" onWheel={handleScroll}>
           {
             mainProjects.map((project, index) => 
@@ -47,10 +47,9 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
         <div onMouseEnter={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)} className="projects-sidebar">
         {
           mainProjects.map((project, index) => 
-          <div onMouseEnter={() => {setSlide(index); setSidebar(true)}} className="project-sidebar-row">
-            <div className={`project-sidebar-item ${index === slide ? "active-sidebar" : ""}`} id={project.id}>
-            </div>
+          <div key={index} onMouseEnter={() => {setSlide(index); setSidebar(true)}} className="project-sidebar-row">
             <CSSTransition
+              key={index}
               in={sidebar || index === slide}
               timeout={500}
               unmountOnExit
@@ -58,6 +57,9 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
             >
               <p className="sidebar-onhover" key={index}>{project.name}</p>
             </CSSTransition>
+            <div className={`project-sidebar-item ${index === slide ? "active-sidebar" : ""}`} id={project.id}>
+            </div>
+            
           </div>
           )
         }

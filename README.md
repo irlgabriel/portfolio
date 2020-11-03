@@ -1,11 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Need to do: 
+### - Figure out page transitions
+### - Think of what the main page should look like
+### - Think of what the "ME" page should look like. 
 
-## Features: 
-### - Scroll Spy for the sidebar!
-### - Mobile design
-
-## Upcoming features: 
-### - Add Dark Mode!
-### - Add a scroll animation. Carousel style scroll for projects' containers
 

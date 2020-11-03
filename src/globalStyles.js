@@ -145,7 +145,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: 700%;
-  width: 85%;
+  max-width: 80%;
 
 }
 .project-slide {

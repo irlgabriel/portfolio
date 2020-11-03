@@ -135,16 +135,17 @@ body {
 #page-wrapper {
   flex: 1;
   overflow: hidden;
-
+  display: flex;
+  padding: 0;
 }
 #projects-slider {
   transition: all 1.5s cubic-bezier(.43,.35,0,1);
-  border: 1px solid royalblue;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 700%;
+  width: 85%;
 
 }
 .project-slide {
@@ -152,26 +153,49 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 .projects-sidebar {
-  position: absolute;
-  right: 10%;
-  top: 30%;
-  z-index: 15;
+  position: relative;
+  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .project-sidebar-item {
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  margin: 5px 0;
   border: 2px solid black;
   transition: all .5s ease-in-out;
+  position: relative;
 }
 .active-sidebar {
   background: royalblue;
   z-index: 122;
 }
+.sidebar-onhover {
+  user-select: none;
+  cursor: default;
+  padding: .5rem .75rem;
+  background: lightgrey;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+  &:hover {
+    background: royalblue;
+  }
+}
+.project-sidebar-row {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 12px;
+  }
+}
+
 .hover-info {
   top: 0;
   left: 0;
@@ -194,6 +218,22 @@ body {
 
 
 // REACT-TRANSITION-GROUP ANIMATIONS
+
+.left-slide-enter {
+  transform: translateX(300%);
+}
+.left-slide-enter-active{
+  transform: translateX(0);
+  transition: all .5s;
+}
+.left-slide-exit {
+  transform: translateX(0);
+}
+.left-slide-exit-active {
+  transform: translateX(300%);
+  transition: all .5s;
+}
+
 
 .fade-enter {
   opacity: 0;
@@ -232,34 +272,23 @@ body {
   transition: all .5s ease-in-out;
 }
 
-.fade-abs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.fade-abs-enter {
+.sidebar-bubble-enter {
   opacity: 0;
-  transform: scale(1.1);
+  transform: translateX(200%);
 }
-
-.fade-abs-enter-active {
+.side-bubble-enter-active {
   opacity: 1;
-  transform: scale(1);
-  transition: opacity 500, transform 500;
+  transform: translateX(0%);
+  transition: all .5s ease-in-out;
 }
-
-.fade-abs-exit {
+.side-bubble-exit {
   opacity: 1;
-  transform: scale(1);
+  transform: translateX(0%);
 }
-
-.fade-abs-exit-active {
+.side-bubble-exit-active {
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 500, transform 500;
+  transform: translateX(200%);
+  transition: all .5s ease-in-out;
 }
 
 .section-scroll-exit {

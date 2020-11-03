@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { mainProjects } from "./Data";
 import { MainProject } from "..";
+import { CSSTransition } from "react-transition-group";
 
-export default ({slide, setSlide}) => {
+export default ({slide, setSlide, sidebar, setSidebar}) => {
   const slides = mainProjects.length;
   const [styles, setStyles] = useState({transform: `translate(0px, 0%)`});
 
@@ -35,14 +36,32 @@ export default ({slide, setSlide}) => {
     }
   }, [slide])
   return (
-
-      <div style={styles} id="projects-slider" onWheel={handleScroll}>
-        
+      <div class="d-flex">
+        <div style={styles} id="projects-slider" onWheel={handleScroll}>
+          {
+            mainProjects.map((project, index) => 
+              <MainProject key={project.id} {...project} />
+            )
+          }
+        </div>
+        <div onMouseEnter={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)} className="projects-sidebar">
         {
           mainProjects.map((project, index) => 
-            <MainProject key={project.id} {...project} />
+          <div onMouseEnter={() => {setSlide(index); setSidebar(true)}} className="project-sidebar-row">
+            <div className={`project-sidebar-item ${index === slide ? "active-sidebar" : ""}`} id={project.id}>
+            </div>
+            <CSSTransition
+              in={sidebar}
+              timeout={500}
+              unmountOnExit
+              classNames="left-slide"
+            >
+              <p className="sidebar-onhover" key={index}>{project.name}</p>
+            </CSSTransition>
+          </div>
           )
         }
+      </div>
       </div>
   );
 };

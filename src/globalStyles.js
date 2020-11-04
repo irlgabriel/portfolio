@@ -69,7 +69,19 @@ body {
     border-bottom: 1px solid royalblue;
   }
 }
-
+#navigate-div {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  color: white;
+}
+#navigate-info {
+  transform: rotate(90deg);
+}
+#scroll-icon {
+  font-size: 32px;
+}
 .border-right-radius-5 {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;

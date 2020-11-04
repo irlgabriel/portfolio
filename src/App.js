@@ -27,7 +27,7 @@ function App() {
               <CSSTransition
                 key={path}
                 in={match !== null}
-                timeout={5000}
+                timeout={500}
                 classNames="fade"
                 unmountOnExit
               >

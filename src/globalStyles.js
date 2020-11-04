@@ -259,7 +259,7 @@ body {
 .fade-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: all 5s;
+  transition: all .5s;
 }
 
 .fade-exit {
@@ -270,7 +270,7 @@ body {
 .fade-exit-active {
   opacity: 0;
   transform: scale(0.9);
-  transition: all 5s;
+  transition: all .5s;
 }
 
 .fade2-enter {

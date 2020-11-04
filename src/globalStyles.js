@@ -73,8 +73,9 @@ body {
   display: flex;
   position: absolute;
   top: 40%;
-  left: 10px;
+  right: 10px;
   color: white;
+  transform: scale(1.4);
 }
 #navigate-info {
   transform: rotate(90deg);
@@ -156,11 +157,11 @@ body {
   overflow: hidden;
   display: flex;
   padding: 0;
+  position: relative;
 }
 #inner-page-wrapper {
   display: flex;
   flex-direction: row;
-
 }
 #projects-slider {
   transition: all 1.5s cubic-bezier(.43,.35,0,1);
@@ -173,6 +174,7 @@ body {
 
 }
 .project-slide {
+  position: relative;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -262,26 +264,24 @@ body {
   transition: all .5s;
 }
 
-
+.fade {
+  position: absolute;
+}
 .fade-enter {
   opacity: 0;
-  transform: scale(1.1);
 }
 
 .fade-enter-active {
   opacity: 1;
-  transform: scale(1);
   transition: all .5s;
 }
 
 .fade-exit {
   opacity: 1;
-  transform: scale(1);
 }
 
 .fade-exit-active {
   opacity: 0;
-  transform: scale(0.9);
   transition: all .5s;
 }
 

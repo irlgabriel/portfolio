@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
+import { BsArrowUpDown } from "react-icons/bs"
+
 import {
   Container,
   Row,
@@ -16,8 +18,13 @@ export default function MainProject({
   codeURL,
 }) {
   const [isMouseInside, setMouse] = useState(false);
+
   return (
     <Container fluid className="project-slide" id={id}>
+      <div id="navigate-div">
+          <em id="navigate-info">Scroll</em>
+          <span id="scroll-icon"><BsArrowUpDown/></span>
+        </div>
       <Container onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} fluid id="image-container">
         <img src={images.src} className="project-image" />
           <CSSTransition

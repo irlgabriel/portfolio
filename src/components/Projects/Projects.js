@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { mainProjects } from "./Data";
 import { MainProject } from "..";
 import { CSSTransition } from "react-transition-group";
-import { BsArrowUpDown } from "react-icons/bs"
 
 export default ({slide, setSlide, sidebar, setSidebar}) => {
   const slides = mainProjects.length;
@@ -46,10 +45,7 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
           }
         </div>
         <div onMouseEnter={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)} className="projects-sidebar">
-        <div id="navigate-div">
-          <em id="navigate-info">Scroll</em>
-          <span id="scroll-icon"><BsArrowUpDown/></span>
-        </div>
+        
 
         {
           mainProjects.map((project, index) => 

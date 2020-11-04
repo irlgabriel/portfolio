@@ -245,7 +245,56 @@ body {
   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
 }
 
-
+// INTRO LAYOUT
+#intro-cards-row {
+  height: 100% !important;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+}
+.intro-card {
+  position: relative;
+  border: 1px solid royalblue;
+  &:first-child {
+  }
+  &:last-child{
+  }
+}
+#what-card {
+  position: relative;  
+  background-image: url("https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  .page-overlay {
+    z-index: 2;
+  }
+}
+#who-card {
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dvse0yuih/image/upload/v1604520677/F2B21B1A-5368-4838-924B-4EF9FB892BF6_kolxgg.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  .page-overlay {
+    z-index: 2;
+  }
+}
+#who-image, #what-image {
+  position: absolute;
+  top: 0;
+  right :0;
+  left: 0;
+  bottom: 0;
+}
+.see-more {
+  padding: .5rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: lightskyblue;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
 
 // REACT-TRANSITION-GROUP ANIMATIONS
 

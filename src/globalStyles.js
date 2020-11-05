@@ -318,6 +318,11 @@ body {
   }
 }
 
+// ME
+#me {
+  position: relative;
+}
+
 // REACT-TRANSITION-GROUP ANIMATIONS
 
 .left-slide-enter {

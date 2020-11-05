@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 a {
   color: white;
   &:hover {
-    color: royalblue;
+    color: lightskyblue;
     text-decoration: none;
   }
 }
@@ -157,12 +157,15 @@ body {
 #code-links {
   justify-content: space-between;
 }
+#currently-link {
+  color: lightskyblue;
+}
 .smallproject-row a {
   padding: .15rem .35rem;
   border: 1px solid white;
   margin-right: .5rem;
   &:hover {
-    border: 1px solid royalblue;
+    border: 1px solid lightskyblue;
   }
 }
 // MAIN LAYOUT
@@ -393,6 +396,22 @@ body {
 .side-bubble-exit-active {
   opacity: 0;
   transform: translateX(200%);
+  transition: all .5s ease-in-out;
+}
+
+.slide-from-left-exit {
+  transform: translateX(-100%);
+}
+.slide-from-left-exit-active {
+  transform: translateX(0);
+  transition: all .5s ease-in-out;
+}
+
+.slide-from-right-exit {
+  transform: translateX(100%);
+}
+.slide-from-right-exit-active {
+  transform: translateX(0);
   transition: all .5s ease-in-out;
 }
 

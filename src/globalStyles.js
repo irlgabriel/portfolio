@@ -7,7 +7,13 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
+a {
+  color: white;
+  &:hover {
+    color: royalblue;
+    text-decoration: none;
+  }
+}
 body {
   position: relative;
 }
@@ -151,6 +157,14 @@ body {
 #code-links {
   justify-content: space-between;
 }
+.smallproject-row a {
+  padding: .15rem .35rem;
+  border: 1px solid white;
+  margin-right: .5rem;
+  &:hover {
+    border: 1px solid royalblue;
+  }
+}
 // MAIN LAYOUT
 #page-wrapper {
   flex: 1;
@@ -250,34 +264,34 @@ body {
   height: 100% !important;
   flex-wrap: nowrap;
   overflow-y: scroll;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .intro-card {
   position: relative;
-  border: 1px solid royalblue;
-  &:first-child {
-  }
-  &:last-child{
+  color: white;
+  padding: .75rem !important;
+  h1 {
+    margin-top: .5rem;
   }
 }
 #what-card {
-  position: relative;  
-  background-image: url("https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  .page-overlay {
-    z-index: 2;
+  h5 {
+    margin: .25rem;
   }
 }
-#who-card {
-  position: relative;
+#who-image {
   background-image: url("https://res.cloudinary.com/dvse0yuih/image/upload/v1604520677/F2B21B1A-5368-4838-924B-4EF9FB892BF6_kolxgg.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  .page-overlay {
-    z-index: 2;
-  }
+}
+#what-image {
+  background-image: url("https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 #who-image, #what-image {
   position: absolute;
@@ -285,15 +299,23 @@ body {
   right :0;
   left: 0;
   bottom: 0;
+  z-index: -4 !important;
 }
 .see-more {
   padding: .5rem;
   border: 1px solid white;
   border-radius: 5px;
-  background: lightskyblue;
   position: absolute;
   bottom: 5px;
   right: 5px;
+  text-decoration: none;
+  color: white;
+  transition: all .3s;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.05);
+  }
 }
 
 // REACT-TRANSITION-GROUP ANIMATIONS
@@ -333,6 +355,7 @@ body {
   opacity: 0;
   transition: all .5s;
 }
+
 
 .fade2-enter {
   opacity: 0;

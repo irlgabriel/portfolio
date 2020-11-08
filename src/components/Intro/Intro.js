@@ -27,7 +27,7 @@ export default () => {
               <h2 style={{lineHeight: "1"}}>Gabriel, 21</h2>
               <div className="d-flex align-items-center">
                 <GoLocation/>
-                <h5 style={{marginBottom: "0"}}>Brasov, Romania</h5>
+                <h5 style={{marginBottom: "0"}}>Brasov/Braila, Romania</h5>
               </div>
             </div>
           </CSSTransition>

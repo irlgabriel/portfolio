@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { mainProjects } from "../Projects/Data"
 import { GoLocation } from "react-icons/go"
 import { CSSTransition } from "react-transition-group"
-
+import { FaNode, FaReact } from "react-icons/fa";
+import { SiMongodb, SiHeroku } from "react-icons/si";
+import { DiRuby } from "react-icons/di";
 export default () => {
   const [firstLoad, setFirstLoad] = useState(true);
   useEffect(() => {
@@ -28,6 +30,15 @@ export default () => {
               <div className="d-flex align-items-center">
                 <GoLocation/>
                 <h5 style={{marginBottom: "0"}}>Brasov/Braila, Romania</h5>
+              </div>
+              <div style={{marginTop: ".5rem"}}>
+                <h5>Technologies</h5>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaReact size="2rem" color='red'/>&nbsp;<span style={{fontSize:"24px"}}>React</span></div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><DiRuby size="2rem" color="red"/>&nbsp;<span style={{fontSize:"24px"}}>Rubyon rails</span> </div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaNode size="2rem" color="lightgreen"/>&nbsp;<span style={{fontSize:"24px"}}>NodeJS</span></div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><img src={require("../../images/expressjs-icon.svg")} width="32px"/>&nbsp;<span style={{fontSize:"24px"}}>Express</span></div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><SiMongodb size="2rem" color="green"/>&nbsp;<span style={{fontSize:"24px"}}>mongoDB</span></div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><SiHeroku size="2rem" color="purple" />&nbsp;<span style={{fontSize:"24px"}}>Heroku</span></div>
               </div>
             </div>
           </CSSTransition>

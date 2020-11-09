@@ -160,6 +160,7 @@ body {
 #currently-link {
   color: lightskyblue;
 }
+
 .smallproject-row a {
   padding: .15rem .35rem;
   border: 1px solid white;

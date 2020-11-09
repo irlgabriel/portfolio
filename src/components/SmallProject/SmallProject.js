@@ -6,7 +6,7 @@ import { Row, Col } from "reactstrap";
 export const SmallProject = ({img, name, liveURL, codeURL}) => {
   const [showOverlay, setOverlay] = useState(false);
   return (
-    <ProjectContainer onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
+    <ProjectContainer styles={{boxShadow: '0px 0px 5px 3px rgba(0,0,0,0.75)'}} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
       <BackgroundImage img={img}/>
       <CSSTransition
         in={showOverlay}

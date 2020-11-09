@@ -15,8 +15,8 @@ export const BackgroundImage = styled.div`
 `
 export const ProjectContainer = styled.div`
   position: relative;
-  width: 180px;
-  height: 90px;
+  width: 150px;
+  height: 75px;
   display: inline-block;
   border-radius: 8px !important;
   margin: .25rem;

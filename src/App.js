@@ -23,17 +23,7 @@ function App() {
       <TransitionGroup id="page-wrapper">
         {routes.map(({ path, Component }) => (
           <Route exact path={path} key={path}>
-            {({ match }) => (
-              <CSSTransition
-                key={path}
-                in={match !== null}
-                timeout={500}
-                classNames="fade"
-                unmountOnExit
-              >
-                <Component slide={currentSlide} setSlide={setSlide} sidebar={sidebar} setSidebar={setSidebar}/>
-              </CSSTransition>
-            )}
+            <Component slide={currentSlide} setSlide={setSlide} sidebar={sidebar} setSidebar={setSidebar}/>
           </Route>
         ))}
       </TransitionGroup>

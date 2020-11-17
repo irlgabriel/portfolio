@@ -10,9 +10,7 @@ import { SiMongodb, SiHeroku } from "react-icons/si";
 import { DiRuby } from "react-icons/di";
 export default () => {
   const [firstLoad, setFirstLoad] = useState(true);
-  useEffect(() => {
-    setTimeout(() => setFirstLoad(false), 500);
-  }, [])
+
   return (
     <Container style={{padding:"0"}} fluid>
       <Row noGutters id="intro-cards-row">
@@ -23,6 +21,7 @@ export default () => {
             in={firstLoad}
             timeout={500}
             classNames="slide-from-left"
+            onExited={() => setFirstLoad(false)}
           >
             <div>
               <h1>About me</h1>

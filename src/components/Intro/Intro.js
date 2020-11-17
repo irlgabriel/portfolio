@@ -34,7 +34,7 @@ export default () => {
               <div style={{marginTop: ".5rem"}}>
                 <h5>Technologies</h5>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaReact size="2rem" color='red'/>&nbsp;<span style={{fontSize:"24px"}}>React</span></div>
-                <div className="d-flex align-items-center" style={{userSelect: "none"}}><DiRuby size="2rem" color="red"/>&nbsp;<span style={{fontSize:"24px"}}>Rubyon rails</span> </div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><DiRuby size="2rem" color="red"/>&nbsp;<span style={{fontSize:"24px"}}>Ruby on rails</span> </div>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaNode size="2rem" color="lightgreen"/>&nbsp;<span style={{fontSize:"24px"}}>NodeJS</span></div>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><img src={require("../../images/expressjs-icon.svg")} width="32px"/>&nbsp;<span style={{fontSize:"24px"}}>Express</span></div>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><SiMongodb size="2rem" color="green"/>&nbsp;<span style={{fontSize:"24px"}}>mongoDB</span></div>

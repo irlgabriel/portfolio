@@ -278,7 +278,7 @@ body {
   height: 100% !important;
   flex-wrap: nowrap;
   overflow-y: scroll;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 968px) {
     flex-direction: column;
   }
 }

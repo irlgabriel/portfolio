@@ -12,7 +12,7 @@ export default function AppNavbar() {
   return (
     <Container fluid id="navbar">
       <ToastContainer />
-      <Navbar className="w-75 ml-auto">
+      <Navbar>
         <Nav className="w-100 flex-row justify-content-between">
           <NavLink
             onClick={() => setLocation("/")}

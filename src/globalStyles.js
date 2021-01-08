@@ -127,6 +127,11 @@ body {
 }
 .tech-icon {
   margin: 0 4px;
+  transition: .15s ease-in-out;
+  &:hover {
+    opacity: .75;
+    cursor: pointer;
+  }
 }
 .project-link {
   display: flex;
@@ -178,8 +183,13 @@ body {
   position: relative;
 }
 #inner-page-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  // 
+  @media screen and (max-width: 768px) {
+    
+  }
 }
 #projects-slider {
   transition: all 1.5s cubic-bezier(.43,.35,0,1);
@@ -187,8 +197,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 700%;
-  max-width: 70%;
+  height: 800%;
+  flex: 70%;
 
 }
 .project-slide {
@@ -255,13 +265,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-#image-container { 
-  max-height: 100%;
-  max-width: 75%;
+.project-wrapper { 
+  height: 100%;
+  width: 100vw;
   padding: 0 !important;
-  position: relative;
-  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+  background-image: ${({image}) => (`url(${image})`)};
 }
+//box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
 
 // INTRO LAYOUT
 #intro-cards-row {
@@ -446,6 +456,33 @@ body {
   transform: translateY(200%);
   transition: all 600ms ease-in-out;
 }
+// React router pages
+.page-enter {
+  opacity: 0; 
+}
+.page-enter-active {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+// Hide scrollbars
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 `;
+
+
 
 export default GlobalStyle;

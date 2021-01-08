@@ -14,25 +14,26 @@ export default () => {
   return (
     <Container style={{padding:"0"}} fluid>
       <Row noGutters id="intro-cards-row">
-        <Col xs={12} md={6} id="who-card" className="intro-card">
+        <Col xs={12} lg={6} id="who-card" className="intro-card">
           <div className="page-overlay"></div>
 
           <CSSTransition
+            appear
             in={firstLoad}
             timeout={500}
             classNames="slide-from-left"
-            onExited={() => setFirstLoad(false)}
+            onEntered={() => setFirstLoad(false)}
           >
             <div>
               <h1>About me</h1>
               <h2 style={{lineHeight: "1"}}>Gabriel, 21</h2>
               <div className="d-flex align-items-center">
-                <GoLocation/>
+                <GoLocation color='pink' />&nbsp;
                 <h5 style={{marginBottom: "0"}}>Brasov/Braila, Romania</h5>
               </div>
               <div style={{marginTop: ".5rem"}}>
                 <h5>Technologies</h5>
-                <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaReact size="2rem" color='red'/>&nbsp;<span style={{fontSize:"24px"}}>React</span></div>
+                <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaReact size="2rem" color='royalblue'/>&nbsp;<span style={{fontSize:"24px"}}>React</span></div>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><DiRuby size="2rem" color="red"/>&nbsp;<span style={{fontSize:"24px"}}>Ruby on rails</span> </div>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><FaNode size="2rem" color="lightgreen"/>&nbsp;<span style={{fontSize:"24px"}}>NodeJS</span></div>
                 <div className="d-flex align-items-center" style={{userSelect: "none"}}><img src={require("../../images/expressjs-icon.svg")} width="32px"/>&nbsp;<span style={{fontSize:"24px"}}>Express</span></div>
@@ -45,11 +46,12 @@ export default () => {
           <div id="who-image"></div>
           <Link to="/who" className="see-more">SEE MORE</Link>          
         </Col>
-        <Col xs={12} md={6} id="what-card" className="intro-card">
+        <Col xs={12} lg={6} id="what-card" className="intro-card">
           {/* Absolutely positioned */}
           <div className="page-overlay"></div>
           <div id="what-image"></div>
           <CSSTransition
+            appear
             in={firstLoad}
             timeout={500}
             classNames="slide-from-right"

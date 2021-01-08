@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { BsArrowUpDown } from "react-icons/bs"
-
+import { ImageContainer } from "./Mainproject.components";
 import {
   Container,
   Row,
@@ -22,11 +22,10 @@ export default function MainProject({
   return (
     <Container fluid className="project-slide" id={id}>
       <div id="navigate-div">
-          <em id="navigate-info">Scroll</em>
-          <span id="scroll-icon"><BsArrowUpDown/></span>
-        </div>
-      <Container onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} fluid id="image-container">
-        <img src={images.src} className="project-image" />
+        <em id="navigate-info">Scroll</em>
+        <span id="scroll-icon"><BsArrowUpDown/></span>
+      </div>
+      <ImageContainer src={images.src} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
           <CSSTransition
             in={isMouseInside}
             timeout={500}
@@ -35,7 +34,8 @@ export default function MainProject({
           >
             <Container className="hover-info" id={`hover-info-${id}`} fluid>
               <div className="image-overlay"></div>
-              <h5 style={{lineHeight: "1",marginBottom: "0" }} className="project-title">{name}</h5>
+              <h3 style={{lineHeight: "1",marginBottom: "0" }} className="project-title">{name}</h3>
+              <hr className='my-2' style={{background: 'white'}} />
               <div className="tech-icons-container">
                 {techIcons.map((icon, index) => (
                   <i key={index} className="tech-icon">{icon}</i>
@@ -53,7 +53,7 @@ export default function MainProject({
             </Container>
           </CSSTransition>
         
-      </Container>
+      </ImageContainer>
     </Container>
   );
 }

@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const ImageContainer = styled.div`
+  position: relative;
   background-image: url(${({ src }) => src});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 80%;
-  margin: 0 auto;
-  min-height: 300px;
-  max-height: 650px;
-  transition: all 0.3s ease;
+  flex: 1;
+  height: 100%;
 `;

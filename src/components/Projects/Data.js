@@ -42,8 +42,31 @@ export const mainProjects = [
     key: "0",
   },
   {
+    id: "facebook-clone-mern",
+    name: "MERN-facebook",
+    images: 
+      { src: require("../../images/mern-fb.png"), idx: 0 },      
+    techIcons: [
+      <FaReact size={32} color='royalblue' />,
+      <FaBootstrap size={32}  color="purple" />,
+      <FaHtml5 size={32}  color="orange" />,
+      <FaCss3 size={32}  color="royalblue" />,
+      <SiMongodb size={32}  color="green" />,
+      <FaAws size={32}  color="yellow" />,
+      <SiHeroku size={32}  color="violet" />,
+      <SiStyledComponents csize={32} color='purple' />,
+
+    ],
+    desc:
+      "Facebook v2.0. Improved from the first facebook done with rails. This one has a custom back-end with express, authentication with JWT, AJAX requests that you can't do with rails alone, smooth animations, smoother overall UI experience.",
+    liveURL: "https://fcloneodin.herokuapp.com/",
+    codeURL: "https://github.com/irlgabriel/MERN-facebook",
+    projectIcon: <FaReact size={32}  fontSize="2.5rem" color="royalblue" />,
+    key: "8",
+  },
+  {
     id: "facebook-clone",
-    name: "Facebook Clone",
+    name: "Rails-Facebook",
     images: 
       { src: require("../../images/facebookapp.png"), idx: 0 },      
     techIcons: [

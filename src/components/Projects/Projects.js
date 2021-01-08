@@ -17,13 +17,13 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
         if (e.deltaY > 0) {
           if (slide !== slides - 1) {
             setSlide((slide) => slide + 1);
-            setStyles({transform: `translate(0px, ${(slide + 1) * -100/7}%)`})
+            setStyles({transform: `translate(0px, ${(slide + 1) * -100/8}%)`})
           }
         }
         if (e.deltaY < 0) {
           if (slide !== 0) {
             setSlide((slide) => slide - 1);
-            setStyles({transform: `translate(0px, ${(slide - 1) * -100/7}%)`})
+            setStyles({transform: `translate(0px, ${(slide - 1) * -100/8}%)`})
           }
         }
       }
@@ -32,7 +32,7 @@ export default ({slide, setSlide, sidebar, setSidebar}) => {
   };
   useEffect(() => {
     if(slide >= 0 && slide < mainProjects.length) {
-      setStyles({transform: `translate(0px, ${(slide) * -100/7}%)`})
+      setStyles({transform: `translate(0px, ${(slide) * -100/8}%)`})
     }
   }, [slide])
   return (

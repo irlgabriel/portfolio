@@ -192,3 +192,30 @@ export const mainProjects = [
     key: "6",
   },
 ];
+
+export const technologies = [
+  {
+    name: 'React',
+    icon: <FaReact size="2rem" color='royalblue'/>
+  },
+  {
+    name: 'Ruby on rails',
+    icon: <DiRuby size="2rem" color="red"/>
+  },
+  {
+    name: 'nodeJS',
+    icon: <FaNode size="2rem" color="lightgreen"/>
+  },
+  {
+    name: 'Express',
+    icon: <img src={require("../../images/expressjs-icon.svg")} width="32px"/>
+  },
+  {
+    name: 'mongoDB',
+    icon: <SiMongodb size="2rem" color="green"/>
+  },
+  {
+    name: 'Heroku',
+    icon: <SiHeroku size="2rem" color="purple" />
+  }
+]

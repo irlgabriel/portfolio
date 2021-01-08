@@ -21,10 +21,6 @@ export default function MainProject({
 
   return (
     <Container fluid className="project-slide" id={id}>
-      <div id="navigate-div">
-        <em id="navigate-info">Scroll</em>
-        <span id="scroll-icon"><BsArrowUpDown/></span>
-      </div>
       <ImageContainer src={images.src} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
           <CSSTransition
             in={isMouseInside}

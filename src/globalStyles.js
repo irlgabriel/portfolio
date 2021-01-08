@@ -25,7 +25,7 @@ body {
 #topmost-container {
   padding: 0 !important;
   position: relative;
-  height: 100vh !important;
+  min-height: 100vh !important;
   display: flex;
   flex-direction: column;
 }
@@ -211,7 +211,7 @@ body {
 .projects-sidebar {
   position: relative;
   padding: 0 1rem;
-  flex: 1;
+  flex: min(1, 150px);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -285,6 +285,7 @@ body {
 .intro-card {
   position: relative;
   color: white;
+  height: 100%;
   padding: .75rem !important;
   h1 {
     margin-top: .5rem;
@@ -478,6 +479,7 @@ html {
 }
 ::-webkit-scrollbar {
     width: 0px;
+    height: 0px;
     background: transparent; /* make scrollbar transparent */
 }
 

@@ -8,4 +8,5 @@ export const ImageContainer = styled.div`
   background-position: center;
   flex: 1;
   height: 100%;
+  z-index: 3;
 `;

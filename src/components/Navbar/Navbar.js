@@ -1,45 +1,55 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Intro, Me, Projects } from "../../components";
-import { Navbar, Nav, Container } from "reactstrap";
-import { NavLink } from "./Navbar.components";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React from "react";
+import Appbar from '@material-ui/core/Appbar';
+import Switch from '@material-ui/core/Switch'
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  headerText: {
+    flexGrow: 1,
+  },
+  button: {
+    marginRight: theme.spacing(2),
+  }
+}));
 
 export default function AppNavbar() {
-  const [location, setLocation] = useState(useLocation().pathname);
-  
+  const classes = useStyles();
+
+  const handleOnChange = () => {
+
+  }
+
   return (
-    <Container fluid id="navbar">
-      <ToastContainer />
-      <Navbar>
-        <Nav className="w-100 flex-row justify-content-between">
-          <NavLink
-            onClick={() => setLocation("/")}
-            className={location === "/" ? "selected" : ""}
-            to="/"
-          >
-            Intro
-          </NavLink>
-          <NavLink
-            onClick={() => {
-              setLocation("/what");
-              toast("Scroll to switch projects", { type: toast.TYPE.INFO, position: toast.POSITION.BOTTOM_LEFT});
-            }}
-            className={location === "/what" ? "selected" : ""}
-            to="/what"
-          >
-            What
-          </NavLink>
-          <NavLink
-            onClick={() => setLocation("/who")}
-            className={location === "/who" ? "selected" : ""}
-            to="/who"
-          >
-            Who
-          </NavLink>
-        </Nav>
-      </Navbar>
-    </Container>
+    <div className={classes.root}>
+      <Appbar position='static' >
+        <Toolbar>
+          <Box className={classes.root}>
+            <Button
+              color='primary'
+              variant='contained'
+              startIcon={<AssignmentIndIcon />}
+            >irlgabriel's portfolio</Button>
+          </Box>
+          <Box>
+            <FormControlLabel
+              control={
+                <Switch 
+                onChange={() => handleOnChange()}
+                />
+              }
+              label='Dark mode'
+            />
+          </Box>
+        </Toolbar>
+      </Appbar>
+    </div>
   );
 }

@@ -208,7 +208,7 @@ export const technologies = [
   },
   {
     name: 'Express',
-    icon: <img src={require("../../images/expressjs-icon.svg")} width="32px"/>
+    icon: <img src={require("../../images/expressjs-icon.svg")} alt='express-logo' width="32px"/>
   },
   {
     name: 'mongoDB',

@@ -11,20 +11,4 @@ export const BackgroundImage = styled.div`
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
   z-index: -2;
-  
-`
-export const ProjectContainer = styled.div`
-  position: relative;
-  width: 150px;
-  height: 75px;
-  display: inline-block;
-  border-radius: 8px !important;
-  margin: .25rem;
-  h5 {
-    margin-bottom: 0;
-  }
-  @media screen and (max-width: 968px) {
-    height: 150px;
-    width: 300px;
-  }
 `

@@ -6,9 +6,10 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    boxShadow: "0px 0px 5px 3px rgba(0,0,0,0.75)",
+    boxShadow: "0px 0px 5px 3px rgba(0,0,0,0.25)",
     position: "relative",
     height: "200px",
+    margin: theme.spacing(1),
   },
   absolute: {
     position: "absolute", 
@@ -28,13 +29,18 @@ const useStyles = makeStyles(theme => ({
     }
   },
   backgroundImage: props => ({
-    background: `#fff url(${props.img}) no-repeat center cover`,
-    position: "absolute", 
-    top: "0", 
-    left: "0", 
-    right: "0", 
-    bottom: "0",
-  })
+    zIndex: '-4',
+    backgroundImage: `url(${props.img})`,
+    backgroundPosition: 'center',
+    backgroundSize: '100%',
+    backgroundRepeat: 'no-repeat',
+
+  }),
+  overlay: {
+    color: '#fff',
+    background: 'rgba(70, 72, 82, 0.7)',
+
+  }
 }));
 
 export const SmallProject = ({img, name, liveURL, codeURL}) => {
@@ -43,8 +49,8 @@ export const SmallProject = ({img, name, liveURL, codeURL}) => {
   const [showOverlay, setOverlay] = useState(false);
 
   return (
-    <Grid item xs={6} md={3} className={classes.root} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
-      <div className={classes.backgroundImage} />
+    <Grid item xs={6} md={4} className={classes.root} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
+      <div className={`${classes.backgroundImage} ${classes.absolute}`} />
       {/**Overlay */}
       <CSSTransition
         in={showOverlay}
@@ -52,13 +58,17 @@ export const SmallProject = ({img, name, liveURL, codeURL}) => {
         classNames="fade2"
         unmountOnExit
       >
-         <div>
-        <Typography variant='h4'>{name}</Typography>
-        <Grid item container>
-          <Grid className={classes.link} item component='a' href={liveURL}>Live</Grid>
-          <Grid className={classes.link} item component='a' href={codeURL}>Code</Grid>
-        </Grid>
-      </div>
+        <div className={`${classes.overlay} ${classes.absolute}`}>
+          <Typography variant='h4'>{name}</Typography>
+          <Grid spacing={2} item container>
+            <Grid className={classes.link} item component='a' href={liveURL}>
+              <Typography variant='h5'>Live</Typography>
+            </Grid>
+            <Grid className={classes.link} item component='a' href={codeURL}>
+              <Typography variant='h5'>Code</Typography>
+            </Grid>
+          </Grid>
+        </div>
       </CSSTransition>
     </Grid>
   )

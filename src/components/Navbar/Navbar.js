@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginRight: theme.spacing(2),
+  },
+  normalLink: {
+    color: '#fff',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+    }
   }
 }));
 
@@ -36,7 +44,7 @@ export default function AppNavbar() {
               color='primary'
               variant='contained'
               startIcon={<AssignmentIndIcon />}
-            >irlgabriel's portfolio</Button>
+            ><Link className={classes.normalLink} to='/'>irlgabriel's portfolio</Link></Button>
           </Box>
           <Box>
             <FormControlLabel

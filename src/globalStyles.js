@@ -285,7 +285,7 @@ body {
 .intro-card {
   position: relative;
   color: white;
-  height: 100%;
+  min-height: 100vh;
   padding: .75rem !important;
   h1 {
     margin-top: .5rem;

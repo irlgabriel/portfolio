@@ -23,4 +23,8 @@ export const ProjectContainer = styled.div`
   h5 {
     margin-bottom: 0;
   }
+  @media screen and (max-width: 968px) {
+    height: 150px;
+    width: 300px;
+  }
 `

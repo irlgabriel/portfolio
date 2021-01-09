@@ -106,31 +106,6 @@ export const mainProjects = [
     key: "2",
   },
   {
-    name: "MERN Shopping List",
-    id: "mern-app",
-    images: 
-      { src: require("../../images/mernapp.png"), idx: 0 },
-    techIcons: [
-      <FaNode size={32} color="green" />,
-      <SiMongodb size={32} color="olivedrab" />,
-      //"Express.js",
-      //"JWT Auth",
-      <FaReact  size={32}color="lightblue" />,
-      <SiRedux size={32} color="purple" />,
-      <SiHeroku size={32} color="pink" />,
-      <SiJavascript size={32} color="yellow" />,
-      <FaBootstrap size={32} color="purple" />,
-      <FaHtml5 size={32} color="orange" />,
-      <FaCss3  size={32}color="royalblue" />,
-    ],
-    desc:
-      "A simple shopping list built with the MERN stack. I know it is pointless(the app in itself too) and overkill to have a custom back-end for such an app while I could have used firebase or other BaaS but I created this one to get familiar with node, Express and mongoDB. I plan to turn it into a e-commerce style website with items and a shopping cart in the future. Oh and it also has custom JWT Authentication on the backend!",
-    liveURL: "https://tranquil-anchorage-36599.herokuapp.com",
-    codeURL: "https://github.com/irlgabriel/mern-shopping-list",
-    projectIcon: <FaNode fontSize="2.5rem" color="lightgreen" />,
-    key: "3",
-  },
-  {
     name: "Book Library",
     id: "book-library",
     images: 
@@ -196,26 +171,26 @@ export const mainProjects = [
 export const technologies = [
   {
     name: 'React',
-    icon: <FaReact size="2rem" color='royalblue'/>
+    icon: <FaReact size="3rem" color='royalblue'/>
   },
   {
     name: 'Ruby on rails',
-    icon: <DiRuby size="2rem" color="red"/>
+    icon: <DiRuby size="3rem" color="red"/>
   },
   {
     name: 'nodeJS',
-    icon: <FaNode size="2rem" color="lightgreen"/>
+    icon: <FaNode size="3rem" color="lightgreen"/>
   },
   {
     name: 'Express',
-    icon: <img src={require("../../images/expressjs-icon.svg")} alt='express-logo' width="32px"/>
+    icon: <img src={require("../../images/expressjs-icon.svg")} alt='express-logo' width="48px"/>
   },
   {
     name: 'mongoDB',
-    icon: <SiMongodb size="2rem" color="green"/>
+    icon: <SiMongodb size="3rem" color="green"/>
   },
   {
     name: 'Heroku',
-    icon: <SiHeroku size="2rem" color="purple" />
+    icon: <SiHeroku size="3rem" color="purple" />
   }
 ]

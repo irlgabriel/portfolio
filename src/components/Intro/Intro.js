@@ -143,7 +143,7 @@ export default ({props}) => {
         {/* Absolutely positioned */}
       </Grid>
       <Grid item>
-        {/*<Footer />*/}
+        <Footer />
       </Grid>
     </Grid>
 

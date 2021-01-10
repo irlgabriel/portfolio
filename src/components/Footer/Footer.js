@@ -1,12 +1,9 @@
 import React from "react";
 import { contacts } from "./Data";
-
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -23,15 +20,25 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: "3rem",
+    fontSize: "2rem",
     background: "transparent",
-    margin: '0 10px',
+    
+  },
+  listItemIcon : {
     transition: 'all 0.20s ease-in-out',
     '&:hover': {
       transform: 'scale(1.05)',
     }
   },
-
+  listItemText: {
+    '& span': {
+      fontSize: '1.3rem',
+      display: 'inline-block'
+    },
+  },
+  primaryBg: {
+    background: theme.palette.primary.main
+  }
 }));
 
 
@@ -39,8 +46,9 @@ export default function Footer() {
   const classes = useStyles({});
 
   return (
-    <Grid spacing={0} container>
-      <Grid spacing={0} className={`${classes.noWrap} ${classes.columnSm}`} item container component={List}>
+    <div>
+      <Divider />
+      <Grid spacing={0} className={`${classes.noWrap} ${classes.columnSm} ${classes.primaryBg}`} item container component={List}>
         {contacts.map((obj, index) => (
           <ListItem
             className={classes.listItem}
@@ -50,11 +58,11 @@ export default function Footer() {
             href={obj.contactLink}
             action
           >
-            <ListItemIcon style={{color: obj.color}} >{obj.icon}</ListItemIcon>
-            <ListItemText primary={obj.name} component='span' ></ListItemText>
+            {obj.icon}
+            <span className={classes.listItemText}>{obj.name}</span>
           </ListItem>
         ))}
       </Grid>
-    </Grid>
+    </div>
   );
 }

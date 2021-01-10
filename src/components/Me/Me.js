@@ -50,7 +50,7 @@ export default ({props}) => {
           <img className={classes.borderRadius} width='100%' src={me}/>
         </Grid>
       </Grid>
-      {/*<Footer />*/}
+      <Footer />
     </Box>
   );
 };

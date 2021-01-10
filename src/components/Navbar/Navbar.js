@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function AppNavbar() {
+export default function AppNavbar(props) {
   const classes = useStyles();
 
   const handleOnChange = () => {
-
+    props[1](prev => prev === 'light' ? 'dark' : 'light');
   }
 
   return (

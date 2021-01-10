@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SmallProject } from "../SmallProject/SmallProject";
 import { Link } from "react-router-dom";
 import { mainProjects, technologies } from "../Projects/Data"
@@ -46,19 +46,28 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
     }
+  },
+  flexBreak: {
+    flexBasis: '100%',
+    height: 0
   }
 }))
 
-export default () => {
+export default ({props}) => {
   const classes = useStyles();
+  console.log(props);
 
-  const [firstLoad, setFirstLoad] = useState(true);
+  const [firstLoad, setFirstLoad] = useState(false);
+
+  useEffect(() => {
+    setFirstLoad(true);
+  }, [])
 
   return (
-    
+
     <Grid spacing={0} background='primary' direction='column' container>
       <Grid item>
-        <Navbar />
+        <Navbar {...props}/>
       </Grid>
       <Grid spacing={0} container>
         <CSSTransition
@@ -66,7 +75,7 @@ export default () => {
           in={firstLoad}
           timeout={500}
           classNames="slide-from-left"
-          onEntered={() => setFirstLoad(false)}
+          onEntering={() => setFirstLoad(false)}
         >
           <Grid component={Box} p={1} item xs={12} md={6}>
             <Typography variant='h1' component='h1'>About me</Typography>
@@ -115,24 +124,28 @@ export default () => {
                   <SmallProject codeURL={project.codeURL} liveURL={project.liveURL} key={project.key} img={project.images.src} name={project.name}/>
                 )
               }
+              <div className={classes.flexBreak} />
+              <Button
+                style={{marginLeft: '.5rem'}}
+                component={Link}
+                color='primary'
+                variant='contained'
+                to='/what'
+                className={classes.fullWidthMdDown}
+              >
+                SEE MORE
+              </Button>
             </Grid>
-            <Button
-              component={Link}
-              color='primary'
-              variant='contained'
-              to='/what'
-              className={classes.fullWidthMdDown}
-            >
-              SEE MORE
-            </Button>    
+                
           </Grid>
         </CSSTransition>
 
         {/* Absolutely positioned */}
       </Grid>
       <Grid item>
-        <Footer />
+        {/*<Footer />*/}
       </Grid>
     </Grid>
+
   )
 };

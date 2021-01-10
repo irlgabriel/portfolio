@@ -16,9 +16,7 @@ const useStyles = makeStyles(theme => ({
   columnSm: {
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-      'a': {
-        textAlign: 'center',
-      }
+
     },
   },
   listItem: {
@@ -41,8 +39,8 @@ export default function Footer() {
   const classes = useStyles({});
 
   return (
-    <Grid container>
-      <Grid className={`${classes.noWrap} ${classes.columnSm}`} item container component={List}>
+    <Grid spacing={0} container>
+      <Grid spacing={0} className={`${classes.noWrap} ${classes.columnSm}`} item container component={List}>
         {contacts.map((obj, index) => (
           <ListItem
             className={classes.listItem}

@@ -18,11 +18,7 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     bottom: 0,
   },
-  centerSmDown: {
-    [theme.breakpoints.down('sm')]: {
-      justifyContent: 'center',
-    }
-  }
+  
 }))
 
 export default function MainProject({
@@ -39,7 +35,7 @@ export default function MainProject({
   const [isMouseInside, setMouse] = useState(false);
 
   return (
-    <Grid container item className={`${classes.root} ${classes.centerSmDown}`}>
+    <Grid container item className={`${classes.root}`}>
       <ImageContainer src={images.src} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} />
       <CSSTransition
         in={isMouseInside}

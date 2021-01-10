@@ -2,10 +2,10 @@ import React from "react";
 import { mainProjects } from "./Data";
 import { MainProject, Navbar } from "..";
 
-export default () => {
+export default ({props}) => {
   return (
     <div>
-      <Navbar />
+      <Navbar {...props}/>
       {
         mainProjects.map((project, index) => 
           <MainProject key={project.id} {...project} />

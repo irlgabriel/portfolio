@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -44,14 +45,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export const SmallProject = ({img, name, liveURL, codeURL}) => {
+export const SmallProject = ({img, name, liveURL, codeURL, desc}) => {
   const classes = useStyles({img: img});
 
   const [showOverlay, setOverlay] = useState(false);
 
   return (
     <Grid item xs={12} className={classes.root} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
-      <div className={`${classes.backgroundImage} ${classes.absolute}`} />
+      <Box className={`${classes.backgroundImage} ${classes.absolute}`} />
       {/**Overlay */}
       <CSSTransition
         in={showOverlay}
@@ -59,8 +60,9 @@ export const SmallProject = ({img, name, liveURL, codeURL}) => {
         classNames="fade2"
         unmountOnExit
       >
-        <div className={`${classes.overlay} ${classes.absolute}`}>
+        <Box p={1} className={`${classes.overlay} ${classes.absolute}`}>
           <Typography variant='h4'>{name}</Typography>
+          <Typography variant='body2'>{desc}</Typography>
           <Grid spacing={2} item container>
             <Grid className={classes.link} item component="a" href={liveURL}>
               <Button color='primary' variant='contained'>Live</Button>
@@ -69,7 +71,7 @@ export const SmallProject = ({img, name, liveURL, codeURL}) => {
               <Button color='primary' variant='contained'>Code</Button>
             </Grid>
           </Grid>
-        </div>
+        </Box>
       </CSSTransition>
     </Grid>
   )

@@ -3,10 +3,11 @@ import { SmallProject } from "../SmallProject/SmallProject";
 import { Link } from "react-router-dom";
 import { mainProjects, technologies } from "../Projects/Data"
 import { CSSTransition } from "react-transition-group"
-import { Technology } from './Intro.components';
+import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import { Navbar, Footer } from '..';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -55,6 +56,13 @@ const useStyles = makeStyles((theme) => ({
   },
   justifyContentBetween: {
     justifyContent: 'space-between'
+  },
+  divider: {
+    margin: '.25rem 0',
+    background: theme.palette.text.primary,
+  },
+  alignCenter: {
+    alignItems: 'center'
   }
 }))
 
@@ -82,10 +90,14 @@ export default ({props}) => {
           classNames="slide-from-left"
           onEntering={() => setFirstLoad(false)}
         >
-          <Grid component={Box} p={3} item xs={12} md={6}>
+          <Grid component={Box} p={2} item xs={12} md={6}>
             <Typography variant='h1' component='h1'>About me</Typography>
+            <Divider className={classes.divider} />
             <Typography variant='h2' component='h2'>Gabriel, 21</Typography>
-            <Typography variant='h5'>Brasov/Braila, Romania</Typography>
+            <Grid className={classes.alignCenter} container>
+              <PersonPinCircleIcon color='primary' fontSize='large'/>
+              <Typography variant='h5'>Brasov/Braila, Romania</Typography>
+            </Grid>
             <Typography component='p' variant='subtitle2'>Technologies</Typography>
             <Grid container direction='column'>
               {
@@ -105,7 +117,7 @@ export default ({props}) => {
                 to='/who'
                 className={classes.fullWidthMdDown}
               >
-                SEE MORE
+                About me
               </Button>
           </Grid>
         </CSSTransition>
@@ -118,6 +130,7 @@ export default ({props}) => {
         >
           <Grid  component={Box} p={2} item xs={12} md={6}>
             <Typography variant='h1'>My work</Typography>
+            <Divider className={classes.divider} />
             <Typography variant='h4'>
               Currently working on&nbsp;
               <a className={classes.link} href="https://github.com/irlgabriel/reddit-clone">
@@ -127,7 +140,7 @@ export default ({props}) => {
             <Grid spacing={0} container className={`${classes.centerSmDown} ${classes.justifyContentBetween}`}>
               {
                 mainProjects.map(project => 
-                  <SmallProject codeURL={project.codeURL} liveURL={project.liveURL} key={project.key} img={project.images.src} name={project.name}/>
+                  <SmallProject {...project} codeURL={project.codeURL} liveURL={project.liveURL} key={project.key} img={project.images.src} name={project.name}/>
                 )
               }
               <div className={classes.flexBreak} />
@@ -139,7 +152,7 @@ export default ({props}) => {
                 to='/what'
                 className={classes.fullWidthMdDown}
               >
-                SEE MORE
+                Projects
               </Button>
             </Grid>
                 

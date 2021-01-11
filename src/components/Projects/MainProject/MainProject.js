@@ -57,6 +57,12 @@ const useStyles = makeStyles(theme => ({
   projectImage: {
     borderRadius: '6px',
     boxShadow: theme.shadows[2],
+  },
+  tall: {
+    minHeight: '250px',
+  },
+  techIcon: {
+    marginRight: '.5rem',
   }
 }))
 
@@ -98,14 +104,14 @@ export default function MainProject({
         classNames="slide-from-right"
         onExiting={() => setFirstLoad(false)}
       >
-        <Grid className={classes.padding} spacing={1} item sm={12} md={6}>
-          <Typography variant='subtitle2'>Technologies</Typography>
+        <Grid className={`${classes.padding} ${classes.tall}`} spacing={1} item sm={12} md={6}>
+          <Typography variant='h4'>Technologies</Typography>
           <div>
             {techIcons.map((icon, index) => (
-              <i key={index}>{icon}</i>
+              <i className={classes.techIcon} key={index}>{icon}</i>
             ))}
           </div>
-          <Typography variant='subtitle2'>Description</Typography>
+          <Typography variant='h4'>Description</Typography>
           <Typography variant='subtitle'>{desc}</Typography>
           <Grid  container>
             <Grid className={classes.link} item component="a" href={liveURL}>

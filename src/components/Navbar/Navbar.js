@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   headerText: {
     flexGrow: 1,
@@ -36,7 +36,7 @@ export default function AppNavbar(props) {
   }
 
   return (
-    <div className={classes.root}>
+    <div>
       <Appbar position='static' >
         <Toolbar>
           <Box className={classes.root}>

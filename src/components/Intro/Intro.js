@@ -82,7 +82,7 @@ export default ({props}) => {
           classNames="slide-from-left"
           onEntering={() => setFirstLoad(false)}
         >
-          <Grid component={Box} p={1} item xs={12} md={6}>
+          <Grid component={Box} p={3} item xs={12} md={6}>
             <Typography variant='h1' component='h1'>About me</Typography>
             <Typography variant='h2' component='h2'>Gabriel, 21</Typography>
             <Typography variant='h5'>Brasov/Braila, Romania</Typography>
@@ -116,7 +116,7 @@ export default ({props}) => {
           classNames="slide-from-right"
           onExit={() => setFirstLoad(false)}
         >
-          <Grid  component={Box} p={1} item xs={12} md={6}>
+          <Grid  component={Box} p={2} item xs={12} md={6}>
             <Typography variant='h1'>My work</Typography>
             <Typography variant='h4'>
               Currently working on&nbsp;

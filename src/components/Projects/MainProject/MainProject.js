@@ -5,12 +5,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import { mainProjects } from '../Data';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'relative',
-    minHeight: '100vh',
+    flexWrap: 'nowrap',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
+    }
   },
   absolute: {
     position: 'absolute',
@@ -23,11 +30,39 @@ const useStyles = makeStyles(theme => ({
     width: `${100/mainProjects.length}%`,
   },
   padding: {
-    padding: '.5rem',
+    padding: '1rem',
+  },
+  link: {
+    marginRight: '1rem',
+    textDecoration: 'none',
+
+  },
+  overlay: {
+    position: 'absolute',
+    inset: '0px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '0 1.5rem'
+  },
+  navItem: {
+    color: theme.palette.primary.main,
+    transform: 'scale(2)',
+    transition: 'all .2s ease-in-out',
+    '&:hover': {
+      cursor: 'pointer',
+      transform: 'scale(3)',
+    }
+  },
+  projectImage: {
+    borderRadius: '6px',
+    boxShadow: theme.shadows[2],
   }
 }))
 
 export default function MainProject({
+  slide,
+  setSlide,
   images,
   id,
   name,
@@ -35,10 +70,10 @@ export default function MainProject({
   desc,
   liveURL,
   codeURL,
+  
 }) {
   const classes = useStyles();
 
-  const [isMouseInside, setMouse] = useState(false);
   const [firstLoad, setFirstLoad] = useState(false);
 
   useEffect(() => {
@@ -47,8 +82,15 @@ export default function MainProject({
 
   return (
     <Grid container item className={`${classes.root} ${classes.slide}`}>
-      <Grid item xs={12} sm={6}>
-        <ImageContainer src={images.src} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} />
+      <Grid className={classes.padding} item container  sm={12} md={6} direction='column'>
+        <div className={classes.overlay}>
+          <NavigateBeforeIcon onClick={() => setSlide(prev => prev !== 0 ? prev - 1 : mainProjects.length - 1)} className={classes.navItem}/>
+          <NavigateNextIcon onClick={() => setSlide(prev => prev !== mainProjects.length - 1 ? prev + 1 : 0)} className={classes.navItem}/>
+
+        </div>
+        <Typography variant='h3'>{name}</Typography>
+        <Divider />
+        <img className={classes.projectImage} src={images.src} width='100%'/>
       </Grid> 
       <CSSTransition
         in={firstLoad}
@@ -56,21 +98,21 @@ export default function MainProject({
         classNames="slide-from-right"
         onExiting={() => setFirstLoad(false)}
       >
-        <Grid className={classes.padding} spacing={1} item xs={12} sm={6}>
-          <Typography variant='h3'>{name}</Typography>
-          <hr />
+        <Grid className={classes.padding} spacing={1} item sm={12} md={6}>
+          <Typography variant='subtitle2'>Technologies</Typography>
           <div>
             {techIcons.map((icon, index) => (
               <i key={index}>{icon}</i>
             ))}
           </div>
+          <Typography variant='subtitle2'>Description</Typography>
           <Typography variant='subtitle'>{desc}</Typography>
-          <Grid container>
-            <Grid item component="a" href={liveURL}>
-              Live
+          <Grid  container>
+            <Grid className={classes.link} item component="a" href={liveURL}>
+              <Button color='primary' variant='contained'>Live</Button>
             </Grid>
-            <Grid item component="a" href={codeURL}>
-              Code
+            <Grid className={classes.link} item component="a" href={codeURL}>
+              <Button color='primary' variant='contained'>Code</Button>
             </Grid>
           </Grid>
         </Grid>

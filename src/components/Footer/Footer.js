@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   primaryBg: {
-    background: theme.palette.primary.main
+    background: theme.palette.secondary.light
   }
 }));
 

@@ -82,7 +82,7 @@ export default ({props}) => {
             <Typography variant='h2' component='h2'>Gabriel, 21</Typography>
             <Typography variant='h5'>Brasov/Braila, Romania</Typography>
             <Typography component='p' variant='subtitle2'>Technologies</Typography>
-            <Grid direction='column'>
+            <Grid container direction='column'>
               {
                 technologies.map(tech => 
                 <div className={classes.technologyItem}>

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { ImageContainer } from "./Mainproject.components";
 import { makeStyles } from '@material-ui/core/styles';
+import { mainProjects } from '../Data';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -9,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'relative',
-    height: '150px',
+    minHeight: '100vh',
   },
   absolute: {
     position: 'absolute',
@@ -18,7 +19,12 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     bottom: 0,
   },
-  
+  slide: {
+    width: `${100/mainProjects.length}%`,
+  },
+  padding: {
+    padding: '.5rem',
+  }
 }))
 
 export default function MainProject({
@@ -33,17 +39,24 @@ export default function MainProject({
   const classes = useStyles();
 
   const [isMouseInside, setMouse] = useState(false);
+  const [firstLoad, setFirstLoad] = useState(false);
+
+  useEffect(() => {
+    setFirstLoad(true)
+  }, [])
 
   return (
-    <Grid container item className={`${classes.root}`}>
-      <ImageContainer src={images.src} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} />
+    <Grid container item className={`${classes.root} ${classes.slide}`}>
+      <Grid item xs={12} sm={6}>
+        <ImageContainer src={images.src} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)} />
+      </Grid> 
       <CSSTransition
-        in={isMouseInside}
-        timeout={500}
-        classNames="fade2"
-        unmountOnExit
+        in={firstLoad}
+        timeout={300}
+        classNames="slide-from-right"
+        onExiting={() => setFirstLoad(false)}
       >
-        <Box className={classes.absolute}>
+        <Grid className={classes.padding} spacing={1} item xs={12} sm={6}>
           <Typography variant='h3'>{name}</Typography>
           <hr />
           <div>
@@ -60,7 +73,7 @@ export default function MainProject({
               Code
             </Grid>
           </Grid>
-        </Box>
+        </Grid>
       </CSSTransition>
     </Grid>
   );

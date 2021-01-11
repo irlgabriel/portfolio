@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     boxShadow: "0px 0px 5px 3px rgba(0,0,0,0.25)",
     position: "relative",
-    height: "200px",
+    height: "280px",
     margin: theme.spacing(1),
   },
   absolute: {
@@ -49,7 +49,7 @@ export const SmallProject = ({img, name, liveURL, codeURL}) => {
   const [showOverlay, setOverlay] = useState(false);
 
   return (
-    <Grid item xs={6} md={4} className={classes.root} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
+    <Grid item xs={12} className={classes.root} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
       <div className={`${classes.backgroundImage} ${classes.absolute}`} />
       {/**Overlay */}
       <CSSTransition

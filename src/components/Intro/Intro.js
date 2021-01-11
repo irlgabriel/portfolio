@@ -40,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
   fullWidthMdDown: {
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      flex: '1',
+      display: 'block'
     }
   },
   centerSmDown: {
@@ -50,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
   flexBreak: {
     flexBasis: '100%',
     height: 0
+  },
+  justifyContentBetween: {
+    justifyContent: 'space-between'
   }
 }))
 
@@ -91,7 +96,9 @@ export default ({props}) => {
                 </div>  
                 )
               }
-               <Button
+               
+            </Grid>
+            <Button
                 component={Link}
                 color='primary'
                 variant='contained'
@@ -100,7 +107,6 @@ export default ({props}) => {
               >
                 SEE MORE
               </Button>
-            </Grid>
           </Grid>
         </CSSTransition>
         <CSSTransition
@@ -110,7 +116,7 @@ export default ({props}) => {
           classNames="slide-from-right"
           onExit={() => setFirstLoad(false)}
         >
-          <Grid component={Box} p={1} item xs={12} md={6}>
+          <Grid  component={Box} p={1} item xs={12} md={6}>
             <Typography variant='h1'>My work</Typography>
             <Typography variant='h4'>
               Currently working on&nbsp;
@@ -118,7 +124,7 @@ export default ({props}) => {
                 this reddit clone with the MERN stack.
               </a>
             </Typography>
-            <Grid spacing={0} container className={classes.centerSmDown}>
+            <Grid spacing={0} container className={`${classes.centerSmDown} ${classes.justifyContentBetween}`}>
               {
                 mainProjects.map(project => 
                   <SmallProject codeURL={project.codeURL} liveURL={project.liveURL} key={project.key} img={project.images.src} name={project.name}/>

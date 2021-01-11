@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -61,11 +62,11 @@ export const SmallProject = ({img, name, liveURL, codeURL}) => {
         <div className={`${classes.overlay} ${classes.absolute}`}>
           <Typography variant='h4'>{name}</Typography>
           <Grid spacing={2} item container>
-            <Grid className={classes.link} item component='a' href={liveURL}>
-              <Typography variant='h5'>Live</Typography>
+            <Grid className={classes.link} item component="a" href={liveURL}>
+              <Button color='primary' variant='contained'>Live</Button>
             </Grid>
-            <Grid className={classes.link} item component='a' href={codeURL}>
-              <Typography variant='h5'>Code</Typography>
+            <Grid className={classes.link} item component="a" href={codeURL}>
+              <Button color='primary' variant='contained'>Code</Button>
             </Grid>
           </Grid>
         </div>

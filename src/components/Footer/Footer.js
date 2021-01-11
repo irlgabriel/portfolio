@@ -1,28 +1,41 @@
 import React from "react";
 import { contacts } from "./Data";
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
+import { SiMaterialUi } from 'react-icons/si';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
-  noWrap: {
-    flexWrap: 'nowrap',
+  root: {
+    position: 'relative',
+    background: theme.palette.secondary.light
   },
-  columnSm: {
+  footerContainer: {
+    flexWrap: 'nowrap',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-
+      alignItems: 'center',
+      '& a': {
+        flex: '30%',
+        display: 'inline-flex',
+        alignItems: 'center',
+      }
     },
   },
   listItem: {
+    width: 'auto',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: "2rem",
     background: "transparent",
-    
+    transition: 'all .25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.2)'
+    }
   },
   listItemIcon : {
     transition: 'all 0.20s ease-in-out',
@@ -36,8 +49,16 @@ const useStyles = makeStyles(theme => ({
       display: 'inline-block'
     },
   },
-  primaryBg: {
-    background: theme.palette.secondary.light
+  note: {
+    textDecoration: 'none',
+
+    display: 'inline-flex',
+    alignItems: 'center',
+    transition: 'all .25s ease-in-out',
+    color: theme.palette.text.primary,
+    '&:hover': {
+      transform: 'scale(1.2)'
+    }
   }
 }));
 
@@ -46,9 +67,12 @@ export default function Footer() {
   const classes = useStyles({});
 
   return (
-    <div>
-      <Divider />
-      <Grid spacing={0} className={`${classes.noWrap} ${classes.columnSm} ${classes.primaryBg}`} item container component={List}>
+    <Box p={2} className={classes.root}>
+      <Typography component='a' href='https://material-ui.com/' className={classes.note} variant='subtitle2'>
+        Built with&nbsp;
+        <SiMaterialUi size={24} />
+      </Typography>
+      <Grid spacing={0} className={classes.footerContainer} item container component={List}>
         {contacts.map((obj, index) => (
           <ListItem
             className={classes.listItem}
@@ -63,6 +87,6 @@ export default function Footer() {
           </ListItem>
         ))}
       </Grid>
-    </div>
+    </Box>
   );
 }

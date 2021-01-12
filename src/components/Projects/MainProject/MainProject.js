@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     padding: '0 1.5rem'
   },
   navItem: {
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
     transform: 'scale(2)',
     transition: 'all .2s ease-in-out',
     '&:hover': {

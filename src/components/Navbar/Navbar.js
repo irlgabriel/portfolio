@@ -41,7 +41,7 @@ export default function AppNavbar(props) {
         <Toolbar>
           <Box className={classes.root}>
             <Button
-              color='primary'
+              color='secondary'
               variant='contained'
               startIcon={<AssignmentIndIcon />}
             ><Link className={classes.normalLink} to='/'>irlgabriel's portfolio</Link></Button>
@@ -50,6 +50,7 @@ export default function AppNavbar(props) {
             <FormControlLabel
               control={
                 <Switch 
+                checked={props[0] == 'dark'}
                 onChange={() => handleOnChange()}
                 />
               }

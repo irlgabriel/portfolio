@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   footerContainer: {
     flexWrap: 'nowrap',
+    justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       alignItems: 'center',

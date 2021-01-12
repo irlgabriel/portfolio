@@ -11,7 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'relative',
-    background: theme.palette.secondary.light
+    background: theme.palette.primary.main
   },
   footerContainer: {
     flexWrap: 'nowrap',

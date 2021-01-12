@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { routes } from "./routes";
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { themeLight, themeDark } from './theme';
+
+const useStyles = makeStyles({
+  root: {
+    transition: 'all .35s ease-in-out',
+  }
+})
+
 
 
 function App() {
   const [theme, setTheme] = useState('light');
-
+  const classes = useStyles();
   const props = [theme, setTheme];
+
+  
 
   return (
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark} >
@@ -27,7 +36,7 @@ function App() {
                     classNames='page'
                     unmountOnExit
                   >
-                    <Component props={props} />     
+                    <Component className={classes.root} props={props} />     
                   </CSSTransition>
                 )}
               </Route>

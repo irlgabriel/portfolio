@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
-import { ImageContainer } from "./Mainproject.components";
 import { makeStyles } from '@material-ui/core/styles';
 import { mainProjects } from '../Data';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -63,6 +61,9 @@ const useStyles = makeStyles(theme => ({
   },
   techIcon: {
     marginRight: '.5rem',
+  },
+  divider: {
+    margin: '.5rem 0',
   }
 }))
 
@@ -95,8 +96,8 @@ export default function MainProject({
 
         </div>
         <Typography variant='h3'>{name}</Typography>
-        <Divider />
-        <img className={classes.projectImage} src={images.src} width='100%'/>
+        <Divider className={classes.divider}/>
+        <img alt='project' className={classes.projectImage} src={images.src} width='100%'/>
       </Grid> 
       <CSSTransition
         in={firstLoad}

@@ -14,7 +14,6 @@ import {
   SiReactrouter,
   SiPostgresql,
   SiJavascript,
-  SiRedux,
   SiMongodb,
   SiFirebase,
   SiRails,

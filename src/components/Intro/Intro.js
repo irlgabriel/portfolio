@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { SmallProject } from "../SmallProject/SmallProject";
 import { Link } from "react-router-dom";
-import { mainProjects, technologies } from "../Projects/Data"
+import { mainProjects as projects, technologies } from "../Projects/Data"
 import { CSSTransition } from "react-transition-group"
 import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import { Navbar, Footer } from '..';
@@ -68,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default ({props}) => {
   const classes = useStyles();
-  console.log(props);
 
   const [firstLoad, setFirstLoad] = useState(false);
 
@@ -139,8 +138,8 @@ export default ({props}) => {
             </Typography>
             <Grid spacing={0} container className={`${classes.centerSmDown} ${classes.justifyContentBetween}`}>
               {
-                mainProjects.map(project => 
-                  <SmallProject {...project} codeURL={project.codeURL} liveURL={project.liveURL} key={project.key} img={project.images.src} name={project.name}/>
+                projects.map(project => 
+                  <SmallProject {...project} codeURL={project.codeURL} liveURL={project.liveURL} key={project.name} img={project.images.src} name={project.name}/>
                 )
               }
               <div className={classes.flexBreak} />

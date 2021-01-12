@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
@@ -48,14 +48,44 @@ const useStyles = makeStyles(theme => ({
 export const SmallProject = ({img, name, liveURL, codeURL, desc}) => {
   const classes = useStyles({img: img});
 
-  const [showOverlay, setOverlay] = useState(false);
+  const proj = useRef();
+
+  const [isInView, setView] = useState(false);
+
+  const handleRef = (e) => {
+    proj.current = e;
+  }
+
+  
+
+  useEffect(() => {
+    const isElementInViewport = () => {
+      const rect = proj.current.getBoundingClientRect(); 
+
+      setView(
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) 
+      )
+
+      console.log(isInView);
+      
+    }
+    window.addEventListener("scroll", isElementInViewport);
+    return () => {
+      window.removeEventListener("scroll", isElementInViewport);
+    };
+  }, [isInView]);
+
+
 
   return (
-    <Grid item xs={12} className={classes.root} onMouseEnter={() => setOverlay(true)} onMouseLeave={() => setOverlay(false)}>
-      <Box className={`${classes.backgroundImage} ${classes.absolute}`} />
+    <Grid item xs={12} className={classes.root}>
+      <Box ref={(e) => handleRef(e)} className={`${classes.backgroundImage} ${classes.absolute}`} />
       {/**Overlay */}
       <CSSTransition
-        in={showOverlay}
+        in={isInView}
         timeout={500}
         classNames="fade2"
         unmountOnExit

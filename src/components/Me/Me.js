@@ -47,7 +47,7 @@ export default ({props}) => {
         </Grid>
         {/** Image */}
         <Grid xs={6} item>
-          <img className={classes.borderRadius} width='100%' src={me}/>
+          <img alt='me' className={classes.borderRadius} width='100%' src={me}/>
         </Grid>
       </Grid>
       <Footer />

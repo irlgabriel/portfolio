@@ -1,31 +1,30 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.158ce6ba.chunk.css",
-    "main.js": "/portfolio/static/js/main.c915b44b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c915b44b.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.cf2f3352.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.cf2f3352.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.70964fd7.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.70964fd7.js.map",
-    "static/js/2.69ea7e48.chunk.js": "/portfolio/static/js/2.69ea7e48.chunk.js",
-    "static/js/2.69ea7e48.chunk.js.map": "/portfolio/static/js/2.69ea7e48.chunk.js.map",
+    "static/js/2.090f1a77.chunk.js": "/portfolio/static/js/2.090f1a77.chunk.js",
+    "static/js/2.090f1a77.chunk.js.map": "/portfolio/static/js/2.090f1a77.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.c37e3e0675aadd2d72a55bf14bcf1342.js": "/portfolio/precache-manifest.c37e3e0675aadd2d72a55bf14bcf1342.js",
+    "precache-manifest.86c279301735db85a68bce313ee35eb8.js": "/portfolio/precache-manifest.86c279301735db85a68bce313ee35eb8.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/main.158ce6ba.chunk.css.map": "/portfolio/static/css/main.158ce6ba.chunk.css.map",
-    "static/js/2.69ea7e48.chunk.js.LICENSE.txt": "/portfolio/static/js/2.69ea7e48.chunk.js.LICENSE.txt",
+    "static/js/2.090f1a77.chunk.js.LICENSE.txt": "/portfolio/static/js/2.090f1a77.chunk.js.LICENSE.txt",
     "static/media/covid19app.png": "/portfolio/static/media/covid19app.88117a78.png",
     "static/media/cvapp.png": "/portfolio/static/media/cvapp.134440eb.png",
     "static/media/expressjs-icon.svg": "/portfolio/static/media/expressjs-icon.9de32921.svg",
     "static/media/facebookapp.png": "/portfolio/static/media/facebookapp.8d02990a.png",
     "static/media/libraryapp.png": "/portfolio/static/media/libraryapp.dad4fd14.png",
     "static/media/me.jpeg": "/portfolio/static/media/me.231104cb.jpeg",
-    "static/media/memorycardapp.png": "/portfolio/static/media/memorycardapp.380e4eb2.png",
     "static/media/mern-fb.png": "/portfolio/static/media/mern-fb.0939a9dc.png",
     "static/media/weatherapp.png": "/portfolio/static/media/weatherapp.8c804369.png"
   },
   "entrypoints": [
     "static/js/runtime-main.70964fd7.js",
-    "static/js/2.69ea7e48.chunk.js",
+    "static/js/2.090f1a77.chunk.js",
     "static/css/main.158ce6ba.chunk.css",
-    "static/js/main.c915b44b.chunk.js"
+    "static/js/main.cf2f3352.chunk.js"
   ]
 }

@@ -146,6 +146,7 @@ export const mainProjects = [
     projectIcon: <FaReact />,
     key: "5",
   },
+  /*
   {
     name: "Netflix Memory Game",
     id: "netflix-memory-game",
@@ -165,6 +166,7 @@ export const mainProjects = [
     projectIcon: <FaReact />,
     key: "6",
   },
+  */
 ];
 
 export const technologies = [

@@ -33,7 +33,7 @@ export default ({props}) => {
       <Grid spacing={0} direction='row' component={Box} p={2} container>
         <Grid xs={6} item>
           <Box p={1}>
-          <Typography variant='h2'>Gabriel, 21</Typography>
+          <Typography variant='h3'>Gabriel, 21</Typography>
           <Grid className={classes.alignCenter} container>
             <GoLocation/>
             <Typography variant='h5'>Brasov/Braila, Romania</Typography>

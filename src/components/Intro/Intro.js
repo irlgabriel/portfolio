@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
   },
   link: {
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
     textDecoration: 'none',
     transition: 'all .15s ease-in-out',
     '&:hover': {
@@ -94,7 +94,7 @@ export default ({props}) => {
             <Divider className={classes.divider} />
             <Typography variant='h2' component='h2'>Gabriel, 21</Typography>
             <Grid className={classes.alignCenter} container>
-              <PersonPinCircleIcon color='primary' fontSize='large'/>
+              <PersonPinCircleIcon color='secondary' fontSize='large'/>
               <Typography variant='h5'>Brasov/Braila, Romania</Typography>
             </Grid>
             <Typography component='p' variant='subtitle2'>Technologies</Typography>

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eefaad63c79da96266b4e0d726b26f67",
+    "revision": "5e311342ca2fa496a37893e3a21a707d",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "cd1057405301ecc7965a",
+    "revision": "88a3e4690792a5fa67f5",
     "url": "/portfolio/static/css/main.158ce6ba.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.090f1a77.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cd1057405301ecc7965a",
-    "url": "/portfolio/static/js/main.cf2f3352.chunk.js"
+    "revision": "88a3e4690792a5fa67f5",
+    "url": "/portfolio/static/js/main.b88e57e9.chunk.js"
   },
   {
     "revision": "f89f2099577e680dc7b6",
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/mern-fb.0939a9dc.png"
   },
   {
-    "revision": "8c8043693bcb68c0d43b75f1f9fcaa75",
-    "url": "/portfolio/static/media/weatherapp.8c804369.png"
+    "revision": "88db17663115ba2c31cdf93cbffff153",
+    "url": "/portfolio/static/media/weatherapp.88db1766.png"
   }
 ]);

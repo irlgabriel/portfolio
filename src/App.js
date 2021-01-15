@@ -5,6 +5,7 @@ import { routes } from "./routes";
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { themeLight, themeDark } from './theme';
+import { Background } from './components';
 
 const useStyles = makeStyles({
   root: {
@@ -24,6 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark} >
       <CssBaseline />
+      <Background theme={theme} />
       <Router>
         <TransitionGroup>
           <Switch>

@@ -41,6 +41,25 @@ export const mainProjects = [
     key: "0",
   },
   {
+    name: "Weather App",
+    id: "weather-app",
+    images: 
+      { src: require("../../images/weatherapp.png"), idx: 0 },
+    techIcons: [
+      <FaReact size={48} color="lightblue" />,
+      <SiStyledComponents size={48} color="gray" />,
+      <SiJavascript  size={48}color="yellow" />,
+      <FaHtml5 size={48} color="orange" />,
+      <FaCss3 size={48} color="royalblue" />,
+    ],
+    desc:
+      "React app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer). I had an idea to make it look better but unfortunately I don't have enough info with any free weather APIs.",
+    liveURL: "https://irlgabriel.github.io/weather-app/",
+    codeURL: "https://github.com/irlgabriel/weather-app/",
+    projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
+    key: "2",
+  },
+  {
     id: "facebook-clone-mern",
     name: "MERN-facebook",
     images: 
@@ -84,25 +103,6 @@ export const mainProjects = [
     codeURL: "https://github.com/irlgabriel/facebook-odin",
     projectIcon: <DiRuby size={48}  fontSize="2.5rem" color="red" />,
     key: "1",
-  },
-  {
-    name: "Weather App",
-    id: "weather-app",
-    images: 
-      { src: require("../../images/weatherapp.png"), idx: 0 },
-    techIcons: [
-      <FaReact size={48} color="lightblue" />,
-      <SiStyledComponents size={48} color="gray" />,
-      <SiJavascript  size={48}color="yellow" />,
-      <FaHtml5 size={48} color="orange" />,
-      <FaCss3 size={48} color="royalblue" />,
-    ],
-    desc:
-      "React app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer). I had an idea to make it look better but unfortunately I don't have enough info with any free weather APIs.",
-    liveURL: "https://irlgabriel.github.io/weather-app/",
-    codeURL: "https://github.com/irlgabriel/weather-app/",
-    projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
-    key: "2",
   },
   {
     name: "Book Library",

@@ -103,7 +103,7 @@ export default ({props}) => {
                 technologies.map(tech => 
                 <div className={classes.technologyItem}>
                   {tech.icon}
-                  <Typography variant='subtitle1'>{tech.name}</Typography>
+                  <Typography variant='h5'>&nbsp;{tech.name}</Typography>
                 </div>  
                 )
               }

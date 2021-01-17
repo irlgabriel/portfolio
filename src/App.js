@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const classes = useStyles();
   const props = [theme, setTheme];
 

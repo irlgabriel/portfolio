@@ -36,7 +36,14 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
 
   },
-
+  overlay: {
+    position: 'absolute',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding:  '.5rem',
+    inset: '0',
+  },
   navItem: {
     color: theme.palette.secondary.main,
     transform: 'scale(2)',

@@ -76,6 +76,10 @@ const useStyles = makeStyles( theme => ({
     background: 'rgba(180,180,180,.6)',
     textAlign: 'center',
     inset: '0px',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     zIndex: '901'
   },
   swipeDiv: {

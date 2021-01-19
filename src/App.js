@@ -14,7 +14,7 @@ import { themeLight, themeDark } from './theme';
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'relative',
-    height: 'max(100vh, 600px)',
+    minHeight: 'max(100vh, 600px)',
   },
   main: {
     border: `1px solid ${theme.palette.type === 'dark' ? 'white' : 'black'}`,
@@ -23,7 +23,6 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     justifyContent: 'center',
     flexDirection: 'column',
-    marginBottom: '2rem',
     width: '100%',
     '& > div > div > a > h3': {
       cursor: 'pointer',

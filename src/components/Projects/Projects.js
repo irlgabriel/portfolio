@@ -30,6 +30,7 @@ const useStyles = makeStyles( theme => ({
     position: 'absolute',
     top: '0',
     left: '0',
+    zIndex: '503',
   },
   sliderArrow: {
     fontSize: '4rem',

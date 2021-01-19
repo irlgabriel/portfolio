@@ -30,8 +30,8 @@ const useStyles = makeStyles( theme => ({
   },
   rootLink: {
     position: 'absolute',
-    top: '0',
-    left: '0',
+    top: '1rem',
+    left: '1rem',
     zIndex: '503',
   },
   sliderArrow: {

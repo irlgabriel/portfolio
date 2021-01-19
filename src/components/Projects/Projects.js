@@ -62,7 +62,10 @@ const useStyles = makeStyles( theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding:  '.5rem',
-    inset: '0',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     [theme.breakpoints.down('xs')]: {
       alignItems: 'flex-end',
     }
@@ -75,7 +78,6 @@ const useStyles = makeStyles( theme => ({
     justifyContent: 'center',
     background: 'rgba(180,180,180,.6)',
     textAlign: 'center',
-    inset: '0px',
     top: 0,
     left: 0,
     right: 0,

@@ -107,10 +107,10 @@ export default ({props}) => {
   const touchEnd = (e) => {
     const xEnd = e.changedTouches[0].pageX;
     console.log(xEnd - xStart);
-    if(xEnd - xStart > 100) { 
+    if(xEnd - xStart > 50) { 
       setSlide(slide <= 0 ? mainProjects.length - 1 : slide - 1);
     }
-    if(xEnd - xStart < -100) {
+    if(xEnd - xStart < -50) {
       setSlide(slide < mainProjects.length - 1 ? slide + 1 : 0);
     }
   }

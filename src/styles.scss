@@ -105,6 +105,22 @@
   transform: translateY(200%);
   transition: all 600ms ease-in-out;
 }
+
+.hint-appear {
+  opacity: 0;
+}
+.hint-appear-active {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+.hint-exit {
+  opacity: 1;
+}
+.hint-exit-active {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
 // React router pages
 .page-appear {
   opacity: 0;

@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { GiSideswipe } from 'react-icons/gi';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,6 +56,10 @@ const useStyles = makeStyles(theme => ({
   },
   divider: {
     margin: '.5rem 0',
+    marginTop: '.25rem',
+  },
+  hint: {
+    textAlign: 'right',
   }
 }))
 
@@ -72,47 +77,34 @@ export default function MainProject({
 }) {
   const classes = useStyles();
 
-  const [firstLoad, setFirstLoad] = useState(false);
 
-  useEffect(() => {
-    setFirstLoad(true)
-  }, [])
 
   return (
     <Grid container item className={`${classes.root} ${classes.slide}`}>
       <Grid className={classes.padding} item container  sm={12} md={6} direction='column'>
-        <div className={classes.overlay}>
-
-        </div>
         <Typography variant='h3'>{name}</Typography>
+        <Typography className={classes.hint} variant='overline'>Swipe to switch between projects!</Typography>
         <Divider className={classes.divider}/>
         <img alt='project' className={classes.projectImage} src={images.src} width='100%'/>
       </Grid> 
-      <CSSTransition
-        in={firstLoad}
-        timeout={300}
-        classNames="slide-from-right"
-        onExiting={() => setFirstLoad(false)}
-      >
-        <Grid className={`${classes.padding} ${classes.tall}`} spacing={1} item sm={12} md={6}>
-          <Typography variant='h4'>Technologies</Typography>
-          <div>
-            {techIcons.map((icon, index) => (
-              <i className={classes.techIcon} key={index}>{icon}</i>
-            ))}
-          </div>
-          <Typography variant='h4'>Description</Typography>
-          <Typography variant='subtitle1'>{desc}</Typography>
-          <Grid  container>
-            <Grid className={classes.link} item component="a" href={liveURL}>
-              <Button size='large' color='primary' variant='contained'>Live</Button>
-            </Grid>
-            <Grid className={classes.link} item component="a" href={codeURL}>
-              <Button size='large' color='primary' variant='contained'>Code</Button>
-            </Grid>
+      <Grid className={`${classes.padding} ${classes.tall}`} spacing={1} item sm={12} md={6}>
+        <Typography variant='h4'>Technologies</Typography>
+        <div>
+          {techIcons.map((icon, index) => (
+            <i className={classes.techIcon} key={index}>{icon}</i>
+          ))}
+        </div>
+        <Typography variant='h4'>Description</Typography>
+        <Typography variant='subtitle1'>{desc}</Typography>
+        <Grid  container>
+          <Grid className={classes.link} item component="a" href={liveURL}>
+            <Button size='large' color='primary' variant='contained'>Live</Button>
+          </Grid>
+          <Grid className={classes.link} item component="a" href={codeURL}>
+            <Button size='large' color='primary' variant='contained'>Code</Button>
           </Grid>
         </Grid>
-      </CSSTransition>
+      </Grid>
     </Grid>
   );
 }

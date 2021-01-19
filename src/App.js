@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
       }
     },
     '& a': {
-      transition: 'all .3s ease-in-out',
+      transition: 'transform .3s ease-in-out',
       '&:hover': {
         transform: 'scale(1.5)'
       }

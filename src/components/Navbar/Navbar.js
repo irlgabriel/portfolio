@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   button: {
-    marginRight: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+      padding: '4px 12px',
+    }
   },
   normalLink: {
     color: '#fff',
@@ -41,10 +43,14 @@ export default function AppNavbar(props) {
         <Toolbar>
           <Box className={classes.root}>
             <Button
+              className={classes.button}
               color='secondary'
               variant='contained'
+              size='small'
               startIcon={<AssignmentIndIcon />}
-            ><Link className={classes.normalLink} to='/'>irlgabriel's portfolio</Link></Button>
+            >
+              <Link className={classes.normalLink} to='/'>irlgabriel's portfolio</Link>
+            </Button>
           </Box>
           <Box>
             <FormControlLabel

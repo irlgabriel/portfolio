@@ -5,8 +5,6 @@ import { mainProjects } from '../Data';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -35,14 +33,6 @@ const useStyles = makeStyles(theme => ({
     marginRight: '1rem',
     textDecoration: 'none',
 
-  },
-  overlay: {
-    position: 'absolute',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding:  '.5rem',
-    inset: '0',
   },
   navItem: {
     color: theme.palette.secondary.main,
@@ -92,8 +82,6 @@ export default function MainProject({
     <Grid container item className={`${classes.root} ${classes.slide}`}>
       <Grid className={classes.padding} item container  sm={12} md={6} direction='column'>
         <div className={classes.overlay}>
-          <NavigateBeforeIcon onClick={() => setSlide(prev => prev !== 0 ? prev - 1 : mainProjects.length - 1)} className={classes.navItem}/>
-          <NavigateNextIcon onClick={() => setSlide(prev => prev !== mainProjects.length - 1 ? prev + 1 : 0)} className={classes.navItem}/>
 
         </div>
         <Typography variant='h3'>{name}</Typography>
@@ -117,10 +105,10 @@ export default function MainProject({
           <Typography variant='subtitle1'>{desc}</Typography>
           <Grid  container>
             <Grid className={classes.link} item component="a" href={liveURL}>
-              <Button color='primary' variant='contained'>Live</Button>
+              <Button size='large' color='primary' variant='contained'>Live</Button>
             </Grid>
             <Grid className={classes.link} item component="a" href={codeURL}>
-              <Button color='primary' variant='contained'>Code</Button>
+              <Button size='large' color='primary' variant='contained'>Code</Button>
             </Grid>
           </Grid>
         </Grid>

@@ -19,12 +19,13 @@ const useStyles = makeStyles(theme => ({
   main: {
     border: `1px solid ${theme.palette.type === 'dark' ? 'white' : 'black'}`,
     borderRadius: '.75rem',
-    inset: '1.5rem',
-    position: 'absolute',
     display: 'flex',
+    position: 'relative',
     justifyContent: 'center',
     flexDirection: 'column',
-    '& h3': {
+    marginBottom: '2rem',
+    width: '100%',
+    '& > div > div > a > h3': {
       cursor: 'pointer',
       transition: 'all .30s ease-in-out',
       userSelect: 'none',
@@ -32,14 +33,21 @@ const useStyles = makeStyles(theme => ({
         transform: 'translateX(20px)',
       }
     },
-    '& a': {
+    '& > div > div > a': {
       color: 'inherit',
       textDecoration: 'none',
       '&:hover': {
         color: theme.palette.info.light
       }
+    },
+    '& a': {
+      transition: 'all .3s ease-in-out',
+      '&:hover': {
+        transform: 'scale(1.5)'
+      }
     }
   },
+
   switchContainer: {
     position: 'absolute',
     top: '.5rem',

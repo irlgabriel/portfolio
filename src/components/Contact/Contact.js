@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },  
   rootLink: {
     position: 'absolute',
-    top: '-2.5rem',
+    top: '0',
     left: '0',
   }
 })

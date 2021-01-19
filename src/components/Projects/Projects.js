@@ -7,8 +7,10 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( theme => ({
   root: {
     
   },
@@ -26,10 +28,28 @@ const useStyles = makeStyles({
   },
   rootLink: {
     position: 'absolute',
-    top: '-2.5rem',
+    top: '0',
     left: '0',
-  }
-})
+  },
+  sliderArrow: {
+    fontSize: '4rem',
+    transition: 'all .3s ease-in-out',
+    zIndex: '501',
+    '&:hover': {
+      cursor: 'pointer',
+      fontSize: '5rem',
+      color: theme.palette.primary.light,
+    }
+  },
+  overlay: {
+    position: 'absolute',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding:  '.5rem',
+    inset: '0',
+  },
+}))
 
 
 export default ({props}) => {
@@ -52,13 +72,14 @@ export default ({props}) => {
     const xEnd = e.changedTouches[0].pageX;
     console.log(xEnd - xStart);
     // slide to right!
-    if(xEnd - xStart < 100) { 
+    if(xEnd - xStart > 100) { 
       console.log('slide left to right')
-      setSlide(slide < mainProjects.length - 1 ? slide + 1 : 0);
-    }
-    if(xEnd - xStart > -100) {
-      console.log('slide right to left')
       setSlide(slide <= 0 ? mainProjects.length - 1 : slide - 1);
+    }
+    if(xEnd - xStart < -100) {
+      console.log('slide right to left')
+      
+      setSlide(slide < mainProjects.length - 1 ? slide + 1 : 0);
     }
   }
 
@@ -70,6 +91,11 @@ export default ({props}) => {
         </Typography>
       </Link>
       <Grid container direction='column' className={classes.root}>
+        <div className={classes.overlay}>
+          <NavigateBeforeIcon onClick={() => setSlide(prev => prev !== 0 ? prev - 1 : mainProjects.length - 1)} className={classes.sliderArrow}/>
+          <NavigateNextIcon onClick={() => setSlide(prev => prev !== mainProjects.length - 1 ? prev + 1 : 0)} className={classes.sliderArrow}/>
+        </div>
+
         <Box style={{overflow: 'hidden'}}>
           <Grid style={styles} className={`${classes.slider}`} container>
             {

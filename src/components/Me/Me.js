@@ -4,10 +4,16 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Navbar, Footer } from '../';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles } from '@material-ui/core/styles';
 import { GoLocation } from "react-icons/go";
+import { Link, useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    height: '100%',
+  },
   alignCenter: {
     alignItems: 'center'
   },
@@ -21,16 +27,31 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.dark,
     }
+  },
+  rootLink: {
+    position: 'absolute',
+    top: '-2.5rem',
+    left: '0',
+    transition: 'all .3s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.3)',
+    }
   }
 }))
 
 export default ({props}) => {
+  const location = useLocation();
+
   const classes = useStyles();
 
   return (
-    <Box container>
-      <Navbar {...props}/>
-      <Grid spacing={0} direction='row' component={Box} p={2} container>
+      <Grid className={classes.root} spacing={0} direction='row' p={2} container>
+         {/* Absolutely positioned back button */}
+        <Link className={classes.rootLink} to='/'>
+          <Typography variant='h5'>
+            <ArrowBackIcon fontSize='large' />
+          </Typography>
+        </Link>
         <Grid xs={6} item>
           <Box p={1}>
           <Typography variant='h3'>Gabriel, 21</Typography>
@@ -49,10 +70,8 @@ export default ({props}) => {
         </Grid>
         {/** Image */}
         <Grid xs={6} item>
-          <img alt='me' className={classes.borderRadius} width='100%' src={me}/>
+          <img alt='me' className={classes.borderRadius} width='60%' src={me}/>
         </Grid>
       </Grid>
-      <Footer />
-    </Box>
   );
 };

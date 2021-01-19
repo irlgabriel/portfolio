@@ -1,5 +1,5 @@
 import React from "react";
-import { contacts } from "./Data";
+import { contactLinks } from "./Data";
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
@@ -74,7 +74,7 @@ export default function Footer() {
         <SiMaterialUi size={24} />
       </Typography>
       <Grid spacing={0} className={classes.footerContainer} item container component={List}>
-        {contacts.map((obj, index) => (
+        {contactLinks.map((obj, index) => (
           <ListItem
             className={classes.listItem}
             key={index}

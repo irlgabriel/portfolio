@@ -46,11 +46,6 @@ const useStyles = makeStyles(theme => ({
     right: '.25rem',
     zIndex: '3',
   },
-  routeWrapper: {
-    width: '100%',
-    height: '100%',
-  }
-
 }))
 
 function App() {
@@ -81,8 +76,8 @@ function App() {
                 label={<NightsStayIcon fontSize='large' />}
               />
             </Box>
-            <TransitionGroup className={classes.routeWrapper}>
-              <Switch className='asd'>
+            <TransitionGroup>
+              <Switch>
                 {routes.map(({ path, Component }) => (
                   <Route exact path={path} key={path} >
                     {({match}) => (

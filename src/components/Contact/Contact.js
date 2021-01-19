@@ -33,7 +33,7 @@ export default () => {
       </Link>
       {
         contactLinks.map(link => (
-          <a className={classes.link} href={link.contactLink}>
+          <a key={link.name} className={classes.link} href={link.contactLink}>
             <Grid container className={classes.root}>
               {link.icon}&nbsp;
               <Typography variant='h5'>{link.name}</Typography>

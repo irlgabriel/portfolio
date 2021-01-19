@@ -3,7 +3,6 @@ import me from '../../images/me.jpeg';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { Navbar, Footer } from '../';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles } from '@material-ui/core/styles';
 import { GoLocation } from "react-icons/go";

@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   slide: {
     width: `${100/mainProjects.length}%`,
+    height: '100%',
   },
   padding: {
     padding: '1rem',
@@ -35,14 +36,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
 
   },
-  overlay: {
-    position: 'absolute',
-    inset: '0px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '0 1.5rem'
-  },
+
   navItem: {
     color: theme.palette.secondary.main,
     transform: 'scale(2)',
@@ -113,7 +107,7 @@ export default function MainProject({
             ))}
           </div>
           <Typography variant='h4'>Description</Typography>
-          <Typography variant='subtitle'>{desc}</Typography>
+          <Typography variant='subtitle1'>{desc}</Typography>
           <Grid  container>
             <Grid className={classes.link} item component="a" href={liveURL}>
               <Button color='primary' variant='contained'>Live</Button>

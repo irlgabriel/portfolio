@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   slider: {
     overflowX: 'hidden',
     width: `${mainProjects.length}00%`,
-    transition: 'transform .5s ease-in-out', 
+    transition: 'transform .5s ease-in-out',
   },
 
   noWrap: {
@@ -35,6 +35,9 @@ const useStyles = makeStyles({
 export default ({props}) => {
   const classes = useStyles();
 
+  // touch start positions
+  let xStart;
+
   const [slide, setSlide] = useState(0);
   const [styles, setStyles] = useState({transform: 'translateX(-0%);'});
 
@@ -42,8 +45,25 @@ export default ({props}) => {
     setStyles({transform: `translateX(-${slide * 100/mainProjects.length}%)`});
   }, [slide])
 
+  const touchStart = (e) => {
+    xStart = e.touches[0].pageX
+  }
+  const touchEnd = (e) => {
+    const xEnd = e.changedTouches[0].pageX;
+    console.log(xEnd - xStart);
+    // slide to right!
+    if(xEnd - xStart < 100) { 
+      console.log('slide left to right')
+      setSlide(slide < mainProjects.length - 1 ? slide + 1 : 0);
+    }
+    if(xEnd - xStart > -100) {
+      console.log('slide right to left')
+      setSlide(slide <= 0 ? mainProjects.length - 1 : slide - 1);
+    }
+  }
+
   return (
-    <Box>
+    <Box onTouchStart={(e) => touchStart(e)} onTouchEnd={(e) => touchEnd(e)}>
       <Link className={classes.rootLink} to='/'>
         <Typography variant='h5'>
           <ArrowBackIcon fontSize='large'/>

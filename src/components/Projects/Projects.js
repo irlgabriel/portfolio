@@ -128,7 +128,7 @@ export default ({props}) => {
         appear
         in={appear && window.innerWidth < 600}
         classNames='hint'
-        timeout={3000}
+        timeout={1500}
         unmountOnExit
         onEntered={() => setAppear(false)}
       >

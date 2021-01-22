@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     minHeight: 'max(100vh, 600px)',
   },
   main: {
-    border: `1px solid ${theme.palette.type === 'dark' ? 'white' : 'black'}`,
     borderRadius: '.75rem',
     display: 'flex',
     position: 'relative',
@@ -64,7 +63,7 @@ function App() {
       <CssBaseline />
       <Router>
         <Grid className={classes.root} spacing={0} container>
-          <Box className={classes.main} m={2} p={2}>
+          <Box style={{border: `1px solid ${theme === 'dark' ? 'white' : 'black'}`}} className={classes.main} m={2} p={2}>
             <Box
               className={classes.switchContainer}
             >

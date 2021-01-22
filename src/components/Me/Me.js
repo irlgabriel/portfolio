@@ -65,14 +65,15 @@ export default ({props}) => {
           </Grid>
           <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
           <img alt='me' className={classes.img} width='50%' src={me}/>
-            I am a young aspiring web developer from Romania. 
+            &nbsp;&nbsp;&nbsp;&nbsp;I am a young aspiring web developer from Romania. 
             Started taking an interest in web development roughly 2-3 years ago with basic HTML and CSS but quicky lost motivation to further my knowledge. 
             Afterwards I got more seriously into it and fell in love with ruby on rails really quickly then 
             fell out of love just as quick after I've found that there's hardly any rails jobs in Romania - that was quite a disappointment as I thought it would put me behind on my 
             goal to get hired as a web developer, but lately as I've got familiar with node and express I started to realize that the rails knowledge came in really handy, and it only made me
             truly appreciate the work that rails gems do to offload a lot of boring (and sometimes complicated) tasks like devise for authentication, active record for database associations, 
             active storage for image uploading and more that I do not recall right now and I am sure there's plenty others useful ones that I didn't have the chance to work with in my very brief journey with rails.
-            Lately I got into React and and I have since developed a couple random apps to get better at it. These I consider the most satisfying projects that I developed with React: 
+            <br /><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;Lately I got into React and and I have since developed a couple random apps to get better at it. These I consider the most satisfying projects that I developed with React: 
             <a className={classes.link} href='https://irlgabriel.github.io/covid-19-tracker'>this</a> - a small app that implements some (unreliable but free) public APIs and shows relevant covid-19 related stats from your country 
             and around the world, in quite an aesthetically pleasing - if not useful - way, and 
             <a className={classes.link} href='https://fcloneodin.herokuapp.com'>this</a> - an improved facebook clone built with the MERN stack. Not so much satisfying because 
@@ -80,7 +81,8 @@ export default ({props}) => {
             but I learned a lot of things such as: different kind of authentication flows and their pros and cons, security concerns for small to medium apps. I got introduced to different node libraries for things 
             like image uploading (multer + AWS S3), authentication (passport, jsonwebtoken), env variables (dotenv). That's just what I recall off the top of my head, what I want to say is that I learned a lot of
             things and I wish I had a more useful app to show for it.
-            Right now I am only working on getting hired, I hardly have any ideas for more projects to showcase my skills - for now anyway. 
+            <br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Right now I am only working on getting hired, I hardly have any ideas for more projects to showcase my skills - for now anyway. 
             When I am not learning and practicing web development I am probably working out or reading. 
           </Typography>
         </Box>

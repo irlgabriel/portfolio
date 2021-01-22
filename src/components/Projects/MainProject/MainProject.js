@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'nowrap',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column'
-    }
+    },
   },
   absolute: {
     position: 'absolute',
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
   projectImage: {
     borderRadius: '6px',
-    boxShadow: theme.shadows[2],
+    boxShadow: theme.shadows[8],
   },
   tall: {
     minHeight: '250px',

@@ -11,9 +11,14 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles((theme) => ({
-
-}))
+const useStyles = makeStyles({
+  link: {
+    transition: 'transform .3s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.5)'
+    }
+  }
+})
 
 export default ({theme, setTheme}) => {
 
@@ -21,13 +26,13 @@ export default ({theme, setTheme}) => {
 
   return (
     <Grid>
-      <Link to='/what'>
+      <Link className={classes.link} to='/what'>
         <Typography variant='h3'>Work</Typography>
       </Link>
-      <Link to='who'>
+      <Link className={classes.link} to='who'>
         <Typography variant='h3'>About</Typography>
       </Link>
-      <Link to='contact'>
+      <Link className={classes.link} to='contact'>
         <Typography variant='h3'>Contact</Typography>
       </Link>
   </Grid>

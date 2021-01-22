@@ -19,6 +19,11 @@ const useStyles = makeStyles({
     top: '1rem',
     left: '1rem',
     zIndex: '503',
+  },
+  '& a[href="/"]': {
+    '&:hover': {
+      transform: 'scale(1.5)',
+    }
   }
 })
 

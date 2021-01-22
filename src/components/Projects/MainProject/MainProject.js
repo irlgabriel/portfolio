@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
   projectImage: {
     borderRadius: '6px',
-    boxShadow: theme.shadows[8],
+    boxShadow: theme.shadows[10],
   },
   tall: {
     minHeight: '250px',

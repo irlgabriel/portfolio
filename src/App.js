@@ -39,12 +39,7 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.info.light
       }
     },
-    '& a': {
-      transition: 'transform .3s ease-in-out',
-      '&:hover': {
-        transform: 'scale(1.5)'
-      }
-    }
+    
   },
 
   switchContainer: {

@@ -77,7 +77,7 @@ export default ({props}) => {
             <a className={classes.link} href='https://irlgabriel.github.io/covid-19-tracker'>this</a> - a small app that implements some (unreliable but free) public APIs and shows relevant covid-19 related stats from your country 
             and around the world, in quite an aesthetically pleasing - if not useful - way, and 
             <a className={classes.link} href='https://fcloneodin.herokuapp.com'>this</a> - an improved facebook clone built with the MERN stack. Not so much satisfying because 
-            of its usefulness - of course it doesn't serve any purpose other than showcase my skills with the stack. I would estimate it took me about 150+ hours to build it 
+            of its usefulness - of course it doesn't serve any purpose - but because I learned a lot of things while doing it. I would estimate it took me about 150+ hours to build it 
             but I learned a lot of things such as: different kind of authentication flows and their pros and cons, security concerns for small to medium apps. I got introduced to different node libraries for things 
             like image uploading (multer + AWS S3), authentication (passport, jsonwebtoken), env variables (dotenv). That's just what I recall off the top of my head, what I want to say is that I learned a lot of
             things and I wish I had a more useful app to show for it.

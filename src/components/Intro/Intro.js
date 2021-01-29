@@ -1,15 +1,11 @@
 import React from "react";
-import { SmallProject } from "../SmallProject/SmallProject";
 import { Link } from "react-router-dom";
-import { mainProjects as projects, technologies } from "../Projects/Data"
-import { CSSTransition } from "react-transition-group"
-import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import mui from '../../images/mui.svg';
+import { FaReact } from 'react-icons/fa';
 
 const useStyles = makeStyles({
   link: {
@@ -17,15 +13,36 @@ const useStyles = makeStyles({
     '&:hover': {
       transform: 'scale(1.5)'
     }
+  },
+  desc: {
+    position: "absolute",
+    top: '1rem',
+    left: '1rem',
+  },
+  align: {
+    display: 'flex',
+    alignItems: 'center',
   }
+
 })
 
-export default ({theme, setTheme}) => {
-
+export default () => {
   const classes = useStyles();
 
   return (
     <Grid>
+      {/**Absolutely positioned */}
+      <Box className={classes.desc} p={1}>
+        <Box className={classes.align}>
+          <Typography variant='subtitle2'>
+            Built with&nbsp;
+          </Typography>
+          <img src={mui} width='32px'/>
+          &nbsp;+&nbsp;
+          <FaReact fill='royalblue' size={32}/>
+        </Box>
+      </Box>
+
       <Link className={classes.link} to='/what'>
         <Typography variant='h3'>Work</Typography>
       </Link>

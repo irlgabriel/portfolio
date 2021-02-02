@@ -42,6 +42,11 @@ const useStyles = makeStyles(theme => ({
   },
   desc: {
     padding: '.5rem',
+  },
+  hireMe: {
+    color: 'pink',
+    letterSpacing: '.35rem',
+    fontSize: '1.5rem'
   }
 }))
 
@@ -83,8 +88,12 @@ export default ({props}) => {
             things and I wish I had a more useful app to show for it.
             <br /><br />
             &nbsp;&nbsp;&nbsp;&nbsp;Right now I am only working on getting hired, I hardly have any ideas for more projects to showcase my skills - for now anyway. 
-            When I am not learning and practicing web development I am probably working out or reading. 
+            When I am not learning and practicing web development I am probably working out or reading.
+           
           </Typography>
+          <Typography className={classes.hireMe}>
+            Hire meeeeeeeeeeeeeeeee
+          </Typography>          
         </Box>
       </Box>
   );

@@ -91,9 +91,11 @@ export default ({props}) => {
             When I am not learning and practicing web development I am probably working out or reading.
            
           </Typography>
+          {/*
           <Typography className={classes.hireMe}>
             Hire meeeeeeeeeeeeeeeee
           </Typography>          
+          */}
         </Box>
       </Box>
   );

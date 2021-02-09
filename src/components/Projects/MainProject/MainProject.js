@@ -60,6 +60,9 @@ const useStyles = makeStyles(theme => ({
   },
   hint: {
     textAlign: 'right',
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    }
   }
 }))
 

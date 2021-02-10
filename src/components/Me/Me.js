@@ -174,7 +174,7 @@ export default ({props}) => {
                 active storage for image uploading and more that I do not recall right now and I am sure there's plenty others useful ones that I didn't have the chance to work with in my very brief journey with rails.
                 */}
                 &nbsp;&nbsp;&nbsp;&nbsp;I have been interested in computers since as far as I remember. Spent way too much
-                time playing video games and naturally I was expected to have a job related working
+                time playing video games and naturally I was expected to grow up working
                 with computers as well. Nothing new so far, I am sure. 
                 <br/>&nbsp;&nbsp;&nbsp;&nbsp;
                 So why would you take an interest
@@ -234,7 +234,7 @@ export default ({props}) => {
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 Got introduced to react nearly 6 months ago and I am enjoying every single part of it. I am writing 
                 react with functional components and hooks because it seems more intuitive to me.
-                I read that this is the more modern approach anyway so win-win scenario.
+                I read that this is the more modern approach anyway so win-win scenario if you ask me.
               </Typography>
             </Box>
           </CSSTransition>
@@ -253,8 +253,12 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
-                Node and express were the natural choice since I was already familiar with javascript. Shortly after getting the handle of express' basics principles 
-                I quicky understood why rails is so popular and all the articles I read years ago started to make sense once I had to implement routes, write authentication logic, 
+                Node and express were the natural choice since I was already 
+                familiar with javascript. Shortly after getting the handle of express' 
+                basics principles 
+                I quicky understood why rails is so popular and all the articles 
+                I read years ago started to make sense once I had to implement routes, 
+                write authentication logic, 
                 provide a database solution for the app, and so on.
               </Typography>
             </Box>
@@ -295,7 +299,8 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                I have implemented Amazon's S3 storage service with express and react to upload/edit/delete images.
+                I have implemented Amazon's S3 storage service with express and react to upload/edit/delete images, 
+                handling all the file naming and cleaning up login myself.
               </Typography>
 
               {/* MUI */}
@@ -308,7 +313,8 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                This is the main CSS framework that I use right now. I used bootstrap with reactstrap and I am quite familiar with it as well, but I seem to enjoy this one 
+                This is the main CSS framework that I use right now. I used bootstrap with reactstrap and 
+                I am quite familiar with it as well, but I seem to enjoy this one 
                 a lot more.
               </Typography>
 
@@ -322,8 +328,10 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                I am using SASS for css pre-processing. I will be honest, I am not acquainted with most of its features, it only makes styling transitions easier with the reference symbol (&)
-                
+                I am using SASS for css pre-processing. I will be honest, 
+                I am not acquainted with most of its features, 
+                it only makes styling easier with the reference symbol(&) nesting, 
+                especially transitions.
               </Typography>
             </Box>
           </CSSTransition>

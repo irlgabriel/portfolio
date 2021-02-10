@@ -111,18 +111,25 @@ export default ({props}) => {
     );
     
   }
+  const checkVisibleDivs = () => {
+    background && !showBackground && setShowBackground(isInViewport(background));
+    react && !showReact && setShowReact(isInViewport(react));
+    rails && !showRails && setShowRails(isInViewport(rails));
+    express && !showExpress && setShowExpress(isInViewport(express));
+    others && !showOthers && setShowOthers(isInViewport(others));
+  }
 
+  // refresh shown status of refs when scrolling
   useEffect(() => {
-    const checkVisibleDivs = () => {
-      background && !showBackground && setShowBackground(isInViewport(background));
-      react && !showReact && setShowReact(isInViewport(react));
-      rails && !showRails && setShowRails(isInViewport(rails));
-      express && !showExpress && setShowExpress(isInViewport(express));
-      others && !showOthers && setShowOthers(isInViewport(others));
-    }
+    
     window.addEventListener('scroll', checkVisibleDivs, false);
     return () => window.removeEventListener('scroll', checkVisibleDivs);
   })
+
+  // check initial status of shown items on render
+  useEffect(() => {
+    checkVisibleDivs();
+  }, [])
 
   return (
       <Box className={classes.root} spacing={0} direction='row' p={2} container>
@@ -144,7 +151,7 @@ export default ({props}) => {
             classNames='left-slide'
             timeout={1000}
           >
-            <Box ref={background} className={classes.leftBox}>
+            <Box ref={background} style={{display: showBackground ? 'block' : 'none'}} className={classes.leftBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
                   <MdComputer size='48' color='gray' />&nbsp;
@@ -184,7 +191,7 @@ export default ({props}) => {
             classNames='right-slide'
             timeout={1000}
           >
-            <Box ref={rails} className={classes.rightBox}>
+            <Box style={{display: showRails ? 'block' : 'none'}}  ref={rails} className={classes.rightBox}>
               <Grid container className={classes.grid}>
                 <Grid item className={classes.grid}>
                   <SiRuby size='32' color='red' /> &nbsp;&nbsp;
@@ -212,7 +219,7 @@ export default ({props}) => {
             classNames='left-slide'
             timeout={1000}
           >
-            <Box ref={react} className={classes.leftBox}>
+            <Box style={{display: showReact ? 'block' : 'none'}}  ref={react} className={classes.leftBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
                   <FaReact color='lightskyblue' size='32' />&nbsp;&nbsp;
@@ -236,7 +243,7 @@ export default ({props}) => {
           classNames='right-slide'
           timeout={1000}
           >
-            <Box ref={express} className={classes.rightBox}>
+            <Box style={{display: showExpress ? 'block' : 'none'}}  ref={express} className={classes.rightBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
                   <img src={expressjs} />&nbsp;&nbsp;                
@@ -257,7 +264,7 @@ export default ({props}) => {
             classNames='left-slide'
             timeout={1000}
           >
-            <Box ref={others} className={classes.leftBox}>
+            <Box style={{display: showOthers ? 'block' : 'none'}}  ref={others} className={classes.leftBox}>
               <Typography variant='h3' className={classes.title}>
                 Other tools
               </Typography>

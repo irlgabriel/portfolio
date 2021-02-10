@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import me from '../../images/me.jpeg';
+import expressjs from '../../images/expressjs-icon.svg'
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -9,6 +10,10 @@ import { CSSTransition } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
 import { GoLocation } from "react-icons/go";
 import { Link } from 'react-router-dom';
+import { SiFirebase } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
+import { SiRails, SiRuby } from 'react-icons/si';
+import { MdComputer } from 'react-icons/md';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,6 +74,13 @@ const useStyles = makeStyles(theme => ({
     padding: '8px',
     width: 'max(60%, 400px)',
     marginLeft: 'auto',
+  },
+  tool: {
+    fontSize: '1.5rem'
+  },
+  grid: {
+    display: 'flex',
+    alignItems: 'center'
   }
 }))
 
@@ -81,7 +93,7 @@ export default ({props}) => {
   const express = useRef(null);
   const others = useRef(null);
 
-  const [showBackground, setShowBackground] = useState(false);
+  const [showBackground, setShowBackground] = useState(true);
   const [showReact, setShowReact] = useState(false);
   const [showRails, setShowRails] = useState(false);
   const [showExpress, setShowExpress] = useState(false);
@@ -132,9 +144,16 @@ export default ({props}) => {
             timeout={1000}
           >
             <Box ref={background} className={classes.leftBox}>
-              <Typography className={classes.title} variant='h3'>
-                Background
-              </Typography>
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <MdComputer size='48' color='gray' />&nbsp;
+                </Grid>
+                <Grid item>
+                  <Typography className={classes.title} variant='h3'>
+                    Background
+                  </Typography>
+                </Grid>
+              </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
               {/*<img alt='me' className={classes.img} width='50%' src={me}/>*/}
                 {/*
@@ -160,40 +179,55 @@ export default ({props}) => {
             </Box>
           </CSSTransition>
           <CSSTransition
-            in={showReact}
+            in={showRails}
             classNames='right-slide'
             timeout={1000}
           >
-            <Box ref={react} className={classes.rightBox}>
-              <Typography variant='h3' className={classes.title}>
-                React
-              </Typography>
-              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+            <Box ref={rails} className={classes.rightBox}>
+              <Grid container className={classes.grid}>
+                <Grid item className={classes.grid}>
+                  <SiRuby size='32' color='red' /> &nbsp;&nbsp;
+                  <SiRails size='48'/>&nbsp;&nbsp;
+                </Grid>
+                <Grid item>
+                  <Typography variant='h3' className={classes.title}>
+                    Ruby on Rails
+                  </Typography>
+                </Grid>
                 
-                &nbsp;&nbsp;&nbsp;&nbsp;Lately I got into React and and I have since developed a couple random apps to get better at it. These I consider the most satisfying projects that I developed with React: 
-                <a className={classes.link} href='https://irlgabriel.github.io/covid-19-tracker'>this</a> - a small app that implements some (unreliable but free) public APIs and shows relevant covid-19 related stats from your country 
-                and around the world, in quite an aesthetically pleasing - if not useful - way, and 
-                <a className={classes.link} href='https://fcloneodin.herokuapp.com'>this</a> - an improved facebook clone built with the MERN stack. Not so much satisfying because 
-                of its usefulness - of course it doesn't serve any purpose - but because I learned a lot of things while doing it. I would estimate it took me about 150+ hours to build it 
-                but I learned a lot of things such as: different kind of authentication flows and their pros and cons, security concerns for small to medium apps. I got introduced to different node libraries for things 
-                like image uploading (multer + AWS S3), authentication (passport, jsonwebtoken), env variables (dotenv). That's just what I recall off the top of my head, what I want to say is that I learned a lot of
-                things and I wish I had a more useful app to show for it.
-                <br /><br />
-                &nbsp;&nbsp;&nbsp;&nbsp;Right now I am only working on getting hired, I hardly have any ideas for more projects to showcase my skills - for now anyway. 
-                When I am not learning and practicing web development I am probably working out or reading.
-              
+              </Grid>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+                &nbsp;&nbsp;&nbsp;&nbsp;This is where I first started, about three years ago. I wanted to get into web development and everyone 
+                seemed to say that ruby and ruby on rails are the best first step for any beginners. I am not sure I totally 
+                agree. Ruby surely is easy and satisfying to learn, but surprisingly I get frustrated when I don't know 
+                how certain things happen, and rails does a lot of behind-the-scenes magic for simple, albeit repetitive, tasks 
+                like routing, or forms. I didn't feel like I was learning anything - maybe that's why I dropped learning 
+                altogether shortly afterward.
               </Typography>
             </Box>
           </CSSTransition>
           <CSSTransition
-            in={showRails}
+            in={showReact}
             classNames='left-slide'
             timeout={1000}
           >
-            <Box ref={rails} className={classes.leftBox}>
-              <Typography variant='h3' className={classes.title}>
-                Rails
-              </Typography> 
+            <Box ref={react} className={classes.leftBox}>
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <FaReact color='lightskyblue' size='32' />
+                </Grid>
+                <Grid Item>
+                  <Typography variant='h3' className={classes.title}>
+                    React
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                Got introduced to react nearly 6 months ago and I am enjoying every single part of it. I am writing 
+                react with functional components and hooks, which I heard it's the more modern way anyway.
+
+              </Typography>
             </Box>
           </CSSTransition>
           <CSSTransition
@@ -202,8 +236,20 @@ export default ({props}) => {
           timeout={1000}
           >
             <Box ref={express} className={classes.rightBox}>
-              <Typography variant='h3' className={classes.title}>
-                Express 
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <img src={expressjs} />                
+                </Grid>
+                <Grid item>
+                  <Typography variant='h3' className={classes.title}>Express</Typography>
+                </Grid>
+              </Grid>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+                I will be honest, I only picked up express and node because these two are the most sought after in the current 
+                local job market. But I don't regret it one bit. Shortly after getting the handle of express' basics principles 
+                I quicky understood why rails is so popular and all the articles I read years ago started to make sense. It was 
+
+                
               </Typography>
             </Box>
           </CSSTransition>
@@ -215,7 +261,22 @@ export default ({props}) => {
             <Box ref={others} className={classes.leftBox}>
               <Typography variant='h3' className={classes.title}>
                 Other tools
-              </Typography> 
+              </Typography>
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <SiFirebase color='orange' size='32'/>
+                </Grid>
+                <Grid item>
+                  <Typography variant='overline' className={classes.tool}>Firebase</Typography>
+                </Grid>
+              </Grid>
+              
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
+                &nbsp;&nbsp;&nbsp;&nbsp;I have used a lot of other resources on my learning journey. First, before learning a back-end language 
+                well enough, I have used google firebase' services such as firestore - a noSQL database serive - or 
+                authentication - a simple authentication service with support for a lot of oAuth strategies and also 
+                with a intuitive GUI dashboard for managing users.
+              </Typography>
             </Box>
           </CSSTransition>
         </Box>

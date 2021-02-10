@@ -2,9 +2,11 @@
 // REACT-TRANSITION-GROUP ANIMATIONS
 .left-slide-enter {
   transform: translateX(-300%);
+  opacity: 0;
 }
 .left-slide-enter-active{
   transform: translateX(0);
+  opacity: 1;
   transition: all .5s;
 }
 .left-slide-exit {
@@ -14,6 +16,22 @@
   transform: translateX(-300%);
   transition: all .5s;
 }
+
+.right-slide-enter {
+  transform: translateX(300%);
+}
+.right-slide-enter-active{
+  transform: translateX(0);
+  transition: all .5s;
+}
+.right-slide-exit {
+  transform: translateX(0);
+}
+.right-slide-exit-active {
+  transform: translateX(300%);
+  transition: all .5s;
+}
+
 .fade {
   position: absolute;
 }

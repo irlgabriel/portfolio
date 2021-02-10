@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import me from '../../images/me.jpeg';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -73,8 +73,42 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default ({props}) => {
-
   const classes = useStyles();
+
+  const background = useRef(null);
+  const react = useRef(null);
+  const rails = useRef(null);
+  const express = useRef(null);
+  const others = useRef(null);
+
+  const [showBackground, setShowBackground] = useState(false);
+  const [showReact, setShowReact] = useState(false);
+  const [showRails, setShowRails] = useState(false);
+  const [showExpress, setShowExpress] = useState(false);
+  const [showOthers, setShowOthers] = useState(false);
+
+  const isInViewport = (element) => {
+    console.log(element);
+    if(!element) return false;
+    const rect = element.current ? element.current.getBoundingClientRect() : element.getBoundingClientRect();
+    return (
+        rect.top >= 0 || 
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+    
+  }
+
+  useEffect(() => {
+    const checkVisibleDivs = () => {
+      background && !showBackground && setShowBackground(isInViewport(background));
+      react && !showReact && setShowReact(isInViewport(react));
+      rails && !showRails && setShowRails(isInViewport(rails));
+      express && !showExpress && setShowExpress(isInViewport(express));
+      others && !showOthers && setShowOthers(isInViewport(others));
+    }
+    window.addEventListener('scroll', checkVisibleDivs, false);
+    return () => window.removeEventListener('scroll', checkVisibleDivs);
+  })
 
   return (
       <Box className={classes.root} spacing={0} direction='row' p={2} container>
@@ -91,11 +125,12 @@ export default ({props}) => {
             <Typography variant='h5'>Brasov, Romania</Typography>
           </Grid>
           <CSSTransition
-            in={true}
+            appear
+            in={showBackground}
             classNames='left-slide'
             timeout={500}
           >
-            <Box className={classes.leftBox}>
+            <Box ref={background} className={classes.leftBox}>
               <Typography className={classes.title} variant='h3'>
                 Background
               </Typography>
@@ -124,12 +159,11 @@ export default ({props}) => {
             </Box>
           </CSSTransition>
           <CSSTransition
-            in={true == true}
+            in={showReact}
             classNames='right-slide'
             timeout={500}
-            unmountOnExit
           >
-            <Box className={classes.rightBox}>
+            <Box ref={react} className={classes.rightBox}>
               <Typography variant='h3' className={classes.title}>
                 React
               </Typography>
@@ -149,22 +183,34 @@ export default ({props}) => {
               </Typography>
             </Box>
           </CSSTransition>
-          <CSSTransition>
-            <Box className={classes.leftBox}>
+          <CSSTransition
+            in={showRails}
+            classNames='left-slide'
+            timeout={500}
+          >
+            <Box ref={rails} className={classes.leftBox}>
               <Typography variant='h3' className={classes.title}>
                 Rails
               </Typography> 
             </Box>
           </CSSTransition>
-          <CSSTransition>
-            <Box className={classes.rightBox}>
+          <CSSTransition
+          in={showExpress}
+          classNames='right-slide'
+          timeout={500}
+          >
+            <Box ref={express} className={classes.rightBox}>
               <Typography variant='h3' className={classes.title}>
                 Express 
               </Typography>
             </Box>
           </CSSTransition>
-          <CSSTransition>
-            <Box className={classes.leftBox}>
+          <CSSTransition
+            in={showOthers}
+            classNames='left-slide'
+            timeout={500}
+          >
+            <Box ref={others} className={classes.leftBox}>
               <Typography variant='h3' className={classes.title}>
                 Other tools
               </Typography> 

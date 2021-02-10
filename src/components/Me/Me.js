@@ -199,10 +199,10 @@ export default ({props}) => {
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;This is where I first started, about three years ago. I wanted to get into web development and everyone 
-                seemed to say that ruby and ruby on rails are the best first step for any beginners. I am not sure I totally 
-                agree. Ruby surely is easy and satisfying to learn, but surprisingly I get frustrated when I don't know 
+                seemed to say that ruby and ruby on rails are the best first step for any beginner. I am not sure I totally 
+                agree now. Ruby surely is easy and satisfying to learn, but surprisingly I get frustrated when I don't know 
                 how certain things happen, and rails does a lot of behind-the-scenes magic for simple, albeit repetitive, tasks 
-                like routing, or forms. I didn't feel like I was learning anything - maybe that's why I dropped learning 
+                like routing, or forms. I didn't feel like I was learning anything - maybe that's why I dropped the whole web-dev idea 
                 altogether shortly afterward.
               </Typography>
             </Box>
@@ -226,8 +226,8 @@ export default ({props}) => {
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 Got introduced to react nearly 6 months ago and I am enjoying every single part of it. I am writing 
-                react with functional components and hooks, which I heard it's the more modern way anyway.
-
+                react with functional components and hooks because it seems more intuitive to me.
+                I read that this is the more modern approach anyway so win-win scenario.
               </Typography>
             </Box>
           </CSSTransition>
@@ -248,7 +248,8 @@ export default ({props}) => {
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 I will be honest, I only picked up express and node because these two are the most sought after in the current 
                 local job market. But I don't regret it one bit. Shortly after getting the handle of express' basics principles 
-                I quicky understood why rails is so popular and all the articles I read years ago started to make sense. It was 
+                I quicky understood why rails is so popular and all the articles I read years ago started to make sense once I had to implement routes, write authentication logic, 
+                provide a database solution for the app, and so on.
               </Typography>
             </Box>
           </CSSTransition>
@@ -287,8 +288,7 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                I have implemented Amazon's S3 storage service with express and react to upload/edit/
-                delete images.
+                I have implemented Amazon's S3 storage service with express and react to upload/edit/delete images.
               </Typography>
 
               {/* MUI */}

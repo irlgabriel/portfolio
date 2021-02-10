@@ -94,7 +94,7 @@ export default ({props}) => {
   const express = useRef(null);
   const others = useRef(null);
 
-  const [showBackground, setShowBackground] = useState(true);
+  const [showBackground, setShowBackground] = useState(false);
   const [showReact, setShowReact] = useState(false);
   const [showRails, setShowRails] = useState(false);
   const [showExpress, setShowExpress] = useState(false);
@@ -277,8 +277,9 @@ export default ({props}) => {
                   <Typography variant='caption' className={classes.tool}>Firebase</Typography>
                 </Grid>
               </Grid>
+              
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                &nbsp;&nbsp;&nbsp;&nbsp;I have used a lot of other resources on my learning journey. First, before learning a back-end language 
+                &nbsp;&nbsp;&nbsp;&nbsp;Before learning a back-end language 
                 well enough, I have used google firebase' services such as firestore - a noSQL database serive - or 
                 authentication - a simple authentication service with support for a lot of oAuth strategies and also 
                 with a intuitive GUI dashboard for managing users.

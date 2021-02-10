@@ -11,9 +11,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { GoLocation } from "react-icons/go";
 import { Link } from 'react-router-dom';
 import { SiFirebase } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
-import { SiRails, SiRuby } from 'react-icons/si';
+import { FaReact, FaAws, FaSass } from 'react-icons/fa';
+import { SiRails, SiRuby, SiMaterialUi } from 'react-icons/si';
 import { MdComputer } from 'react-icons/md';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -214,7 +215,7 @@ export default ({props}) => {
             <Box ref={react} className={classes.leftBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
-                  <FaReact color='lightskyblue' size='32' />
+                  <FaReact color='lightskyblue' size='32' />&nbsp;&nbsp;
                 </Grid>
                 <Grid Item>
                   <Typography variant='h3' className={classes.title}>
@@ -238,7 +239,7 @@ export default ({props}) => {
             <Box ref={express} className={classes.rightBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
-                  <img src={expressjs} />                
+                  <img src={expressjs} />&nbsp;&nbsp;                
                 </Grid>
                 <Grid item>
                   <Typography variant='h3' className={classes.title}>Express</Typography>
@@ -248,8 +249,6 @@ export default ({props}) => {
                 I will be honest, I only picked up express and node because these two are the most sought after in the current 
                 local job market. But I don't regret it one bit. Shortly after getting the handle of express' basics principles 
                 I quicky understood why rails is so popular and all the articles I read years ago started to make sense. It was 
-
-                
               </Typography>
             </Box>
           </CSSTransition>
@@ -262,20 +261,62 @@ export default ({props}) => {
               <Typography variant='h3' className={classes.title}>
                 Other tools
               </Typography>
+              {/* Firebase */}
               <Grid className={classes.grid} container>
                 <Grid item>
-                  <SiFirebase color='orange' size='32'/>
+                  <SiFirebase color='orange' size='32'/>&nbsp;
                 </Grid>
                 <Grid item>
-                  <Typography variant='overline' className={classes.tool}>Firebase</Typography>
+                  <Typography variant='caption' className={classes.tool}>Firebase</Typography>
                 </Grid>
               </Grid>
-              
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;I have used a lot of other resources on my learning journey. First, before learning a back-end language 
                 well enough, I have used google firebase' services such as firestore - a noSQL database serive - or 
                 authentication - a simple authentication service with support for a lot of oAuth strategies and also 
                 with a intuitive GUI dashboard for managing users.
+              </Typography>
+
+              {/* AWS */}
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <FaAws color='#CCCC00' size='32'/>&nbsp;&nbsp;
+                </Grid>
+                <Grid item>
+                  <Typography variant='caption' className={classes.tool}>Amazon Web Services</Typography>
+                </Grid>
+              </Grid>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
+                I have implemented Amazon's S3 storage service with express and react to upload/edit/
+                delete images.
+              </Typography>
+
+              {/* MUI */}
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <SiMaterialUi size='32'/>&nbsp;&nbsp;
+                </Grid>
+                <Grid item>
+                  <Typography variant='caption' className={classes.tool}>MaterialUI</Typography>
+                </Grid>
+              </Grid>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
+                This is the main CSS framework that I use right now. I used bootstrap with reactstrap and I am quite familiar with it as well, but I seem to enjoy this one 
+                a lot more.
+              </Typography>
+
+              {/* SASS */}
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <FaSass color='red' size='32'/>&nbsp;&nbsp;
+                </Grid>
+                <Grid item>
+                  <Typography variant='caption' className={classes.tool}>Sass</Typography>
+                </Grid>
+              </Grid>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
+                I am using SASS for css pre-processing. I will be honest, I am not acquainted with most of its features, it only makes styling transitions easier with the reference symbol (&)
+                
               </Typography>
             </Box>
           </CSSTransition>

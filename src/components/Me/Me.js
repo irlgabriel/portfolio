@@ -88,12 +88,13 @@ export default ({props}) => {
   const [showOthers, setShowOthers] = useState(false);
 
   const isInViewport = (element) => {
+    // returns true if the element is viewable at all (as soon as any part of it is viewable);
     console.log(element);
-    if(!element) return false;
+    if(!element || !element.current) return false;
     const rect = element.current ? element.current.getBoundingClientRect() : element.getBoundingClientRect();
     return (
-        rect.top >= 0 || 
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        rect.top >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) ||
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0
     );
     
   }
@@ -128,7 +129,7 @@ export default ({props}) => {
             appear
             in={showBackground}
             classNames='left-slide'
-            timeout={500}
+            timeout={1000}
           >
             <Box ref={background} className={classes.leftBox}>
               <Typography className={classes.title} variant='h3'>
@@ -161,13 +162,14 @@ export default ({props}) => {
           <CSSTransition
             in={showReact}
             classNames='right-slide'
-            timeout={500}
+            timeout={1000}
           >
             <Box ref={react} className={classes.rightBox}>
               <Typography variant='h3' className={classes.title}>
                 React
               </Typography>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+                
                 &nbsp;&nbsp;&nbsp;&nbsp;Lately I got into React and and I have since developed a couple random apps to get better at it. These I consider the most satisfying projects that I developed with React: 
                 <a className={classes.link} href='https://irlgabriel.github.io/covid-19-tracker'>this</a> - a small app that implements some (unreliable but free) public APIs and shows relevant covid-19 related stats from your country 
                 and around the world, in quite an aesthetically pleasing - if not useful - way, and 
@@ -186,7 +188,7 @@ export default ({props}) => {
           <CSSTransition
             in={showRails}
             classNames='left-slide'
-            timeout={500}
+            timeout={1000}
           >
             <Box ref={rails} className={classes.leftBox}>
               <Typography variant='h3' className={classes.title}>
@@ -197,7 +199,7 @@ export default ({props}) => {
           <CSSTransition
           in={showExpress}
           classNames='right-slide'
-          timeout={500}
+          timeout={1000}
           >
             <Box ref={express} className={classes.rightBox}>
               <Typography variant='h3' className={classes.title}>
@@ -208,7 +210,7 @@ export default ({props}) => {
           <CSSTransition
             in={showOthers}
             classNames='left-slide'
-            timeout={500}
+            timeout={1000}
           >
             <Box ref={others} className={classes.leftBox}>
               <Typography variant='h3' className={classes.title}>

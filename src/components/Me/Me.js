@@ -246,8 +246,7 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
-                I will be honest, I only picked up express and node because these two are the most sought after in the current 
-                local job market. But I don't regret it one bit. Shortly after getting the handle of express' basics principles 
+                Node and express were the natural choice since I was already familiar with javascript. Shortly after getting the handle of express' basics principles 
                 I quicky understood why rails is so popular and all the articles I read years ago started to make sense once I had to implement routes, write authentication logic, 
                 provide a database solution for the app, and so on.
               </Typography>

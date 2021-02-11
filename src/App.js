@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { routes } from "./routes";
+import { Switch as MaterialSwitch } from '@material-ui/core/';
+import { themeLight, themeDark } from './theme';
+
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { Switch as MaterialSwitch } from '@material-ui/core/';
-import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { themeLight, themeDark } from './theme';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,13 +44,16 @@ const useStyles = makeStyles(theme => ({
     },
     
   },
-
   switchContainer: {
     position: 'absolute',
     top: '.5rem',
     right: '.25rem',
     zIndex: '3',
   },
+  switchLabel: {
+    display: 'flex', 
+    alignItems: 'center'
+  }
 }))
 
 function App() {
@@ -76,7 +81,12 @@ function App() {
                   onChange={() => handleOnChange()}
                   />
                 }
-                label={<NightsStayIcon fontSize='large' />}
+                label={
+                  <Box className={classes.switchLabel}>
+                    <NightsStayIcon fontSize='large' />
+                    <Typography variant='overline'>Dark mode</Typography>
+                  </Box>
+                }
               />
             </Box>
             <TransitionGroup>

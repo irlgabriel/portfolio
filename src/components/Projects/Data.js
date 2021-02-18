@@ -61,7 +61,7 @@ export const mainProjects = [
   },
   {
     id: "facebook-clone-mern",
-    name: "MERN-facebook",
+    name: "Facebook v2",
     images: 
       { src: require("../../images/mern-fb.png"), idx: 0 },      
     techIcons: [
@@ -84,7 +84,7 @@ export const mainProjects = [
   },
   {
     id: "facebook-clone",
-    name: "Rails-Facebook",
+    name: "Facebook",
     images: 
       { src: require("../../images/facebookapp.png"), idx: 0 },      
     techIcons: [

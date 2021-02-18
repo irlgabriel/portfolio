@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { GoLocation } from "react-icons/go";
 import { Link } from 'react-router-dom';
 import { SiFirebase } from 'react-icons/si';
+import { AiFillClockCircle } from 'react-icons/ai';
 import { FaReact, FaAws, FaSass } from 'react-icons/fa';
 import { SiRails, SiRuby, SiMaterialUi } from 'react-icons/si';
 import { MdComputer } from 'react-icons/md';
@@ -83,6 +84,12 @@ const useStyles = makeStyles(theme => ({
   grid: {
     display: 'flex',
     alignItems: 'center'
+  },
+  exp: {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: '24px',
+    width: '100%',
   }
 }))
 
@@ -174,16 +181,11 @@ export default ({props}) => {
                 truly appreciate the work that rails gems do to offload a lot of boring (and sometimes complicated) tasks like devise for authentication, active record for database associations, 
                 active storage for image uploading and more that I do not recall right now and I am sure there's plenty others useful ones that I didn't have the chance to work with in my very brief journey with rails.
                 */}
-                &nbsp;&nbsp;&nbsp;&nbsp;I have been interested in computers since as far as I remember. Spent way too much
-                time playing video games and naturally I was expected to grow up working
-                with computers as well. Nothing new so far, I am sure. 
-                <br/>&nbsp;&nbsp;&nbsp;&nbsp;
-                So why would you take an interest
-                in me then, you might ask. I don't know either honestly, are you that desperate? I am 
-                kidding, hopefully. Maybe you're looking for an unpretentious, reasonable, responsible
-                junior that needs a chance to make a change for the better? That's all I can think of.
-                Let's talk, it might just be worth it for both of us, who knows?
-                <br /><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                I am a young aspiring web developer from Romania. Interested in 
+                frontend / fullstack jobs, either remote roles or 
+                companies established in Brașov.
+                <br/>
               </Typography>
             </Box>
           </CSSTransition>
@@ -203,15 +205,20 @@ export default ({props}) => {
                     Ruby on Rails
                   </Typography>
                 </Grid>
-                
               </Grid>
+              
+              <Box className={classes.exp}>
+                <AiFillClockCircle />
+                &nbsp;
+                <Typography variant='overline'>6-12 months</Typography>
+              </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+                <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;This is where I first started, about three years ago. I wanted to get into web development and everyone 
                 seemed to say that ruby and ruby on rails are the best first step for any beginner. I am not sure I totally 
                 agree now. Ruby surely is easy and satisfying to learn, but surprisingly I get frustrated when I don't know 
                 how certain things happen, and rails does a lot of behind-the-scenes magic for simple, albeit repetitive, tasks 
-                like routing, or forms. I didn't feel like I was learning anything - maybe that's why I dropped the whole web-dev idea 
-                altogether shortly afterward.
+                like routing, or forms.
               </Typography>
             </Box>
           </CSSTransition>
@@ -231,6 +238,11 @@ export default ({props}) => {
                   </Typography>
                 </Grid>
               </Grid>
+              <Box className={classes.exp}>
+                <AiFillClockCircle />
+                  &nbsp;
+                <Typography variant='overline'>6-12 months</Typography>
+              </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 Got introduced to react nearly 6 months ago and I am enjoying every single part of it. I am writing 
@@ -253,6 +265,11 @@ export default ({props}) => {
                   <Typography variant='h3' className={classes.title}>Express</Typography>
                 </Grid>
               </Grid>
+              <Box className={classes.exp}>
+                <AiFillClockCircle />
+                  &nbsp;
+                <Typography variant='overline'>3-6 months</Typography>
+              </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 Node and express were the natural choice since I was already 
                 familiar with javascript. Shortly after getting the handle of express' 
@@ -329,10 +346,8 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-              &nbsp;&nbsp;&nbsp;&nbsp;I am using SASS for css pre-processing. I will be honest, 
-                I am not acquainted with most of its features, 
-                it only makes styling easier with the reference symbol(&) nesting, 
-                especially transitions.
+              &nbsp;&nbsp;&nbsp;&nbsp;I am using SASS for css pre-processing. I find the reference
+               symbol feature really useful especially.
               </Typography>
             </Box>
           </CSSTransition>

@@ -7,6 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import mui from '../../images/mui.svg';
 import { FaReact } from 'react-icons/fa';
+import { MdWork, MdContacts } from 'react-icons/md';
+import { BsFillInfoSquareFill } from 'react-icons/bs';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -81,13 +83,20 @@ export default () => {
       <Grid className={classes.flexContainer} container>
         <Grid className={`${classes.flexItem} ${classes.leftDiv}`} item>
           <Link className={classes.link} to='/what'>
-            <Typography variant='h3'>Work</Typography>
+            <Typography variant='h3'>
+            <MdWork size={32}/>&nbsp;
+              Work</Typography>
           </Link>
           <Link className={classes.link} to='who'>
-            <Typography variant='h3'>About</Typography>
+            <Typography variant='h3'>
+            <BsFillInfoSquareFill size={32}/>&nbsp;
+            About</Typography>
           </Link>
           <Link className={classes.link} to='contact'>
-            <Typography variant='h3'>Contact</Typography>
+            
+            <Typography variant='h3'>
+            <MdContacts size={32}/>&nbsp;
+            Contact</Typography>
           </Link>
         </Grid>
         

@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     height: '100%',
+    margin: '0',
   },
   alignCenter: {
     alignItems: 'center'
@@ -49,6 +50,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '6px',
   },
   desc: {
+    width: '100%',
     padding: '.5rem',
   },
   hireMe: {
@@ -65,7 +67,7 @@ const useStyles = makeStyles(theme => ({
   leftBox: {
     borderRadius: '6px',
     padding: '8px',
-    width: 'max(60%, 400px)'
+    width: 'min(450px, 90%)',
   },
   rightBox: {
     display: 'flex',
@@ -73,7 +75,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'flex-end',
     borderRadius: '6px',
     padding: '8px',
-    width: 'max(60%, 400px)',
+    width: 'min(450px, 90%)',
     marginLeft: 'auto',
   },
   tool: {
@@ -299,7 +301,7 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                I have implemented Amazon's S3 storage service with express and react to upload/edit/delete images, 
+              &nbsp;&nbsp;&nbsp;&nbsp;I have implemented Amazon's S3 storage service with express and react to upload/edit/delete images, 
                 handling all the file naming and cleaning up login myself.
               </Typography>
 
@@ -313,7 +315,7 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                This is the main CSS framework that I use right now. I used bootstrap with reactstrap and 
+              &nbsp;&nbsp;&nbsp;&nbsp;This is the main CSS framework that I use right now. I used bootstrap with reactstrap and 
                 I am quite familiar with it as well, but I seem to enjoy this one 
                 a lot more.
               </Typography>
@@ -328,7 +330,7 @@ export default ({props}) => {
                 </Grid>
               </Grid>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
-                I am using SASS for css pre-processing. I will be honest, 
+              &nbsp;&nbsp;&nbsp;&nbsp;I am using SASS for css pre-processing. I will be honest, 
                 I am not acquainted with most of its features, 
                 it only makes styling easier with the reference symbol(&) nesting, 
                 especially transitions.

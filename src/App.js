@@ -15,10 +15,14 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    overflowY: 'scroll',
+    display: 'flex',
+    justifyContent: 'center',
     position: 'relative',
     minHeight: 'max(100vh, 600px)',
     maxWidth: '1200px',
     margin: '0 auto',
+    padding: '16px',
   },
   main: {
     borderRadius: '.75rem',
@@ -26,7 +30,9 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     justifyContent: 'center',
     flexDirection: 'column',
+    minHeight: '100vh',
     width: '100%',
+    margin: '0',
     '& > div > div > a > h3': {
       cursor: 'pointer',
       transition: 'all .30s ease-in-out',

@@ -13,7 +13,7 @@ import { SiFirebase } from 'react-icons/si';
 import { AiFillClockCircle } from 'react-icons/ai';
 import { FaReact, FaAws, FaSass } from 'react-icons/fa';
 import { SiRails, SiRuby, SiMaterialUi } from 'react-icons/si';
-import { MdComputer } from 'react-icons/md';
+import { FiBookOpen } from 'react-icons/fi';
 
 
 const useStyles = makeStyles(theme => ({
@@ -162,11 +162,11 @@ export default ({props}) => {
             <Box ref={background} style={{opacity: showBackground ? '1' : '0'}} className={classes.leftBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
-                  <MdComputer size='48' color='gray' />&nbsp;
+                  <FiBookOpen size='48' color='gray' />&nbsp;
                 </Grid>
                 <Grid item>
                   <Typography className={classes.title} variant='h3'>
-                    Background
+                    Summary
                   </Typography>
                 </Grid>
               </Grid>

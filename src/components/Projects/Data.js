@@ -35,7 +35,7 @@ export const mainProjects = [
       <FaSass size={48}  color="red" />,
     ],
     desc:
-      "A react app that takes data from two different APIs and uses Recharts npm library to display some (hopefully useful) charts with Covid-19 information around the world. ",
+      "A React app that takes data from two different APIs and uses Recharts npm library to display some (hopefully useful) charts with Covid-19 information around the world. ",
     liveURL: "https://irlgabriel.github.io/covid-19-tracker",
     codeURL: "https://github.com/irlgabriel/covid-19-tracker",
     key: "0",
@@ -121,7 +121,7 @@ export const mainProjects = [
       <FaCss3 size={48}  color="royalblue" />,
     ],
     desc:
-      "A small app that I've built to get used with firebase and its services (firestore and auth more specifically). I reached the conclusion that it is a great tool (and very easy to learn and implement) for smaller apps that do not need full fledged backends.",
+      "An app that I've built to get used with firebase and its services (Firestore and Authentication more specifically). I reached the conclusion that it is a great tool (and very easy to learn and implement) for smaller apps that do not need full fledged backends.",
     liveURL: "https://irlgabriel.github.io/library-project-redo/#/",
     codeURL: "https://github.com/irlgabriel/library-project-redo/",
     projectIcon: <FaReact />,
@@ -140,7 +140,7 @@ export const mainProjects = [
       <FaCss3 size={48}  color="royalblue" />,
     ],
     desc:
-      "Just a small app that helped me understand and manage state more easily. I have got a bit of a taste of form client-side validations since it revolves a lot around valid informations being input.",
+      "This app that helped me understand and manage state more easily. I have got a bit of a taste of form client-side validations since it revolves a lot around valid informations being input.",
     liveURL: "https://irlgabriel.github.io/Cv-project",
     codeURL: "https://github.com/irlgabriel/Cv-project",
     projectIcon: <FaReact />,

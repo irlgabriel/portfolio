@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100vh',
     width: '100%',
     margin: '0',
-    '& > div > div > a > h3': {
+    '& div > a > h3': {
       cursor: 'pointer',
       transition: 'all .30s ease-in-out',
       userSelect: 'none',
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
         transform: 'translateX(20px)',
       }
     },
-    '& > div > div > a': {
+    '& div > a': {
       color: 'inherit',
       textDecoration: 'none',
       '&:hover': {
@@ -94,7 +94,7 @@ function App() {
                 }
               />
             </Box>
-            <TransitionGroup>
+            <TransitionGroup style={{height: '100%', paddingTop: '4rem'}}>
               <Switch>
                 {routes.map(({ path, Component }) => (
                   <Route exact path={path} key={path} >

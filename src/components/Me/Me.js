@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import me from '../../images/me.jpeg';
 import expressjs from '../../images/expressjs-icon.svg'
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';

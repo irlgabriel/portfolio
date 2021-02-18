@@ -245,7 +245,7 @@ export default ({props}) => {
               </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                Got introduced to react nearly 6 months ago and I am enjoying every single part of it. I am writing 
+                Got my first taste of react about seven months ago and I loved it right away. I am writing 
                 react with functional components and hooks because it seems more intuitive to me.
                 I read that this is the more modern approach anyway so win-win scenario if you ask me.
               </Typography>

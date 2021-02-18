@@ -86,7 +86,8 @@ const useStyles = makeStyles( theme => ({
     left: 0,
     right: 0,
     bottom: 0,
-    zIndex: '901'
+    zIndex: '901',
+    color: 'white'
   },
   swipeDiv: {
     alignItems: 'center',

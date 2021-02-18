@@ -213,12 +213,9 @@ export default ({props}) => {
                 <Typography variant='overline'>6-12 months</Typography>
               </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;This is where I first started, about three years ago. I wanted to get into web development and everyone 
-                seemed to say that ruby and ruby on rails are the best first step for any beginner. I am not sure I totally 
-                agree now. Ruby surely is easy and satisfying to learn, but surprisingly I get frustrated when I don't know 
-                how certain things happen, and rails does a lot of behind-the-scenes magic for simple, albeit repetitive, tasks 
-                like routing, or forms.
+                <br />Ruby is a really easy and satisfying programming language to learn and build things with and 
+                paired with rails it makes for a really smooth ride through dull tasks like authentications, 
+                routing, forms, and such repetitive tasks.
               </Typography>
             </Box>
           </CSSTransition>

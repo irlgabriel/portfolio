@@ -53,9 +53,13 @@ const useStyles = makeStyles( theme => ({
   },
   swipeIcon: {
     fontSize: '4rem',
+    zIndex: '9222',
     [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
+    '&:hover': {
+      cursor: 'pointer',
+    }
   },
   rotate180: {
     transform: 'rotate(180deg)',
@@ -154,8 +158,8 @@ export default ({props}) => {
         <div className={classes.overlay}>
           <NavigateBeforeIcon onClick={() => setSlide(prev => prev !== 0 ? prev - 1 : mainProjects.length - 1)} className={classes.sliderArrow}/>
           <NavigateNextIcon onClick={() => setSlide(prev => prev !== mainProjects.length - 1 ? prev + 1 : 0)} className={classes.sliderArrow}/>
-          <GiSideswipe className={classes.swipeIcon} />
-          <GiSideswipe className={`${classes.swipeIcon} ${classes.rotate180}`} />
+          <GiSideswipe onClick={() => setSlide(prev => prev !== 0 ? prev - 1 : mainProjects.length - 1)} className={classes.swipeIcon} />
+          <GiSideswipe onClick={() => setSlide(prev => prev !== mainProjects.length - 1 ? prev + 1 : 0)} className={`${classes.swipeIcon} ${classes.rotate180}`} />
         </div>
 
         <Box style={{overflow: 'hidden'}}>

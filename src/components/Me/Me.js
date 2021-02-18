@@ -284,9 +284,9 @@ export default ({props}) => {
               
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;Before learning a back-end language 
-                well enough, I have used google firebase' services such as firestore - a noSQL database serive - or 
+                well enough, I have used google firebase' services such as firestore - a noSQL database service - or 
                 authentication - a simple authentication service with support for a lot of oAuth strategies and also 
-                with a intuitive GUI dashboard for managing users.
+                a intuitive GUI dashboard for managing users.
               </Typography>
 
               {/* AWS */}

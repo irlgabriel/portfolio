@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     alignItems: 'center',
+    height: '100%',
   },
   link: {
     fontSize: '2rem',
@@ -28,6 +29,11 @@ const useStyles = makeStyles({
     '&:hover': {
       transform: 'scale(1.5)',
     }
+  },
+  flexContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column'
   }
 })
 
@@ -41,16 +47,19 @@ export default () => {
           <ArrowBackIcon fontSize='large'/>
         </Typography>
       </Link>
-      {
-        contactLinks.map(link => (
-          <a key={link.name} className={classes.link} href={link.contactLink}>
-            <Grid container className={classes.root}>
-              {link.icon}&nbsp;
-              <Typography variant='h5'>{link.name}</Typography>
-            </Grid>
-          </a>
-        ))
-      }
+
+      <Grid container className={classes.flexContainer}>
+        {
+          contactLinks.map(link => (
+            <a key={link.name} className={classes.link} href={link.contactLink}>
+              <Grid container className={classes.root}>
+                {link.icon}&nbsp;
+                <Typography variant='h5'>{link.name}</Typography>
+              </Grid>
+            </a>
+          ))
+        }
+      </Grid>
     </Box>
   )
 }

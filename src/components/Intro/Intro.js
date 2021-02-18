@@ -23,9 +23,11 @@ const useStyles = makeStyles(theme => ({
   },
   flexContainer: {
     height: '100%',
+    /*
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column'
     }
+    */
   },
   flexItem: {
     flexBasis: '50%'
@@ -34,18 +36,22 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     display: 'flex',
     alignItems: 'flex-end',
+    /*
     [theme.breakpoints.down('xs')]: {
       order: '1'
     }
+    */
   },
   leftDiv: {
     height: '100%',
     display: "flex",
     flexDirection: 'column',
     justifyContent: 'center',
+    /*
     [theme.breakpoints.down('xs')]: {
       order: '2'
     }
+    */
   },
   img: {
     borderRadius: '8px',
@@ -84,17 +90,7 @@ export default () => {
             <Typography variant='h3'>Contact</Typography>
           </Link>
         </Grid>
-        <Grid component={Box} direction='column' className={`${classes.flexItem} ${classes.toRight}`} item>
-          <Grid container>
-              <Grid component={Link} to='who' item className={classes.flexItem}>
-                <Typography variant='h4'>Gabriel, 21</Typography>
-                <Typography variant='overline'>Brasov, Romania</Typography>
-              </Grid>
-              <Grid item className={classes.flexItem}>
-                <img className={classes.img} src={me} width='100%' />
-              </Grid>
-            </Grid>
-        </Grid>
+        
       </Grid>
   </Grid>
   )

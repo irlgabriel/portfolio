@@ -80,7 +80,7 @@ const useStyles = makeStyles( theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'rgba(180,180,180,.6)',
+    background: 'rgba(45,45,45,.9)',
     textAlign: 'center',
     top: 0,
     left: 0,
@@ -132,11 +132,11 @@ export default ({props}) => {
         appear
         in={appear && window.innerWidth < 600}
         classNames='hint'
-        timeout={1500}
+        timeout={3000}
         unmountOnExit
         onEntered={() => setAppear(false)}
       >
-        <Box className={classes.hint}>
+        <Box onClick={() => setAppear(false)} className={classes.hint}>
           <Grid container className={classes.swipeDiv}>
             <GiSideswipe className={classes.swipeIcon} />
             <GiSideswipe className={`${classes.swipeIcon} ${classes.rotate180}`} />

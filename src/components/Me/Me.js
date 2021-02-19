@@ -213,8 +213,9 @@ export default ({props}) => {
                 <Typography variant='overline'>6-12 months</Typography>
               </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
-                <br />Ruby is a really easy and satisfying programming language to learn and build things with and 
-                paired with rails it makes for a really smooth ride through dull tasks like authentications, 
+                <br />First programming language that I got into. Ruby is a really easy and satisfying language to learn and build things with and 
+                paired with rails it makes for a really smooth ride through otherwise dull and repetitive 
+                tasks like authentications, 
                 routing, forms, and such repetitive tasks.
               </Typography>
             </Box>
@@ -242,9 +243,8 @@ export default ({props}) => {
               </Box>
               <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                Got my first taste of react about seven months ago and I loved it right away. I am writing 
-                react with functional components and hooks because it seems more intuitive to me.
-                I read that this is the more modern approach anyway so win-win scenario if you ask me.
+                Got my first taste of react about seven months ago and I loved it right away. I am up to date 
+                with latest modern react best practices such as functional components and hooks.
               </Typography>
             </Box>
           </CSSTransition>

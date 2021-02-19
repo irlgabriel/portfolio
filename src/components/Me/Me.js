@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import { SiFirebase } from 'react-icons/si';
 import { AiFillClockCircle } from 'react-icons/ai';
 import { FaReact, FaAws, FaSass } from 'react-icons/fa';
-import { SiRails, SiRuby, SiMaterialUi } from 'react-icons/si';
+import { SiRails, SiRuby, SiMaterialUi, SiMongodb } from 'react-icons/si';
 import { FiBookOpen } from 'react-icons/fi';
 
 
@@ -100,12 +100,14 @@ export default ({props}) => {
   const react = useRef(null);
   const rails = useRef(null);
   const express = useRef(null);
+  const mongo = useRef(null);
   const others = useRef(null);
 
   const [showBackground, setShowBackground] = useState(false);
   const [showReact, setShowReact] = useState(false);
   const [showRails, setShowRails] = useState(false);
   const [showExpress, setShowExpress] = useState(false);
+  const [showMongo, setShowMongo] = useState(false);
   const [showOthers, setShowOthers] = useState(false);
 
   const isInViewport = (element) => {
@@ -124,6 +126,7 @@ export default ({props}) => {
     react && !showReact && setShowReact(isInViewport(react));
     rails && !showRails && setShowRails(isInViewport(rails));
     express && !showExpress && setShowExpress(isInViewport(express));
+    mongo && !showMongo && setShowMongo(isInViewport(mongo));
     others && !showOthers && setShowOthers(isInViewport(others));
   }
 
@@ -156,7 +159,7 @@ export default ({props}) => {
           <CSSTransition
             appear
             in={showBackground}
-            classNames='left-slide'
+            classNames='right-slide'
             timeout={1000}
           >
             <Box ref={background} style={{opacity: showBackground ? '1' : '0'}} className={classes.leftBox}>
@@ -191,7 +194,7 @@ export default ({props}) => {
           </CSSTransition>
           <CSSTransition
             in={showRails}
-            classNames='right-slide'
+            classNames='left-slide'
             timeout={1000}
           >
             <Box style={{opacity: showRails ? '1' : '0'}}  ref={rails} className={classes.rightBox}>
@@ -222,7 +225,7 @@ export default ({props}) => {
           </CSSTransition>
           <CSSTransition
             in={showReact}
-            classNames='left-slide'
+            classNames='right-slide'
             timeout={1000}
           >
             <Box style={{opacity: showReact ? '1' : '0'}}  ref={react} className={classes.leftBox}>
@@ -250,7 +253,7 @@ export default ({props}) => {
           </CSSTransition>
           <CSSTransition
           in={showExpress}
-          classNames='right-slide'
+          classNames='left-slide'
           timeout={1000}
           >
             <Box style={{opacity: showExpress ? '1' : '0'}}  ref={express} className={classes.rightBox}>
@@ -279,11 +282,37 @@ export default ({props}) => {
             </Box>
           </CSSTransition>
           <CSSTransition
+          in={showMongo}
+          classNames='right-slide'
+          timeout={1000}
+          >
+            <Box style={{opacity: showMongo? '1' : '0'}}  ref={mongo} className={classes.leftBox}>
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <SiMongodb size={32}/>
+                </Grid>
+                <Grid item>
+                  <Typography variant='h3' className={classes.title}>MongoDB</Typography>
+                </Grid>
+              </Grid>
+              <Box className={classes.exp}>
+                <AiFillClockCircle />
+                  &nbsp;
+                <Typography variant='overline'>3-6 months</Typography>
+              </Box>
+              <Typography className={classes.desc} variant='subtitle1' style={{marginLeft: "1rem", marginTop: ".5rem"}}>
+                My NoSQL database of choice. I have a good understanding of the basics of MongoDB 
+                and integration with node and express.
+
+              </Typography>
+            </Box>
+          </CSSTransition>
+          <CSSTransition
             in={showOthers}
             classNames='left-slide'
             timeout={1000}
           >
-            <Box style={{opacity: showOthers ? '1' : '0'}}  ref={others} className={classes.leftBox}>
+            <Box style={{opacity: showOthers ? '1' : '0'}}  ref={others} className={classes.rightBox}>
               <Typography variant='h3' className={classes.title}>
                 Other tools
               </Typography>

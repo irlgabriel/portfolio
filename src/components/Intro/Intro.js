@@ -84,18 +84,18 @@ export default () => {
         <Grid className={`${classes.flexItem} ${classes.leftDiv}`} item>
           <Link className={classes.link} to='/what'>
             <Typography variant='h3'>
-            <MdWork size={32}/>&nbsp;
+            <MdWork color='#d2691e' size={32}/>&nbsp;
               Work</Typography>
           </Link>
           <Link className={classes.link} to='who'>
             <Typography variant='h3'>
-            <BsFillInfoSquareFill size={32}/>&nbsp;
+            <BsFillInfoSquareFill color='lightskyblue' size={32}/>&nbsp;
             About</Typography>
           </Link>
           <Link className={classes.link} to='contact'>
             
             <Typography variant='h3'>
-            <MdContacts size={32}/>&nbsp;
+            <MdContacts color='orange' size={32}/>&nbsp;
             Contact</Typography>
           </Link>
         </Grid>

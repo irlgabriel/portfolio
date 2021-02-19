@@ -7,14 +7,14 @@
 .left-slide-enter-active, .left-slide-appear-active{
   transform: translateX(0);
   opacity: 1;
-  transition: all 1s;
+  transition: all 1500ms;
 }
 .left-slide-exit {
   transform: translateX(0);
 }
 .left-slide-exit-active {
   transform: translateX(-300%);
-  transition: all 1s;
+  transition: all 1500ms;
 }
 
 .right-slide-enter {
@@ -24,14 +24,14 @@
 .right-slide-enter-active{
   transform: translateX(0);
   opacity: 1;
-  transition: all 1s;
+  transition: all 1500ms;
 }
 .right-slide-exit {
   transform: translateX(0);
 }
 .right-slide-exit-active {
   transform: translateX(300%);
-  transition: all 1s;
+  transition: all 1500ms;
 }
 
 .fade {

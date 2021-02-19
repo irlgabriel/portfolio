@@ -14,6 +14,7 @@ import { AiFillClockCircle } from 'react-icons/ai';
 import { FaReact, FaAws, FaSass } from 'react-icons/fa';
 import { SiRails, SiRuby, SiMaterialUi, SiMongodb } from 'react-icons/si';
 import { FiBookOpen } from 'react-icons/fi';
+import { FaTools } from 'react-icons/fa';
 
 
 const useStyles = makeStyles(theme => ({
@@ -160,7 +161,7 @@ export default ({props}) => {
             appear
             in={showBackground}
             classNames='right-slide'
-            timeout={1000}
+            timeout={1500}
           >
             <Box ref={background} style={{opacity: showBackground ? '1' : '0'}} className={classes.leftBox}>
               <Grid className={classes.grid} container>
@@ -195,7 +196,7 @@ export default ({props}) => {
           <CSSTransition
             in={showRails}
             classNames='left-slide'
-            timeout={1000}
+            timeout={1500}
           >
             <Box style={{opacity: showRails ? '1' : '0'}}  ref={rails} className={classes.rightBox}>
               <Grid container className={classes.grid}>
@@ -226,7 +227,7 @@ export default ({props}) => {
           <CSSTransition
             in={showReact}
             classNames='right-slide'
-            timeout={1000}
+            timeout={1500}
           >
             <Box style={{opacity: showReact ? '1' : '0'}}  ref={react} className={classes.leftBox}>
               <Grid className={classes.grid} container>
@@ -254,7 +255,7 @@ export default ({props}) => {
           <CSSTransition
           in={showExpress}
           classNames='left-slide'
-          timeout={1000}
+          timeout={1500}
           >
             <Box style={{opacity: showExpress ? '1' : '0'}}  ref={express} className={classes.rightBox}>
               <Grid className={classes.grid} container>
@@ -284,12 +285,12 @@ export default ({props}) => {
           <CSSTransition
           in={showMongo}
           classNames='right-slide'
-          timeout={1000}
+          timeout={1500}
           >
             <Box style={{opacity: showMongo? '1' : '0'}}  ref={mongo} className={classes.leftBox}>
               <Grid className={classes.grid} container>
                 <Grid item>
-                  <SiMongodb size={32}/>
+                  <SiMongodb color='green' size={32}/>
                 </Grid>
                 <Grid item>
                   <Typography variant='h3' className={classes.title}>MongoDB</Typography>
@@ -310,12 +311,19 @@ export default ({props}) => {
           <CSSTransition
             in={showOthers}
             classNames='left-slide'
-            timeout={1000}
+            timeout={1500}
           >
             <Box style={{opacity: showOthers ? '1' : '0'}}  ref={others} className={classes.rightBox}>
-              <Typography variant='h3' className={classes.title}>
-                Other tools
-              </Typography>
+              <Grid className={classes.grid} container>
+                <Grid item>
+                  <FaTools size={32} color='lightgray' />
+                </Grid>&nbsp;
+                <Grid item>
+                <Typography variant='h3' className={classes.title}>
+                  Other tools
+                </Typography>
+                </Grid>
+              </Grid>
               {/* Firebase */}
               <Grid className={classes.grid} container>
                 <Grid item>

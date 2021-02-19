@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
@@ -6,6 +6,8 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Divider from '@material-ui/core/Divider';
+
+import { CSSTransition } from 'react-transition-group';
 import { Switch as MaterialSwitch } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -70,6 +72,29 @@ const useStyles = makeStyles(theme => ({
     bottom: '16px',
     left: '16px',
     right: '16px',
+  },
+  menuOverlay: { 
+    position: 'fixed',
+    top: '95px',
+    left: '0px',
+    right: '0px',
+    bottom: '0px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    '& div > h5': {
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    '& div > h5 > a': {
+      fontSize: '1.5rem',
+      color: theme.palette.text.primary,
+      textDecoration: 'none',
+      transition: 'all .15s ease-in-out',
+      '&:hover': {
+        color: theme.palette.text.secondary,
+      }
+    }
   }
   
 }))
@@ -82,6 +107,16 @@ export default ({theme, setTheme}) => {
   const handleOnChange = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   }
+
+  const checkSize = () => {
+    if (window.innerWidth > 960) setMenu(false);
+  }
+
+  // dismount menuOverlay when window is resized >960px
+  useEffect(() => {
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  })
 
   return (
     <Grid container className={classes.root}> 
@@ -126,12 +161,42 @@ export default ({theme, setTheme}) => {
       </Grid>
 
       
-      {/* <960px Mobile Menu */}
+      {/* <960px Mobile Menu Button */}
       <Grid onClick={() => setMenu(prev => !prev)} item className={classes.menu}>
         <GiHamburgerMenu size={32} />
       </Grid>
       
+      {/* Mobile Menu Overlay */}
+      <CSSTransition
+        in={showMenu}
+        classNames='fade'
+        timeout={500}
+        unmountOnExit
+      >
+        <Grid container class={classes.menuOverlay}>
+          <Grid item>
+            <Typography variant='overline' component='h5'>
+              <a href='#projects'>Projects</a>
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant='overline' component='h5'>
+              <a href='#tools'>Tools</a>
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant='overline' component='h5'>
+              <a href='#about-me'>About Me</a>
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant='overline' component='h5'>
+              <a href='#contact'>Contact</a>
+            </Typography>
+          </Grid>
 
+        </Grid>
+      </CSSTransition>
       {/* Absolutely positioned divider at the bottom */}
       <Divider className={classes.divider} />
     </Grid>

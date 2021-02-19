@@ -13,7 +13,11 @@ const useStyles = makeStyles({
     height: '100%',
   },
   link: {
-    fontSize: '2rem',
+    marginBottom: '.5rem',
+    transition: 'all .25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.2)'
+    }
   },  
   rootLink: {
     position: 'absolute',
@@ -53,8 +57,8 @@ export default () => {
           contactLinks.map(link => (
             <a key={link.name} className={classes.link} href={link.contactLink}>
               <Grid container className={classes.root}>
-                {link.icon}&nbsp;
-                <Typography variant='h5'>{link.name}</Typography>
+                {link.icon}&nbsp;&nbsp;
+                <Typography variant='h4'>{link.name}</Typography>
               </Grid>
             </a>
           ))

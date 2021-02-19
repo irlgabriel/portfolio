@@ -7,10 +7,11 @@ import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Divider from '@material-ui/core/Divider';
 
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Switch as MaterialSwitch } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from 'react-icons/im';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -163,7 +164,15 @@ export default ({theme, setTheme}) => {
       
       {/* <960px Mobile Menu Button */}
       <Grid onClick={() => setMenu(prev => !prev)} item className={classes.menu}>
-        <GiHamburgerMenu size={32} />
+        <TransitionGroup component={null}>
+          <CSSTransition
+            timeout={500}
+            classNames='fade'
+          >
+            {!showMenu ? <GiHamburgerMenu size={32}/> : <ImCross size={32}/> }
+          </CSSTransition>
+          
+        </TransitionGroup>
       </Grid>
       
       {/* Mobile Menu Overlay */}
@@ -176,22 +185,22 @@ export default ({theme, setTheme}) => {
         <Grid container class={classes.menuOverlay}>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a href='#projects'>Projects</a>
+              <a onClick={() => setMenu(false)} href='#projects'>Projects</a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a href='#tools'>Tools</a>
+              <a onClick={() => setMenu(false)} href='#tools'>Tools</a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a href='#about-me'>About Me</a>
+              <a onClick={() => setMenu(false)} href='#about-me'>About Me</a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a href='#contact'>Contact</a>
+              <a onClick={() => setMenu(false)} href='#contact'>Contact</a>
             </Typography>
           </Grid>
 

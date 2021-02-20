@@ -158,7 +158,7 @@ export default ({theme, setTheme}) => {
           <a href='#projects'>Projects</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a href='#tools'>Tools</a>
+          <a href='#skills'>Skills</a>
         </Typography>
         <Typography variant='overline' component='h5'>
           <a href='#contact'>Contact</a>
@@ -199,7 +199,7 @@ export default ({theme, setTheme}) => {
           </Grid>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a onClick={() => setMenu(false)} href='#tools'>Tools</a>
+              <a onClick={() => setMenu(false)} href='#skills'>Skills</a>
             </Typography>
           </Grid>
           

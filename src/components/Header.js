@@ -152,13 +152,13 @@ export default ({theme, setTheme}) => {
 
         {/** >960px Links */}
         <Typography variant='overline' component='h5'>
+          <a href='#about-me'>About Me</a>
+        </Typography>
+        <Typography variant='overline' component='h5'>
           <a href='#projects'>Projects</a>
         </Typography>
         <Typography variant='overline' component='h5'>
           <a href='#tools'>Tools</a>
-        </Typography>
-        <Typography variant='overline' component='h5'>
-          <a href='#about-me'>About Me</a>
         </Typography>
         <Typography variant='overline' component='h5'>
           <a href='#contact'>Contact</a>
@@ -189,6 +189,11 @@ export default ({theme, setTheme}) => {
         <Grid container class={classes.menuOverlay}>
           <Grid item>
             <Typography variant='overline' component='h5'>
+              <a onClick={() => setMenu(false)} href='#about-me'>About Me</a>
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant='overline' component='h5'>
               <a onClick={() => setMenu(false)} href='#projects'>Projects</a>
             </Typography>
           </Grid>
@@ -197,17 +202,12 @@ export default ({theme, setTheme}) => {
               <a onClick={() => setMenu(false)} href='#tools'>Tools</a>
             </Typography>
           </Grid>
-          <Grid item>
-            <Typography variant='overline' component='h5'>
-              <a onClick={() => setMenu(false)} href='#about-me'>About Me</a>
-            </Typography>
-          </Grid>
+          
           <Grid item>
             <Typography variant='overline' component='h5'>
               <a onClick={() => setMenu(false)} href='#contact'>Contact</a>
             </Typography>
           </Grid>
-
         </Grid>
       </CSSTransition>
       {/* Absolutely positioned divider at the bottom */}

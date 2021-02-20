@@ -39,7 +39,7 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.root} container>
+    <Grid id='tools' className={classes.root} container>
       <Grid item>
         <Typography component='h2' className={classes.title} variant='h3'>Tools</Typography>
       </Grid>

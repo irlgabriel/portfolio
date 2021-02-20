@@ -6,6 +6,9 @@ import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { projects } from '../data/Data';
+import { useInView } from 'react-intersection-observer';
+
+import { Project } from '../Components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,34 +30,6 @@ const useStyles = makeStyles(theme => ({
     width: '50%',
     margin: '0 auto'
   },
-  project: {
-    [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
-    },
-    display: 'flex',
-    flexDirection: 'row',
-    width: '90%',
-    margin: '0 auto',
-    justifyContent: 'space-around',
-    marginBottom: '3rem'
-  },
-  img: {
-    display: 'block',
-    maxWidth: '65%',
-    maxHeight: '300px',
-    width: 'auto',
-    height: 'auto',
-    boxShadow: theme.shadows[10]
-  },
-  techIcon: {
-    marginRight: '.5rem'
-  },
-  desc: {
-    [theme.breakpoints.down('sm')]: {
-      padding: '1rem 0',
-    },
-    padding: '0 1rem',
-  }
 }))
 
 
@@ -70,23 +45,7 @@ export default () => {
       <TransitionGroup component={null}>
       {
         projects.map(project =>
-          <CSSTransition
-            classNames={project.id % 2 == 0 ? 'left-slide' : 'right-slide'}
-            timeout={1500}
-          >
-            <Grid item className={classes.project}>
-              <img className={classes.img} src={project.images.src}/>
-              <Box className={classes.desc}>
-                <Typography component='p' variant='overline'>{project.name}</Typography>
-                {
-                  project.techIcons.map(icon =>
-                    <span class={classes.techIcon}>{icon}</span>
-                  )
-                }
-                <Typography variant='subtitle1'>{project.desc}</Typography>
-              </Box>
-            </Grid>
-          </CSSTransition>
+          <Project {...project}/>
         )
       }
       </TransitionGroup>

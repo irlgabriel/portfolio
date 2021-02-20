@@ -39,6 +39,15 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     placeItems: 'center',
     flex: 1,
+  },
+  title: {
+    fontFamily: 'Truculenta',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center'
+    }
+  },
+  backdrop: {
+    
   }
   
 }))
@@ -49,7 +58,7 @@ export default () => {
   return (
     <Grid id='about-me' className={classes.root} container>
       <Grid className={classes.left} item>
-        <Typography style={{fontFamily: 'Truculenta'}} variant='h3' component='h1'>Hey! I am Gabriel.</Typography>
+        <Typography className={classes.title} variant='h3' component='h1'>Hey! I am Gabriel.</Typography>
         <Typography variant='subtitle1' component='h2'>
           A young, passion-driven developer from Romania. I love developing single
            page applications with React!

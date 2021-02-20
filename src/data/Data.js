@@ -11,6 +11,7 @@ import {
   FaAws,
   FaCss3,
   FaHtml5,
+  FaFigma,
 } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
 import { DiRuby } from "react-icons/di";
@@ -23,8 +24,11 @@ import {
   SiFirebase,
   SiRails,
   SiStyledComponents,
+  SiVisualstudio,
+  SiMaterialUi,
 } from "react-icons/si";
-
+import { DiGit } from 'react-icons/di';
+import { GiAtlas } from 'react-icons/gi';
 
 // Contact Links
 export const contactLinks = [
@@ -210,27 +214,102 @@ export const projects = [
 
 export const technologies = [
   {
+    type: 'framework',
     name: 'React',
     icon: <FaReact size="5rem" color='royalblue'/>
   },
   {
+    type: 'framework',
     name: 'Ruby on rails',
     icon: <DiRuby size="5rem" color="red"/>
   },
   {
+    type: 'language',
     name: 'nodeJS',
     icon: <FaNode size="5rem" color="lightgreen"/>
   },
   {
+    type: 'framework',
     name: 'Express',
     icon: <img src={require("../images/expressjs-icon.svg")} alt='express-logo' width="90px"/>
   },
   {
-    name: 'mongoDB',
-    icon: <SiMongodb size="5rem" color="green"/>
+    type: 'language',
+    name: 'HTML5',
+    icon: <FaHtml5 size='5rem'  color="red" />,
   },
   {
+    type: 'language',
+    name: 'CSS3',
+    icon: <FaCss3 size='5rem' color='royalblue' />
+  },
+  {
+    type: 'framework',
+    name: 'Sass',
+    icon: <FaSass size='5rem'  color="red" />,
+  },
+  {
+    type: 'framwork',
+    name: 'Bootstrap',
+    icon: <FaBootstrap size='5rem' color='purple' />,
+  },
+  {
+    type: 'framework',
+    name: 'MaterialUI',
+    icon: <SiMaterialUi size='5rem' color='black' />
+  },
+  /**Platforms */
+  {
+    type: 'platform',
     name: 'Heroku',
-    icon: <SiHeroku size="5rem" color="purple" />
+    icon: <SiHeroku size="4rem" color="purple" />
+  },
+  {
+    type: 'platform',
+    name: 'Github',
+    icon: <FaGithub size='4rem' color='black' />
+  },
+  /**Tools */
+  {
+    type: 'tool',
+    name: 'Visual Studio Code',
+    icon: <SiVisualstudio size='4rem' color='blue' />
+  },
+  {
+    type: 'tool',
+    name: 'Figma',
+    icon: <FaFigma size='4rem' color='lightskyblue' />
+  },
+  {
+    type: 'tool',
+    name: 'Git',
+    icon: <DiGit size='4rem' color='black' />
+  },
+  /**Services */
+  {
+    type: 'service',
+    name: 'PostgreSQL',
+    icon: <SiPostgresql size='4rem' color='purple' />,
+  },
+  {
+    type: 'service',
+    name: 'mongoDB',
+    icon: <SiMongodb size="4rem" color="green"/>
+  },
+  {
+    type: 'service',
+    name: 'Amazon Web Services(S3)',
+    icon: <FaAws size='4rem' color='orange' />
+  },
+  {
+    type: 'service',
+    name: 'Firebase',
+    icon: <SiFirebase size='4rem' color='orange' />
+  },
+  {
+    type: 'service',
+    name: 'Atlas',
+    name: <GiAtlas size='4rem' color='green' />
   }
+
 ]

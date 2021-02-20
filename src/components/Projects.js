@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-export default () => {
+export default ({theme}) => {
   const classes = useStyles();
 
   return (
@@ -45,7 +45,7 @@ export default () => {
       <TransitionGroup component={null}>
       {
         projects.map(project =>
-          <Project {...project}/>
+          <Project theme={theme} {...project}/>
         )
       }
       </TransitionGroup>

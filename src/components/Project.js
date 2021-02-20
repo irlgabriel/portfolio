@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default ({name, images, techIcons, desc, key}) => {
+export default ({theme, name, images, techIcons, desc, key}) => {
   const classes = useStyles();
 
   const [enteredInView, setEntered] = useState(false);
@@ -50,6 +50,10 @@ export default ({name, images, techIcons, desc, key}) => {
   useEffect(() => {
     if (inView) setEntered(true);
   }, [inView])
+
+  useEffect(() => {
+    setEntered(false);
+  }, [theme])
 
   return (
     <CSSTransition

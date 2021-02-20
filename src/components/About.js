@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import cloud from '../images/cloud.svg'
+import { CSSTransition } from 'react-transition-group';
+import { useInView } from 'react-intersection-observer';
+import cloud from '../images/cloud.svg';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,17 +37,33 @@ const useStyles = makeStyles(theme => ({
 export default () => {
   const classes = useStyles();
 
+  const [entered, setEntered] = useState(false);
+
+  const { ref, inView, entry } = useInView({
+    threshold: 0.2
+  })
+
+  useEffect(() => {
+    if(inView) setEntered(true);
+  }, [inView])
+
   return (
-    <Grid className={classes.root} container>
-      <Grid className={classes.flexItem} item>
-        <Typography className={classes.desc} variant='h4' component='p'>
-          I love writing clean code and building simple looking pages with 
-          smooth transitions.
-        </Typography>
+    <CSSTransition
+      in={entered}
+      classNames='right-slide'
+      timeout={1500}
+    >
+      <Grid ref={ref} className={classes.root} container>
+        <Grid className={classes.flexItem} item>
+          <Typography className={classes.desc} variant='h4' component='p'>
+            I love writing clean code and building simple looking pages with 
+            smooth transitions.
+          </Typography>
+        </Grid>
+        <Grid className={classes.flexItem} item>
+          <img className='cloud' src={cloud} width='50%' />
+        </Grid>
       </Grid>
-      <Grid className={classes.flexItem} item>
-        <img className='cloud' src={cloud} width='50%' />
-      </Grid>
-    </Grid>
+    </CSSTransition>
   )
 }

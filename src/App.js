@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Page Components
-import { Header, Intro, Projects } from './Components';
+import { Header, Intro, Projects, Tools } from './Components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,6 +32,9 @@ function App() {
           </Grid>
           <Grid item>
             <Projects />
+          </Grid>
+          <Grid item>
+            <Tools />
           </Grid>
         </Grid>
     </ThemeProvider>

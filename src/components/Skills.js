@@ -38,7 +38,7 @@ const useStyles = makeStyles({
 
 })
 
-export default () => {
+export default ({theme}) => {
   const classes = useStyles();
 
   const { ref, inView, entry } = useInView({
@@ -50,6 +50,10 @@ export default () => {
   useEffect(() => {
     if(inView) setEntered(true);
   }, [inView])
+
+  useEffect(() => {
+    setEntered(false)
+  }, [theme])
 
   return (
     <CSSTransition

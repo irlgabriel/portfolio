@@ -71,8 +71,8 @@ export default ({theme}) => {
           timeout={1000}
           exit={false}
         >
-          <a className={`${classes.link} slide-up`} ref={ref} href='/projects'>
-            <Button variant='contained' size='large'>See all projects</Button>
+          <a className={`${classes.link}`} ref={ref} href='/projects'>
+            <Button variant='contained' color='secondary' size='large'>See all projects</Button>
           </a>
         </CSSTransition>
       </TransitionGroup>

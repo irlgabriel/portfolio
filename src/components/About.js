@@ -38,11 +38,12 @@ export default () => {
     <Grid className={classes.root} container>
       <Grid className={classes.flexItem} item>
         <Typography className={classes.desc} variant='h4' component='p'>
-          I love writing clean code and building simple
+          I love writing clean code and building simple looking pages with 
+          smooth transitions.
         </Typography>
       </Grid>
       <Grid className={classes.flexItem} item>
-        <img src={cloud} width='100%' />
+        <img className='cloud' src={cloud} width='50%' />
       </Grid>
     </Grid>
   )

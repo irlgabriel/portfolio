@@ -13,12 +13,24 @@ const useStyles = makeStyles({
   title: {
     fontSize: '2rem',
   },
-  iconContainer: {
-
+  techContainer: {
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
   },
-  icon: {
-    marginRight: '1rem'
-  }
+  iconContainer: {
+    position: 'relative',
+    borderRadius: '12px',
+    height: '120px',
+    width: '120px',
+    display: 'grid',
+    placeItems: 'center',
+    background: 'rgba(140,140,140,.6)',
+    zIndex: '2',
+    transition: 'transform .35s ease-in-out',
+    cursor: 'pointer',
+    transform: 'scale(1.1)'
+    }
+
 })
 
 export default () => {
@@ -29,16 +41,14 @@ export default () => {
       <Grid item>
         <Typography className={classes.title} variant='overline'>Tools</Typography>
       </Grid>
-      <Grid item>
-        <Grid container>
-        {
-          technologies.map(tech => 
-            <Grid className={classes.icon} item>
-              {tech.icon}
-            </Grid>
-          )
-        }
-        </Grid>
+      <Grid className={classes.techContainer} item container>
+      {
+        technologies.map(tech => 
+          <Grid className={classes.iconContainer} item>
+            {tech.icon}
+          </Grid>
+        )
+      }
       </Grid>
     </Grid>
   )

@@ -213,26 +213,26 @@ export const projects = [
 export const technologies = [
   {
     name: 'React',
-    icon: <FaReact size="3rem" color='royalblue'/>
+    icon: <FaReact size="5rem" color='royalblue'/>
   },
   {
     name: 'Ruby on rails',
-    icon: <DiRuby size="3rem" color="red"/>
+    icon: <DiRuby size="5rem" color="red"/>
   },
   {
     name: 'nodeJS',
-    icon: <FaNode size="3rem" color="lightgreen"/>
+    icon: <FaNode size="5rem" color="lightgreen"/>
   },
   {
     name: 'Express',
-    icon: <img src={require("../images/expressjs-icon.svg")} alt='express-logo' width="48px"/>
+    icon: <img src={require("../images/expressjs-icon.svg")} alt='express-logo' width="90px"/>
   },
   {
     name: 'mongoDB',
-    icon: <SiMongodb size="3rem" color="green"/>
+    icon: <SiMongodb size="5rem" color="green"/>
   },
   {
     name: 'Heroku',
-    icon: <SiHeroku size="3rem" color="purple" />
+    icon: <SiHeroku size="5rem" color="purple" />
   }
 ]

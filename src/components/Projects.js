@@ -36,13 +36,19 @@ const useStyles = makeStyles(theme => ({
   img: {
     display: 'block',
     maxWidth: '65%',
-    maxHeight: '700px',
+    maxHeight: '300px',
     width: 'auto',
     height: 'auto',
     boxShadow: theme.shadows[10]
   },
   techIcon: {
     marginRight: '.5rem'
+  },
+  desc: {
+    [theme.breakpoints.down('sm')]: {
+      padding: '1rem 0',
+    },
+    padding: '0 1rem',
   }
 }))
 
@@ -60,7 +66,7 @@ export default () => {
           <Grid item className={classes.project}>
 
             <img className={classes.img} src={project.images.src}/>
-            <Box px={2}>
+            <Box className={classes.desc}>
               <Typography component='p' variant='overline'>{project.name}</Typography>
               {
                 project.techIcons.map(icon =>

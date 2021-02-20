@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -40,14 +40,20 @@ const useStyles = makeStyles(theme => ({
 export default ({name, images, techIcons, desc, key}) => {
   const classes = useStyles();
 
+  const [enteredInView, setEntered] = useState(false);
+
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.2,
   });
 
+  useEffect(() => {
+    if (inView) setEntered(true);
+  }, [inView])
+
   return (
     <CSSTransition
-      in={inView}
+      in={enteredInView}
       classNames='slide-up'
       timeout={1000}
       exit={false}

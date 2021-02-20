@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark} >
       <CssBaseline />
-      <Router basename='/portfolio'>
+      <Router>
         {/**Routes */}
         <Switch>
           <Route exact path='/projects' render={() => <ProjectPage setTheme={setTheme} theme={theme} />} />

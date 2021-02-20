@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down('sm')]: {
         margin: '.5rem 0'
       }
+    },
+    '& .MuiButtonBase-root': {
+      margin: '2rem 0'
     }
   },
   img: {

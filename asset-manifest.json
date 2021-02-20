@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fc535cfe.chunk.css",
-    "main.js": "/portfolio/static/js/main.127d1203.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.127d1203.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.fdc484db.chunk.css",
+    "main.js": "/portfolio/static/js/main.f2afb150.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f2afb150.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.70964fd7.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.70964fd7.js.map",
-    "static/js/2.5f750995.chunk.js": "/portfolio/static/js/2.5f750995.chunk.js",
-    "static/js/2.5f750995.chunk.js.map": "/portfolio/static/js/2.5f750995.chunk.js.map",
+    "static/js/2.2e4589ff.chunk.js": "/portfolio/static/js/2.2e4589ff.chunk.js",
+    "static/js/2.2e4589ff.chunk.js.map": "/portfolio/static/js/2.2e4589ff.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.d94232ef0231328c1ba38dad1465ba5c.js": "/portfolio/precache-manifest.d94232ef0231328c1ba38dad1465ba5c.js",
+    "precache-manifest.960e27d384d13e8b16526d456e82a5b3.js": "/portfolio/precache-manifest.960e27d384d13e8b16526d456e82a5b3.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.fc535cfe.chunk.css.map": "/portfolio/static/css/main.fc535cfe.chunk.css.map",
-    "static/js/2.5f750995.chunk.js.LICENSE.txt": "/portfolio/static/js/2.5f750995.chunk.js.LICENSE.txt",
+    "static/css/main.fdc484db.chunk.css.map": "/portfolio/static/css/main.fdc484db.chunk.css.map",
+    "static/js/2.2e4589ff.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2e4589ff.chunk.js.LICENSE.txt",
+    "static/media/cloud.svg": "/portfolio/static/media/cloud.4383be8b.svg",
     "static/media/covid19app.png": "/portfolio/static/media/covid19app.88117a78.png",
     "static/media/cvapp.png": "/portfolio/static/media/cvapp.134440eb.png",
     "static/media/expressjs-icon.svg": "/portfolio/static/media/expressjs-icon.9de32921.svg",
@@ -19,13 +20,12 @@
     "static/media/libraryapp.png": "/portfolio/static/media/libraryapp.dad4fd14.png",
     "static/media/me.jpeg": "/portfolio/static/media/me.231104cb.jpeg",
     "static/media/mern-fb.png": "/portfolio/static/media/mern-fb.0939a9dc.png",
-    "static/media/mui.svg": "/portfolio/static/media/mui.c00dbc7c.svg",
     "static/media/weatherapp.png": "/portfolio/static/media/weatherapp.88db1766.png"
   },
   "entrypoints": [
     "static/js/runtime-main.70964fd7.js",
-    "static/js/2.5f750995.chunk.js",
-    "static/css/main.fc535cfe.chunk.css",
-    "static/js/main.127d1203.chunk.js"
+    "static/js/2.2e4589ff.chunk.js",
+    "static/css/main.fdc484db.chunk.css",
+    "static/js/main.f2afb150.chunk.js"
   ]
 }

@@ -53,11 +53,11 @@ export default () => {
       classNames='right-slide'
       timeout={1500}
     >
-      <Grid ref={ref} className={classes.root} container>
+      <Grid id='about-me' ref={ref} className={classes.root} container>
         <Grid className={classes.flexItem} item>
           <Typography className={classes.desc} variant='h4' component='p'>
             I love writing clean code and building simple looking pages with 
-            smooth transitions.
+            smooth animations.
           </Typography>
         </Grid>
         <Grid className={classes.flexItem} item>

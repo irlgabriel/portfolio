@@ -147,7 +147,7 @@ export default ({theme, setTheme}) => {
     {/** Links */}
       <Grid item className={classes.navLinks}>
         <Typography className={classes.me} variant='overline' component='h4'>
-          <a href='#intro'>Gabriel Radu</a>
+          <a href='/'>Gabriel Radu</a>
         </Typography>
 
         {/** >960px Links */}
@@ -210,8 +210,6 @@ export default ({theme, setTheme}) => {
           </Grid>
         </Grid>
       </CSSTransition>
-      {/* Absolutely positioned divider at the bottom */}
-      <Divider className={classes.divider} />
     </Grid>
   )
 }

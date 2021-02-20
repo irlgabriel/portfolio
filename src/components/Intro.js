@@ -66,7 +66,7 @@ export default () => {
     <CSSTransition
       in={transition}
       classNames='fade'
-      timeout={1000}
+      timeout={1500}
     >
       <Grid id='intro' className={classes.root} container>
         <Grid className={classes.left} item>

@@ -72,7 +72,7 @@ export const projects = [
     images: 
       { src: require("../images/covid19app.png") },
     techIcons: [
-      <FaReact size={48}  color="lightblue" />,
+      <FaReact size={48}  color="lightskyblue" />,
       <FaBootstrap size={48}  color="purple" />,
       <FaCss3 size={48}  color="royalblue" />,
       <FaHtml5 size={48}  color="red" />,
@@ -90,7 +90,7 @@ export const projects = [
     images: 
       { src: require("../images/weatherapp.png"), idx: 0 },
     techIcons: [
-      <FaReact size={48} color="lightblue" />,
+      <FaReact size={48} color="lightskyblue" />,
       <SiStyledComponents size={48} color="gray" />,
       <SiJavascript  size={48}color="yellow" />,
       <FaHtml5 size={48} color="orange" />,
@@ -109,7 +109,7 @@ export const projects = [
     images: 
       { src: require("../images/mern-fb.png"), idx: 0 },      
     techIcons: [
-      <FaReact size={48} color='royalblue' />,
+      <FaReact size={48} color='lightskyblue' />,
       <FaBootstrap size={48}  color="purple" />,
       <FaHtml5 size={48}  color="orange" />,
       <FaCss3 size={48}  color="royalblue" />,
@@ -249,7 +249,7 @@ export const technologies = [
     icon: <FaSass size='5rem'  color="red" />,
   },
   {
-    type: 'framwork',
+    type: 'framework',
     name: 'Bootstrap',
     icon: <FaBootstrap size='5rem' color='purple' />,
   },
@@ -258,18 +258,18 @@ export const technologies = [
     name: 'MaterialUI',
     icon: <SiMaterialUi size='5rem' color='black' />
   },
-  /**Platforms */
+  /**Tools */
+
   {
-    type: 'platform',
+    type: 'tool',
     name: 'Heroku',
     icon: <SiHeroku size="4rem" color="purple" />
   },
   {
-    type: 'platform',
+    type: 'tool',
     name: 'Github',
     icon: <FaGithub size='4rem' color='black' />
   },
-  /**Tools */
   {
     type: 'tool',
     name: 'Visual Studio Code',
@@ -306,10 +306,6 @@ export const technologies = [
     name: 'Firebase',
     icon: <SiFirebase size='4rem' color='orange' />
   },
-  {
-    type: 'service',
-    name: 'Atlas',
-    name: <GiAtlas size='4rem' color='green' />
-  }
+
 
 ]

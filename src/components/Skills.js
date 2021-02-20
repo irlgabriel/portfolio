@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { technologies }from '../data/Data';
-
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
+import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles({
   root: {
@@ -16,21 +17,23 @@ const useStyles = makeStyles({
   },
   techContainer: {
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
     padding: '1rem',
   },
   iconContainer: {
     position: 'relative',
     borderRadius: '12px',
-    height: '120px',
-    width: '120px',
     display: 'grid',
+    padding: '1rem',
     placeItems: 'center',
-    background: 'rgba(140,140,140,.6)',
     zIndex: '2',
     transition: 'transform .35s ease-in-out',
     cursor: 'pointer',
-    transform: 'scale(1.1)'
+    },
+    subtitle: {
+      fontFamily: 'Truculenta',
+    },
+    '&:hover': {
+      transform: 'scale(1.2)',
     }
 
 })
@@ -38,20 +41,51 @@ const useStyles = makeStyles({
 export default () => {
   const classes = useStyles();
 
+  const { ref, inView, entry } = useInView({
+    threshold: 0.2
+  })
+
+  const [entered, setEntered] = useState(false);
+
+  useEffect(() => {
+    if(inView) setEntered(true);
+  }, [inView])
+
   return (
-    <Grid id='skills' className={classes.root} container>
-      <Grid item>
-        <Typography component='h2' className={classes.title} variant='h3'>Skills</Typography>
-      </Grid>
-      <Grid className={classes.techContainer} item container>
-      {
-        technologies.map(tech => 
-          <Grid key={tech.name} className={classes.iconContainer} item>
-            {tech.icon}
+    <CSSTransition
+      in={entered}
+      timeout={1000}
+      classNames='fade'
+    >
+
+      <Grid ref={ref} id='skills' className={`${classes.root} fade`} container>
+        <Grid item>
+          <Typography component='h2' className={classes.title} variant='h3'>Skills</Typography>
+        </Grid>
+        <Typography variant='h3' component='h3' className={classes.subtitle}>Languages & Frameworks</Typography>
+          <Grid className={classes.techContainer} item container>
+          {
+            technologies.map((tech, idx) => 
+              tech.type === 'language' || tech.type === 'framework' &&
+              <Grid key={tech.name} className={classes.iconContainer} item>
+                {tech.icon}
+              </Grid>
+            )
+          }
           </Grid>
-        )
-      }
+          <Typography variant='h3' component='h2' className={classes.subtitle}>Tools & Services</Typography>
+
+          <Grid className={classes.techContainer} item container>
+          {
+            technologies.map(tech => 
+              tech.type !== 'language' && tech.type !== 'framework' &&
+              <Grid key={tech.name} className={classes.iconContainer} item>
+                {tech.icon}
+              </Grid>
+            )
+          }
+          </Grid>
       </Grid>
-    </Grid>
+    </CSSTransition>
   )
 }

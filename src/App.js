@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Route } from 'react-router-dom';
-import { CSSTransition } from "react-transition-group";
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { themeLight, themeDark } from './theme';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Pages
@@ -16,10 +14,12 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark} >
       <CssBaseline />
-      <Router basename='/portfolio'>
+      <Router>
         {/**Routes */}
-        <Route path='/' exact render={() => <IntroPage theme={theme} setTheme={setTheme} />} />
-        <Route path='/projects' exact render={() => <ProjectPage setTheme={setTheme} theme={theme} />} />
+        <Switch>
+          <Route exact path='/projects' render={() => <ProjectPage setTheme={setTheme} theme={theme} />} />
+          <Route path='/' render={() => <IntroPage theme={theme} setTheme={setTheme} />} />
+        </Switch>
       </Router>
     </ThemeProvider>
   );

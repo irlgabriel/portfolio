@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
 import { TransitionGroup } from 'react-transition-group';
@@ -71,9 +72,9 @@ export default ({theme}) => {
           timeout={1000}
           exit={false}
         >
-          <a className={`${classes.link}`} ref={ref} href='/projects'>
+          <Link className={`${classes.link}`} ref={ref} to='/projects'>
             <Button variant='contained' color='secondary' size='large'>See all projects</Button>
-          </a>
+          </Link>
         </CSSTransition>
       </TransitionGroup>
     </Grid>

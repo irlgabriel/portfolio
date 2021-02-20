@@ -15,7 +15,7 @@ import { ImCross } from 'react-icons/im';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    position: 'relative',
+    //position: 'relative',
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '1rem',
@@ -71,7 +71,8 @@ const useStyles = makeStyles(theme => ({
     right: '16px',
   },
   menuOverlay: { 
-    position: 'fixed',
+    zIndex: '51',
+    position: 'absolute',
     top: '95px',
     left: '0px',
     right: '0px',
@@ -79,6 +80,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
+    background: theme.palette.background.default,
     '& div > h5': {
       display: 'flex',
       justifyContent: 'center'
@@ -114,6 +116,12 @@ export default ({theme, setTheme}) => {
     window.addEventListener('resize', checkSize);
     return () => window.removeEventListener('resize', checkSize);
   })
+
+  useEffect(() => {
+    showMenu 
+    ? document.body.style.overflow = 'hidden'
+    : document.body.style.overflow = 'unset';
+  }, [showMenu])
 
   return (
     <Grid container className={classes.root}> 

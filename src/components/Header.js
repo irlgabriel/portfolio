@@ -60,10 +60,6 @@ const useStyles = makeStyles(theme => ({
     flex: '2',
     fontSize: '24px',
   },
-  flexBreak: {
-    flexBasis: '0',
-    height: '0',
-  },
   divider: {
     [theme.breakpoints.down('sm')]: {
       display: 'block'

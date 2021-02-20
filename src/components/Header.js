@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     flex: '1',
     '& a': {
+      cursor: 'pointer',
       color: theme.palette.text.primary,
       textDecoration: 'none',
       transition: 'all .15s ease-in-out',
@@ -98,7 +99,7 @@ const useStyles = makeStyles(theme => ({
   
 }))
 
-export default ({theme, setTheme}) => {
+export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
   const classes = useStyles();
 
   const [showMenu, setMenu] = useState(false);
@@ -152,16 +153,16 @@ export default ({theme, setTheme}) => {
 
         {/** >960px Links */}
         <Typography variant='overline' component='h5'>
-          <a href='#about-me'>About Me</a>
+          <a onClick={() => aboutMe.current.scrollIntoView()}>About Me</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a href='#projects'>Projects</a>
+          <a onClick={() => projects.current.scrollIntoView()}>Projects</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a href='#skills'>Skills</a>
+          <a onClick={() => skills.current.scrollIntoView()}>Skills</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a href='#contact'>Contact</a>
+          <a onClick={() => contact.current.scrollIntoView()}>Contact</a>
         </Typography>
       </Grid>
 

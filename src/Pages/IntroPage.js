@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Header, Intro, Projects, Skills, Contact, About } from '../Components';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,26 +12,36 @@ const useStyles = makeStyles(theme => ({
 
 export default ({theme, setTheme}) => {
 
+  const intro = useRef(null);
+  const aboutMe = useRef(null);
+  const projects = useRef(null);
+  const skills = useRef(null);
+  const contact = useRef(null);
+
+  useEffect(() => {
+    console.log(intro, aboutMe)
+  }, [intro, aboutMe])
+
   const classes = useStyles();
 
   return (
     <Grid className={classes.root} spacing={0} container>
       <Grid item>
-        <Header theme={theme} setTheme={setTheme}/>
+        <Header projects={projects} skills={skills} contact={contact} intro={intro} aboutMe={aboutMe} theme={theme} setTheme={setTheme}/>
       </Grid>
-      <Grid item>
+      <Grid ref={intro} item>
         <Intro />
       </Grid>
-      <Grid item>
+      <Grid ref={aboutMe} item>
         <About />
       </Grid>
-      <Grid item>
+      <Grid ref={projects} item>
         <Projects theme={theme} />
       </Grid>
-      <Grid item>
+      <Grid ref={skills} item>
         <Skills />
       </Grid>
-      <Grid item>
+      <Grid ref={contact} item>
         <Contact />
       </Grid>
     </Grid>

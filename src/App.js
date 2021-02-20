@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from "react-transition-group";
 import { themeLight, themeDark } from './theme';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';

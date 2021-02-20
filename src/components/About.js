@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-export default () => {
+export default ({aboutMe}) => {
   const classes = useStyles();
 
   const [entered, setEntered] = useState(false);

@@ -4,8 +4,27 @@ import {
   FaInstagramSquare,
   FaFacebookSquare,
   FaLinkedin,
+  FaSass,
+  FaReact,
+  FaNode,
+  FaBootstrap,
+  FaAws,
+  FaCss3,
+  FaHtml5,
 } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
+import { DiRuby } from "react-icons/di";
+import {
+  SiHeroku,
+  SiReactrouter,
+  SiPostgresql,
+  SiJavascript,
+  SiMongodb,
+  SiFirebase,
+  SiRails,
+  SiStyledComponents,
+} from "react-icons/si";
+
 
 // Contact Links
 export const contactLinks = [
@@ -42,35 +61,12 @@ export const contactLinks = [
   },
 ];
 
-// Project data
-import React from "react";
-import {
-  FaSass,
-  FaReact,
-  FaNode,
-  FaBootstrap,
-  FaAws,
-  FaCss3,
-  FaHtml5,
-} from "react-icons/fa";
-import { DiRuby } from "react-icons/di";
-import {
-  SiHeroku,
-  SiReactrouter,
-  SiPostgresql,
-  SiJavascript,
-  SiMongodb,
-  SiFirebase,
-  SiRails,
-  SiStyledComponents,
-} from "react-icons/si";
-
-export const mainProjects = [
+export const projects = [
   {
     id: "covid-app",
     name: "Covid-19 Charts",
     images: 
-      { src: require("../../images/covid19app.png") },
+      { src: require("../images/covid19app.png") },
     techIcons: [
       <FaReact size={48}  color="lightblue" />,
       <FaBootstrap size={48}  color="purple" />,
@@ -89,7 +85,7 @@ export const mainProjects = [
     name: "Weather App",
     id: "weather-app",
     images: 
-      { src: require("../../images/weatherapp.png"), idx: 0 },
+      { src: require("../images/weatherapp.png"), idx: 0 },
     techIcons: [
       <FaReact size={48} color="lightblue" />,
       <SiStyledComponents size={48} color="gray" />,
@@ -102,13 +98,13 @@ export const mainProjects = [
     liveURL: "https://irlgabriel.github.io/weather-app/",
     codeURL: "https://github.com/irlgabriel/weather-app/",
     projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
-    key: "2",
+    key: "1",
   },
   {
     id: "facebook-clone-mern",
     name: "Facebook v2",
     images: 
-      { src: require("../../images/mern-fb.png"), idx: 0 },      
+      { src: require("../images/mern-fb.png"), idx: 0 },      
     techIcons: [
       <FaReact size={48} color='royalblue' />,
       <FaBootstrap size={48}  color="purple" />,
@@ -125,13 +121,13 @@ export const mainProjects = [
     liveURL: "https://fcloneodin.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/MERN-facebook",
     projectIcon: <FaReact size={48}  fontSize="2.5rem" color="royalblue" />,
-    key: "8",
+    key: "2",
   },
   {
     id: "facebook-clone",
     name: "Facebook",
     images: 
-      { src: require("../../images/facebookapp.png"), idx: 0 },      
+      { src: require("../images/facebookapp.png"), idx: 0 },      
     techIcons: [
       <SiRails size={48}  color="red" />,
       <DiRuby size={48}  color="red" />,
@@ -147,13 +143,13 @@ export const mainProjects = [
     liveURL: "https://whispering-bayou-85275.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/facebook-odin",
     projectIcon: <DiRuby size={48}  fontSize="2.5rem" color="red" />,
-    key: "1",
+    key: "3",
   },
   {
     name: "Book Library",
     id: "book-library",
     images: 
-      { src: require("../../images/libraryapp.png"), idx: 0 },
+      { src: require("../images/libraryapp.png"), idx: 0 },
     alt: "Photo of library project",
     projectTitle: "Library",
     techIcons: [
@@ -176,7 +172,7 @@ export const mainProjects = [
     name: "CV Generator",
     id: "cv-generator",
     images: 
-      { src: require("../../images/cvapp.png"), idx: 0 },
+      { src: require("../images/cvapp.png"), idx: 0 },
     techIcons: [
       <FaReact  size={48} color="lightblue" />,
       <SiJavascript size={48}  color="yellow" />,
@@ -229,7 +225,7 @@ export const technologies = [
   },
   {
     name: 'Express',
-    icon: <img src={require("../../images/expressjs-icon.svg")} alt='express-logo' width="48px"/>
+    icon: <img src={require("../images/expressjs-icon.svg")} alt='express-logo' width="48px"/>
   },
   {
     name: 'mongoDB',

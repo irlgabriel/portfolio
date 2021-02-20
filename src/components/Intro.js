@@ -47,11 +47,11 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.root} container>
+    <Grid id='projects' className={classes.root} container>
       <Grid className={classes.left} item>
         <Typography variant='h3' component='h1'>Hey! I am Gabriel.</Typography>
         <Typography variant='subtitle1' component='h2'>
-          A young, motivated developer from Romania. I love developing single
+          A young, passion-driven developer from Romania. I love developing single
            page applications with React!
         </Typography>
         <a href='#projects'>

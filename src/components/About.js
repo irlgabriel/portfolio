@@ -24,6 +24,15 @@ const useStyles = makeStyles(theme => ({
         order: 1,
       }
     },
+    '&:last-of-type': {
+      '& img': {
+        width: '50%',
+        [theme.breakpoints.down('sm')]: {
+          width: '25%'
+        }
+      },
+      padding: '1rem'
+    },
     flex: 1,
     display: 'grid',
     placeItems: 'center'
@@ -61,7 +70,7 @@ export default ({aboutMe}) => {
           </Typography>
         </Grid>
         <Grid className={classes.flexItem} item>
-          <img className='cloud' src={cloud} width='50%' />
+          <img className={classes.cloud} src={cloud}/>
         </Grid>
       </Grid>
     </CSSTransition>

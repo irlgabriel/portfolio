@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import { projects } from '../data/Data' ;
 import { Project, Header, Contact } from '../Components';
@@ -13,6 +13,10 @@ const useStyles = makeStyles({
 
 export default ({setTheme, theme}) => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [])
 
   return (
     <Grid className={classes.root} container>

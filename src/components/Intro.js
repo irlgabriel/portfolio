@@ -49,7 +49,7 @@ export default () => {
   return (
     <Grid id='about-me' className={classes.root} container>
       <Grid className={classes.left} item>
-        <Typography variant='h3' component='h1'>Hey! I am Gabriel.</Typography>
+        <Typography style={{fontFamily: 'Truculenta'}} variant='h3' component='h1'>Hey! I am Gabriel.</Typography>
         <Typography variant='subtitle1' component='h2'>
           A young, passion-driven developer from Romania. I love developing single
            page applications with React!

@@ -11,11 +11,13 @@ const useStyles = makeStyles({
     padding: '1rem'
   },
   title: {
-    fontSize: '2rem',
+    textAlign: 'center',  
+    fontFamily: 'Truculenta',
   },
   techContainer: {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
+    padding: '1rem',
   },
   iconContainer: {
     position: 'relative',
@@ -39,7 +41,7 @@ export default () => {
   return (
     <Grid className={classes.root} container>
       <Grid item>
-        <Typography className={classes.title} variant='overline'>Tools</Typography>
+        <Typography component='h2' className={classes.title} variant='h3'>Tools</Typography>
       </Grid>
       <Grid className={classes.techContainer} item container>
       {

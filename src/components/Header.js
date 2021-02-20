@@ -148,7 +148,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
     {/** Links */}
       <Grid item className={classes.navLinks}>
         <Typography className={classes.me} variant='overline' component='h4'>
-          <a href='/'>Gabriel Radu</a>
+          <a href='/portfolio'>Gabriel Radu</a>
         </Typography>
 
         {/** >960px Links */}

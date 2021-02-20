@@ -46,7 +46,7 @@ export default () => {
       <Grid className={classes.techContainer} item container>
       {
         technologies.map(tech => 
-          <Grid className={classes.iconContainer} item>
+          <Grid key={tech.name} className={classes.iconContainer} item>
             {tech.icon}
           </Grid>
         )

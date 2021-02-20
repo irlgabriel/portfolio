@@ -29,7 +29,7 @@ export default () => {
       <Grid className={classes.linksContainer} id='contact' container>
       {
         contactLinks.map(contact =>
-          <a href={contact.contactLink}>
+          <a key={contact.name} href={contact.contactLink}>
             {contact.icon}
           </a>
         )

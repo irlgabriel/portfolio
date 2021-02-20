@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useInView } from 'react-intersection-observer';
 import { CSSTransition } from 'react-transition-group';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme, id) => ({
   project: {
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '3rem'
   },
   img: {
+    order: id === 0 ? '1' : '2',
     display: 'block',
     maxWidth: '65%',
     maxHeight: '300px',
@@ -34,12 +35,12 @@ const useStyles = makeStyles(theme => ({
       padding: '1rem 0',
     },
     padding: '0 1rem',
+    order: id === 0 ? '2' : '1' 
   }
 }))
 
-export default ({theme, name, images, techIcons, desc, key}) => {
-  const classes = useStyles();
-
+export default ({theme, name, images, techIcons, desc, id}) => {
+  const classes = useStyles({id: id});
   const [enteredInView, setEntered] = useState(false);
 
   const { ref, inView, entry } = useInView({
@@ -69,7 +70,7 @@ export default ({theme, name, images, techIcons, desc, key}) => {
             <Typography component='p' variant='overline'>{name}</Typography>
             {
               techIcons.map(icon =>
-                <span class={classes.techIcon}>{icon}</span>
+                <span key={icon.name} className={classes.techIcon}>{icon}</span>
               )
             }
             <Typography variant='subtitle1'>{desc}</Typography>

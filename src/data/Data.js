@@ -63,7 +63,7 @@ export const contactLinks = [
 
 export const projects = [
   {
-    id: "covid-app",
+    featured: true,
     name: "Covid-19 Charts",
     images: 
       { src: require("../images/covid19app.png") },
@@ -79,11 +79,10 @@ export const projects = [
       "A React app that takes data from two different APIs and uses Recharts npm library to display some (hopefully useful) charts with Covid-19 information around the world. ",
     liveURL: "https://irlgabriel.github.io/covid-19-tracker",
     codeURL: "https://github.com/irlgabriel/covid-19-tracker",
-    key: "0",
+    key: 0,
   },
   {
     name: "Weather App",
-    id: "weather-app",
     images: 
       { src: require("../images/weatherapp.png"), idx: 0 },
     techIcons: [
@@ -98,10 +97,10 @@ export const projects = [
     liveURL: "https://irlgabriel.github.io/weather-app/",
     codeURL: "https://github.com/irlgabriel/weather-app/",
     projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
-    key: "1",
+    key: 1,
   },
   {
-    id: "facebook-clone-mern",
+    featured: true,
     name: "Facebook v2",
     images: 
       { src: require("../images/mern-fb.png"), idx: 0 },      
@@ -121,9 +120,10 @@ export const projects = [
     liveURL: "https://fcloneodin.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/MERN-facebook",
     projectIcon: <FaReact size={48}  fontSize="2.5rem" color="royalblue" />,
-    key: "2",
+    key: 2,
   },
   {
+    
     id: "facebook-clone",
     name: "Facebook",
     images: 
@@ -143,11 +143,10 @@ export const projects = [
     liveURL: "https://whispering-bayou-85275.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/facebook-odin",
     projectIcon: <DiRuby size={48}  fontSize="2.5rem" color="red" />,
-    key: "3",
+    key: 3,
   },
   {
     name: "Book Library",
-    id: "book-library",
     images: 
       { src: require("../images/libraryapp.png"), idx: 0 },
     alt: "Photo of library project",
@@ -166,11 +165,10 @@ export const projects = [
     liveURL: "https://irlgabriel.github.io/library-project-redo/#/",
     codeURL: "https://github.com/irlgabriel/library-project-redo/",
     projectIcon: <FaReact />,
-    key: "4",
+    key: 4,
   },
   {
     name: "CV Generator",
-    id: "cv-generator",
     images: 
       { src: require("../images/cvapp.png"), idx: 0 },
     techIcons: [
@@ -185,7 +183,7 @@ export const projects = [
     liveURL: "https://irlgabriel.github.io/Cv-project",
     codeURL: "https://github.com/irlgabriel/Cv-project",
     projectIcon: <FaReact />,
-    key: "5",
+    key: 5,
   },
   /*
   {

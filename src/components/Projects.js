@@ -39,13 +39,14 @@ export default ({theme}) => {
   return (
     <Grid id="projects" className={classes.root} container>
       <Box className={classes.title}>
-        <Typography variant='h3'>Projects</Typography>
+        <Typography variant='h3'>Featured Projects</Typography>
         <Divider />
       </Box>
       <TransitionGroup component={null}>
       {
-        projects.map(project =>
-          <Project theme={theme} {...project}/>
+        projects.map((project, idx) =>
+          project.featured && 
+          <Project key={project.key} id={idx} theme={theme} {...project}/>
         )
       }
       </TransitionGroup>

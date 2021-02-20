@@ -47,7 +47,7 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <Grid id='projects' className={classes.root} container>
+    <Grid id='about-me' className={classes.root} container>
       <Grid className={classes.left} item>
         <Typography variant='h3' component='h1'>Hey! I am Gabriel.</Typography>
         <Typography variant='subtitle1' component='h2'>

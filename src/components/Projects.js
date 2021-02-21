@@ -53,6 +53,8 @@ export default ({theme}) => {
     if(isInView) setEntered(true);
   }, [isInView])
 
+  
+
   return (
     <Grid id="projects" className={classes.root} container>
       <Box className={classes.title}>

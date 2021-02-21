@@ -94,6 +94,12 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.text.secondary,
       }
     }
+  },
+  link: {
+    '&:hover': {
+      color: theme.palette.text.secondary,
+      cursor: 'pointer',
+    }
   }
   
 }))
@@ -130,6 +136,10 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
     : document.body.style.overflow = 'unset';
   }, [showMenu])
 
+  useEffect(() => {
+    console.log(location.pathname)
+  })
+
   return (
     <Grid container className={classes.root}> 
     {/** Switch */}
@@ -158,17 +168,17 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
         </Typography>
 
         {/** >960px Links */}
-        <Typography variant='overline' component='h5'>
-          <a onClick={() => onIntroPage ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>About Me</a>
+        <Typography className={classes.link} onClick={() => onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+          About me
         </Typography>
-        <Typography variant='overline' component='h5'>
-          <a onClick={() => onIntroPage ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>Projects</a>
+        <Typography className={classes.link} onClick={() => onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+          Projects
         </Typography>
-        <Typography variant='overline' component='h5'>
-          <a onClick={() => onIntroPage ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>Skills</a>
+        <Typography className={classes.link} onClick={() => onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+          Skills
         </Typography>
-        <Typography variant='overline' component='h5'>
-          <a onClick={() => onIntroPage ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>Contact</a>
+        <Typography className={classes.link} onClick={() => onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+          Contact
         </Typography>
       </Grid>
 

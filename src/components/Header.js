@@ -116,6 +116,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
   }
 
   const onIntroPage = () => {
+    location.pathname === '/' ? console.log('on intro page') : console.log('on projects page')
     return location.pathname === '/';
   }
 
@@ -198,29 +199,29 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
       {/* Mobile Menu Overlay */}
       <CSSTransition
         in={showMenu}
-        classNames='fade'
-        timeout={500}
+        classNames='fade2'
+        timeout={750}
         unmountOnExit
       >
-        <Grid container class={classes.menuOverlay}>
+        <Grid container className={classes.menuOverlay}>
           <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
               About Me
             </Typography>
           </Grid>
           <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
               Projects
             </Typography>
           </Grid>
           <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
               Skills
             </Typography>
           </Grid>
           
           <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
               Contact
             </Typography>
           </Grid>

@@ -83,14 +83,14 @@
 }
 .fade2-enter-active {
   opacity: 1;
-  transition: all .5s ease-in-out;
+  transition: all .75s ease-in-out;
 }
 .fade2-exit {
   opacity: 1;
 }
 .fade2-exit-active {
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all .75s ease-in-out;
 }
 .sidebar-bubble-enter {
   opacity: 0;

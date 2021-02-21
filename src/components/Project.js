@@ -22,10 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   img: {
     display: 'block',
-    maxWidth: '65%',
-    maxHeight: '300px',
-    width: 'auto',
-    height: 'auto',
+    width: '100%',
     boxShadow: theme.shadows[10]
   },
   techIcon: {
@@ -39,6 +36,12 @@ const useStyles = makeStyles(theme => ({
     padding: '0 1rem',
   },
   imgContainer: {
+    marginRight: '5%',
+    marginLeft: '5%',
+    maxWidth: '65%',
+    maxHeight: '300px',
+    width: 'auto',
+    height: 'auto',
     position: 'relative',
     [theme.breakpoints.down('sm')]: {
       order: '1 !important',
@@ -47,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   backdrop: {
     position: 'absolute',
     top: 0,
-    right: '30%',
+    right: '-5%',
     bottom: '0',
     left: '5%',
     zIndex: -51,

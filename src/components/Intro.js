@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
@@ -38,6 +39,10 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
   },
   right: {
+    [theme.breakpoints.down('sm')]:{
+      marginTop: '40px'
+    },
+    position: 'relative',
     display: 'grid',
     placeItems: 'center',
     flex: 1,
@@ -49,7 +54,17 @@ const useStyles = makeStyles(theme => ({
     }
   },
   backdrop: {
-    
+    position: 'absolute',
+    top: 0,
+    right: '5%',
+    bottom: '0',
+    left: '15%',
+    zIndex: -51,
+    background: 'rgba(25,25,25,.85)',
+    transform: 'translateY(-40px)',
+  },
+  link: {
+    textDecoration: 'none',
   }
   
 }))
@@ -76,12 +91,13 @@ export default () => {
             A young, passion-driven developer from Romania. I love developing single
             page applications with React!
           </Typography>
-          <Link to='/projects'>
+          <Link className={classes.link} to='/projects'>
             <Button size='large' variant='contained' color='primary'>My Projects</Button>
           </Link>
         </Grid>
         <Grid className={classes.right} item>
-          <img alt='me' className={classes.img} src={me} width='90%'></img>
+          <Box className={classes.backdrop} />
+          <img alt='me' className={classes.img} src={me} width='80%'></img>
         </Grid>
       </Grid>
     </CSSTransition>

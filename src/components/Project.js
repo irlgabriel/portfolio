@@ -11,12 +11,14 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
+    marginTop: '40px',
     display: 'flex',
     flexDirection: 'row',
     width: '90%',
     margin: '0 auto',
     justifyContent: 'space-around',
-    marginBottom: '3rem'
+    marginBottom: '3rem',
+    position: 'relative'
   },
   img: {
     display: 'block',
@@ -31,10 +33,27 @@ const useStyles = makeStyles(theme => ({
   },
   desc: {
     [theme.breakpoints.down('sm')]: {
+      order: '2 !important',
       padding: '1rem 0',
     },
     padding: '0 1rem',
-  }
+  },
+  imgContainer: {
+    position: 'relative',
+    [theme.breakpoints.down('sm')]: {
+      order: '1 !important',
+    },
+  },
+  backdrop: {
+    position: 'absolute',
+    top: 0,
+    right: '30%',
+    bottom: '0',
+    left: '5%',
+    zIndex: -51,
+    background: 'rgba(25,25,25,.85)',
+    transform: 'translateY(-40px)',
+  },
 }))
 
 export default ({theme, name, images, techIcons, desc, idx}) => {
@@ -63,7 +82,10 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
     >
       <Box className='slide-up' ref={ref} p={1}>
         <Grid item className={classes.project}>
-          <img alt='project' style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.img} src={images.src}/>
+          <Box style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.imgContainer}>
+            <Box className={classes.backdrop} />
+            <img alt='project' className={classes.img} src={images.src}/>
+          </Box>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>
             <Typography component='p' variant='overline'>{name}</Typography>
             {

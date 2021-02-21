@@ -79,7 +79,7 @@ export const projects = [
       <FaSass size={48}  color="red" />,
     ],
     desc:
-      "A React app that takes data from two different APIs and uses Recharts npm library to display some (hopefully useful) charts with Covid-19 information around the world. ",
+      "A React app that consumes a public api to serve covid-19 related data based on country and worldwide. The data is shown in an aesthesically pleasing and intuitive way using recharts npm library.",
     liveURL: "https://irlgabriel.github.io/covid-19-tracker",
     codeURL: "https://github.com/irlgabriel/covid-19-tracker",
     idx: 0,
@@ -101,7 +101,7 @@ export const projects = [
 
     ],
     desc:
-      "Facebook v2.0. Improved from the first facebook done with rails. This one has a custom back-end with express, authentication with JWT, AJAX requests that you can't do with rails alone, smooth animations, smoother overall UI experience.",
+      "Facebook v2.0. Improved from the first facebook done with rails. This one has a custom back-end with express, authentication with JWT, AJAX requests that you can't do with rails alone, smooth animations, better overall UI/UX.",
     liveURL: "https://fcloneodin.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/MERN-facebook",
     projectIcon: <FaReact size={48}  fontSize="2.5rem" color="royalblue" />,

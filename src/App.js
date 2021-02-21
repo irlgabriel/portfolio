@@ -16,7 +16,7 @@ function App() {
       <CssBaseline />
         {/**Routes */}
         <Route path='/projects' exact render={() => <ProjectPage setTheme={setTheme} theme={theme} />} />
-        <Route path='/' render={() => <IntroPage theme={theme} setTheme={setTheme} />} />
+        <Route path='/' exact render={() => <IntroPage theme={theme} setTheme={setTheme} />} />
     </ThemeProvider>
   );
 }

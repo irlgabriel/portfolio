@@ -28,7 +28,6 @@ import {
   SiMaterialUi,
 } from "react-icons/si";
 import { DiGit } from 'react-icons/di';
-import { GiAtlas } from 'react-icons/gi';
 
 // Contact Links
 export const contactLinks = [

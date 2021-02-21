@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { themeLight, themeDark } from './theme';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';

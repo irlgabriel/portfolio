@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { technologies }from '../data/Data';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import { useInView } from 'react-intersection-observer';
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 export default ({theme}) => {
   const classes = useStyles();
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.2
   })
 
@@ -69,8 +69,8 @@ export default ({theme}) => {
         <Typography variant='h3' component='h3' className={classes.subtitle}>Languages & Frameworks</Typography>
           <Grid className={classes.techContainer} item container>
           {
-            technologies.map((tech, idx) => 
-              tech.type === 'language' || tech.type === 'framework' &&
+            technologies.map((tech) => 
+              (tech.type === 'language' || tech.type === 'framework') &&
               <Grid key={tech.name} className={classes.iconContainer} item>
                 {tech.icon}
               </Grid>
@@ -82,7 +82,7 @@ export default ({theme}) => {
           <Grid className={classes.techContainer} item container>
           {
             technologies.map(tech => 
-              tech.type !== 'language' && tech.type !== 'framework' &&
+              (tech.type !== 'language' && tech.type !== 'framework') &&
               <Grid key={tech.name} className={classes.iconContainer} item>
                 {tech.icon}
               </Grid>

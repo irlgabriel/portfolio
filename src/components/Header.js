@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
 import Typography from '@material-ui/core/Typography';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory, Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Switch as MaterialSwitch } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
@@ -147,7 +146,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
         <FormControlLabel
           control={
             <MaterialSwitch 
-            checked={theme == 'dark'}
+            checked={theme === 'dark'}
             onChange={() => handleOnChange()}
             />
           }
@@ -164,7 +163,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
     {/** Links */}
       <Grid item className={classes.navLinks}>
         <Typography className={classes.me} variant='overline' component='h4'>
-          <a href='/portfolio'>Gabriel Radu</a>
+          <Link to='/'>Gabriel Radu</Link>
         </Typography>
 
         {/** >960px Links */}
@@ -205,24 +204,24 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
       >
         <Grid container class={classes.menuOverlay}>
           <Grid item>
-            <Typography variant='overline' component='h5'>
-              <a onClick={() => {setMenu(false); onIntroPage ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >About Me</a>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+              About Me
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant='overline' component='h5'>
-              <a onClick={() => {setMenu(false); onIntroPage ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >Projects</a>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+              Projects
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant='overline' component='h5'>
-              <a onClick={() => {setMenu(false); onIntroPage ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >Skills</a>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+              Skills
             </Typography>
           </Grid>
           
           <Grid item>
-            <Typography variant='overline' component='h5'>
-              <a onClick={() => {setMenu(false); onIntroPage ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >Contact</a>
+            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+              Contact
             </Typography>
           </Grid>
         </Grid>

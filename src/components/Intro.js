@@ -81,7 +81,7 @@ export default () => {
           </Link>
         </Grid>
         <Grid className={classes.right} item>
-          <img className={classes.img} src={me} width='90%'></img>
+          <img alt='me' className={classes.img} src={me} width='90%'></img>
         </Grid>
       </Grid>
     </CSSTransition>

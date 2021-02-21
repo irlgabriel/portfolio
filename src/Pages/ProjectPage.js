@@ -26,8 +26,8 @@ export default ({setTheme, theme}) => {
       <Grid item>
         <TransitionGroup component={null}> 
         {
-          projects.map((project, idx) => 
-            <Project idx={idx} theme={theme} {...project} />
+          projects.map(project => 
+            <Project key={project.idx} theme={theme} {...project} />
           )
         }
         </TransitionGroup>

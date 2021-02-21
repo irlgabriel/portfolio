@@ -48,7 +48,7 @@ export default ({aboutMe}) => {
 
   const [entered, setEntered] = useState(false);
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.2
   })
 
@@ -70,7 +70,7 @@ export default ({aboutMe}) => {
           </Typography>
         </Grid>
         <Grid className={classes.flexItem} item>
-          <img className={classes.cloud} src={cloud}/>
+          <img alt='cloud' className={classes.cloud} src={cloud}/>
         </Grid>
       </Grid>
     </CSSTransition>

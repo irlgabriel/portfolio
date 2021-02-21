@@ -41,7 +41,7 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
   const classes = useStyles();
   const [enteredInView, setEntered] = useState(false);
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.2,
   });
@@ -54,10 +54,6 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
     setEntered(false);
   }, [theme])
 
-  useEffect(() => [
-    console.log(idx)
-  ], [])
-
   return (
     <CSSTransition
       in={enteredInView}
@@ -67,12 +63,12 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
     >
       <Box className='slide-up' ref={ref} p={1}>
         <Grid item className={classes.project}>
-          <img style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.img} src={images.src}/>
+          <img alt='project' style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.img} src={images.src}/>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>
             <Typography component='p' variant='overline'>{name}</Typography>
             {
-              techIcons.map(icon =>
-                <span key={icon.name} className={classes.techIcon}>{icon}</span>
+              techIcons.map((icon, idx) =>
+                <span key={idx} className={classes.techIcon}>{icon}</span>
               )
             }
             <Typography variant='subtitle1'>{desc}</Typography>

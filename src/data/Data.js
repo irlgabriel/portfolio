@@ -83,25 +83,7 @@ export const projects = [
       "A React app that takes data from two different APIs and uses Recharts npm library to display some (hopefully useful) charts with Covid-19 information around the world. ",
     liveURL: "https://irlgabriel.github.io/covid-19-tracker",
     codeURL: "https://github.com/irlgabriel/covid-19-tracker",
-    key: 0,
-  },
-  {
-    name: "Weather App",
-    images: 
-      { src: require("../images/weatherapp.png"), idx: 0 },
-    techIcons: [
-      <FaReact size={48} color="lightskyblue" />,
-      <SiStyledComponents size={48} color="gray" />,
-      <SiJavascript  size={48}color="yellow" />,
-      <FaHtml5 size={48} color="orange" />,
-      <FaCss3 size={48} color="royalblue" />,
-    ],
-    desc:
-      "React app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer). I had an idea to make it look better but unfortunately I don't have enough info with any free weather APIs.",
-    liveURL: "https://irlgabriel.github.io/weather-app/",
-    codeURL: "https://github.com/irlgabriel/weather-app/",
-    projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
-    key: 1,
+    idx: 0,
   },
   {
     featured: true,
@@ -124,7 +106,26 @@ export const projects = [
     liveURL: "https://fcloneodin.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/MERN-facebook",
     projectIcon: <FaReact size={48}  fontSize="2.5rem" color="royalblue" />,
-    key: 2,
+    idx: 13,
+  },
+
+  {
+    name: "Weather App",
+    images: 
+      { src: require("../images/weatherapp.png"), idx: 0 },
+    techIcons: [
+      <FaReact size={48} color="lightskyblue" />,
+      <SiStyledComponents size={48} color="gray" />,
+      <SiJavascript  size={48}color="yellow" />,
+      <FaHtml5 size={48} color="orange" />,
+      <FaCss3 size={48} color="royalblue" />,
+    ],
+    desc:
+      "React app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer). I had an idea to make it look better but unfortunately I don't have enough info with any free weather APIs.",
+    liveURL: "https://irlgabriel.github.io/weather-app/",
+    codeURL: "https://github.com/irlgabriel/weather-app/",
+    projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
+    idx: 10,
   },
   {
     
@@ -147,7 +148,7 @@ export const projects = [
     liveURL: "https://whispering-bayou-85275.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/facebook-odin",
     projectIcon: <DiRuby size={48}  fontSize="2.5rem" color="red" />,
-    key: 3,
+    idx: 3,
   },
   {
     name: "Book Library",
@@ -169,7 +170,7 @@ export const projects = [
     liveURL: "https://irlgabriel.github.io/library-project-redo/#/",
     codeURL: "https://github.com/irlgabriel/library-project-redo/",
     projectIcon: <FaReact />,
-    key: 4,
+    idx: 4,
   },
   {
     name: "CV Generator",
@@ -187,7 +188,7 @@ export const projects = [
     liveURL: "https://irlgabriel.github.io/Cv-project",
     codeURL: "https://github.com/irlgabriel/Cv-project",
     projectIcon: <FaReact />,
-    key: 5,
+    idx: 5,
   },
   /*
   {
@@ -207,7 +208,7 @@ export const projects = [
     liveURL: "https://irlgabriel.github.io/memory-card-game/#/",
     codeURL: "https://github.com/irlgabriel/memory-card-game",
     projectIcon: <FaReact />,
-    key: "6",
+    idx: "6",
   },
   */
 ];

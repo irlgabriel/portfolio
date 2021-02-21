@@ -5,11 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
-import { TransitionGroup } from 'react-transition-group';
 import { projects } from '../data/Data';
-import { useInView } from 'react-intersection-observer';
 
 import { Project } from '../Components';
 
@@ -43,18 +40,6 @@ const useStyles = makeStyles(theme => ({
 export default ({theme}) => {
   const classes = useStyles();
 
-  const { ref, isInView } = useInView({
-    threshold: 0.2
-  })
-
-  const [entered, setEntered] = useState(false) ;
-
-  useEffect(() => {
-    if(isInView) setEntered(true);
-  }, [isInView])
-
-  
-
   return (
     <Grid id="projects" className={classes.root} container>
       <Box className={classes.title}>
@@ -62,9 +47,9 @@ export default ({theme}) => {
         <Divider />
       </Box>
       {
-        projects.map((project, idx) =>
+        projects.map((project) =>
           project.featured && 
-          <Project key={project.key} id={idx} theme={theme} {...project}/>
+          <Project key={project.idx} theme={theme} {...project}/>
         )
       }
         <Link className={`${classes.link}`}  to='/projects'>

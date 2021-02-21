@@ -24,7 +24,7 @@ export default ({setTheme, theme}) => {
         <Header theme={theme} setTheme={setTheme} />
       </Grid>
       <Grid item>
-        <TransitionGroup>
+        <TransitionGroup component={null}> 
         {
           projects.map((project, idx) => 
             <Project idx={idx} theme={theme} {...project} />

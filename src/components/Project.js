@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useInView } from 'react-intersection-observer';
 import { CSSTransition } from 'react-transition-group';
 
-const useStyles = makeStyles((theme, id) => ({
+const useStyles = makeStyles(theme => ({
   project: {
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme, id) => ({
     marginBottom: '3rem'
   },
   img: {
-    order: id === 0 ? '1' : '2',
     display: 'block',
     maxWidth: '65%',
     maxHeight: '300px',
@@ -35,12 +34,11 @@ const useStyles = makeStyles((theme, id) => ({
       padding: '1rem 0',
     },
     padding: '0 1rem',
-    order: id === 0 ? '2' : '1' 
   }
 }))
 
-export default ({theme, name, images, techIcons, desc, id}) => {
-  const classes = useStyles({id: id});
+export default ({theme, name, images, techIcons, desc, idx}) => {
+  const classes = useStyles();
   const [enteredInView, setEntered] = useState(false);
 
   const { ref, inView, entry } = useInView({
@@ -56,6 +54,10 @@ export default ({theme, name, images, techIcons, desc, id}) => {
     setEntered(false);
   }, [theme])
 
+  useEffect(() => [
+    console.log(idx)
+  ], [])
+
   return (
     <CSSTransition
       in={enteredInView}
@@ -65,8 +67,8 @@ export default ({theme, name, images, techIcons, desc, id}) => {
     >
       <Box className='slide-up' ref={ref} p={1}>
         <Grid item className={classes.project}>
-          <img className={classes.img} src={images.src}/>
-          <Box className={classes.desc}>
+          <img style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.img} src={images.src}/>
+          <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>
             <Typography component='p' variant='overline'>{name}</Typography>
             {
               techIcons.map(icon =>

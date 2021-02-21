@@ -59,24 +59,15 @@ export default ({theme}) => {
         <Typography variant='h3'>Featured Projects</Typography>
         <Divider />
       </Box>
-      <TransitionGroup component={null}>
       {
         projects.map((project, idx) =>
           project.featured && 
           <Project key={project.key} id={idx} theme={theme} {...project}/>
         )
       }
-        <CSSTransition
-          in={entered}
-          classNames='slide-up'
-          timeout={1000}
-          exit={false}
-        >
-          <Link className={`${classes.link}`} ref={ref} to='/projects'>
-            <Button variant='contained' color='secondary' size='large'>See all projects</Button>
-          </Link>
-        </CSSTransition>
-      </TransitionGroup>
+        <Link className={`${classes.link}`}  to='/projects'>
+          <Button variant='contained' color='secondary' size='large'>See all projects</Button>
+        </Link>
     </Grid>
   )
 }

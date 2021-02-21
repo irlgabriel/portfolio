@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { CSSTransition } from 'react-transition-group';
 import me from '../images/me.jpeg';
@@ -75,9 +76,9 @@ export default () => {
             A young, passion-driven developer from Romania. I love developing single
             page applications with React!
           </Typography>
-          <a href='#projects'>
+          <Link to='/projects'>
             <Button size='large' variant='contained' color='primary'>My Projects</Button>
-          </a>
+          </Link>
         </Grid>
         <Grid className={classes.right} item>
           <img className={classes.img} src={me} width='90%'></img>

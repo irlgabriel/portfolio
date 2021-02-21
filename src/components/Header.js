@@ -5,8 +5,8 @@ import NightsStayIcon from '@material-ui/icons/NightsStay';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Divider from '@material-ui/core/Divider';
 
+import { useLocation, useHistory } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Switch as MaterialSwitch } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,7 +15,6 @@ import { ImCross } from 'react-icons/im';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    //position: 'relative',
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '1rem',
@@ -102,10 +101,17 @@ const useStyles = makeStyles(theme => ({
 export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
   const classes = useStyles();
 
+  const location = useLocation();
+  const history = useHistory();
+
   const [showMenu, setMenu] = useState(false);
 
   const handleOnChange = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  }
+
+  const onIntroPage = () => {
+    return location.pathname === '/';
   }
 
   const checkSize = () => {
@@ -153,16 +159,16 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
 
         {/** >960px Links */}
         <Typography variant='overline' component='h5'>
-          <a onClick={() => aboutMe.current.scrollIntoView()}>About Me</a>
+          <a onClick={() => onIntroPage ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>About Me</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a onClick={() => projects.current.scrollIntoView()}>Projects</a>
+          <a onClick={() => onIntroPage ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>Projects</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a onClick={() => skills.current.scrollIntoView()}>Skills</a>
+          <a onClick={() => onIntroPage ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>Skills</a>
         </Typography>
         <Typography variant='overline' component='h5'>
-          <a onClick={() => contact.current.scrollIntoView()}>Contact</a>
+          <a onClick={() => onIntroPage ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')}>Contact</a>
         </Typography>
       </Grid>
 
@@ -190,23 +196,23 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
         <Grid container class={classes.menuOverlay}>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a onClick={() => setMenu(false)} href='#about-me'>About Me</a>
+              <a onClick={() => {setMenu(false); onIntroPage ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >About Me</a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a onClick={() => setMenu(false)} href='#projects'>Projects</a>
+              <a onClick={() => {setMenu(false); onIntroPage ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >Projects</a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a onClick={() => setMenu(false)} href='#skills'>Skills</a>
+              <a onClick={() => {setMenu(false); onIntroPage ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >Skills</a>
             </Typography>
           </Grid>
           
           <Grid item>
             <Typography variant='overline' component='h5'>
-              <a onClick={() => setMenu(false)} href='#contact'>Contact</a>
+              <a onClick={() => {setMenu(false); onIntroPage ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } >Contact</a>
             </Typography>
           </Grid>
         </Grid>

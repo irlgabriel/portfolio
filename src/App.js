@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { themeLight, themeDark } from './theme';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,13 +14,9 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark} >
       <CssBaseline />
-      <Router basename='/portfolio'>
         {/**Routes */}
-        <Switch>
-          <Route exact path='/projects' render={() => <ProjectPage setTheme={setTheme} theme={theme} />} />
-          <Route path='/' render={() => <IntroPage theme={theme} setTheme={setTheme} />} />
-        </Switch>
-      </Router>
+        <Route path='/projects' render={() => <ProjectPage setTheme={setTheme} theme={theme} />} />
+        <Route path='/' render={() => <IntroPage theme={theme} setTheme={setTheme} />} />
     </ThemeProvider>
   );
 }

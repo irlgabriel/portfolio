@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
       
     },
     */
-    background: theme.palette.secondary.main,
+    background: theme.palette.primary.main,
     padding: '1rem',
     '& .MuiTypography-overline': {
       fontSize: '2rem',
@@ -69,13 +69,13 @@ export default ({theme}) => {
         <Divider />
       </Box>
       {
-        projects.map((project) =>
+        projects.map((project, idx) =>
           project.featured && 
-          <Project key={project.idx} theme={theme} {...project}/>
+          <Project altBackground={idx % 2 === 0 ? true : false} key={project.idx} theme={theme} {...project}/>
         )
       }
         <Link className={`${classes.link}`}  to='/projects'>
-          <Button variant='contained' color='primary' size='large'>See all projects</Button>
+          <Button variant='contained' color='secondary' size='large'>See all projects</Button>
         </Link>
     </Grid>
   )

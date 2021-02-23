@@ -24,7 +24,6 @@ export default () => {
 
   return (
     <Grid className={classes.root} container>
-      <Divider />
       <Grid item>
         <Typography className={classes.title} component='h1' variant='h3'>Contact</Typography>
       </Grid>

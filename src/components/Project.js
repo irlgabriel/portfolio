@@ -6,16 +6,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useInView } from 'react-intersection-observer';
 import { CSSTransition } from 'react-transition-group';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '&:nth-child(odd)': {
+      background: theme.palette.primary.main
+    },
+  },
   project: {
+    padding: '0 5%',
+    
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
-    marginTop: '40px',
+    marginTop: '60px',
     display: 'flex',
     flexDirection: 'row',
-    width: '90%',
-    margin: '0 auto',
     justifyContent: 'space-around',
     marginBottom: '3rem',
     position: 'relative'
@@ -60,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default ({theme, name, images, techIcons, desc, idx}) => {
+export default ({altBackground, theme, name, images, techIcons, desc, idx}) => {
   const classes = useStyles();
   const [enteredInView, setEntered] = useState(false);
 
@@ -84,7 +89,7 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
       timeout={1000}
       exit={false}
     >
-      <Box className='slide-up' ref={ref} p={1}>
+      <Box className={`${classes.root} slide-up`} ref={ref} p={1}>
         <Grid item className={classes.project}>
           <Box style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.imgContainer}>
             <Box className={classes.backdrop} />

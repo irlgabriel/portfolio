@@ -95,6 +95,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   link: {
+    fontSize: '1rem',
     '&:hover': {
       color: theme.palette.text.secondary,
       cursor: 'pointer',
@@ -147,6 +148,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
         <FormControlLabel
           control={
             <MaterialSwitch 
+            color='primary'
             checked={theme === 'dark'}
             onChange={() => handleOnChange()}
             />

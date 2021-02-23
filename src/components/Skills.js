@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import { technologies }from '../data/Data';
 import { CSSTransition } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import { useInView } from 'react-intersection-observer';
 
+import { Tools } from '../Components';
 const useStyles = makeStyles( theme => ({
   root: {
     
@@ -71,9 +71,9 @@ export default ({theme}) => {
         <CSSTransition
           in={entered}
           timeout={1000}
-          classNames='fade'
+          classNames='slide-up'
         >
-          <Grid className={classes.rows} container>
+          <Grid className={`${classes.rows} slide-up`} container>
             <Grid ref={ref} item>
               <Typography component='h2' className={classes.title} variant='h3'>Skills</Typography>
             </Grid>
@@ -89,22 +89,9 @@ export default ({theme}) => {
                 )
               }
               </Grid>
-            <Box className={classes.section}>
-              <Typography variant='h3' component='h2' className={classes.subtitle}>Tools & Services</Typography>
-
-              <Grid className={classes.techContainer} item container>
-              {
-                technologies.map(tech => 
-                  (tech.type !== 'language' && tech.type !== 'framework') &&
-                  <Grid key={tech.name} className={classes.iconContainer} item>
-                    {tech.icon}
-                  </Grid>
-                )
-              }
-              </Grid>
-            </Box>
           </Grid>
       </CSSTransition>
+      <Tools theme={theme}/>
     </Grid>
   )
 }

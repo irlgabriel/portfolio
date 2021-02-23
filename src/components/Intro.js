@@ -81,8 +81,8 @@ export default () => {
   return (
     <CSSTransition
       in={transition}
-      classNames='fade'
-      timeout={1500}
+      classNames='bubble'
+      timeout={1000}
     >
       <Grid id='intro' className={classes.root} container>
         <Grid className={classes.left} item>
@@ -92,7 +92,7 @@ export default () => {
             page applications with React!
           </Typography>
           <Link className={classes.link} to='/projects'>
-            <Button size='large' variant='contained' color='primary'>My Projects</Button>
+            <Button size='large' variant='contained' color='secondary'>My Projects</Button>
           </Link>
         </Grid>
         <Grid className={classes.right} item>

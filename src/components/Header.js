@@ -148,7 +148,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
         <FormControlLabel
           control={
             <MaterialSwitch 
-            color='primary'
+            color='secondary'
             checked={theme === 'dark'}
             onChange={() => handleOnChange()}
             />

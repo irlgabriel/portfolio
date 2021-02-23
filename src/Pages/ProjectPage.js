@@ -42,7 +42,7 @@ export default ({setTheme, theme}) => {
         </TransitionGroup>
       </Grid>
       <Grid item>
-        <Contact />
+        <Contact theme={theme}/>
       </Grid>
     </Grid>
   )

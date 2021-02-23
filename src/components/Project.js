@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default ({altBackground, theme, name, images, techIcons, desc, idx}) => {
+export default ({theme, name, images, techIcons, desc, idx}) => {
   const classes = useStyles();
   const [enteredInView, setEntered] = useState(false);
 
@@ -96,7 +96,7 @@ export default ({altBackground, theme, name, images, techIcons, desc, idx}) => {
             <img alt='project' className={classes.img} src={images.src}/>
           </Box>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>
-            <Typography component='p' variant='overline'>{name}</Typography>
+            <Typography style={{fontSize: '16px'}} component='p' variant='overline'>{name}</Typography>
             {
               techIcons.map((icon, idx) =>
                 <span key={idx} className={classes.techIcon}>{icon}</span>

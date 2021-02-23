@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { CSSTransition } from 'react-transition-group';
 import { useInView } from 'react-intersection-observer';
-import cloud from '../images/cloud.svg';
+import { AiTwotoneBuild } from 'react-icons/ai';
 
 
 const useStyles = makeStyles(theme => ({
@@ -13,37 +13,23 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       flex: '0 1',
-    }
+    },
+    width: '80%',
+    margin: '0 auto',
   },
-  flexItem: {
-    [theme.breakpoints.down('sm')]: {
-      '&:first-of-type': {
-        order: 2,
-      },
-      '&:last-of-type': {
-        order: 1,
-      }
-    },
-    '&:last-of-type': {
-      '& img': {
-        width: '50%',
-        [theme.breakpoints.down('sm')]: {
-          width: '25%'
-        }
-      },
-      padding: '1rem'
-    },
-    flex: 1,
-    display: 'grid',
-    placeItems: 'center'
-  }, 
   desc: {
     fontFamily: 'Truculenta'
+  },
+  tetris: {
+    color: theme.palette.secondary.main
+  },
+  row: {
+    textAlign: 'center'
   }
 }))
 
 
-export default ({aboutMe}) => {
+export default () => {
   const classes = useStyles();
 
   const [entered, setEntered] = useState(false);
@@ -59,18 +45,17 @@ export default ({aboutMe}) => {
   return (
     <CSSTransition
       in={entered}
-      classNames='right-slide'
-      timeout={1500}
+      classNames='bubble'
+      timeout={1000}
     >
-      <Grid id='about-me' ref={ref} className={classes.root} container>
-        <Grid className={classes.flexItem} item>
-          <Typography className={classes.desc} variant='h4' component='p'>
-            I love writing clean code and building simple looking pages with 
-            smooth animations.
-          </Typography>
+      <Grid id='about-me' ref={ref} className={`${classes.root} bubble`} container>
+      <Grid className={classes.row} item>
+          <AiTwotoneBuild className={classes.tetris} size='144px'/>
         </Grid>
-        <Grid className={classes.flexItem} item>
-          <img alt='cloud' className={classes.cloud} src={cloud}/>
+        <Grid className={classes.row} item>
+          <Typography className={classes.desc} variant='h4' component='p'>
+            I love building all kind of things. Here's some of the projects that I am proudest of.
+          </Typography>
         </Grid>
       </Grid>
     </CSSTransition>

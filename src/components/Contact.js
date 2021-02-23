@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import { contactLinks } from '../data/Data';
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   root: {
     padding: '1rem',
+    paddingBottom: '2rem',
     flexDirection: 'column'
   },
   linksContainer: {
@@ -16,14 +16,16 @@ const useStyles = makeStyles({
   title: {
     fontFamily: 'Truculenta',
     textAlign: 'center',
+    marginBottom: '1rem'
   }
 })
 
 export default () => {
   const classes = useStyles();
 
+
   return (
-    <Grid className={classes.root} container>
+    <Grid className={`${classes.root}`} container>
       <Grid item>
         <Typography className={classes.title} component='h1' variant='h3'>Contact</Typography>
       </Grid>

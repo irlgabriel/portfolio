@@ -13,6 +13,19 @@ import { Project } from '../Components';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    /*
+    '&::before': {
+      background: theme.palette.background.default,
+      padding: '-1rem',
+      transform: 'skew(0,15deg)',
+      content: '""',
+      width: '100%',
+      display: 'inline-block',
+      height: '40px',
+      
+    },
+    */
+    background: theme.palette.secondary.main,
     padding: '1rem',
     '& .MuiTypography-overline': {
       fontSize: '2rem',
@@ -38,7 +51,8 @@ const useStyles = makeStyles(theme => ({
   row: {
     alignItems: 'center',
     flexWrap: 'nowrap',
-  }
+  },
+
 }))
 
 

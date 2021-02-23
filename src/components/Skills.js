@@ -37,6 +37,9 @@ const useStyles = makeStyles( theme => ({
     },
     '&:hover': {
       transform: 'scale(1.2)',
+    },
+    '&::last-of-type': {
+      background: theme.palette.secondary.main,
     }
 }))
 

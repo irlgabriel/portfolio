@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: '5%',
     marginLeft: '5%',
     maxWidth: '65%',
-    maxHeight: '300px',
+    //maxHeight: '300px',
     width: 'auto',
     height: 'auto',
     position: 'relative',
@@ -48,13 +48,14 @@ const useStyles = makeStyles(theme => ({
     },
   },
   backdrop: {
+    
     position: 'absolute',
     top: 0,
     right: '-5%',
     bottom: '0',
     left: '5%',
     zIndex: -51,
-    background: 'rgba(25,25,25,.85)',
+    background: 'rgba(25,25,25,.65)',
     transform: 'translateY(-40px)',
   },
 }))

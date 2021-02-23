@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import { useInView } from 'react-intersection-observer';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( theme => ({
   root: {
     flexDirection: 'column',
     padding: '1rem'
@@ -18,6 +18,9 @@ const useStyles = makeStyles({
   techContainer: {
     flexWrap: 'wrap',
     padding: '1rem',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'space-around'
+    }
   },
   iconContainer: {
     position: 'relative',
@@ -35,8 +38,7 @@ const useStyles = makeStyles({
     '&:hover': {
       transform: 'scale(1.2)',
     }
-
-})
+}))
 
 export default ({theme}) => {
   const classes = useStyles();

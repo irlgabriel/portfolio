@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import { MdWork } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { projects } from '../data/Data';
@@ -27,12 +28,16 @@ const useStyles = makeStyles(theme => ({
     },
     display: 'flex',
     justifyContent: 'center',
-    width: '50%',
+    width: '70%',
     margin: '0 auto'
   },
   link: {
     textDecoration: 'none',
     margin: '0 auto'
+  },
+  row: {
+    alignItems: 'center',
+    flexWrap: 'nowrap',
   }
 }))
 
@@ -43,7 +48,10 @@ export default ({theme}) => {
   return (
     <Grid id="projects" className={classes.root} container>
       <Box className={classes.title}>
-        <Typography variant='h3'>Featured Projects</Typography>
+        <Grid className={classes.row} container>
+          <MdWork size='2rem' color='brown'/>&nbsp;
+          <Typography style={{flex: 1}} variant='h3'>Featured Projects</Typography>
+        </Grid>
         <Divider />
       </Box>
       {
@@ -53,7 +61,7 @@ export default ({theme}) => {
         )
       }
         <Link className={`${classes.link}`}  to='/projects'>
-          <Button variant='contained' color='secondary' size='large'>See all projects</Button>
+          <Button variant='contained' color='primary' size='large'>See all projects</Button>
         </Link>
     </Grid>
   )

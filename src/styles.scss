@@ -44,10 +44,10 @@
 .slide-up {
   opacity: 0;
 }
-.slide-up-enter {
+.slide-up-enter, .slide-up-appear {
   transform: translateY(100px);
 }
-.slide-up-enter-active {
+.slide-up-enter-active, .slide-up-appear-active {
   transform: translateY(0px); 
   opacity: 1;
   transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
@@ -197,7 +197,7 @@
   transition: all .5s ease-in-out;
 }
 .page-enter-done {
-  position: relative,
+  position: static;
 }
 
 

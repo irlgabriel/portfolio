@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { technologies }from '../data/Data';
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import { useInView } from 'react-intersection-observer';
@@ -58,7 +58,7 @@ export default ({theme}) => {
   const [entered, setEntered] = useState(false);
 
   useEffect(() => {
-    if(inView) setEntered(true);
+    if(inView === true) setEntered(true);
   }, [inView])
 
   useEffect(() => {
@@ -68,29 +68,32 @@ export default ({theme}) => {
   return (
 
       <Grid  id='skills' className={`${classes.root}`} container>
-        <CSSTransition
-          in={entered}
-          timeout={1000}
-          classNames='slide-up'
-        >
-          <Grid className={`${classes.rows} slide-up`} container>
-            <Grid ref={ref} item>
+        <TransitionGroup component={null}>
+          <Grid className={`${classes.rows}`} container>
+            <Grid item>
               <Typography component='h2' className={classes.title} variant='h3'>Skills</Typography>
             </Grid>
 
             <Typography variant='h3' component='h3' className={classes.subtitle}>Languages & Frameworks</Typography>
-              <Grid className={classes.techContainer} item container>
+              <Grid ref={ref} className={classes.techContainer} item container>
               {
                 technologies.map((tech) => 
                   (tech.type === 'language' || tech.type === 'framework') &&
-                  <Grid key={tech.name} className={classes.iconContainer} item>
-                    {tech.icon}
-                  </Grid>
+                  <CSSTransition
+                    appear
+                    in={entered}
+                    timeout={1000}
+                    classNames='slide-up'
+                  >
+                    <Grid key={tech.name} className={`${classes.iconContainer} slide-up`} item>
+                      {tech.icon}
+                    </Grid>
+                  </CSSTransition>
                 )
               }
               </Grid>
           </Grid>
-      </CSSTransition>
+        </TransitionGroup>
       <Tools theme={theme}/>
     </Grid>
   )

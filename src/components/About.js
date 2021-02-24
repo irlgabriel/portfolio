@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-export default () => {
+export default ({theme}) => {
   const classes = useStyles();
 
   const [entered, setEntered] = useState(false);
@@ -42,6 +42,10 @@ export default () => {
     if(inView) setEntered(true);
   }, [inView])
 
+  useEffect(() => {
+    setEntered(false);
+  }, [theme])
+
   return (
     <CSSTransition
       in={entered}
@@ -49,7 +53,7 @@ export default () => {
       timeout={1000}
     >
       <Grid id='about-me' ref={ref} className={`${classes.root} bubble`} container>
-      <Grid className={classes.row} item>
+        <Grid className={classes.row} item>
           <AiTwotoneBuild className={classes.tetris} size='144px'/>
         </Grid>
         <Grid className={classes.row} item>

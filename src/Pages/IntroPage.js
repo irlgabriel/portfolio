@@ -33,7 +33,7 @@ export default ({theme, setTheme}) => {
         <Intro />
       </Grid>
       <Grid ref={aboutMe} item>
-        <About />
+        <About theme={theme} />
       </Grid>
       <Grid ref={projects} item>
         <Projects theme={theme} />

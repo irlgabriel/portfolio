@@ -216,17 +216,17 @@ export const technologies = [
   {
     type: 'framework',
     name: 'React',
-    icon: <FaReact size="5rem" color='royalblue'/>
+    icon: <FaReact size="144px" color='royalblue'/>
   },
   {
     type: 'framework',
     name: 'Ruby on rails',
-    icon: <DiRuby size="5rem" color="red"/>
+    icon: <DiRuby size="144px" color="red"/>
   },
   {
     type: 'language',
     name: 'nodeJS',
-    icon: <FaNode size="5rem" color="lightgreen"/>
+    icon: <FaNode size="144px" color="lightgreen"/>
   },
   {
     type: 'framework',
@@ -236,27 +236,27 @@ export const technologies = [
   {
     type: 'language',
     name: 'HTML5',
-    icon: <FaHtml5 size='5rem'  color="red" />,
+    icon: <FaHtml5 size='144px'  color="red" />,
   },
   {
     type: 'language',
     name: 'CSS3',
-    icon: <FaCss3 size='5rem' color='royalblue' />
+    icon: <FaCss3 size='144px' color='royalblue' />
   },
   {
     type: 'framework',
     name: 'Sass',
-    icon: <FaSass size='5rem'  color="red" />,
+    icon: <FaSass size='144px'  color="red" />,
   },
   {
     type: 'framework',
     name: 'Bootstrap',
-    icon: <FaBootstrap size='5rem' color='purple' />,
+    icon: <FaBootstrap size='144px' color='purple' />,
   },
   {
     type: 'framework',
     name: 'MaterialUI',
-    icon: <SiMaterialUi size='5rem' color='black' />
+    icon: <SiMaterialUi size='144px' color='black' />
   },
   /**Tools */
 

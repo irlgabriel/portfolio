@@ -28,7 +28,20 @@ const useStyles = makeStyles((theme) => ({
   img: {
     display: 'block',
     width: '100%',
-    boxShadow: theme.shadows[10]
+    boxShadow: theme.shadows[10],
+    zIndex: '53',
+    '&::before': {
+      content: '""',
+      display: 'inline-block',
+      position: 'absolute',
+      top: 0,
+      right: '-5%',
+      bottom: '0',
+      left: '5%',
+      background: 'rgba(25,25,25,.65)',
+      transform: 'translateY(-40px)',
+      zIndex: 52
+    }
   },
   techIcon: {
     marginRight: '.5rem'
@@ -53,13 +66,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   backdrop: {
-    
     position: 'absolute',
     top: 0,
     right: '-5%',
     bottom: '0',
     left: '5%',
-    zIndex: -51,
+    zIndex: -52,
     background: 'rgba(25,25,25,.65)',
     transform: 'translateY(-40px)',
   },
@@ -92,7 +104,6 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
       <Box className={`${classes.root} slide-up`} ref={ref} p={1}>
         <Grid item className={classes.project}>
           <Box style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.imgContainer}>
-            <Box className={classes.backdrop} />
             <img alt='project' className={classes.img} src={images.src}/>
           </Box>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>

@@ -12,6 +12,7 @@ import {
   FaCss3,
   FaHtml5,
   FaFigma,
+  FaMapSigns
 } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
 import { DiRuby } from "react-icons/di";
@@ -306,6 +307,38 @@ export const technologies = [
     name: 'Firebase',
     icon: <SiFirebase size='4rem' color='orange' />
   },
+]
 
-
+export const altSkills = [
+  {
+    title: 'Work Stack',
+    align: 'center',
+    icons: [
+      <FaMapSigns size='144px' />
+    ],
+  },
+  {
+    title: 'Frontend',
+    align: 'flex-start',
+    icons: [
+      <FaReact size='144px' color='royalblue' />
+    ],
+  },
+  {
+    title: 'Backend',
+    align: 'flex-end',
+    icons: [
+      <FaNode size='144px' color='green' />,
+      <img src={require("../images/expressjs-icon.svg")} alt='express'/>,
+      <SiMongodb size='144px' color='green' />,
+    ]
+  },
+  {
+    title: 'Styling',
+    align: 'flex-start',
+    icons: [
+      <SiMaterialUi size='144px' color='black' />,
+      <FaSass size='144px' color='lightcoral' />
+    ]
+  }
 ]

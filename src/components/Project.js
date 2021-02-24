@@ -6,6 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useInView } from 'react-intersection-observer';
 import { CSSTransition } from 'react-transition-group';
 
+import Button from '@material-ui/core/Button'
+import { TiMediaRecord } from 'react-icons/ti';
+import { AiOutlineCode } from 'react-icons/ai';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '&:nth-child(odd)': {
@@ -30,18 +35,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     boxShadow: theme.shadows[10],
     zIndex: '53',
-    '&::before': {
-      content: '""',
-      display: 'inline-block',
-      position: 'absolute',
-      top: 0,
-      right: '-5%',
-      bottom: '0',
-      left: '5%',
-      background: 'rgba(25,25,25,.65)',
-      transform: 'translateY(-40px)',
-      zIndex: 52
-    }
   },
   techIcon: {
     marginRight: '.5rem'
@@ -75,9 +68,18 @@ const useStyles = makeStyles((theme) => ({
     background: 'rgba(25,25,25,.65)',
     transform: 'translateY(-40px)',
   },
+  linkSection: {
+    '& a': {
+      textDecoration: 'none',
+      alignItems: 'center',
+      marginRight: '1rem',
+      display: 'flex',
+    },
+    
+  }
 }))
 
-export default ({theme, name, images, techIcons, desc, idx}) => {
+export default ({theme, name, images, techIcons, desc, idx, liveURL, codeURL}) => {
   const classes = useStyles();
   const [enteredInView, setEntered] = useState(false);
 
@@ -104,6 +106,7 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
       <Box className={`${classes.root} slide-up`} ref={ref} p={1}>
         <Grid item className={classes.project}>
           <Box style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.imgContainer}>
+            <Box className={classes.backdrop} />
             <img alt='project' className={classes.img} src={images.src}/>
           </Box>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>
@@ -114,6 +117,20 @@ export default ({theme, name, images, techIcons, desc, idx}) => {
               )
             }
             <Typography variant='subtitle1'>{desc}</Typography>
+            <Grid container>
+              <Grid className={classes.linkSection} item>
+                <a href={liveURL}>
+                  <TiMediaRecord size='48px' color='green' />
+                  <Button variant='contained' color='secondary'>LIVE</Button>
+                </a>
+              </Grid>
+              <Grid className={classes.linkSection} item>
+                <a href={codeURL}>
+                  <AiOutlineCode size='48px' color='gray' />
+                  <Button variant='contained' color='secondary'>CODE</Button>
+                </a>
+              </Grid>
+            </Grid>
           </Box>
         </Grid>
       </Box>

@@ -58,7 +58,7 @@ export default ({theme}) => {
         </Grid>
         <Grid className={classes.row} item>
           <Typography className={classes.desc} variant='h4' component='p'>
-            I love building all kind of things. Here's some of the projects that I am proudest of.
+            I love building all kinds of things. Here's some of my better work.
           </Typography>
         </Grid>
       </Grid>

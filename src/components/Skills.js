@@ -65,7 +65,7 @@ export default ({theme}) => {
               <Grid ref={ref} className={classes.skillsection} item container>
               {
                 altSkills.map((skill) => 
-                  <SkillSection theme={theme} {...skill}/>
+                  <SkillSection key={skill.title} theme={theme} {...skill}/>
                 )
               }
               </Grid>

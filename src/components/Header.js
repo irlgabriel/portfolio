@@ -4,6 +4,7 @@ import NightsStayIcon from '@material-ui/icons/NightsStay';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Divider from '@material-ui/core/Divider';
 
 import { useLocation, useHistory, Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -142,93 +143,96 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
   })
 
   return (
-    <Grid container className={classes.root}> 
-    {/** Switch */}
-    <Grid item>
-        <FormControlLabel
-          control={
-            <MaterialSwitch 
-            color='secondary'
-            checked={theme === 'dark'}
-            onChange={() => handleOnChange()}
-            />
-          }
-          className={classes.switch}
-          label={
-            <Box
-              className={classes.switch}
-            >
-              <NightsStayIcon fontSize='large' />
-            </Box>
-          }
-        />
-      </Grid>
-    {/** Links */}
-      <Grid item className={classes.navLinks}>
-        <Typography className={classes.me} variant='overline' component='h4'>
-          <Link to='/'>Gabriel Radu</Link>
-        </Typography>
-
-        {/** >960px Links */}
-        <Typography className={classes.link} onClick={() => onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
-          About me
-        </Typography>
-        <Typography className={classes.link} onClick={() => onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
-          Projects
-        </Typography>
-        <Typography className={classes.link} onClick={() => onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
-          Skills
-        </Typography>
-        <Typography className={classes.link} onClick={() => onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
-          Contact
-        </Typography>
-      </Grid>
-
-      
-      {/* <960px Mobile Menu Button */}
-      <Grid onClick={() => setMenu(prev => !prev)} item className={classes.menu}>
-        <TransitionGroup component={null}>
-          <CSSTransition
-            timeout={500}
-            classNames='fade'
-          >
-            {!showMenu ? <GiHamburgerMenu size={32}/> : <ImCross size={32}/> }
-          </CSSTransition>
-          
-        </TransitionGroup>
-      </Grid>
-      
-      {/* Mobile Menu Overlay */}
-      <CSSTransition
-        in={showMenu}
-        classNames='fade2'
-        timeout={750}
-        unmountOnExit
-      >
-        <Grid container className={classes.menuOverlay}>
-          <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
-              About Me
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
-              Projects
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
-              Skills
-            </Typography>
-          </Grid>
-          
-          <Grid item>
-            <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
-              Contact
-            </Typography>
-          </Grid>
+    <Box className={classes.wrapper}>
+      <Grid container className={classes.root}> 
+        {/** Switch */}
+        <Grid item>
+          <FormControlLabel
+            control={
+              <MaterialSwitch 
+              color='secondary'
+              checked={theme === 'dark'}
+              onChange={() => handleOnChange()}
+              />
+            }
+            className={classes.switch}
+            label={
+              <Box
+                className={classes.switch}
+              >
+                <NightsStayIcon fontSize='large' />
+              </Box>
+            }
+          />
         </Grid>
-      </CSSTransition>
-    </Grid>
+        {/** Links */}
+        <Grid item className={classes.navLinks}>
+          <Typography className={classes.me} variant='overline' component='h4'>
+            <Link to='/'>Gabriel Radu</Link>
+          </Typography>
+
+          {/** >960px Links */}
+          <Typography className={classes.link} onClick={() => onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+            About me
+          </Typography>
+          <Typography className={classes.link} onClick={() => onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+            Projects
+          </Typography>
+          <Typography className={classes.link} onClick={() => onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+            Skills
+          </Typography>
+          <Typography className={classes.link} onClick={() => onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+            Contact
+          </Typography>
+        </Grid>
+
+        
+        {/* <960px Mobile Menu Button */}
+        <Grid onClick={() => setMenu(prev => !prev)} item className={classes.menu}>
+          <TransitionGroup component={null}>
+            <CSSTransition
+              timeout={500}
+              classNames='fade'
+            >
+              {!showMenu ? <GiHamburgerMenu size={32}/> : <ImCross size={32}/> }
+            </CSSTransition>
+            
+          </TransitionGroup>
+        </Grid>
+        
+        {/* Mobile Menu Overlay */}
+        <CSSTransition
+          in={showMenu}
+          classNames='fade2'
+          timeout={750}
+          unmountOnExit
+        >
+          <Grid container className={classes.menuOverlay}>
+            <Grid item>
+              <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+                About Me
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+                Projects
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+                Skills
+              </Typography>
+            </Grid>
+            
+            <Grid item>
+              <Typography className={classes.link} onClick={() => {setMenu(false); onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} } variant='overline' component='h5'>
+                Contact
+              </Typography>
+            </Grid>
+          </Grid>
+        </CSSTransition>
+      </Grid>
+      <Divider />
+    </Box>
   )
 }

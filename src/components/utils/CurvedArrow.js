@@ -49,7 +49,6 @@ export default (props) => {
     <Box className={classes.root}>
       <Box className={classes.curvedLine} />
       <Box className={classes.trailingLine} />
-      <Box className={classes.circle} />
     </Box>
   )
 }

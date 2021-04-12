@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     textAlign: 'center',
-    marginBottom: '1rem'
+    marginBottom: '2.5rem',
+    fontFamily: 'Truculenta',
   },
   content: {
     position: 'absolute'
@@ -40,7 +41,7 @@ export default () => {
        * code to accomodate this change.
        */}
       <Box ref={ref} className={classes.root} style={{minHeight: '600px'}}>
-        <Typography variant='h3' className={classes.title}>Career Path</Typography>
+        <Typography variant='h2' className={classes.title}>Career Path</Typography>
         <Box>
           <CurvedArrow count={4} order={0} color='purple' direction='left'/>
           <InfoSection left order={0} count={4} title={'May 2020'} subtitle={'Ruby on Rails'} info='Started learning ruby on rails after reading lots of articles on "what is the best programming language to learn as a beginner". Unfortunately I did not read enough of "Limbaje programare populare în Romania @ junior level." as I later found out - not too late tough.' />          
@@ -59,7 +60,7 @@ export default () => {
         </Box>
         <Box>
           <CurvedArrow count={4} order={4} color='green' direction='left'/>
-          <InfoSection left order={4 } count={4} title={'Getting hired'} subtitle={'LinkedIn'} info="Literally building this 'career path' section right now to make the portfolio more appealing, along with applying to new jobs on LinkedIn on a daily basis." />          
+          <InfoSection left order={4 } count={4} title={'Now'} subtitle={'Getting Hired @ LinkedIn'} info="Literally building this 'career path' section right now to make the portfolio more appealing, along with applying to new jobs on LinkedIn on a daily basis." />          
         </Box>
       </Box>
     </CSSTransition>

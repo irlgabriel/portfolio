@@ -11,12 +11,6 @@ const useStyles = makeStyles({
     margin: '0 auto'
   },
   curvedLine: {
-    '&:before': {
-      content: "''",
-      width: '10px',
-      height: '10px',
-      background: 'yellow'
-    },
     width: '300px',
     borderRadius: '150px',
     height: '300px',
@@ -31,6 +25,17 @@ const useStyles = makeStyles({
     transform: `rotate(45deg)`,
   },
   trailingLine: {
+    '&:before': {
+      content: '""',
+      borderTop: '20px solid transparent',
+      borderRight: props => props.direction === 'right' ? `20px solid ${props.color}` : '',
+      borderLeft: props => props.direction === 'left' ? `20px solid ${props.color}` : '',
+      top: '-155px',
+      right: props => props.direction === 'left' ? '140px' : 'unset',
+      left: props => props.direction === 'right' ? '140px' : 'unset',
+      position: 'absolute',
+      transform: props => props.direction === 'left' ?  'rotate(45deg)' : 'rotate(-45deg)',
+    },
     position: 'absolute',
     height: props => props.order === props.count ? '126px' : '300px',
     width: '8px',

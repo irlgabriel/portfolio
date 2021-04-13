@@ -15,6 +15,7 @@ import { ImCross } from 'react-icons/im';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    background: theme.palette.background.paper,
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '1rem',

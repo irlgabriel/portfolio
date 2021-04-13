@@ -24,7 +24,11 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.main
   },
   row: {
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '100%',
+  },
+  centered: {
+    justifyContent: 'center'
   }
 }))
 
@@ -53,7 +57,7 @@ export default ({theme}) => {
       timeout={1000}
     >
       <Grid id='about-me' ref={ref} className={`${classes.root} bubble`} container>
-        <Grid className={classes.row} item>
+        <Grid className={`${classes.row} ${classes.centered}`} item>
           <AiTwotoneBuild className={classes.tetris} size='144px'/>
         </Grid>
         <Grid className={classes.row} item>

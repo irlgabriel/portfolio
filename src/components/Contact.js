@@ -5,9 +5,11 @@ import Typography from '@material-ui/core/Typography';
 import { contactLinks } from '../data/Data';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
+    background: theme.palette.background.paper,
     padding: '1rem',
+    paddingTop: '0',
     paddingBottom: '2rem',
     flexDirection: 'column'
   },
@@ -21,8 +23,9 @@ const useStyles = makeStyles({
   },
   divider: {
     margin: '1rem 0',
+    marginTop: '0',
   }
-})
+}))
 
 export default () => {
   const classes = useStyles();

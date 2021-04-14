@@ -58,16 +58,6 @@ const useStyles = makeStyles((theme) => ({
       order: '1 !important',
     },
   },
-  backdrop: {
-    position: 'absolute',
-    top: 0,
-    right: '-5%',
-    bottom: '0',
-    left: '5%',
-    zIndex: -52,
-    background: 'rgba(25,25,25,.65)',
-    transform: 'translateY(-40px)',
-  },
   linkSection: {
     '& a': {
       textDecoration: 'none',
@@ -106,7 +96,6 @@ export default ({theme, name, images, techIcons, desc, idx, liveURL, codeURL}) =
       <Box className={`${classes.root} slide-up`} ref={ref} p={1}>
         <Grid item className={classes.project}>
           <Box style={{order: idx % 2 === 0 ? 1 : 2}} className={classes.imgContainer}>
-            <Box className={classes.backdrop} />
             <img alt='project' className={classes.img} src={images.src}/>
           </Box>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>

@@ -40,7 +40,7 @@ export default () => {
       {/** Note: count should actually be count + 1 but I don't want to redo the dependent
        * code to accomodate this change.
        */}
-      <Box ref={ref} className={classes.root} style={{minHeight: '600px'}}>
+      <Box ref={ref} className={`${classes.root} slide-up`} style={{minHeight: '600px'}}>
         <Typography variant='h2' className={classes.title}>Career Path</Typography>
         <Box>
           <CurvedArrow count={4} order={0} color='purple' direction='left'/>

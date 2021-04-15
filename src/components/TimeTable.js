@@ -27,7 +27,7 @@ export default () => {
   const classes = useStyles();
 
   const { inView, ref } = useInView({
-    threshold: .2
+    threshold: .05
   });
 
   return (

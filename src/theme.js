@@ -8,16 +8,19 @@ export const themeLight = createMuiTheme({
     secondary: {
       main: '#F53D38',
     },
+    background: {
+      paper: '#DBDAD7'
+    }
   },
 });
 
 export const themeDark = createMuiTheme({
   palette: {
     primary: {
-      main: '#1d2d50',
+      main: '#8F6027',
     },
     secondary: {
-      main: '#FFB37A',
+      main: '#18688F',
     },
     type: 'dark',
   }

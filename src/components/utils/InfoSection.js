@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     padding: '1rem',
     [theme.breakpoints.down('xs')]: {
       right: 'unset !important',
-      left: '45% !important',
+      left: '40% !important',
       textAlign: 'right !important',
       top: props => `${450 * props.order + 60}px`,
     }

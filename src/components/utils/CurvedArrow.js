@@ -12,7 +12,8 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       margin: '0 auto 0 -175px !important',
       width: '450px !important',
-      height: '450px !important'
+      height: '450px !important',
+      
     }
   },
   curvedLine: {
@@ -36,6 +37,7 @@ const useStyles = makeStyles(theme => ({
       borderColor: props => 'transparent transparent transparent ' + props.color,
       height: '450px !important',
       width: '450px !important',
+      overflow: 'hidden',
       borderRadius: '225px !important',
     }
   },

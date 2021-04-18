@@ -121,7 +121,7 @@ export const projects = [
       <FaCss3 size={48} color="royalblue" />,
     ],
     desc:
-      "React app that integrates OpenWeatherMap API and HTML's Geolocation API to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer). I had an idea to make it look better but unfortunately I don't have enough info with any free weather APIs.",
+      "React app that integrates OpenWeatherMap API and HTML's Geolocation APIs to display weather forecast for the next week based on your location or the city that you input. This was the first app in which I integrated an API and I was introduced to the ways you can send requests in javascript - XMLHttpRequest vs Fetch(newer). I had an idea to make it look better but unfortunately I don't have enough info with any free weather APIs.",
     liveURL: "https://irlgabriel.github.io/weather-app/",
     codeURL: "https://github.com/irlgabriel/weather-app/",
     projectIcon: <FaReact fontSize="2.5rem" color="lightblue" />,
@@ -184,7 +184,7 @@ export const projects = [
       <FaCss3 size={48}  color="royalblue" />,
     ],
     desc:
-      "This app that helped me understand and manage state more easily. I have got a bit of a taste of form client-side validations since it revolves a lot around valid informations being input.",
+      "This app helped me understand and manage state more easily. I have got a bit of a taste of form client-side validations since it revolves a lot around valid informations being input.",
     liveURL: "https://irlgabriel.github.io/Cv-project",
     codeURL: "https://github.com/irlgabriel/Cv-project",
     projectIcon: <FaReact />,

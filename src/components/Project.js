@@ -35,6 +35,12 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     boxShadow: theme.shadows[10],
     zIndex: '53',
+    borderRadius: '10px',
+    transition: 'all .25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.1)',
+      
+    }
   },
   techIcon: {
     marginRight: '.5rem'

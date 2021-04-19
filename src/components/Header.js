@@ -15,7 +15,7 @@ import { ImCross } from 'react-icons/im';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: theme.palette.background.paper,
+    //background: theme.palette.background.paper,
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '1rem',
@@ -59,7 +59,14 @@ const useStyles = makeStyles(theme => ({
   },
   me: {
     flex: '2',
-    fontSize: '24px',
+    fontSize: '2.5rem',
+    fontWeight: 'bold',
+    margin: '0',
+    padding: '0',
+    lineHeight: '1',
+    '& a': {
+      color: theme.palette.secondary.main
+    }
   },
   divider: {
     [theme.breakpoints.down('sm')]: {
@@ -168,8 +175,8 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
         </Grid>
         {/** Links */}
         <Grid item className={classes.navLinks}>
-          <Typography className={classes.me} variant='overline' component='h4'>
-            <Link to='/'>Gabriel Radu</Link>
+          <Typography className={classes.me} variant='subtitle' component='h4'>
+            <Link to='/'>irlgabriel</Link>
           </Typography>
 
           {/** >960px Links */}
@@ -179,9 +186,13 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
           <Typography className={classes.link} onClick={() => onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
             Projects
           </Typography>
+          {
+          /*
           <Typography className={classes.link} onClick={() => onIntroPage() ? skills.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
             Skills
           </Typography>
+          */
+          }
           <Typography className={classes.link} onClick={() => onIntroPage() ? contact.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
             Contact
           </Typography>

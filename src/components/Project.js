@@ -99,7 +99,7 @@ export default ({theme, name, images, techIcons, desc, idx, liveURL, codeURL}) =
             <img alt='project' className={classes.img} src={images.src}/>
           </Box>
           <Box style={{order: idx % 2 === 1 ? 1 : 2}} className={classes.desc}>
-            <Typography style={{fontSize: '16px'}} component='p' variant='overline'>{name}</Typography>
+            <Typography style={{fontSize: '2rem', fontWeight: 'bold', lineHeight: '1.2'}} component='p' variant='overline'>{name}</Typography>
             {
               techIcons.map((icon, idx) =>
                 <span key={idx} className={classes.techIcon}>{icon}</span>

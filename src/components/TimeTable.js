@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default () => {
+export default ({theme}) => {
   const classes = useStyles();
 
   const [animated, setAnimated] = useState(false);
@@ -31,6 +31,10 @@ export default () => {
   const { inView, ref } = useInView({
     threshold: .05
   });
+
+  useEffect(() => {
+    setAnimated(false);
+  }, [theme])
 
   useEffect(() => {
     if(inView) setAnimated(true);

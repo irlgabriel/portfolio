@@ -32,18 +32,22 @@ export default ({theme, setTheme}) => {
       <Grid ref={intro} item>
         <Intro />
       </Grid>      
+      <Grid>
+        <TimeTable theme={theme} />
+      </Grid>
       <Grid ref={aboutMe} item>
         <About theme={theme} />
-      </Grid>
-      <Grid>
-        <TimeTable />
       </Grid>
       <Grid ref={projects} item>
         <Projects theme={theme} />
       </Grid>
+      {
+      /*
       <Grid ref={skills} item>
         <Skills theme={theme}/>
       </Grid>
+      */
+      }
       <Grid ref={contact} item>
         <Contact />
       </Grid>

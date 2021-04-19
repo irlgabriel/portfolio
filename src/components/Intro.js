@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { CSSTransition } from 'react-transition-group';
 import me from '../images/me.jpeg';
+import designer from '../images/designer.svg'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -97,7 +98,7 @@ export default () => {
         </Grid>
         <Grid className={classes.right} item>
           <Box className={classes.backdrop} />
-          <img alt='me' className={classes.img} src={me} width='80%'></img>
+          <img alt='me' className={classes.img} src={designer} width='80%'></img>
         </Grid>
       </Grid>
     </CSSTransition>

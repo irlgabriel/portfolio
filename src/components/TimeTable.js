@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useInView } from 'react-intersection-observer';
 import { CSSTransition } from 'react-transition-group';
@@ -26,13 +26,19 @@ const useStyles = makeStyles(theme => ({
 export default () => {
   const classes = useStyles();
 
+  const [animated, setAnimated] = useState(false);
+
   const { inView, ref } = useInView({
     threshold: .05
   });
 
+  useEffect(() => {
+    if(inView) setAnimated(true);
+  }, [inView])
+
   return (
     <CSSTransition
-      in={inView}
+      in={animated}
       classNames='slide-up'
       timeout={1000}
       exit={false}

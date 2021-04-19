@@ -29,7 +29,7 @@ export default ({theme}) => {
   const [animated, setAnimated] = useState(false);
 
   const { inView, ref } = useInView({
-    threshold: .05
+    threshold: .25
   });
 
   useEffect(() => {

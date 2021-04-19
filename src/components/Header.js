@@ -180,8 +180,10 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
           </Typography>
 
           {/** >960px Links */}
-          <Typography className={classes.link} onClick={() => onIntroPage() ? aboutMe.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
+          <Typography className={classes.link} variant='overline' component='h5'>
+            <Link to='/about'>
             About me
+            </Link>
           </Typography>
           <Typography className={classes.link} onClick={() => onIntroPage() ? projects.current.scrollIntoView({behavior: 'smooth'}) : history.push('/')} variant='overline' component='h5'>
             Projects

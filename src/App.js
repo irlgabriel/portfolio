@@ -6,12 +6,13 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Pages
-import { ProjectPage, IntroPage } from './Pages';
+import { ProjectPage, IntroPage, AboutMe } from './Pages';
 
 // For page transitions
 const routes = [
   { path: '/projects', Component: ProjectPage },
-  { path: '/', Component: IntroPage }
+  { path: '/', Component: IntroPage },
+  { path: '/about', Component: AboutMe }
 ]
 
 function App() {

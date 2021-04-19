@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   title: {
+    color: props => props.color,
+    fontWeight: 'bold',
+    lineHeight: '1.4',
     fontSize: '2rem',
     [theme.breakpoints.down('xs')]: {
       lineHeight: '1.25',

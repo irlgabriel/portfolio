@@ -58,7 +58,7 @@ export default ({theme}) => {
         </Box>
         <Box>
           <CurvedArrow count={4} order={1} color='#E6C15E' direction='right'/>
-          <InfoSection color='#E6C15E' right order={1} count={4} title={'August 2020'} subtitle={'React'} info='Heard a lot about this thing called react - I only knew it was a frontend framework and a very popular one at that. I love it and apparently it is not only very intuitive to learn and enjoyable to build things with, but also arguably the most popular frontend programming language in Romania and not only.' />
+          <InfoSection color='#E6C15E' right order={1} count={4} title={'August 2020'} subtitle={'React'} info='Had heard a lot about this thing called react - I only knew it was a frontend framework and a very popular one at that. I love it and I find it very intuitive to learn and enjoyable to build things with. It helps that it is arguably the most popular frontend framework too.' />
         </Box>
         <Box>
           <CurvedArrow count={4} order={2} color='lightblue' direction='left'/>

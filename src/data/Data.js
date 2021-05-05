@@ -51,6 +51,7 @@ export const contactLinks = [
     contactLink: "https://github.com/irlgabriel",
     color: "inherit",
   },
+  /*
   {
     icon: <FaInstagramSquare color='violet' size='4rem'/>,
     name: 'Instagram',
@@ -63,6 +64,7 @@ export const contactLinks = [
     contactLink: "https://www.facebook.com/gabi.radu.75/",
     color: "blue",
   },
+  */
 ];
 
 export const projects = [

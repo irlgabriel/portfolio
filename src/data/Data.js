@@ -102,7 +102,7 @@ export const projects = [
 
     ],
     desc:
-      "Facebook v2.0. Improved from the first facebook clone built with rails. This one has a custom back-end with express, authentication with JWT, AJAX requests that you can't do with rails alone, smooth animations, better overall UI/UX.",
+      "Facebook v2.0. Improved from the first facebook clone built with rails. This one has a custom back-end with express, authentication with JWT, AJAX requests that you can't do with rails alone unless you use a custom frontend framework, smoother animations, better overall UI/UX Experience.",
     liveURL: "https://fcloneodin.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/MERN-facebook",
     projectIcon: <FaReact size={48}  fontSize="2.5rem" color="royalblue" />,

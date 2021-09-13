@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { projects } from '../data/Data';
 
-import { Project } from '../Components';
+import { Project } from '../components';
 
 const useStyles = makeStyles(theme => ({
   root: {

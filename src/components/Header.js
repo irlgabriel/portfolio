@@ -122,6 +122,7 @@ export default ({aboutMe, projects, skills, contact, theme, setTheme}) => {
   const [showMenu, setMenu] = useState(false);
 
   const handleOnChange = () => {
+    localStorage.setItem('irlgabriel-theme', theme === 'light' ? 'dark' : 'light');
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   }
 

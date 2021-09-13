@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Header, Intro, Projects, Skills, Contact, About, TimeTable } from '../Components';
+import { Header, Intro, Projects, Contact, About, TimeTable } from '../components';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({

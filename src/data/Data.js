@@ -1,8 +1,6 @@
 import React from "react";
 import {
   FaGithub,
-  FaInstagramSquare,
-  FaFacebookSquare,
   FaLinkedin,
   FaSass,
   FaReact,
@@ -89,7 +87,7 @@ export const projects = [
   },
   {
     featured: true,
-    name: "Facebook v2",
+    name: "Facebook clone",
     images: 
       { src: require("../images/mern-fb.png"), idx: 0 },      
     techIcons: [
@@ -104,7 +102,7 @@ export const projects = [
 
     ],
     desc:
-      "Facebook v2.0. Improved from the first facebook clone built with rails. This one has a custom back-end with express, authentication with JWT, AJAX requests that you can't do with rails alone unless you use a custom frontend framework, smoother animations, better overall UI/UX Experience.",
+      "Facebook v2.0. Improved from the first facebook clone built with rails. This one is built with react and has a custom back-end with express, authentication with JWT, AJAX requests, smoother animations and better overall UI/UX Experience. I have been maintaining and improving this for a while now.",
     liveURL: "https://fcloneodin.herokuapp.com/",
     codeURL: "https://github.com/irlgabriel/MERN-facebook",
     projectIcon: <FaReact size={48}  fontSize="2.5rem" color="royalblue" />,

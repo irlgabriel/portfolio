@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { technologies, altSkills }from '../data/Data';
+import { altSkills }from '../data/Data';
 import { TransitionGroup } from 'react-transition-group';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
 import { useInView } from 'react-intersection-observer';
-import { SkillSection } from '../Components';
+import { SkillSection } from '../components';
 
 const useStyles = makeStyles( theme => ({
   root: {

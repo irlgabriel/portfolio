@@ -16,7 +16,7 @@ const routes = [
 ]
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(localStorage.getItem('irlgabriel-theme') || 'light');
 
   return (
     <ThemeProvider theme={theme === 'light' ? themeLight : themeDark} >

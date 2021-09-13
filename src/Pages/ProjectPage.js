@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import { projects } from '../data/Data' ;
-import { Project, Header, Contact } from '../Components';
+import { Project, Header, Contact } from '../components';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
